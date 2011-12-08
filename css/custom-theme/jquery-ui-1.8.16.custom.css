@@ -73,7 +73,7 @@
   background-image: -o-linear-gradient(top, #049cdb, #0064cd);
   background-image: linear-gradient(top, #049cdb, #0064cd);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
   border-color: #0064cd #0064cd #003f81;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   border:1px solid #666;
@@ -96,8 +96,9 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
   background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
   background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  
+  x
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+ 
   color: #333;
   font-size: 13px;
   line-height: normal;
@@ -123,10 +124,11 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
   background-position: 0 -15px;
   color: #333;
   text-decoration: none;
+  font-weight:normal;
 
  }
 .ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa; background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa;  font-weight: bold; color: #212121; }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #212121; text-decoration: none; }
 .ui-widget :active { outline: none; }
 
@@ -134,7 +136,7 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
 ----------------------------------*/
 
 
-.ui-state-highlight p, .ui-state-error p{
+.ui-state-highlight p, .ui-state-error p, .ui-state-default p{
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 18px;
