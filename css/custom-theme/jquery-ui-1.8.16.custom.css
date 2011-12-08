@@ -124,7 +124,7 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
   background-position: 0 -15px;
   color: #333;
   text-decoration: none;
-  font-weight:normal;
+  font-weight:bold;
 
  }
 .ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; }
