@@ -68,7 +68,21 @@
 		</script>
 		<style type="text/css">
 			/*demo page css*/
-			body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+			html{
+				
+			}
+			body {
+			  background-color: #ffffff;
+			  margin: 0;
+			  padding:0;
+			  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			  font-size: 13px;
+			  font-weight: normal;
+			  line-height: 18px;
+			  color: #404040;
+			 
+
+			}
 			.demoHeaders { margin-top: 2em; }
 			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
 			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
@@ -76,26 +90,29 @@
 			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
 			ul#icons span.ui-icon {float: left; margin: 0 4px;}
 			#buttons button { float:left;}
+			#components {font-weight: bold; margin: 2em 0 1em; width:900px; margin:0 auto;}
 		</style>	
 	</head>
 	<body>
-	<h1>Welcome to jQuery UI Bootstrap!</h1>
-	<p style="font-size: 1.3em; line-height: 1.5; margin: 1em 0; width: 50%;">This page demonstrates a rethemed jQuery UI using Twitter bootstrap. It was developed for projects at AOL and is being open-sourced in case it can help others.</p>	
 
-	<p style="font-weight: bold; margin: 2em 0 1em; font-size: 1.3em;">YOUR COMPONENTS:</p>
+
+	<div id="components">
 		
 			
+	<h1>Welcome to (AOL) jQuery UI Bootstrap!</h1>
+	<p style="font-size: 1.3em; line-height: 1.5; margin: 1em 0; width: 50%;">This page demonstrates a rethemed jQuery UI using Twitter bootstrap. It was developed for projects at AOL and is being open-sourced in case it can help others.</p>	
+
 		<!-- Highlight / Error -->
 		<h2 class="demoHeaders">Highlight / Error</h2>
 		<div class="ui-widget">
-			<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+			<div class="ui-state-highlight ui-corner-all"> 
 				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
 				<strong>Hey!</strong> Sample ui-state-highlight style.</p>
 			</div>
 		</div>
 		
 		<div class="ui-widget">
-			<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;"> 
+			<div class="ui-state-error ui-corner-all"> 
 				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
 				<strong>Alert:</strong> Sample ui-state-error style.</p>
 			</div>
@@ -393,7 +410,7 @@
 		<h2 class="demoHeaders">Progressbar</h2>	
 		<div id="progressbar"></div>
 
-
+</div>
 	</body>
 </html>
 
