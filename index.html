@@ -280,6 +280,13 @@
 	#tabs2 { margin-top: 1em; }
 	#tabs2 li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
 	#add_tab { cursor: pointer; }
+
+	.ui-datepicker td .ui-state-default {
+		background:none;
+		border:0px;	
+	}
+
+
 </style>
 
 
@@ -293,7 +300,7 @@
 
 		// tabs init with a custom tab template and an "add" callback filling in the content
 		var $tabs = $( "#tabs2").tabs({
-			tabTemplate: "<li><a href='#{href}'>#{label}</a> <span class='ui-icon ui-icon-close'>Remove Tab</span></li>",
+			tabTemplate: "<li><a href='#{href}'>#{label}</a></li>",
 			add: function( event, ui ) {
 				var tab_content = $tab_content_input.val() || "Tab " + tab_counter + " content.";
 				$( ui.panel ).append( "<p>" + tab_content + "</p>" );
@@ -371,7 +378,7 @@
 
 	<div id="tabs2">
 		<ul>
-			<li><a href="#tabs-1">Nunc tincidunt</a> <span class="ui-icon ui-icon-close">Remove Tab</span></li>
+			<li><a href="#tabs-1">Nunc tincidunt</a></li>
 		</ul>
 		<div id="tabs-1">
 			<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
