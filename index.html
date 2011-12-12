@@ -18,6 +18,9 @@
 				// Buttons
 				$('button').button();
 
+				//Anchors, Submit
+				$('.button').button();
+
 				// Buttonset
 				$('#radioset').buttonset();
 				$( "#format" ).buttonset();
@@ -148,12 +151,18 @@
 		<h2 class="demoHeaders">Buttons</h2>
 		<div id="buttons">
 			<button>Default</button>
+
+			<a class="button">Anchor</a>
+
+			<input type="submit" class="button" value="Submit"/>
 			
 			<button class="ui-button-primary">Primary</button>
 			
 			<button class="ui-button-success">Success</button>
 			
 			<button class="ui-button-error">Danger</button>
+
+
 		</div>
 
 		
@@ -572,9 +581,114 @@
 		<div id="datepicker"></div>
 
 
+		<!--static dialog-->
+
+<style>
+.ui-dialog-titlebar{
+  border:0px 0px 0px 1px solid;
+  border-color: white;
+  padding: 5px 15px;
+  font-size: 18px;
+  text-decoration:none;
+  background:none;
+  -moz-border-radius-bottomright: 0px; 
+  -webkit-border-bottom-right-radius: 0px; 
+  -khtml-border-bottom-right-radius: 0px;
+   
+  -moz-border-radius-bottomleft: 0px; 
+  -webkit-border-bottom-left-radius: 0px; 
+  -khtml-border-bottom-left-radius: 0px; 
+  border-bottom-left-radius: 0px;
+
+  border-bottom:1px solid #ccc;
+
+}
+
+.ui-dialog .ui-dialog-title {
+	color:#404040;
+	font-weight:bold;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding:5px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close{
+	  font-size: 20px;
+  font-weight: bold;
+  line-height: 13.5px;
+  text-shadow: 0 1px 0 #ffffff;
+  filter: alpha(opacity=25);
+  -khtml-opacity: 0.25;
+  -moz-opacity: 0.25;
+  opacity: 0.25;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover{
+  filter: alpha(opacity=90);
+  -khtml-opacity: 0.90;
+  -moz-opacity: 0.90;
+  opacity: 0.90;	
+}
+
+.ui-dialog .ui-dialog-buttonpane{
+  background-color: #f5f5f5;
+  padding: 5px 15px 5px;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+  zoom: 1;
+  margin-bottom: 0;
+}
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button{
+	  color: #ffffff;
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+</style>
+<script>
+$(function(){
+$( "#dialog-message" ).dialog({
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$( this ).dialog( "close" );
+				}
+			}
+		});
+	//Remove focus from buttons
+	$('.ui-dialog :button').blur();
+});
+</script>
 
 
-	
+<div id="dialog-message" title="Modal Dialog">
+	<p>
+		<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+		Your files have downloaded successfully into the My Downloads folder.
+	</p>
+	<p>
+		Currently using <b>36% of your storage space</b>.
+	</p>
+</div>
+
+
+
+	<p>&nbsp;</p>
 		
 
 </div>
