@@ -65,6 +65,24 @@
 					function() { $(this).removeClass('ui-state-hover'); }
 				);
 				
+				//split button
+				$( "#rerun" )
+			.button()
+			.click(function() {
+				alert( "Running the last action" );
+			})
+			.next()
+				.button( {
+					text: false,
+					icons: {
+						primary: "ui-icon-triangle-1-s"
+					}
+				})
+				.click(function() {
+					alert( "Could display a menu to select an action" );
+				})
+				.parent()
+					.buttonset();
 			});
 		</script>
 		<style type="text/css">
@@ -100,7 +118,7 @@
 	<div id="components">
 		
 			
-	<h1>Welcome to (AOL) jQuery UI Bootstrap!</h1>
+	<h1>Welcome to (AOL) `jQuery UI Bootstrap!</h1>
 	<p style="font-size: 1.3em; line-height: 1.5; margin: 1em 0; width: 50%;">This page demonstrates a rethemed jQuery UI using Twitter bootstrap. It was developed for projects at AOL and is being open-sourced in case it can help others.</p>	
 
 		<!-- Highlight / Error -->
@@ -157,6 +175,9 @@
 				<input type="checkbox" id="check2" /><label for="check2">I</label>
 				<input type="checkbox" id="check3" /><label for="check3">U</label>
 				</div>
+				</br>
+
+	
 
 			</form>
 
