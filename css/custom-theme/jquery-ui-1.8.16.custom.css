@@ -515,7 +515,8 @@ border: 1px solid #cd0a0a; background: #fef1ec url(images/ui-bg_inset-soft_95_fe
 }
 .ui-menu .ui-menu-item a.ui-state-hover,
 .ui-menu .ui-menu-item a.ui-state-active {
-	font-weight: normal;
+	/*font-weight: normal;*/
+  font-weight:bold;
 	margin: -1px;
 }
 /*
