@@ -1,7 +1,7 @@
 /*
- * jQuery UI bootstrap
+ * jQuery UI Bootstrap
  * Copyright Addy Osmani, 2011.
- * Do-whatever license
+ * Released under MIT/GPL.
  */
 
 /* Layout helpers
@@ -106,13 +106,6 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
   line-height: normal;
   border: 1px solid #ccc;
   border-bottom-color: #bbb;
-
-/*
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  */
-
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -122,8 +115,6 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
   -o-transition: 0.1s linear background-image;
   transition: 0.1s linear background-image;
    overflow: visible;
-
-
 
  }
 
@@ -631,7 +622,19 @@ display: inline-block; position: relative; padding: 0; margin-right: .1em; text-
 }
 
 .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
-button.ui-button-icon-only { width: 2.4em; /*tempfix*/ margin-bottom:-9px; /*tempfix*/ padding:5px 14px 4px; } /* button elements seem to need a little more width */
+button.ui-button-icon-only { 
+    width: 2.4em;
+    margin-right: -.3em;
+    display: inline-block;
+position: relative;
+margin-right: .1em;
+text-decoration: none !important;
+cursor: pointer;
+text-align: center;
+zoom: 1;
+overflow: visible;
+
+   } /* button elements seem to need a little more width */
 .ui-button-icons-only { width: 3.4em; }
 button.ui-button-icons-only { width: 3.7em; }
 
@@ -672,7 +675,7 @@ button.ui-button-icons-only { width: 3.7em; }
   border-color: #0064cd #0064cd #003f81;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
-.ui-buttonset .ui-button { margin-left: 0; margin-right: -3px; }
+.ui-buttonset .ui-button { margin-left: 0; margin-right: -.3em; }
 
 /* workarounds */
 button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
@@ -989,5 +992,49 @@ margin-bottom:-1px;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   border-color: #0064cd #0064cd #003f81;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-
  }
+
+
+
+/*** Input field styling from Bootstrap **/
+ input, textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+input[type=file]:focus, input[type=checkbox]:focus, select:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: 1px dotted #666;
+}
+
+input[type="text"],
+.ui-autocomplete-input,
+textarea,
+.uneditable-input {
+  display: inline-block;
+  width: 210px;
+  height: 18px;
+  padding: 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+

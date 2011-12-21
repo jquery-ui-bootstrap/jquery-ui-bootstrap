@@ -6,6 +6,7 @@
 		<link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 		<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+	
 		<script type="text/javascript">
 			$(function(){
 
@@ -165,7 +166,7 @@
 			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
 			ul#icons span.ui-icon {float: left; margin: 0 4px;}
 			#buttons button { float:left; margin-right: 4px;}
-			#components { margin: 2em 0 1em; width:900px; margin:0 auto;}
+			#components { margin: 2em 0 1em; width:900px; margin:0 auto; padding:50px;}
 
 			.ui-dialog-buttonset .ui-button:nth-child(2){
 			  cursor: pointer;
@@ -199,6 +200,10 @@
 			  transition: 0.1s linear all;
 			   overflow: visible;
 			}
+
+			#container { width:100%;display:block;}
+			.col_r {float:right;}
+			.col_l {float:left; width:58%; height:100%;}
 		</style>
 	</head>
 	<body>
@@ -207,8 +212,66 @@
 	<div id="components">
 
 
-	<h1>Welcome to jQuery UI Bootstrap!</h1>
-	<p style="font-size: 1.3em; line-height: 1.5; margin: 1em 0; width: 50%;">This page demonstrates a rethemed jQuery UI using Twitter bootstrap. It was developed for projects at AOL and is being open-sourced in case it can help others.</p>
+	<h1>Welcome to the jQuery UI Bootstrap theme!</h1>
+	<p>A project by <a href="http://twitter.com/addyosmani">@addyosmani</a>, initially developed for AOL. Released with tweaks from the <a href="https://github.com/addyosmani/jquery-ui-bootstrap/contributors">community<a/>.</p>
+
+	<div id="container">
+			<div class="col_r">
+
+		<!-- Buttons -->
+		<h2 class="demoHeaders">Buttons</h2>
+		<div id="buttons">
+			<button>Default</button>
+
+			<button class="ui-button-primary">Primary</button>
+
+			<button class="ui-button-success">Success</button>
+
+			<button class="ui-button-error">Danger</button>
+
+			</br>
+			</br>
+			<a class="button">Anchor</a>
+
+			<input type="submit" class="button" value="Submit"/>
+
+
+		</div>
+
+
+		</br>
+	
+
+
+		<h2 class="demoHeaders">Button set</h2>
+			<form style="margin-top: 1em;">
+				<div id="radioset">
+					<input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
+					<input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
+					<input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+				</div>
+				</br>
+				<div id="format">
+				<input type="checkbox" id="check1" /><label for="check1">B</label>
+				<input type="checkbox" id="check2" /><label for="check2">I</label>
+				<input type="checkbox" id="check3" /><label for="check3">U</label>
+				</div>
+				</br>
+
+			</form>
+	<!--end buttons-->
+
+
+		<!-- Slider -->
+		<h2 class="demoHeaders">Slider</h2>
+		<div id="slider"></div>
+		<!--end slider-->
+
+	<!-- Progressbar -->
+		<h2 class="demoHeaders">Progressbar</h2>
+		<div id="progressbar"></div>
+	<!--end progressbar-->
+
 
 		<!-- Highlight / Error -->
 		<h2 class="demoHeaders">Highlight / Error</h2>
@@ -233,209 +296,40 @@
 				<strong>Alert:</strong> Sample ui-state-default style.</p>
 			</div>
 		</div>
-
-		<!-- Buttons -->
-		<h2 class="demoHeaders">Buttons</h2>
-		<div id="buttons">
-			<button>Default</button>
-
-			<button class="ui-button-primary">Primary</button>
-
-			<button class="ui-button-success">Success</button>
-
-			<button class="ui-button-error">Danger</button>
-
-			</br>
-			</br>
-			<a class="button">Anchor</a>
-
-			<input type="submit" class="button" value="Submit"/>
+		<!--end highlights-->
 
 
+
+		<!--Autocomplete-->
+		<h2 class="demoHeaders">Autocomplete</h2>
+		<!--autocomplete-->
+		<div class="ui-widget">
+			<label for="tags">Tags: </label>
+			<input id="tags" />
 		</div>
-
-
-		</br>
-		<div>
-			<button id="rerun">Run last action</button>
-			<button id="select">Select an action</button>
-		</div>
-
-		</br>
-		</br>
-
-		<h2 class="demoHeaders">Button set</h2>
-			<form style="margin-top: 1em;">
-				<div id="radioset">
-					<input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
-					<input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
-					<input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
-				</div>
-				</br>
-				<div id="format">
-				<input type="checkbox" id="check1" /><label for="check1">B</label>
-				<input type="checkbox" id="check2" /><label for="check2">I</label>
-				<input type="checkbox" id="check3" /><label for="check3">U</label>
-				</div>
-				</br>
-
-
-
-			</form>
+		<!--end autocomplete-->
 
 
 
 
-		<!-- Tabs -->
-		<h2 class="demoHeaders">Tabs</h2>
-		<div id="tabs">
-			<ul>
-				<li><a href="#tabs-1">First</a></li>
-				<li><a href="#tabs-2">Second</a></li>
-				<li><a href="#tabs-3">Third</a></li>
-			</ul>
-			<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-			<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-			<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
-		</div>
+		<!-- Datepicker -->
+		<h2 class="demoHeaders">Datepicker</h2>
+		<div id="datepicker"></div>
+		<!--end datepicker-->
 
 
+		<h2 class="demoHeaders">Other</h2>
 
-		<!--Dynamic tabs-->
-
-		<style>
-			#dialog2 label, #dialog2 input { display:block; }
-			#dialog2 label { margin-top: 0.5em; }
-			#dialog2 input, #dialog2 textarea { width: 95%; }
-			#tabs2 { margin-top: 1em; }
-			#tabs2 li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
-			#add_tab { cursor: pointer; }
-
-			.ui-datepicker td .ui-state-default {
-				border:0px;
-				background:none;
-				margin-bottom:0px;
-			}
-
-			.ui-datepicker-calendar{
-				border:0px;
-			}
-			.ui-datepicker-current-day, .ui-datepicker-today a{
-				margin-bottom:0px;
-			}
-
-			.ui-datepicker td .ui-state-active{
-				margin-bottom:0px;
-				font-weight:bold;
-				font-size:normal;
-			}
-
-		</style>
+		<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+		<span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
+		Master volume
+		</p>
 
 
-		<script type="text/javascript">
-		$(function() {
-
-
-			var $tab_title_input = $( "#tab_title"),
-				$tab_content_input = $( "#tab_content" );
-			var tab_counter = 2;
-
-			// tabs init with a custom tab template and an "add" callback filling in the content
-			var $tabs = $( "#tabs2").tabs({
-				tabTemplate: "<li><a href='#{href}'>#{label}</a></li>",
-				add: function( event, ui ) {
-					var tab_content = $tab_content_input.val() || "Tab " + tab_counter + " content.";
-					$( ui.panel ).append( "<p>" + tab_content + "</p>" );
-				}
-			});
-
-			// modal dialog init: custom buttons and a "close" callback reseting the form inside
-			var $dialog = $( "#dialog2" ).dialog({
-				autoOpen: false,
-				modal: true,
-				buttons: {
-					Add: function() {
-						addTab();
-						$( this ).dialog( "close" );
-					},
-					Cancel: function() {
-						$( this ).dialog( "close" );
-					}
-				},
-				open: function() {
-					$tab_title_input.focus();
-				},
-				close: function() {
-					$form[ 0 ].reset();
-				}
-			});
-
-			// addTab form: calls addTab function on submit and closes the dialog
-			var $form = $( "form", $dialog ).submit(function() {
-				addTab();
-				$dialog.dialog( "close" );
-				return false;
-			});
-
-			// actual addTab function: adds new tab using the title input from the form above
-			function addTab() {
-				var tab_title = $tab_title_input.val() || "Tab " + tab_counter;
-				$tabs.tabs( "add", "#tabs-" + tab_counter, tab_title );
-				tab_counter++;
-			}
-
-			// addTab button: just opens the dialog
-			$( "#add_tab" )
-				.button()
-				.click(function() {
-					$dialog.dialog( "open" );
-				});
-
-			// close icon: removing the tab on click
-			// note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
-			$( "#tabs span.ui-icon-close" ).live( "click", function() {
-				var index = $( "li", $tabs ).index( $( this ).parent() );
-				$tabs.tabs( "remove", index );
-			});
-		});
-		</script>
-
-
-
-<div class="demo">
-
-	<h2>Dynamic Tabs</h2>
-	<div id="dialog2" title="Tab data">
-		<form>
-			<fieldset class="ui-helper-reset">
-				<label for="tab_title">Title</label>
-				<input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all" />
-				<label for="tab_content">Content</label>
-				<textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all"></textarea>
-			</fieldset>
-		</form>
-	</div>
-
-	<button id="add_tab" class="ui-button-primary">Add Tab</button>
-
-	<div id="tabs2">
-		<ul>
-			<li><a href="#tabs-1">Nunc tincidunt</a></li>
-		</ul>
-		<div id="tabs-1">
-			<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-		</div>
-	</div>
-
-</div><!-- End demo -->
-
-
-
-<div class="demo-description">
-<p>Simple tabs adding and removing.</p>
-</div><!-- End demo-description -->
-
+			</div>
+			
+			<div class="col_l">
+	
 
 
 		<!-- Accordion -->
@@ -454,17 +348,24 @@
 				<div>Nam dui erat, auctor a, dignissim quis.</div>
 			</div>
 		</div>
+		<!--end accordion-->
+
+		<!-- Tabs -->
+		<h2 class="demoHeaders">Tabs</h2>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">First</a></li>
+				<li><a href="#tabs-2">Second</a></li>
+				<li><a href="#tabs-3">Third</a></li>
+			</ul>
+			<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+			<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+		</div>
+		<!--end tabs-->
 
 
-	<!-- Progressbar -->
-		<h2 class="demoHeaders">Progressbar</h2>
-		<div id="progressbar"></div>
-
-		<!-- Slider -->
-		<h2 class="demoHeaders">Slider</h2>
-		<div id="slider"></div>
-
-		<!-- Dialog NOTE: Dialog is not generated by UI in this demo so it can be visually styled in themeroller-->
+<!-- Dialog NOTE: Dialog is not generated by UI in this demo so it can be visually styled in themeroller-->
 		<h2 class="demoHeaders">Dialog</h2>
 		<p><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Open Dialog</a>
 		&nbsp;
@@ -472,7 +373,7 @@
 		</p>
 
 
-		<h2 class="demoHeaders">Overlay and Shadow Classes <em>(not currently used in UI widgets)</em></h2>
+		<h2 class="demoHeaders">Overlay and Shadow Classes</h2>
 		<div style="position: relative; width: 96%; height: 200px; padding:1% 4%; overflow:hidden;" class="fakewindowcontain">
 			<p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p><p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. </p><p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. </p><p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. </p>
 
@@ -692,31 +593,150 @@
 		</ul>
 
 
+
+		<!--Dynamic tabs-->
+
+		<style>
+			#dialog2 label, #dialog2 input { display:block; }
+			#dialog2 label { margin-top: 0.5em; }
+			#dialog2 input, #dialog2 textarea { width: 95%; }
+			#tabs2 { margin-top: 1em; }
+			#tabs2 li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+			#add_tab { cursor: pointer; }
+
+			.ui-datepicker td .ui-state-default {
+				border:0px;
+				background:none;
+				margin-bottom:0px;
+			}
+
+			.ui-datepicker-calendar{
+				border:0px;
+			}
+			.ui-datepicker-current-day, .ui-datepicker-today a{
+				margin-bottom:0px;
+			}
+
+			.ui-datepicker td .ui-state-active{
+				margin-bottom:0px;
+				font-weight:bold;
+				font-size:normal;
+			}
+
+		</style>
+
+
+		<script type="text/javascript">
+		$(function() {
+
+
+			var $tab_title_input = $( "#tab_title"),
+				$tab_content_input = $( "#tab_content" );
+			var tab_counter = 2;
+
+			// tabs init with a custom tab template and an "add" callback filling in the content
+			var $tabs = $( "#tabs2").tabs({
+				tabTemplate: "<li><a href='#{href}'>#{label}</a></li>",
+				add: function( event, ui ) {
+					var tab_content = $tab_content_input.val() || "Tab " + tab_counter + " content.";
+					$( ui.panel ).append( "<p>" + tab_content + "</p>" );
+				}
+			});
+
+			// modal dialog init: custom buttons and a "close" callback reseting the form inside
+			var $dialog = $( "#dialog2" ).dialog({
+				autoOpen: false,
+				modal: true,
+				buttons: {
+					Add: function() {
+						addTab();
+						$( this ).dialog( "close" );
+					},
+					Cancel: function() {
+						$( this ).dialog( "close" );
+					}
+				},
+				open: function() {
+					$tab_title_input.focus();
+				},
+				close: function() {
+					$form[ 0 ].reset();
+				}
+			});
+
+			// addTab form: calls addTab function on submit and closes the dialog
+			var $form = $( "form", $dialog ).submit(function() {
+				addTab();
+				$dialog.dialog( "close" );
+				return false;
+			});
+
+			// actual addTab function: adds new tab using the title input from the form above
+			function addTab() {
+				var tab_title = $tab_title_input.val() || "Tab " + tab_counter;
+				$tabs.tabs( "add", "#tabs-" + tab_counter, tab_title );
+				tab_counter++;
+			}
+
+			// addTab button: just opens the dialog
+			$( "#add_tab" )
+				.button()
+				.click(function() {
+					$dialog.dialog( "open" );
+				});
+
+			// close icon: removing the tab on click
+			// note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
+			$( "#tabs span.ui-icon-close" ).live( "click", function() {
+				var index = $( "li", $tabs ).index( $( this ).parent() );
+				$tabs.tabs( "remove", index );
+			});
+		});
+		</script>
+
+
+
 		<p>&nbsp;</p>
+		<div class="demo">
 
-		<h2 class="demoHeaders">Autocomplete</h2>
-		<!--autocomplete-->
-		<div class="ui-widget">
-			<label for="tags">Tags: </label>
-			<input id="tags" />
-		</div>
+			<h2>Dynamic Tabs</h2>
+			<div id="dialog2" title="Tab data">
+				<form>
+					<fieldset class="ui-helper-reset">
+						<label for="tab_title">Title</label>
+						<input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all" />
+						<label for="tab_content">Content</label>
+						<textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all"></textarea>
+					</fieldset>
+				</form>
+			</div>
+
+			<button id="add_tab" class="ui-button-primary">Add Tab</button>
+
+			<div id="tabs2">
+				<ul>
+					<li><a href="#tabs-1">Nunc tincidunt</a></li>
+				</ul>
+				<div id="tabs-1">
+					<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+				</div>
+			</div>
+
+		</div><!-- End demo -->
 
 
 
+		<div class="demo-description">
+		<p>Simple tabs adding and removing.</p>
+		</div><!-- End demo-description -->
 
-		<!-- Datepicker -->
-		<h2 class="demoHeaders">Datepicker</h2>
-		<div id="datepicker"></div>
+			</div>
+	</div>
 
 
-		<h2 class="demoHeaders">Other</h2>
+</div>
 
-		<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
-		<span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
-		Master volume
-		</p>
-
-		<!--static dialog-->
+	<!--static dialog-->
 		<div id="dialog-message" title="Modal Dialog">
 			<p>
 				<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
@@ -728,11 +748,6 @@
 		</div>
 
 
-
-	<p>&nbsp;</p>
-
-
-</div>
 	</body>
 </html>
 
