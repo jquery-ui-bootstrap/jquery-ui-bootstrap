@@ -58,24 +58,7 @@
 .ui-widget-content { border: 1px solid #aaaaaa; background: #ffffff url(images/ui-bg_glass_75_ffffff_1x400.png) 50% 50% repeat-x; color: #404040; }
 .ui-widget-content a { color: #404040; }
 .ui-widget-header {
-/*border: 1px solid #aaaaaa; background: #cccccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold;*/
-
-
-
   font-weight:bold;
-  /*
-  background-color: #0064cd;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
-  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
-  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
-  background-image: linear-gradient(top, #049cdb, #0064cd);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);*/
-  /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
-
   border-color: #0064cd #0064cd #003f81;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   border:1px solid #666;
@@ -210,7 +193,7 @@ border: 1px solid #cd0a0a; background: #fef1ec url(images/ui-bg_inset-soft_95_fe
 .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
 .ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
-.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none;  }
 
 
 
@@ -908,7 +891,16 @@ margin-bottom:-1px;
  * http://docs.jquery.com/UI/Datepicker#theming
  */
 .ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
-.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; border:0px; }
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; border:0px;
+
+ font-weight: bold;
+  width: 100%;
+  padding: 4px 0;
+  background-color: #f5f5f5;
+  color: #808080;
+
+  
+   }
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
 .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
 .ui-datepicker .ui-datepicker-prev { left:2px; }
@@ -965,7 +957,65 @@ margin-bottom:-1px;
     left: -4px; /*must have*/
     width: 200px; /*must have*/
     height: 200px; /*must have*/
-}/*
+}
+
+.ui-datepicker th{
+  font-weight: bold;
+  color: gray;
+}
+
+.ui-datepicker-today a:hover{
+  background-color: #808080;
+  color: #ffffff;
+
+}
+.ui-datepicker-today a{
+  background-color: #BFBFBF;
+  cursor: pointer;
+  padding: 0 4px;
+  margin-bottom:0px;
+
+}
+
+
+.ui-datepicker td a{
+  margin-bottom:0px;
+  border:0px;
+}
+
+.ui-datepicker td:hover{
+  color:white;
+}
+
+.ui-datepicker td .ui-state-default {
+  border:0px;
+  background:none;
+  margin-bottom:0px;
+  padding:5px;
+}
+
+
+.ui-datepicker td .ui-state-active{
+  background:#BFBFBF;
+  margin-bottom:0px;
+  font-size:normal;
+  text-shadow: 0px;
+  color:white;  
+    -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.ui-datepicker td .ui-state-default:hover{
+  background:#0064cd;
+  color:white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+/*
  * jQuery UI Progressbar 1.8.16
  *
  * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
@@ -1037,4 +1087,11 @@ textarea,
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+
+
+
+
+
+
+
 
