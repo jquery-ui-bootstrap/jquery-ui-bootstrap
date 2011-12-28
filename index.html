@@ -6,6 +6,7 @@
 		<link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 		<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+
 	
 		<script type="text/javascript">
 			$(function(){
@@ -201,7 +202,8 @@
 			   overflow: visible;
 			}
 
-			#container { width:100%;display:block;}
+			#container { width:100%;display:block; }
+			#notice { width:900px; display:block; height:300px; clear:both; margin:0 auto;}
 			.col_r {float:right;}
 			.col_l {float:left; width:58%; height:100%;}
 		</style>
@@ -213,7 +215,7 @@
 
 
 	<h1>Welcome to the jQuery UI Bootstrap theme!</h1>
-	<p>A project by <a href="http://twitter.com/addyosmani">@addyosmani</a>, initially developed for AOL. Released with tweaks from the <a href="https://github.com/addyosmani/jquery-ui-bootstrap/contributors">community<a/>.</p>
+	<p>A project by <a href="http://twitter.com/addyosmani">@addyosmani</a>. Released with tweaks from the <a href="https://github.com/addyosmani/jquery-ui-bootstrap/contributors">community<a/>.</p>
 
 	<div id="container">
 			<div class="col_r">
@@ -704,14 +706,50 @@
 
 		</div><!-- End demo -->
 
-
-
 		<div class="demo-description">
 		<p>Simple tabs adding and removing.</p>
 		</div><!-- End demo-description -->
 
+	<!--start filamentgroup datepicker-->
+
+		<script type="text/javascript" src="third-party/jQuery-UI-Date-Range-Picker/js/date.js"></script>
+		<script type="text/javascript" src="third-party/jQuery-UI-Date-Range-Picker/js/daterangepicker.jQuery.js"></script>
+		<script type="text/javascript">	
+			$(function(){
+				  $('#rangeA').daterangepicker(); 
+				  $('#rangeBa, #rangeBb').daterangepicker(); 
+				  
+			 });
+		</script>
+		
+		<link href="third-party/jQuery-UI-Date-Range-Picker/css/ui.daterangepicker.css" media="screen" rel="Stylesheet" type="text/css" />
+
+		<p>&nbsp;</p>
+		<h2>Filament Date Range Picker</h2>
+		<p>
+The date range picker plugin code is open source and available in a git repository, <a href="https://github.com/filamentgroup/jQuery-UI-Date-Range-Picker">jQuery-UI-Date-Range-Picker</a>. For demonstration sakes it is included in this theme pack with style updates.
+</p>
+		<p>
+		<h3>Default Rangepicker</h3>	
+		<div>
+			<input type="text" value="4/23/99" id="rangeA" />			
+		</div>
+
+		<h3>2 inputs Rangepicker</h3>	
+		<div>
+			<input type="text" value="4/23/99" id="rangeBa" />	
+			<input type="text" value="4/23/99" id="rangeBb" />			
+		</div>
+
+		</p>
+
+		<!--end filament group datepicker-->
+
+
 			</div>
 	</div>
+
+	
 
 
 </div>
@@ -726,6 +764,10 @@
 				Currently using <b>36% of your storage space</b>.
 			</p>
 		</div>
+	<!--end static dialog-->
+
+
+	<div id="notice"></div>
 
 
 	</body>
