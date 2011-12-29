@@ -596,6 +596,7 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
 
 .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
 button.ui-button-icon-only { 
+  /*
     width: 2.4em;
     margin-right: -.3em;
     display: inline-block;
@@ -606,7 +607,7 @@ cursor: pointer;
 text-align: center;
 zoom: 1;
 overflow: visible;
-
+*/
    } /* button elements seem to need a little more width */
 .ui-button-icons-only { width: 3.4em; }
 button.ui-button-icons-only { width: 3.7em; }
@@ -622,7 +623,7 @@ button.ui-button-icons-only { width: 3.7em; }
 /* input.ui-button { padding: .4em 1em; } */
 
 /*button icon element(s) */
-.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { /*position: absolute;*/ top: 50%; margin-top: -8px; }
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { top: 50%; margin-top:-3px; margin-bottom:3px; }
 .ui-button-icon-only .ui-icon { left: 50%; margin-left: -8px; }
 .ui-button-text-icon-primary .ui-button-icon-primary, .ui-button-text-icons .ui-button-icon-primary, .ui-button-icons-only .ui-button-icon-primary { left: .5em; }
 .ui-button-text-icon-secondary .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
@@ -870,6 +871,7 @@ margin-bottom:-1px;
 
 } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
+.ui-tabs-panel .ui-button{text-decoration:none;}
 .ui-tabs .ui-tabs-hide { display: none !important; }
 /*
  * jQuery UI Datepicker 1.8.16
@@ -996,7 +998,7 @@ margin-bottom:-1px;
   font-size:normal;
   text-shadow: 0px;
   color:white;  
-    -webkit-border-radius: 4px;
+  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
@@ -1107,10 +1109,40 @@ textarea,
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   box-shadow: inset 0 1px 0 #ffffff;
 }
-.ui-toolbar-segment button{
-  margin-bottom:-10px;
+
+
+/***Dialog fixes**/
+
+.ui-dialog-buttonset .ui-button:nth-child(2){
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  padding: 5px 14px 6px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+   overflow: visible;
 }
-
-
-
 

@@ -15,13 +15,13 @@
 				$("#accordion").accordion({ header: "h3" });
 
 				// Tabs
-				$('#tabs').tabs();
+				$('#tabs2, #tabs').tabs();
 
 				// Buttons
 				$('button').button();
 
 				//Anchors, Submit
-				$('.button').button();
+				$('.button,#sampleButton').button();
 
 				// Buttonset
 				$('#radioset').buttonset();
@@ -118,6 +118,7 @@
 				}
 			});
 
+
 			//Remove focus from buttons
 			$('.ui-dialog :button').blur();
 
@@ -168,40 +169,6 @@
 			ul#icons span.ui-icon {float: left; margin: 0 4px;}
 			#buttons button { float:left; margin-right: 4px;}
 			#components { margin: 2em 0 1em; width:900px; margin:0 auto; padding:50px;}
-
-			.ui-dialog-buttonset .ui-button:nth-child(2){
-			  cursor: pointer;
-			  display: inline-block;
-			  background-color: #e6e6e6;
-			  background-repeat: no-repeat;
-			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
-			  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-			  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
-			  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-			  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-			  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-			  padding: 5px 14px 6px;
-			  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-			  color: #333;
-			  font-size: 13px;
-			  line-height: normal;
-			  border: 1px solid #ccc;
-			  border-bottom-color: #bbb;
-			  -webkit-border-radius: 4px;
-			  -moz-border-radius: 4px;
-			  border-radius: 4px;
-			  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-			  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-			  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-			  -webkit-transition: 0.1s linear all;
-			  -moz-transition: 0.1s linear all;
-			  -ms-transition: 0.1s linear all;
-			  -o-transition: 0.1s linear all;
-			  transition: 0.1s linear all;
-			   overflow: visible;
-			}
-
 			#container { width:100%;display:block; }
 			#notice { width:900px; display:block; height:300px; clear:both; margin:0 auto;}
 			.col_r {float:right;}
@@ -604,6 +571,8 @@
 			#tabs2 { margin-top: 1em; }
 			#tabs2 li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
 			#add_tab { cursor: pointer; }
+
+	
 		</style>
 
 
@@ -672,6 +641,10 @@
 				var index = $( "li", $tabs ).index( $( this ).parent() );
 				$tabs.tabs( "remove", index );
 			});
+
+
+
+
 		});
 		</script>
 
@@ -708,6 +681,29 @@
 		<div class="demo-description">
 		<p>Simple tabs adding and removing.</p>
 		</div><!-- End demo-description -->
+
+
+<!--start combinations-->
+<h2 class="demoHeaders">Combination examples</h2>
+	<div class="columnbox" style="height: 200px;">
+		<div id="tabs2">
+			<ul>
+				<li><a href="#tabs2-1">First</a></li>
+				<li><a href="#tabs2-2">Second</a></li>
+				<li><a href="#tabs2-3">Third</a></li>
+			</ul>
+			<div id="tabs2-1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
+				<a href="#" id="sampleButton">Change</a>
+			</div>
+			<div id="tabs2-2">Tab 2</div>
+			<div id="tabs2-3">Tab 3</div>
+		</div>
+	</div>
+<!--end combinations-->
+	<br />
+
+
 
 	<!--start filamentgroup datepicker-->
 
@@ -749,75 +745,11 @@ The date range picker plugin code is open source and available in a git reposito
 	#toolbar {
 		padding: 10px 4px;
 	}
-
-
 	</style>
 	<script>
 	$(function() {
-		$( "#beginning" ).button({
-			text: false,
-			icons: {
-				primary: "ui-icon-seek-start"
-			}
-		});
-		$( "#rewind" ).button({
-			text: false,
-			icons: {
-				primary: "ui-icon-seek-prev"
-			}
-		});
-		$( "#play" ).button({
-			text: false,
-			icons: {
-				primary: "ui-icon-play"
-			}
-		})
-		.click(function() {
-			var options;
-			if ( $( this ).text() === "play" ) {
-				options = {
-					label: "pause",
-					icons: {
-						primary: "ui-icon-pause"
-					}
-				};
-			} else {
-				options = {
-					label: "play",
-					icons: {
-						primary: "ui-icon-play"
-					}
-				};
-			}
-			$( this ).button( "option", options );
-		});
-		$( "#stop" ).button({
-			text: false,
-			icons: {
-				primary: "ui-icon-stop"
-			}
-		})
-		.click(function() {
-			$( "#play" ).button( "option", {
-				label: "play",
-				icons: {
-					primary: "ui-icon-play"
-				}
-			});
-		});
-		$( "#forward" ).button({
-			text: false,
-			icons: {
-				primary: "ui-icon-seek-next"
-			}
-		});
-		$( "#end" ).button({
-			text: false,
-			icons: {
-				primary: "ui-icon-seek-end"
-			}
-		});
-		$( "#shuffle" ).button();
+		
+		$( "#play, #shuffle" ).button();
 		$( "#repeat" ).buttonset();
 	});
 	</script>
@@ -827,22 +759,11 @@ The date range picker plugin code is open source and available in a git reposito
 <div class="demo">
 
 <p>&nbsp;</p>
-<h2>Toolbar</h2>
+<h2>Simple toolbar</h2>
 <p></p>
 <span id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
-	<span class="ui-toolbar-segment">
 
-	<button id="beginning">go to beginning</button>
-	<button id="rewind">rewind</button>
-	<button id="play">play</button>
-	<button id="stop">stop</button>
-	<button id="forward">fast forward</button>
-	<button id="end">go to end</button>
-
-	</span>
-	
-	<span>
-
+	<input type="checkbox" id="play" /><label for="play">Play</label>
 	<input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
 	
 	<span id="repeat">
@@ -850,7 +771,7 @@ The date range picker plugin code is open source and available in a git reposito
 		<input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
 		<input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
 	</span>
-	</span>
+
 </span>
 
 </div><!-- End demo -->
@@ -862,8 +783,6 @@ The date range picker plugin code is open source and available in a git reposito
 	</div>
 
 	
-
-
 
 
 <!--begin wijmo menu-->
