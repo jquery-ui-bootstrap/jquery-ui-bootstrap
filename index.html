@@ -237,7 +237,6 @@
 
 			<input type="submit" class="button" value="Submit"/>
 
-
 		</div>
 
 
@@ -745,11 +744,219 @@ The date range picker plugin code is open source and available in a git reposito
 
 		<!--end filament group datepicker-->
 
+<!--start toolbar-->
+	<style>
+	#toolbar {
+		padding: 10px 4px;
+	}
+
+
+	</style>
+	<script>
+	$(function() {
+		$( "#beginning" ).button({
+			text: false,
+			icons: {
+				primary: "ui-icon-seek-start"
+			}
+		});
+		$( "#rewind" ).button({
+			text: false,
+			icons: {
+				primary: "ui-icon-seek-prev"
+			}
+		});
+		$( "#play" ).button({
+			text: false,
+			icons: {
+				primary: "ui-icon-play"
+			}
+		})
+		.click(function() {
+			var options;
+			if ( $( this ).text() === "play" ) {
+				options = {
+					label: "pause",
+					icons: {
+						primary: "ui-icon-pause"
+					}
+				};
+			} else {
+				options = {
+					label: "play",
+					icons: {
+						primary: "ui-icon-play"
+					}
+				};
+			}
+			$( this ).button( "option", options );
+		});
+		$( "#stop" ).button({
+			text: false,
+			icons: {
+				primary: "ui-icon-stop"
+			}
+		})
+		.click(function() {
+			$( "#play" ).button( "option", {
+				label: "play",
+				icons: {
+					primary: "ui-icon-play"
+				}
+			});
+		});
+		$( "#forward" ).button({
+			text: false,
+			icons: {
+				primary: "ui-icon-seek-next"
+			}
+		});
+		$( "#end" ).button({
+			text: false,
+			icons: {
+				primary: "ui-icon-seek-end"
+			}
+		});
+		$( "#shuffle" ).button();
+		$( "#repeat" ).buttonset();
+	});
+	</script>
+
+
+
+<div class="demo">
+
+<p>&nbsp;</p>
+<h2>Toolbar</h2>
+<p></p>
+<span id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
+	<span class="ui-toolbar-segment">
+
+	<button id="beginning">go to beginning</button>
+	<button id="rewind">rewind</button>
+	<button id="play">play</button>
+	<button id="stop">stop</button>
+	<button id="forward">fast forward</button>
+	<button id="end">go to end</button>
+
+	</span>
+	
+	<span>
+
+	<input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
+	
+	<span id="repeat">
+		<input type="radio" id="repeat0" name="repeat" checked="checked" /><label for="repeat0">No Repeat</label>
+		<input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
+		<input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
+	</span>
+	</span>
+</span>
+
+</div><!-- End demo -->
+<!--end toolbar-->
+
 
 			</div>
+
 	</div>
 
 	
+
+
+
+
+<!--begin wijmo menu-->
+    <link href="third-party/wijmo/jquery.wijmo.wijmenu.css" rel="stylesheet" type="text/css" />
+    <script src="third-party/wijmo/jquery.wijmo.wijutil.js" type="text/javascript"></script>
+    <script src="third-party/wijmo/jquery.wijmo.wijsuperpanel.js" type="text/javascript"></script>
+    <script src="third-party/wijmo/jquery.wijmo.wijmenu.js" type="text/javascript"></script>
+    
+    <script id="scriptInit" type="text/javascript">
+        $(document).ready(function () {
+            $("#menu1").wijmenu();
+            $(".wijmo-wijmenu-text").parent().bind("click", function () {
+                $("#menu1").wijmenu("hideAllMenus");
+            });
+            $(".wijmo-wijmenu-link").hover(function () {
+                $(this).addClass("ui-state-hover");
+            }, function () {
+                $(this).removeClass("ui-state-hover");
+            })
+        });
+    </script>
+    <style>
+    	.wijmo-container{
+    		display:block;
+    		clear:both;
+    		width:600px;
+
+    	}
+    </style>
+
+   
+	<div class="wijmo-container">
+	<p>&nbsp;</p>
+	 <h2>Wijmo Menu</h2>
+	 <p>This is an example of how to retheme one of the Wijmo components to match the Twitter Bootstrap theme. Whilst a menu component will be arriving to jQueryUI soon, you can find the menu in <a href="http://wijmo.com/widgets/wijmo-open/">Wijmo Open</a>.</p>
+            <ul id="menu1">
+            	<li><h3><a href="">Project Name</a></h3></li>
+                <li><a href="#">File</a>
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="#" class="wijmo-wijmenu-text">New</a><span class="wijmo-wijmenu-icon-right">Ctrl+N</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" class="wijmo-wijmenu-text">Open</a><span class="wijmo-wijmenu-icon-right">Ctrl+O</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" class="wijmo-wijmenu-text">Save</a><span class="wijmo-wijmenu-icon-right">Ctrl+S</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Edit</a>
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="#" class="wijmo-wijmenu-text">Undo</a><span class="wijmo-wijmenu-icon-right">Ctrl+Z</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li>
+                            <div>
+                                <a href="#" class="wijmo-wijmenu-text">Cut</a><span class="wijmo-wijmenu-icon-right">Ctrl+X</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" class="wijmo-wijmenu-text">Copy</a><span class="wijmo-wijmenu-icon-right">Ctrl+C</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" class="wijmo-wijmenu-text">Paste</a><span class="wijmo-wijmenu-icon-right">Ctrl+V</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                <a href="#" class="wijmo-wijmenu-text">About</a>
+                </li>
+            </ul>
+            <!-- End demo markup -->
+            </div>
+<!--end wijmo menu-->
+
+
+
+
+
 
 
 </div>
@@ -765,6 +972,13 @@ The date range picker plugin code is open source and available in a git reposito
 			</p>
 		</div>
 	<!--end static dialog-->
+
+
+
+
+	
+
+</div><!-- End demo -->
 
 
 	<div id="notice"></div>
