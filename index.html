@@ -123,6 +123,60 @@
 			$('.ui-dialog :button').blur();
 
 
+
+			//Vertical slider
+			$( "#slider-vertical" ).slider({
+				orientation: "vertical",
+				range: "min",
+				min: 0,
+				max: 100,
+				value: 60,
+				slide: function( event, ui ) {
+					$( "#amount" ).val( ui.value );
+				}
+			});
+			$( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
+
+
+			//color picker
+			function hexFromRGB(r, g, b) {
+					var hex = [
+						r.toString( 16 ),
+						g.toString( 16 ),
+						b.toString( 16 )
+					];
+					$.each( hex, function( nr, val ) {
+						if ( val.length === 1 ) {
+							hex[ nr ] = "0" + val;
+						}
+					});
+					return hex.join( "" ).toUpperCase();
+				}
+				function refreshSwatch() {
+					var red = $( "#red" ).slider( "value" ),
+						green = $( "#green" ).slider( "value" ),
+						blue = $( "#blue" ).slider( "value" ),
+						hex = hexFromRGB( red, green, blue );
+					$( "#swatch" ).css( "background-color", "#" + hex );
+				}
+				$(function() {
+					$( "#red, #green, #blue" ).slider({
+						orientation: "horizontal",
+						range: "min",
+						max: 255,
+						value: 127,
+						slide: refreshSwatch,
+						change: refreshSwatch
+					});
+					$( "#red" ).slider( "value", 255 );
+					$( "#green" ).slider( "value", 140 );
+					$( "#blue" ).slider( "value", 60 );
+				});
+
+
+
+
+
 				//split button
 				$( "#rerun" )
 			.button()
@@ -144,6 +198,10 @@
 			});
 		</script>
 
+
+
+
+
 		<style type="text/css">
 			/*demo page css*/
 			html{
@@ -158,8 +216,6 @@
 			  font-weight: normal;
 			  line-height: 18px;
 			  color: #404040;
-
-
 			}
 			.demoHeaders { margin-top: 2em; }
 			#dialog_link,#modal_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
@@ -231,7 +287,7 @@
 
 
 		<!-- Slider -->
-		<h2 class="demoHeaders">Slider</h2>
+		<h2 class="demoHeaders">Horizontal Slider</h2>
 		<div id="slider"></div>
 		<!--end slider-->
 
@@ -286,14 +342,22 @@
 		<!--end datepicker-->
 
 
-		<h2 class="demoHeaders">Other</h2>
-
+		<!-- Vertical Slider -->
+		<h2 class="demoHeaders">Vertical Slider</h2>
 		<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
 		<span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
 		Master volume
 		</p>
+		<p>
+			<label for="amount">Volume:</label>
+			<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
+		</p>
+
+		<div id="slider-vertical" style="height:200px;"></div>
 
 
+
+<!--end bar-->
 			</div>
 			
 			<div class="col_l">
@@ -643,8 +707,6 @@
 			});
 
 
-
-
 		});
 		</script>
 
@@ -653,7 +715,7 @@
 		<p>&nbsp;</p>
 		<div class="demo">
 
-			<h2>Dynamic Tabs</h2>
+			<h2 class="demoHeaders">Dynamic Tabs</h2>
 			<div id="dialog2" title="Tab data">
 				<form>
 					<fieldset class="ui-helper-reset">
@@ -683,25 +745,26 @@
 		</div><!-- End demo-description -->
 
 
-<!--start combinations-->
-<h2 class="demoHeaders">Combination examples</h2>
-	<div class="columnbox" style="height: 200px;">
-		<div id="tabs2">
-			<ul>
-				<li><a href="#tabs2-1">First</a></li>
-				<li><a href="#tabs2-2">Second</a></li>
-				<li><a href="#tabs2-3">Third</a></li>
-			</ul>
-			<div id="tabs2-1">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
-				<a href="#" id="sampleButton">Change</a>
+	<!--start combinations-->
+	<h2 class="demoHeaders">Combination examples</h2>
+		<div class="columnbox" style="height: 200px;">
+			<div id="tabs2">
+				<ul>
+					<li><a href="#tabs2-1">First</a></li>
+					<li><a href="#tabs2-2">Second</a></li>
+					<li><a href="#tabs2-3">Third</a></li>
+				</ul>
+				<div id="tabs2-1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
+					<a href="#" id="sampleButton">Change</a>
+				</div>
+				<div id="tabs2-2">Tab 2</div>
+				<div id="tabs2-3">Tab 3</div>
 			</div>
-			<div id="tabs2-2">Tab 2</div>
-			<div id="tabs2-3">Tab 3</div>
 		</div>
-	</div>
-<!--end combinations-->
-	<br />
+	<!--end combinations-->
+		<br />
+
 
 
 
@@ -713,7 +776,6 @@
 			$(function(){
 				  $('#rangeA').daterangepicker(); 
 				  $('#rangeBa, #rangeBb').daterangepicker(); 
-				  
 			 });
 		</script>
 		
@@ -740,42 +802,83 @@ The date range picker plugin code is open source and available in a git reposito
 
 		<!--end filament group datepicker-->
 
-<!--start toolbar-->
-	<style>
-	#toolbar {
-		padding: 10px 4px;
-	}
-	</style>
-	<script>
-	$(function() {
-		
-		$( "#play, #shuffle" ).button();
-		$( "#repeat" ).buttonset();
-	});
-	</script>
 
 
+		<!--color picker-->
+		<p>&nbsp;</p>
+		<p>
 
-<div class="demo">
+		<h2 class="demoHeaders">Simple Colorpicker</h2>
 
-<p>&nbsp;</p>
-<h2>Simple toolbar</h2>
-<p></p>
-<span id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
+		<style>
+			#red, #green, #blue {
+				float: left;
+				clear: left;
+				width: 300px;
+				margin: 15px;
+			}
+			#swatch {
+				width: 120px;
+				height: 100px;
+				margin-top: 18px;
+				margin-left: 350px;
+				background-image: none;
+			}
+			#red .ui-slider-range { background: #ef2929; }
+			#red .ui-slider-handle { border-color: #ef2929; }
+			#green .ui-slider-range { background: #8ae234; }
+			#green .ui-slider-handle { border-color: #8ae234; }
+			#blue .ui-slider-range { background: #729fcf; }
+			#blue .ui-slider-handle { border-color: #729fcf; }
+			#demo-frame > div.demo { padding: 10px !important; };
+			</style>
 
-	<input type="checkbox" id="play" /><label for="play">Play</label>
-	<input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
+		<div id="red"></div>
+		<div id="green"></div>
+		<div id="blue"></div>
+
+		<div id="swatch" class="ui-widget-content ui-corner-all"></div>
+
+		</p>
+		<p>&nbsp;</p>
+		<!--end color picker-->
+
 	
-	<span id="repeat">
-		<input type="radio" id="repeat0" name="repeat" checked="checked" /><label for="repeat0">No Repeat</label>
-		<input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
-		<input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
-	</span>
+		<!--start toolbar-->
+			<style>
+			#toolbar {
+				padding: 10px 4px;
+			}
+			</style>
+			<script>
+			$(function() {
+				
+				$( "#play, #shuffle" ).button();
+				$( "#repeat" ).buttonset();
+			});
+			</script>
 
-</span>
 
-</div><!-- End demo -->
-<!--end toolbar-->
+		<div class="demo">
+
+		<p>&nbsp;</p>
+		<h2 class="demoHeaders">Simple toolbar</h2>
+		<p></p>
+		<span id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
+
+			<input type="checkbox" id="play" /><label for="play">Play</label>
+			<input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
+			
+			<span id="repeat">
+				<input type="radio" id="repeat0" name="repeat" checked="checked" /><label for="repeat0">No Repeat</label>
+				<input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
+				<input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
+			</span>
+
+		</span>
+
+		</div><!-- End demo -->
+		<!--end toolbar-->
 
 
 			</div>
@@ -816,7 +919,7 @@ The date range picker plugin code is open source and available in a git reposito
    
 	<div class="wijmo-container">
 	<p>&nbsp;</p>
-	 <h2>Wijmo Menu</h2>
+	 <h2 class="demoHeaders">Wijmo Menu</h2>
 	 <p>This is an example of how to retheme one of the Wijmo components to match the Twitter Bootstrap theme. Whilst a menu component will be arriving to jQueryUI soon, you can find the menu in <a href="http://wijmo.com/widgets/wijmo-open/">Wijmo Open</a>.</p>
             <ul id="menu1">
             	<li><h3><a href="">Project Name</a></h3></li>
