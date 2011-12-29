@@ -1,1 +1,0 @@
-This project aims to create a new jQuery UI theme based on the Twitter Bootstrap pack. At present, most of the basic styles have been applied to jQuery UI components and I'm working on patching bugs with components such as the accordion. If anyone would like to help with the efforts, please do let me know!
