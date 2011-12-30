@@ -1152,11 +1152,14 @@ textarea,
 /***Wijmo Theming**/
 
 .wijmo-wijmenu{
-  padding: 0 0.3em;	
+  padding: 0 0.3em !important; 
 }
 
-.wijmo-wijmenu-item .wijmo-wijmenu-child{
+.wijmo-wijmenu .wijmo-wijmenu-parent .wijmo-wijmenu-child{
   padding: 0.3em 0;
+}
+
+.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child{
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -1165,12 +1168,18 @@ textarea,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.wijmo-wijmenu-child .wijmo-wijmenu-link{
-  padding: 0.4em 0.6em;
+.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-link{
+  padding: 0.4em 3%;
+  width: 94%;
 }
 
-.wijmo-wijmenu-item .wijmo-wijmenu-separator{
+.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-separator
+{
+  padding: 5px 0;
+  background-image: none;
   background-color: #222;
-  border-color: #444;
+  border-top: 1px solid #444;
+  border-bottom:0;
+  border-left:0;
+  border-right:0;
 }
-
