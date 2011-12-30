@@ -1148,3 +1148,29 @@ textarea,
    overflow: visible;
 }
 
+
+/***Wijmo Theming**/
+
+.wijmo-wijmenu{
+  padding: 0 0.3em;	
+}
+
+.wijmo-wijmenu-item .wijmo-wijmenu-child{
+  padding: 0.3em 0;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.wijmo-wijmenu-child .wijmo-wijmenu-link{
+  padding: 0.4em 0.6em;
+}
+
+.wijmo-wijmenu-item .wijmo-wijmenu-separator{
+  background-color: #222;
+  border-color: #444;
+}
+
