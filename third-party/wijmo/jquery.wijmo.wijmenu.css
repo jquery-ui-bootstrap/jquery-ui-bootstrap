@@ -90,12 +90,15 @@ border:0;
 	display:block;
 }
 
-.wijmo-wijmenu .wijmo-wijmenu-list .wijmo-wijmenu-item:hover{
+.wijmo-wijmenu .wijmo-wijmenu-list .wijmo-wijmenu-item .ui-state-active{
 	background:#303030;
   -webkit-border-radius: 0px; /* Saf3-4, iOS 1-3.2, Android <e;1.6 */
      -moz-border-radius: 0px; /* FF1-3.6 */
           border-radius: 0px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+}
 
+.wijmo-wijmenu .wijmo-wijmenu-list .wijmo-wijmenu-item .ui-state-active span{
+  color:#fff;
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-link {
@@ -142,6 +145,7 @@ color:gray;
 
 .wijmo-wijmenu-horizontal .wijmo-wijmenu-child .wijmo-wijmenu-link:hover{
 	background-color:#111;
+  color:#fff;
 }
 
 .wijmo-wijmenu-horizontal .wijmo-wijmenu-child .wijmo-wijmenu-link a{
@@ -149,9 +153,12 @@ color:gray;
 }
 
 .wijmo-wijmenu-horizontal .wijmo-wijmenu-child .wijmo-wijmenu-link a:hover{
-	color:white;
+	color:#fff;
 }
 
+.wijmo-wijmenu-link .ui-state-hover{
+  color:#fff;
+}
 
 
 .wijmo-wijmenu .wijmo-wijmenu-list .ui-widget-header {
