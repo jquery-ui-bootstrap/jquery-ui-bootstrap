@@ -78,8 +78,13 @@
 	border:1px solid #ccc;
 }
 
-.ui-daterangepicker li.ui-state-hover{
-	color:blue;
+.ui-daterangepicker .ui-state-hover{
+	background:#0064CD;
+	color:#fff;
+}
+
+.ui-daterangepicker .ui-state-hover a{
+	color:#fff;
 }
 
 .ui-daterangepicker .ui-widget{
@@ -101,9 +106,7 @@
 	float: right;
 	margin: .3em .2em;
 }
-.ui-daterangepicker li a:hover{
-	color:#0064CD;
-}
+
 .ui-daterangepicker .title-start, .ui-daterangepicker .title-end {
 	display: block;
 	margin: 0 0 .2em;

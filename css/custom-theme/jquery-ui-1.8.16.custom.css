@@ -496,7 +496,8 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
 .ui-menu .ui-menu-item a.ui-state-hover,
 .ui-menu .ui-menu-item a.ui-state-active {
 	font-weight: normal;
-  color:#0064CD;
+  background:#0064CD;
+  color:#fff
 }
 
 
