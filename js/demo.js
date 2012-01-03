@@ -11,7 +11,7 @@ $(function () {
     // Buttons
     $('button').button();
 
-    //Anchors, Submit
+    // Anchors, Submit
     $('.button,#sampleButton').button();
 
     // Buttonset
@@ -70,7 +70,7 @@ $(function () {
         $(this).removeClass('ui-state-hover');
     });
 
-    //Autocomplete
+    // Autocomplete
     var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
 
     $("#tags").autocomplete({
@@ -78,7 +78,7 @@ $(function () {
     });
 
 
-    //Dialogs
+    // Dialogs
     $("#dialog-message").dialog({
         autoOpen: false,
         modal: true,
@@ -90,12 +90,12 @@ $(function () {
     });
 
 
-    //Remove focus from buttons
+    // Remove focus from buttons
     $('.ui-dialog :button').blur();
 
 
 
-    //Vertical slider
+    // Vertical slider
     $("#slider-vertical").slider({
         orientation: "vertical",
         range: "min",
@@ -109,7 +109,7 @@ $(function () {
     $("#amount").val($("#slider-vertical").slider("value"));
 
 
-    //split button
+    // Split button
     $("#rerun").button().click(function () {
         alert("Running the last action");
     }).next().button({
@@ -125,150 +125,149 @@ $(function () {
 
 
 
-var $tab_title_input = $("#tab_title"),
-    $tab_content_input = $("#tab_content");
-var tab_counter = 2;
+    var $tab_title_input = $("#tab_title"),
+        $tab_content_input = $("#tab_content");
+    var tab_counter = 2;
 
-// tabs init with a custom tab template and an "add" callback filling in the content
-var $tabs = $("#tabs2").tabs({
-    tabTemplate: "<li><a href='#{href}'>#{label}</a></li>",
-    add: function (event, ui) {
-        var tab_content = $tab_content_input.val() || "Tab " + tab_counter + " content.";
-        $(ui.panel).append("<p>" + tab_content + "</p>");
-    }
-});
-
-// modal dialog init: custom buttons and a "close" callback reseting the form inside
-var $dialog = $("#dialog2").dialog({
-    autoOpen: false,
-    modal: true,
-    buttons: {
-        Add: function () {
-            addTab();
-            $(this).dialog("close");
-        },
-        Cancel: function () {
-            $(this).dialog("close");
+    // tabs init with a custom tab template and an "add" callback filling in the content
+    var $tabs = $("#tabs2").tabs({
+        tabTemplate: "<li><a href='#{href}'>#{label}</a></li>",
+        add: function (event, ui) {
+            var tab_content = $tab_content_input.val() || "Tab " + tab_counter + " content.";
+            $(ui.panel).append("<p>" + tab_content + "</p>");
         }
-    },
-    open: function () {
-        $tab_title_input.focus();
-    },
-    close: function () {
-        $form[0].reset();
-    }
-});
+    });
 
-// addTab form: calls addTab function on submit and closes the dialog
-var $form = $("form", $dialog).submit(function () {
-    addTab();
-    $dialog.dialog("close");
-    return false;
-});
-
-// actual addTab function: adds new tab using the title input from the form above
-
-
-function addTab() {
-    var tab_title = $tab_title_input.val() || "Tab " + tab_counter;
-    $tabs.tabs("add", "#tabs-" + tab_counter, tab_title);
-    tab_counter++;
-}
-
-// addTab button: just opens the dialog
-$("#add_tab").button().click(function () {
-    $dialog.dialog("open");
-});
-
-// close icon: removing the tab on click
-// note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
-$("#tabs span.ui-icon-close").live("click", function () {
-    var index = $("li", $tabs).index($(this).parent());
-    $tabs.tabs("remove", index);
-});
-
-//Filament datepicker
-$('#rangeA').daterangepicker();
-$('#rangeBa, #rangeBb').daterangepicker();
-
-
-//Dynamic tabs
-var $tab_title_input = $("#tab_title"),
-    $tab_content_input = $("#tab_content");
-var tab_counter = 2;
-
-// tabs init with a custom tab template and an "add" callback filling in the content
-var $tabs = $("#tabs2").tabs({
-    tabTemplate: "<li><a href='#{href}'>#{label}</a></li>",
-    add: function (event, ui) {
-        var tab_content = $tab_content_input.val() || "Tab " + tab_counter + " content.";
-        $(ui.panel).append("<p>" + tab_content + "</p>");
-    }
-});
-
-// modal dialog init: custom buttons and a "close" callback reseting the form inside
-var $dialog = $("#dialog2").dialog({
-    autoOpen: false,
-    modal: true,
-    buttons: {
-        Add: function () {
-            addTab();
-            $(this).dialog("close");
+    // modal dialog init: custom buttons and a "close" callback reseting the form inside
+    var $dialog = $("#dialog2").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            Add: function () {
+                addTab();
+                $(this).dialog("close");
+            },
+            Cancel: function () {
+                $(this).dialog("close");
+            }
         },
-        Cancel: function () {
-            $(this).dialog("close");
+        open: function () {
+            $tab_title_input.focus();
+        },
+        close: function () {
+            $form[0].reset();
         }
-    },
-    open: function () {
-        $tab_title_input.focus();
-    },
-    close: function () {
-        $form[0].reset();
+    });
+
+    // addTab form: calls addTab function on submit and closes the dialog
+    var $form = $("form", $dialog).submit(function () {
+        addTab();
+        $dialog.dialog("close");
+        return false;
+    });
+
+    // actual addTab function: adds new tab using the title input from the form above
+
+
+    function addTab() {
+        var tab_title = $tab_title_input.val() || "Tab " + tab_counter;
+        $tabs.tabs("add", "#tabs-" + tab_counter, tab_title);
+        tab_counter++;
     }
-});
 
-// addTab form: calls addTab function on submit and closes the dialog
-var $form = $("form", $dialog).submit(function () {
-    addTab();
-    $dialog.dialog("close");
-    return false;
-});
+    // addTab button: just opens the dialog
+    $("#add_tab").button().click(function () {
+        $dialog.dialog("open");
+    });
 
-// actual addTab function: adds new tab using the title input from the form above
+    // close icon: removing the tab on click
+    // note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
+    $("#tabs span.ui-icon-close").live("click", function () {
+        var index = $("li", $tabs).index($(this).parent());
+        $tabs.tabs("remove", index);
+    });
 
-
-function addTab() {
-    var tab_title = $tab_title_input.val() || "Tab " + tab_counter;
-    $tabs.tabs("add", "#tabs-" + tab_counter, tab_title);
-    tab_counter++;
-}
-
-// addTab button: just opens the dialog
-$("#add_tab").button().click(function () {
-    $dialog.dialog("open");
-});
-
-// close icon: removing the tab on click
-// note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
-$("#tabs span.ui-icon-close").live("click", function () {
-    var index = $("li", $tabs).index($(this).parent());
-    $tabs.tabs("remove", index);
-});
+    // Filament datepicker
+    $('#rangeA').daterangepicker();
+    $('#rangeBa, #rangeBb').daterangepicker();
 
 
+    // Dynamic tabs
+    var $tab_title_input = $("#tab_title"),
+        $tab_content_input = $("#tab_content");
+    var tab_counter = 2;
+
+    // tabs init with a custom tab template and an "add" callback filling in the content
+    var $tabs = $("#tabs2").tabs({
+        tabTemplate: "<li><a href='#{href}'>#{label}</a></li>",
+        add: function (event, ui) {
+            var tab_content = $tab_content_input.val() || "Tab " + tab_counter + " content.";
+            $(ui.panel).append("<p>" + tab_content + "</p>");
+        }
+    });
+
+    // modal dialog init: custom buttons and a "close" callback reseting the form inside
+    var $dialog = $("#dialog2").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            Add: function () {
+                addTab();
+                $(this).dialog("close");
+            },
+            Cancel: function () {
+                $(this).dialog("close");
+            }
+        },
+        open: function () {
+            $tab_title_input.focus();
+        },
+        close: function () {
+            $form[0].reset();
+        }
+    });
+
+    // addTab form: calls addTab function on submit and closes the dialog
+    var $form = $("form", $dialog).submit(function () {
+        addTab();
+        $dialog.dialog("close");
+        return false;
+    });
+
+    // actual addTab function: adds new tab using the title input from the form above
+
+    function addTab() {
+        var tab_title = $tab_title_input.val() || "Tab " + tab_counter;
+        $tabs.tabs("add", "#tabs-" + tab_counter, tab_title);
+        tab_counter++;
+    }
+
+    // addTab button: just opens the dialog
+    $("#add_tab").button().click(function () {
+        $dialog.dialog("open");
+    });
+
+    // close icon: removing the tab on click
+    // note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
+    $("#tabs span.ui-icon-close").live("click", function () {
+        var index = $("li", $tabs).index($(this).parent());
+        $tabs.tabs("remove", index);
+    });
 
 
-//Wijmo
-$("#menu1").wijmenu();
-$(".wijmo-wijmenu-text").parent().bind("click", function () {
-    $("#menu1").wijmenu("hideAllMenus");
-});
-$(".wijmo-wijmenu-link").hover(function () {
-    $(this).addClass("ui-state-hover");
-}, function () {
-    $(this).removeClass("ui-state-hover");
-});
 
-//Toolbar
-$("#play, #shuffle").button();
-$("#repeat").buttonset();
+
+    // Wijmo menu
+    $("#menu1").wijmenu();
+    $(".wijmo-wijmenu-text").parent().bind("click", function () {
+        $("#menu1").wijmenu("hideAllMenus");
+    });
+    $(".wijmo-wijmenu-link").hover(function () {
+        $(this).addClass("ui-state-hover");
+    }, function () {
+        $(this).removeClass("ui-state-hover");
+    });
+
+    //Toolbar
+    $("#play, #shuffle").button();
+    $("#repeat").buttonset();
