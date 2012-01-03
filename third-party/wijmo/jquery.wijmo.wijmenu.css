@@ -384,3 +384,8 @@ float:left;
 display:inline-block;
 float:right;
 }
+
+/*IE fixes*/
+.wijmo-wijmenu .ui-state-default,.wijmo-wijmenu .ui-state-default a:active, .wijmo-wijmenu .ui-state-default a{
+  filter:0;
+}
