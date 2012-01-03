@@ -1150,9 +1150,55 @@ textarea,
 
 
 /***Wijmo Theming**/
+.wijmo-wijmenu {
+  background-color: #222;
+  background-color: #222222;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#333333), to(#222222));
+  background-image: -moz-linear-gradient(top, #333333, #222222);
+  background-image: -ms-linear-gradient(top, #333333, #222222);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+  background-image: -o-linear-gradient(top, #333333, #222222);
+  background-image: linear-gradient(top, #333333, #222222);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 
-.wijmo-wijmenu{
-  padding: 0 0.3em !important; 
+}
+
+.wijmo-wijmenu .ui-state-default {
+    box-shadow: none;
+    color:#BFBFBF;
+}
+.wijmo-wijmenu .ui-state-default .wijmo-wijmenu-text 
+{    
+    color:#BFBFBF;
+}
+.wijmo-wijmenu .ui-state-hover {
+  background: #444;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.wijmo-wijmenu .ui-state-hover .wijmo-wijmenu-text {
+    color:#ffffff;
+}
+
+.wijmo-wijmenu h3 a{
+ float: left;
+  display: block;
+  padding: 0px 20px 0px;
+  margin-left: -20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1;
+  text-decoration:none;
+}
+
+.wijmo-wijmenu .ui-widget-header{
+	border:0px;
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-parent .wijmo-wijmenu-child{
@@ -1160,6 +1206,8 @@ textarea,
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child{
+  background: #333;
+  border:0;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -1168,9 +1216,22 @@ textarea,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child .ui-state-hover {
+  background: #191919;
+}
+
 .wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-link{
   padding: 0.4em 3%;
   width: 94%;
+}
+
+
+
+
+.wijmo-wijmenu-horizontal .wijmo-wijmenu-child .wijmo-wijmenu-link{
+  -webkit-border-radius: 0px; /* Saf3-4, iOS 1-3.2, Android <e;1.6 */
+     -moz-border-radius: 0px; /* FF1-3.6 */
+          border-radius: 0px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-separator
