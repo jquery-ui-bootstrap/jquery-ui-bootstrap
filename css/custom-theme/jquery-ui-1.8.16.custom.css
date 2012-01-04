@@ -1089,8 +1089,6 @@ input[type="password"],
 textarea,
 .uneditable-input {
   display: inline-block;
-  width: 210px;
-  height: 18px;
   padding: 4px;
   font-size: 13px;
   line-height: 18px;
@@ -1100,6 +1098,7 @@ textarea,
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+
 
 
 /**Toolbar**/

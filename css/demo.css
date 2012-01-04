@@ -91,3 +91,12 @@ ul#icons span.ui-icon {
 	line-height:18px;
 	margin-bottom:18px;
 }
+
+input[type="text"],
+input[type="password"],
+.ui-autocomplete-input,
+textarea,
+.uneditable-input{
+  width: 210px;
+  height: 18px;
+}

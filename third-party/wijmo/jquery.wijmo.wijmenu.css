@@ -308,50 +308,52 @@ margin-bottom:3px;
 }
 
 .wijmo-wijmenu-breadcrumb li {
-float:left;
-list-style:none;
-font-size:.9em;
-margin:0;
-padding:0 .2em;
+  float:left;
+  list-style:none;
+  font-size:.9em;
+  margin:0;
+  padding:0 .2em;
 }
 
 .wijmo-wijmenu-breadcrumb li.wijmo-wijmenu-prev-list,.wijmo-wijmenu-breadcrumb li.wijmo-wijmenu-current-crumb {
-clear:left;
-float:none;
-opacity:1;
+  clear:left;
+  float:none;
+  opacity:1;
 }
 
 .wijmo-wijmenu-breadcrumb li.wijmo-wijmenu-current-crumb {
-padding-top:.2em;
+  padding-top:.2em;
 }
 
 .wijmo-wijmenu-footer a:link,.wijmo-wijmenu-footer a:visited {
-float:left;
-width:100%;
-text-decoration:none;
+  float:left;
+  width:100%;
+  text-decoration:none;
 }
 
 .wijmo-wijmenu-footer a span {
-float:left;
-cursor:pointer;
+  float:left;
+  cursor:pointer;
 }
 
 .wijmo-wijmenu-breadcrumb .wijmo-wijmenu-prev-list a:link,.wijmo-wijmenu-breadcrumb .wijmo-wijmenu-prev-list a:visited,.wijmo-wijmenu-breadcrumb .wijmo-wijmenu-prev-list a:hover,.wijmo-wijmenu-breadcrumb .wijmo-wijmenu-prev-list a:active {
-background-image:none;
-text-decoration:none;
+  background-image:none;
+  text-decoration:none;
 }
 
 .wijmo-wijmenu-breadcrumb .wijmo-wijmenu-prev-list a {
-float:left;
-padding-right:.4em;
+  float:left;
+  padding-right:.4em;
 }
 
 .wijmo-wijmenu-breadcrumb .wijmo-wijmenu-current-crumb a:link,.wijmo-wijmenu-breadcrumb .wijmo-wijmenu-current-crumb a:visited,.wijmo-wijmenu-breadcrumb .wijmo-wijmenu-current-crumb a:hover,.wijmo-wijmenu-breadcrumb .wijmo-wijmenu-current-crumb a:active {
-display:block;
-background-image:none;
-font-size:1.3em;
-text-decoration:none;
+  display:block;
+  background-image:none;
+  font-size:1.3em;
+  text-decoration:none;
 }
+
+
 
 .wijmo-wijmenu-text{
 	color:#BFBFBF;
@@ -368,24 +370,29 @@ text-decoration:none;
 
 
 .wijmo-wijmenu .wijmo-wijmenu-parent .ui-icon,.wijmo-wijmenu-horizontal .wijmo-wijmenu-child .ui-icon,.wijmo-wijmenu-ipod .ui-icon-triangle-1-e {
-float:right;
+  float:right;
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-text,.wijmo-wijmenu-horizontal .wijmo-wijmenu-parent .ui-icon,.wijmo-wijmenu-breadcrumb a,.wijmo-wijmenu-breadcrumb span,.wijmo-wijmenu-breadcrumb .wijmo-wijmenu-prev-list a .ui-icon {
-float:left;
+  float:left;
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-link .wijmo-wijmenu-icon-left {
-display:inline-block;
-float:left;
+  display:inline-block;
+  float:left;
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-link .wijmo-wijmenu-icon-right {
-display:inline-block;
-float:right;
+  display:inline-block;
+  float:right;
+}
+
+.wijmo-wijmenu .wijmo-wijmenu-link .wijmo-wijmenu-icon-right{
+  text-shadow:none;
 }
 
 /*IE fixes*/
 .wijmo-wijmenu .ui-state-default,.wijmo-wijmenu .ui-state-default a:active, .wijmo-wijmenu .ui-state-default a{
   filter:0;
 }
+
