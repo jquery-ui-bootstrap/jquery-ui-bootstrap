@@ -120,10 +120,10 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
 
 
 .ui-state-highlight p, .ui-state-error p, .ui-state-default p{
-	font-size: 13px;
-	font-weight: normal;
-	line-height: 18px;
-	margin:7px 15px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    margin:7px 15px;
 }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {
 
@@ -469,33 +469,33 @@ border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_
  * http://docs.jquery.com/UI/Menu#theming
  */
 .ui-menu {
-	list-style:none;
-	padding: 2px;
-	margin: 0;
-	display:block;
-	float: left;
+    list-style:none;
+    padding: 2px;
+    margin: 0;
+    display:block;
+    float: left;
 }
 .ui-menu .ui-menu {
-	margin-top: -3px;
+    margin-top: -3px;
 }
 .ui-menu .ui-menu-item {
-	margin:0;
-	padding: 0;
-	zoom: 1;
-	float: left;
-	clear: left;
-	width: 100%;
+    margin:0;
+    padding: 0;
+    zoom: 1;
+    float: left;
+    clear: left;
+    width: 100%;
 }
 .ui-menu .ui-menu-item a {
-	text-decoration:none;
-	display:block;
-	padding:.2em .4em;
-	line-height:1.5;
-	zoom:1;
+    text-decoration:none;
+    display:block;
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
 }
 .ui-menu .ui-menu-item a.ui-state-hover,
 .ui-menu .ui-menu-item a.ui-state-active {
-	font-weight: normal;
+    font-weight: normal;
   color:#0064CD;
 }
 
@@ -1150,8 +1150,8 @@ textarea,
 
 
 /***Wijmo Theming**/
-div.wijmo-wijmenu {
-    padding:0;
+div.wijmo-wijmenu{
+  padding:0 20px;
   background-color: #222;
   background-color: #222222;
   background-repeat: repeat-x;
@@ -1168,46 +1168,59 @@ div.wijmo-wijmenu {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
-.wijmo-wijmenu .ui-state-default {
+.wijmo-wijmenu .ui-state-default{
     box-shadow: none;
     color:#BFBFBF;
 }
-.wijmo-wijmenu .ui-state-default .wijmo-wijmenu-text 
-{    
+.wijmo-wijmenu .ui-state-default .wijmo-wijmenu-text{    
     color:#BFBFBF;
 }
-.wijmo-wijmenu .ui-state-hover {
+.wijmo-wijmenu .ui-state-hover{
   background: #444;
   background: rgba(255, 255, 255, 0.05);
 }
 
-.wijmo-wijmenu .ui-state-hover .wijmo-wijmenu-text {
+.wijmo-wijmenu .ui-state-hover .wijmo-wijmenu-text{
     color:#ffffff;
 }
 
+div.wijmo-wijmenu .ui-widget-header h3{
+    position: relative;
+    margin:0;
+    padding:0;
+}
+
 .wijmo-wijmenu h3 a{
- float: left;
-  display: block;
-  padding: 0px 20px 0px;
-  margin-left: -20px;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 1;
-  text-decoration:none;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+    margin-left: -20px;
+    padding: 8px 20px 12px;
+}
+
+.wijmo-wijmenu h3 a:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .wijmo-wijmenu .ui-widget-header{
-	border:0px;
+    border:0px;
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-parent .wijmo-wijmenu-child{
   padding: 0.3em 0;
 }
 
-.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child{
+div.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child{
   background: #333;
   border:0;
+  margin:0;
+  padding: 6px 0;
+  width:160px;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -1216,28 +1229,37 @@ div.wijmo-wijmenu {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+div.wijmo-wijmenu .wijmo-wijmenu-item{
+    margin:0;
+    border:0;
+}
 
-.wijmo-wijmenu a.wijmo-wijmenu-link      
-{
+.wijmo-wijmenu a.wijmo-wijmenu-link{
     margin:0;
     line-height: 19px;
-    padding: 10px 10px 11px 10px;
+    padding: 10px 10px 11px;
+    border:0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
     border-radius:0;
 }
-.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-link{
-  padding: 0.4em 3%;
-  width: 94%;
+
+div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-link{
+  display:block;
+  float:none;
+  padding: 4px 15px;
+  width:auto;
 }
 
-
+div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text
+{
+  float:none;
+}
 .wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child .ui-state-hover {
   background: #191919;
 }
 
-.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-separator
-{
+.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-separator{
   padding: 5px 0;
   background-image: none;
   background-color: #222;
@@ -1247,16 +1269,29 @@ div.wijmo-wijmenu {
   border-right:0;
 }
 
-.wijmo-wijmenu input {
-    -moz-transition: none 0s ease 0s;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 1px solid #111111;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.25);
-    color: rgba(255, 255, 255, 0.75);
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+.wijmo-wijmenu .wijmo-wijmenu-item input {
+  -moz-transition: none 0s ease 0s;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #111111;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 1;
-    margin: 5px 0 0;
+    margin: 5px 10px 0 10px;
     padding: 4px 9px;
-    width:150px;
+    width:100px;
+}
+.wijmo-wijmenu .wijmo-wijmenu-item input:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
+}
+.wijmo-wijmenu .wijmo-wijmenu-item input:focus {
+    background-color: #FFFFFF;
+    border: 0 none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    color: #404040;
+    outline: 0 none;
+    padding: 5px 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
 }
