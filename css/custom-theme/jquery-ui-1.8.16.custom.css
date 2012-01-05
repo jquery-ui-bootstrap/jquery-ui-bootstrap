@@ -1150,6 +1150,7 @@ textarea,
 
 
 /***Wijmo Theming**/
+
 div.wijmo-wijmenu{
   padding:0 20px;
   background-color: #222;
@@ -1169,46 +1170,48 @@ div.wijmo-wijmenu{
 }
 
 .wijmo-wijmenu .ui-state-default{
-    box-shadow: none;
-    color:#BFBFBF;
+  box-shadow: none;
+  color:#BFBFBF;
 }
+
 .wijmo-wijmenu .ui-state-default .wijmo-wijmenu-text{    
-    color:#BFBFBF;
+  color:#BFBFBF;
 }
+
 .wijmo-wijmenu .ui-state-hover{
   background: #444;
   background: rgba(255, 255, 255, 0.05);
 }
 
 .wijmo-wijmenu .ui-state-hover .wijmo-wijmenu-text{
-    color:#ffffff;
+  color:#ffffff;
 }
 
 div.wijmo-wijmenu .ui-widget-header h3{
-    position: relative;
-    margin:0;
-    padding:0;
+  position: relative;
+  margin:0;
+  padding:0;
 }
 
 .wijmo-wijmenu h3 a{
-    color: #FFFFFF;
-    display: block;
-    float: left;
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 1;
-    margin-left: -20px;
-    padding: 8px 20px 12px;
+  color: #FFFFFF;
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1;
+  margin-left: -20px;
+  padding: 8px 20px 12px;
 }
 
 .wijmo-wijmenu h3 a:hover{
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #FFFFFF;
-    text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .wijmo-wijmenu .ui-widget-header{
-    border:0px;
+  border:0px;
 }
 
 .wijmo-wijmenu .wijmo-wijmenu-parent .wijmo-wijmenu-child{
@@ -1235,13 +1238,13 @@ div.wijmo-wijmenu .wijmo-wijmenu-item{
 }
 
 .wijmo-wijmenu a.wijmo-wijmenu-link{
-    margin:0;
-    line-height: 19px;
-    padding: 10px 10px 11px;
-    border:0;
+  margin:0;
+  line-height: 19px;
+  padding: 10px 10px 11px;
+  border:0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-    border-radius:0;
+  border-radius:0;
 }
 
 div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-link{
@@ -1255,6 +1258,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text
 {
   float:none;
 }
+
 .wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child .ui-state-hover {
   background: #191919;
 }
@@ -1277,21 +1281,23 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.75);
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 1;
-    margin: 5px 10px 0 10px;
-    padding: 4px 9px;
-    width:100px;
+  line-height: 1;
+  margin: 5px 10px 0 10px;
+  padding: 4px 9px;
+  width:100px;
 }
+
 .wijmo-wijmenu .wijmo-wijmenu-item input:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
 }
+
 .wijmo-wijmenu .wijmo-wijmenu-item input:focus {
-    background-color: #FFFFFF;
-    border: 0 none;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-    color: #404040;
-    outline: 0 none;
-    padding: 5px 10px;
-    text-shadow: 0 1px 0 #FFFFFF;
+  background-color: #FFFFFF;
+  border: 0 none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  color: #404040;
+  outline: 0 none;
+  padding: 5px 10px;
+  text-shadow: 0 1px 0 #FFFFFF;
 }
