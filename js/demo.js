@@ -257,16 +257,16 @@ $(function () {
 
 
 
-    // Wijmo menu
-    $("#menu1").wijmenu();
-    $(".wijmo-wijmenu-text").parent().bind("click", function () {
-        $("#menu1").wijmenu("hideAllMenus");
-    });
-    $(".wijmo-wijmenu-link").hover(function () {
-        $(this).addClass("ui-state-hover");
-    }, function () {
-        $(this).removeClass("ui-state-hover");
-    });
+    //Wijmo
+    $("#menu1").wijmenu({ trigger: ".wijmo-wijmenu-item", triggerEvent: "click" });
+    //$(".wijmo-wijmenu-text").parent().bind("click", function () {
+    //    $("#menu1").wijmenu("hideAllMenus");
+    //});
+    //$(".wijmo-wijmenu-link").hover(function () {
+    //    $(this).addClass("ui-state-hover");
+    //}, function () {
+    //    $(this).removeClass("ui-state-hover");
+    //});
 
     //Toolbar
     $("#play, #shuffle").button();
