@@ -2474,3 +2474,18 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
+
+/* WIJMO MENU */
+/* Cancel top-left and top-right rounded border */
+.wijmo-wijmenu-list {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+/* Fix Padding for dropdown ul li elements */
+.wijmo-wijmenu-parent .wijmo-wijmenu-item div.wijmo-wijmenu-link {
+  width: 93.5%;
+}
