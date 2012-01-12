@@ -12,7 +12,7 @@
  */
 $.fn.customFileInput = function(){
 	//Define properties
-	var buttonPosition		= arguments[0].position 			|| 'right';
+	var button_button_position		= arguments[0].button_position 			|| 'right';
 	var extra_class			= arguments[0].extra_class			|| 'span3';
 	var feedback_text		= arguments[0].feedback_text		|| 'No file selected...';
 	var button_text			= arguments[0].button_text			|| 'Browse';
