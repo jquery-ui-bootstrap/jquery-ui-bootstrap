@@ -828,15 +828,19 @@ text-indent: 9999px;
   border-style: solid;
   border-width: 0 0 1px;}
 .ui-tabs { position: relative; padding: .2em; zoom: 1; border:0px;} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-.ui-tabs .ui-tabs-nav li:hover{
-  text-decoration: none;
+
+
+
+.ui-tabs .ui-tabs-nav li:hover, .ui-tabs .ui-tabs-nav li a:hover{
+  background:whiteSmoke;
+  border-bottom:1px solid #ddd;
+  padding-bottom:0px;
+   color:#00438A;
 }
 
 
 .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; border-bottom:1px solid #DDD; }
-.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px;   padding: 0; white-space: nowrap; background:none; border:0px;
-
-
+.ui-tabs .ui-tabs-nav li {  text-decoration: none; list-style: none; float: left; position: relative; top: 1px; padding: 0px 0px 1px 0px; white-space: nowrap; background:none; border:0px; 
 
 }
 
@@ -860,7 +864,7 @@ text-indent: 9999px;
 
 
  }
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 0px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 0px; outline:none;}
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
 
@@ -869,9 +873,15 @@ text-indent: 9999px;
   border-bottom-color: #ffffff;
   cursor: default;
   color:gray;
-
-
+  outline:none;
 }
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected:hover{
+  background:#ffffff;
+  outline:none;
+}
+
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
 cursor: pointer;
 color:#0069D6;
@@ -890,6 +900,7 @@ margin-bottom:-1px;
 .ui-tabs .ui-tabs-nav li{
   filter:none;
 }
+
 
 
 /*
