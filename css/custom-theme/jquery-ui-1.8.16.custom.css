@@ -1219,7 +1219,7 @@ div.wijmo-wijmenu{
 
 div.wijmo-wijmenu .ui-widget-header h3{
   position: relative;
-  margin:0;
+  margin-top:1px;
   padding:0;
 }
 
@@ -1336,4 +1336,13 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text
 
 .wijmo-wijmenu .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   text-shadow:none;
+}
+
+
+.wijmo-wijmenu .ui-state-default{
+  box-shadow: none;
+  color:#BFBFBF;
+  filter: none;
+}
+
 }
