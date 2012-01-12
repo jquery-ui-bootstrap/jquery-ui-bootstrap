@@ -18,6 +18,14 @@ $(function () {
     $('#radioset').buttonset();
     $("#format").buttonset();
 
+	// File input
+	$('#file').customFileInput({
+		position : 'left'
+	});
+	
+	$('#file2').customFileInput({
+		position : 'left'
+	});
 
     // Dialog
     $('#dialog').dialog({
