@@ -12,7 +12,7 @@
  */
 $.fn.customFileInput = function(){
 	//Define properties
-	var button_button_position		= arguments[0].button_position 			|| 'right';
+	var button_position		= arguments[0].position 			|| 'right';
 	var extra_class			= arguments[0].extra_class			|| 'span3';
 	var feedback_text		= arguments[0].feedback_text		|| 'No file selected...';
 	var button_text			= arguments[0].button_text			|| 'Browse';
@@ -69,13 +69,13 @@ $.fn.customFileInput = function(){
 		});
 		
 		//create custom control container
-		var upload = $('<div class="input-' + (('right' === buttonPosition)?'append':'prepend') + ' customfile">');
+		var upload = $('<div class="input-' + (('right' === button_position)?'append':'prepend') + ' customfile">');
 		//create custom control feedback
 		var uploadFeedback = $('<span class="customfile-feedback ' + extra_class + '" aria-hidden="true">' + feedback_text + '</span>').appendTo(upload);
 		//create custom control button
-		var uploadButton = $('<span class="add-on customfile-button" aria-hidden="true">' + button_text + '</span>').css({ float : buttonPosition });
+		var uploadButton = $('<span class="add-on customfile-button" aria-hidden="true">' + button_text + '</span>').css({ float : button_position });
 		
-		if ('right' === buttonPosition) {
+		if ('right' === button_position) {
 			uploadButton.insertAfter(uploadFeedback);
 		} else uploadButton.insertBefore(uploadFeedback);
 	
