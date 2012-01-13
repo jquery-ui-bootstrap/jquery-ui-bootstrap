@@ -18,9 +18,6 @@ $.fn.customFileInput = function(){
 	var button_text			= arguments[0].button_text			|| 'Browse';
 	var button_change_text	= arguments[0].button_change_text	|| 'Change';
 	
-	//Pass click event to original input file
-	function clickInput() { fileInput.click(); }
-	
 	//apply events and styles for file input element
 	var fileInput = $(this)
 		.addClass('customfile-input') //add class for CSS
@@ -82,7 +79,7 @@ $.fn.customFileInput = function(){
 	//match disabled state
 	if(fileInput.is('[disabled]')){
 		fileInput.trigger('disable');
-	} else upload.click(clickInput);
+	} else upload.click(function () { fileInput.trigger('click'); });
 		
 	
 	//insert original input file in dom, css if hide it outside of screen

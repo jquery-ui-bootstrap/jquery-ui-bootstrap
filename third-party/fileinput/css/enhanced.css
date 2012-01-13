@@ -1,6 +1,4 @@
 /*custom upload elements*/
-/*.customfile-input { position: absolute; cursor: pointer; height: 28px; background: transparent; border: 0; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); z-index: 999;  } */
-
 .customfile-input { position: absolute; left: -999em; background: transparent; border: 0; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
 
 .customfile { cursor: pointer; width: auto; display: inline-block; padding: 2px; position: relative; }
@@ -8,8 +6,11 @@
 .customfile.input-prepend .customfile-feedback { border-radius: 0 3px 3px 0; }
 .customfile-disabled { opacity: .5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); cursor: default;  }
 .customfile-feedback { border: 1px solid #CCCCCC; color: #808080; display: inline-block; font-size: 13px; line-height: 18px; padding: 4px; }
+/* IE7 hack */
+*+html .customfile-feedback { margin-top: 1px;}
+/* EO Hack */
 .customfile-feedback-populated { padding-left: 25px; background: url(../images/icon-generic.gif) 5px center no-repeat; white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; }
-.customfile-button {}
+.customfile-button { /* IE7 and bellow hack*/ *margin-top: -1px; /* EO Hack */}
 .customfile:hover .customfile-button, .customfile-focus .customfile-button  { color: #333; background: none repeat scroll 0 0 #A9DBA9; border-color: #46A546; }
 .customfile-focus .customfile-button {}
 
