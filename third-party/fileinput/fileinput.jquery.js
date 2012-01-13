@@ -10,13 +10,15 @@
 /**
  * All credits go to the Author of this file, I just did some customization
  */
-$.fn.customFileInput = function(){
-	//Define properties
-	var button_position		= arguments[0].position 			|| 'right';
-	var extra_class			= arguments[0].extra_class			|| 'span3';
-	var feedback_text		= arguments[0].feedback_text		|| 'No file selected...';
-	var button_text			= arguments[0].button_text			|| 'Browse';
-	var button_change_text	= arguments[0].button_change_text	|| 'Change';
+$.fn.customFileInput = function(options){
+	//Define settings
+	var settings	= jQuery.extend({
+		button_position 	: 'right',
+		extra_class			: 'span3',
+		feedback_text		: 'No file selected...',
+		button_text			: 'Browse',
+		button_change_text	: 'Change'
+	}, options);
 	
 	//apply events and styles for file input element
 	var fileInput = $(this)
@@ -56,7 +58,7 @@ $.fn.customFileInput = function(){
 				.data('fileExt', fileExt) //store file extension for class removal on next change
 				.addClass('customfile-feedback-populated'); //add class to show populated state
 			//change text of button	
-			uploadButton.text(button_change_text);	
+			uploadButton.text(settings.button_change_text);	
 		})
 		.click(function(){ //for IE and Opera, make sure change fires after choosing a file, using an async callback
 			fileInput.data('val', fileInput.val());
@@ -66,13 +68,13 @@ $.fn.customFileInput = function(){
 		});
 		
 		//create custom control container
-		var upload = $('<div class="input-' + (('right' === button_position)?'append':'prepend') + ' customfile">');
+		var upload = $('<div class="input-' + (('right' === settings.button_position)?'append':'prepend') + ' customfile">');
 		//create custom control feedback
-		var uploadFeedback = $('<span class="customfile-feedback ' + extra_class + '" aria-hidden="true">' + feedback_text + '</span>').appendTo(upload);
+		var uploadFeedback = $('<span class="customfile-feedback ' + settings.extra_class + '" aria-hidden="true">' + settings.feedback_text + '</span>').appendTo(upload);
 		//create custom control button
-		var uploadButton = $('<span class="add-on customfile-button" aria-hidden="true">' + button_text + '</span>').css({ float : button_position });
+		var uploadButton = $('<span class="add-on customfile-button" aria-hidden="true">' + settings.button_text + '</span>').css({ float : settings.button_position });
 		
-		if ('right' === button_position) {
+		if ('right' === settings.button_position) {
 			uploadButton.insertAfter(uploadFeedback);
 		} else uploadButton.insertBefore(uploadFeedback);
 	

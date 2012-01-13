@@ -20,7 +20,7 @@ $(function () {
 
 	// File input
 	$('#file').customFileInput({
-		position : 'left'
+		button_position : 'left'
 	});
 
     // Dialog
@@ -124,6 +124,7 @@ $(function () {
     }).click(function () {
         alert("Could display a menu to select an action");
     }).parent().buttonset();
+
 });
 
 
