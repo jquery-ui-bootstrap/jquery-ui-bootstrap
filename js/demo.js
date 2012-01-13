@@ -18,6 +18,10 @@ $(function () {
     $('#radioset').buttonset();
     $("#format").buttonset();
 
+	// File input
+	$('#file').customFileInput({
+		button_position : 'left'
+	});
 
     // Dialog
     $('#dialog').dialog({
@@ -120,6 +124,7 @@ $(function () {
     }).click(function () {
         alert("Could display a menu to select an action");
     }).parent().buttonset();
+
 });
 
 
