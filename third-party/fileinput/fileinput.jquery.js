@@ -11,17 +11,21 @@
  * All credits go to the Author of this file, I just did some customization
  */
 $.fn.customFileInput = function(options){
+	
+	//Get current element
+	var fileInput = $(this);
+	
 	//Define settings
 	var settings	= jQuery.extend({
 		button_position 	: 'right',
-		extra_class			: 'span3',
+		classes				: fileInput.attr('class'),
 		feedback_text		: 'No file selected...',
 		button_text			: 'Browse',
 		button_change_text	: 'Change'
 	}, options);
 	
 	//apply events and styles for file input element
-	var fileInput = $(this)
+	fileInput
 		.addClass('customfile-input') //add class for CSS
 		.focus(function(){
 			upload.addClass('customfile-focus'); 
@@ -70,7 +74,7 @@ $.fn.customFileInput = function(options){
 		//create custom control container
 		var upload = $('<div class="input-' + (('right' === settings.button_position)?'append':'prepend') + ' customfile">');
 		//create custom control feedback
-		var uploadFeedback = $('<span class="customfile-feedback ' + settings.extra_class + '" aria-hidden="true">' + settings.feedback_text + '</span>').appendTo(upload);
+		var uploadFeedback = $('<span class="customfile-feedback ' + settings.classes + '" aria-hidden="true">' + settings.feedback_text + '</span>').appendTo(upload);
 		//create custom control button
 		var uploadButton = $('<span class="add-on customfile-button" aria-hidden="true">' + settings.button_text + '</span>').css({ float : settings.button_position });
 		
