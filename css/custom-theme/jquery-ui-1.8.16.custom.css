@@ -1,8 +1,13 @@
-/*
- * jQuery UI Bootstrap
- * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
- * Released under MIT/GPL.
+/*!
+ * jQuery UI Bootstrap (0.22)
+ * http://addyosmani.github.com/jquery-ui-bootstrap
+ *
+ * Copyright 2012, Addy Osmani
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Portions copyright jQuery UI & Twitter Bootstrap
  */
+
 
 /* Layout helpers
 ----------------------------------*/
@@ -599,20 +604,7 @@
 }
 
 .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
-button.ui-button-icon-only { 
-  /*
-    width: 2.4em;
-    margin-right: -.3em;
-    display: inline-block;
-position: relative;
-margin-right: .1em;
-text-decoration: none !important;
-cursor: pointer;
-text-align: center;
-zoom: 1;
-overflow: visible;
-*/
-   } /* button elements seem to need a little more width */
+button.ui-button-icon-only { } /* button elements seem to need a little more width */
 .ui-button-icons-only { width: 3.4em; }
 button.ui-button-icons-only { width: 3.7em; }
 
@@ -696,7 +688,6 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 .ui-dialog .ui-dialog-title {
   float: left;
-  /*margin: .1em 16px .1em 0; */
   color:#404040;
   font-weight:bold;
   margin-top:5px;
@@ -705,26 +696,27 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 }
 .ui-dialog .ui-dialog-titlebar-close {
-position: absolute;
-right: .3em;
-top: 50%;
-width: 19px;
-margin: -10px 0 0 0;
-padding: 1px;
-height: 18px;
-font-size: 20px;
-font-weight: bold;
-line-height: 13.5px;
-text-shadow: 0 1px 0 #ffffff;
-filter: alpha(opacity=25);
--khtml-opacity: 0.25;
--moz-opacity: 0.25;
-opacity: 0.25;
+  position: absolute;
+  right: .3em;
+  top: 50%;
+  width: 19px;
+  margin: -10px 0 0 0;
+  padding: 1px;
+  height: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 13.5px;
+  text-shadow: 0 1px 0 #ffffff;
+  filter: alpha(opacity=25);
+  -khtml-opacity: 0.25;
+  -moz-opacity: 0.25;
+  opacity: 0.25;
 }
+
 .ui-dialog .ui-dialog-titlebar-close span { 
-display: block; 
-margin: 1px;
-text-indent: 9999px;
+  display: block; 
+  margin: 1px;
+  text-indent: 9999px;
 }
 
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0;   filter: alpha(opacity=90);
@@ -758,7 +750,7 @@ text-indent: 9999px;
 .ui-draggable .ui-dialog-titlebar { cursor: move; }
 
 .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button{
-      color: #ffffff;
+  color: #ffffff;
   background-color: #0064cd;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
@@ -786,9 +778,7 @@ text-indent: 9999px;
 .ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; }
 .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0;
 
-
-/*this can be removed if ui-widget-header is blue*/
-    color: #ffffff;
+  color: #ffffff;
   background-color: #0064cd;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
@@ -828,7 +818,6 @@ text-indent: 9999px;
   border-style: solid;
   border-width: 0 0 1px;}
 .ui-tabs { position: relative; padding: .2em; zoom: 1; border:0px;} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-
 
 
 .ui-tabs .ui-tabs-nav li:hover, .ui-tabs .ui-tabs-nav li a:hover{
@@ -882,15 +871,8 @@ text-indent: 9999px;
   outline:none;
 }
 
-.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
-cursor: pointer;
-color:#0069D6;
-background:none;
-font-weight:normal;
-margin-bottom:-1px;
-
-
-} /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; color:#0069D6; background:none; font-weight:normal; margin-bottom:-1px;} 
+/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
 .ui-tabs-panel .ui-button{text-decoration:none;}
 .ui-tabs .ui-tabs-hide { display: none !important; }
@@ -913,16 +895,7 @@ margin-bottom:-1px;
  * http://docs.jquery.com/UI/Datepicker#theming
  */
 .ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
-.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; border:0px;
-
- font-weight: bold;
-  width: 100%;
-  padding: 4px 0;
-  background-color: #f5f5f5;
-  color: #808080;
-
-  
-   }
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; border:0px; font-weight: bold; width: 100%; padding: 4px 0; background-color: #f5f5f5; color: #808080; }
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
 
 .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { /*top: 1px;*/ }
@@ -973,15 +946,15 @@ margin-bottom:-1px;
 
 /* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
 .ui-datepicker-cover {
-    display: none; /*sorry for IE5*/
-    display/**/: block; /*sorry for IE5*/
-    position: absolute; /*must have*/
-    z-index: -1; /*must have*/
-    filter: mask(); /*must have*/
-    top: -4px; /*must have*/
-    left: -4px; /*must have*/
-    width: 200px; /*must have*/
-    height: 200px; /*must have*/
+  display: none; /*sorry for IE5*/
+  display/**/: block; /*sorry for IE5*/
+  position: absolute; /*must have*/
+  z-index: -1; /*must have*/
+  filter: mask(); /*must have*/
+  top: -4px; /*must have*/
+  left: -4px; /*must have*/
+  width: 200px; /*must have*/
+  height: 200px; /*must have*/
 }
 
 .ui-datepicker th{
@@ -1120,7 +1093,7 @@ textarea,
 /**Toolbar**/
 
 .ui-toolbar{
-    padding: 7px 14px;
+  padding: 7px 14px;
   margin: 0 0 18px;
   background-color: #f5f5f5;
   background-repeat: repeat-x;
@@ -1264,8 +1237,8 @@ div.wijmo-wijmenu .wijmo-wijmenu-item .wijmo-wijmenu-child{
 }
 
 div.wijmo-wijmenu .wijmo-wijmenu-item{
-    margin:0;
-    border:0;
+  margin:0;
+  border:0;
 }
 
 .wijmo-wijmenu a.wijmo-wijmenu-link{

@@ -1,3 +1,14 @@
+/*!
+ * jQuery UI Bootstrap (0.22)
+ * http://addyosmani.github.com/jquery-ui-bootstrap
+ *
+ * Copyright 2012, Addy Osmani
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Portions copyright jQuery UI & Twitter Bootstrap
+ */
+
+
 .demoHeaders {
 	margin-top: 1.5em;
 	margin-bottom: 1em;
@@ -92,6 +103,10 @@ ul#icons span.ui-icon {
 	margin-bottom:18px;
 }
 
+#toolbar {
+padding: 10px 4px;
+}
+              
 input[type="text"],
 input[type="password"],
 .ui-autocomplete-input,

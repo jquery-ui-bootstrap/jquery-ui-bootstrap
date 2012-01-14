@@ -120,9 +120,6 @@ $(function () {
     }).click(function () {
         alert("Could display a menu to select an action");
     }).parent().buttonset();
-});
-
-
 
 
     var $tab_title_input = $("#tab_title"),
@@ -275,3 +272,6 @@ $(function () {
     //Toolbar
     $("#play, #shuffle").button();
     $("#repeat").buttonset();
+
+
+});
