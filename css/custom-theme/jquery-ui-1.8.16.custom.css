@@ -1276,6 +1276,12 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text
   border-left:0;
   border-right:0;
 }
+/* Fix for wijmo separator not being centered. */
+/* Hate having to add the li.wijmo-wijmenu-separator at the end, but because of order of CSS files being loaded, I needed to up the specificity level. */
+.wijmo-wijmenu-horizontal .wijmo-wijmenu-child li.wijmo-wijmenu-separator{
+  width:98%;
+  margin:1px 1%;
+}
 
 .wijmo-wijmenu .wijmo-wijmenu-item input {
   -moz-transition: none 0s ease 0s;
