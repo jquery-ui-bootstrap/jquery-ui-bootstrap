@@ -1032,7 +1032,7 @@ button.ui-button::-moz-focus-inner {
 			border: 1px solid #ddd;
 			border-bottom-color: @white;
 			cursor: default;
-			color:gray;
+			color: @gray;
 		}
 	}
 	.ui-tabs-nav li a,
@@ -1072,7 +1072,7 @@ button.ui-button::-moz-focus-inner {
  * http://docs.jquery.com/UI/Datepicker#theming
  */
 .ui-datepicker { 
-	width: 17em; 
+	width: 22em; 
 	padding: .2em .2em 0; 
 	display: none; 
 	.ui-datepicker-header { 
@@ -1248,15 +1248,16 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-datepicker-today {
-	a:hover{
-		background-color: @gray;
-		color: @white;
-	}
-	 a{
+	
+	a{
 		background-color: @grayLight;
 		cursor: pointer;
 		padding: 0 4px;
 		margin-bottom:0px;
+		&:hover{
+			background-color: @gray;
+			color: @white;
+		}
 	}
 }
 
@@ -1279,20 +1280,19 @@ button.ui-button::-moz-focus-inner {
 		color:gray;
 		text-align: center;
 		filter:none;
+		&:hover{
+			background:@blueDark;
+			color:white;
+			.border-radius( 4px );
+		}
 	}
-
-	.ui-state-active{
+	
+	.ui-state-active {
 		background:@grayLight;
 		margin-bottom:0px;
 		font-size:normal;
 		text-shadow: 0px;
 		color:white;  
-		.border-radius( 4px );
-	}
-
-	.ui-state-default:hover{
-		background:@blueDark;
-		color:white;
 		.border-radius( 4px );
 	}
 }
@@ -1387,4 +1387,3 @@ textarea,
 	.transition( 0.1s linear all );
 	overflow: visible;
 }
-
