@@ -79,12 +79,12 @@
 }
 
 .ui-daterangepicker .ui-state-hover{
-	background:#0064CD;
-	color:#fff;
+	background:#DDD;
+	color:#404040;
 }
 
 .ui-daterangepicker .ui-state-hover a{
-	color:#fff;
+	color:#404040;
 }
 
 .ui-daterangepicker .ui-widget{
