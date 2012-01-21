@@ -853,9 +853,13 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 
  }
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 0px; outline:none;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected,
+.ui-tabs .ui-tabs-nav li.ui-tabs-active { margin-bottom: 0; padding-bottom: 0px; outline:none;}
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-state-processing a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
 
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -866,7 +870,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected:hover{
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected:hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
   background:#ffffff;
   outline:none;
 }
