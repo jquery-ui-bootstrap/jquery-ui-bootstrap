@@ -79,6 +79,7 @@
 }
 
 .ui-daterangepicker .ui-state-hover{
+	padding: 1px;
 	background:#0064CD;
 	color:#fff;
 }
