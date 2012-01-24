@@ -549,6 +549,11 @@
 
 } /* the overflow property removes extra width in IE */
 
+/* Remove the focus ring for default button in dialog buttonset. */
+.ui-dialog-buttonset .ui-button:focus {
+  outline:none;
+}
+
 .ui-button-primary {
   color: #ffffff;
   background-color: #0064cd;
@@ -719,10 +724,12 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   text-indent: 9999px;
 }
 
-.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0;   filter: alpha(opacity=90);
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus {
+  filter: alpha(opacity=90);
   -khtml-opacity: 0.90;
   -moz-opacity: 0.90;
-  opacity: 0.90;   }
+  opacity: 0.90;
+}
 
 .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
 
