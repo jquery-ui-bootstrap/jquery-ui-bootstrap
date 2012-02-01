@@ -54,9 +54,15 @@ $.fn.customFileInput = function(options){
 			var fileName = $(this).val().split(/\\/).pop();
 			//get file extension
 			var fileExt = 'customfile-ext-' + fileName.split('.').pop().toLowerCase();
+			
+			//When a file is added on first time the input box increases 21px in width
+			//so we decrease it 21 pixels and we pass a flag in order to avoid later decreases of width
+			if ('undefined' === typeof uploadFeedback.data('used')) {
+			  uploadFeedback.css({ width : '-=21' }).data('used', true);
+			}
+			
 			//update the feedback
-			uploadFeedback
-				.css({ width : '-=21' })
+			uploadFeedback				
 				.text(fileName) //set feedback text to filename
 				.removeClass(uploadFeedback.data('fileExt') || '') //remove any existing file extension class
 				.addClass(fileExt) //add file extension class
