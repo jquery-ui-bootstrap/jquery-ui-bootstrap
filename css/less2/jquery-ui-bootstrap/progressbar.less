@@ -1,0 +1,24 @@
+/*
+ * jQuery UI Progressbar 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.ui-progressbar {
+	height:2em;
+	text-align: left;
+	.ui-progressbar-value {
+		margin: -1px;
+		height:100%;
+
+	/*this can be removed if ui-widget-header is blue*/
+		color: @white;
+		#gradient > .vertical( @blue, @blueDark );
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		border-color: @blueDark @blueDark @ui-blue;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	}
+}
