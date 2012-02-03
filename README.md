@@ -32,7 +32,9 @@ A [blog post](http://addyosmani.com/blog/jquery-ui-bootstrap/) with some more de
 
 ##LESS
 
-LESS version added into the "jquery-ui-bootstrap/css/less" folder, compile the "main.less"
+LESS version added into the "jquery-ui-bootstrap/css/less" folder, compile the "style.less"
 
-"main.less" makes it easier to change the "bootstrap.less" and "jquery-ui-bootstrap"
+"style.less" makes it easier to change the "bootstrap.less" and "jquery-ui-bootstrap"
+
+Broke down the jquery ui bootstrap LESS files
 
