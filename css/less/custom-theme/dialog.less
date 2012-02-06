@@ -1,0 +1,130 @@
+/*
+ * jQuery UI Dialog 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog { 
+  position: absolute; 
+  padding: .2em; 
+  width: 300px; 
+  overflow: hidden;
+  
+  &-title {
+    float: left;
+    /*margin: .1em 16px .1em 0; */
+    color:@grayDark;
+    font-weight:bold;
+    margin-top:5px;
+    margin-bottom:5px;
+    padding:5px;
+    
+    &bar { /* .titlebar */
+      /*padding: .4em 1em;*/
+      position: relative;
+      padding:5px 15px;
+      border:0px 0px 0px 1px solid;
+      border-color: white;
+      padding: 5px 15px;
+      font-size: 18px;
+      text-decoration:none;
+      background:none;
+      #border-radius > .bottomRight ( 0px );
+      #border-radius > .bottomLeft ( 0px );
+      border-bottom:1px solid @ui-grayLight5;
+      
+      &-close {
+        position: absolute;
+        right: .3em;
+        top: 50%;
+        width: 19px;
+        margin: -10px 0 0 0;
+        padding: 1px;
+        height: 18px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 13.5px;
+        text-shadow: 0 1px 0 @white;
+        .opacity( 25 );
+
+        & span { 
+          display: block; 
+          margin: 1px; 
+        }
+        &:hover, 
+        &:focus { 
+          padding: 0;   
+          .opacity( 90 );
+        }
+      }
+    }
+  }
+  
+  &-content { 
+    position: relative; 
+    border: 0; 
+    padding: .5em 1em; 
+    background: none; 
+    overflow: auto; 
+    zoom: 1; 
+  }
+  
+  &-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin: .5em 0 0 0;
+    background-color: @ui-grayLighter;
+    padding: 5px 15px 5px;
+    border-top: 1px solid @ui-grayLight5;
+    #border-radius > .border( 0, 0, 6px, 6px );
+    .box-shadow( inset 0 1px 0 @white );
+    zoom: 1;
+    margin-bottom: 0;
+    
+    & .ui-dialog-buttonset {
+      float: right;
+    }
+    & button { 
+      margin: .5em .4em .5em 0; 
+      cursor: pointer; 
+    }
+  }
+  
+  & .ui-resizable-se { 
+    width: 14px; 
+    height: 14px; 
+    right: 3px; 
+    bottom: 3px; 
+  }
+  
+  &-buttonpane .ui-dialog-buttonset .ui-button {
+    color: @white;
+    #gradient > .vertical ( @blue, @blueDark ); 
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: @blueDark @blueDark @ui-blue;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  }
+  
+  /***Dialog fixes**/
+  &-buttonset .ui-button:nth-child(2){
+    cursor: pointer;
+    display: inline-block;
+    #gradient > .vertical-three-colors( @white, @white, 25%, @grayLighter );
+    padding: 5px 14px 6px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    color: @grayDark;
+    font-size: 13px;
+    line-height: normal;
+    border: 1px solid @ui-grayLight5;
+    border-bottom-color: @ui-grayLight5;
+    .border-radius( 4px );
+    .ui_box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) );
+    .transition( 0.1s linear all );
+    overflow: visible;
+  }
+}
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
