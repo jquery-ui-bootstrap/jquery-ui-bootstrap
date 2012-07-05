@@ -14,20 +14,26 @@
   &-nav{
     margin: 0; 
     padding: .2em .2em 0; 
-    border-bottom:1px solid @ui-grayLight4;
+    border-bottom:1px solid @btnBorder;
     background:none;
     border-style: solid;
     border-width: 0 0 1px;
     #border-radius > .border(0, 0, 0, 0);
     
     li {
-      white-space: nowrap; 
-      background:none; 
+      float: left;
+      position: relative;
+      top: 1px;
+      padding: 0px 0px 1px 0px;
+      white-space: nowrap;
+      background:none;
+      list-style: none;
       border : 0px !important;
       -webkit-box-shadow: none !important;
       -moz-box-shadow: none !important;
       box-shadow: none !important;
       margin-bottom: -1px;
+      margin-right: 2px;
       /* IE fix for background inheritance from ui-widget*/
       filter:none;
       
@@ -37,17 +43,20 @@
       }
       
       a {
+        float: left;
+        text-decoration: none;
         color: @linkColor !important;
-        padding-top: 9px;
-        padding-bottom: 9px;
+        padding: 9px 15px;
         border: 1px solid transparent;
-        #border-radius > .border(4px 4px 0 0);
+        -webkit-border-radius: 4px 4px 0 0;
+           -moz-border-radius: 4px 4px 0 0;
+                border-radius: 4px 4px 0 0;
         position: relative;
         top: -1px;
         
         &:hover {
           color: @linkColorHover !important;
-          border-color: @grayLighter @grayLighter @ui-grayLight4;
+          border-color: @grayLighter @grayLighter @btnBorder;
         }
       }
       
@@ -60,12 +69,12 @@
       &.ui-state-processing a {}
 
       &.ui-tabs-selected > a,
-      &.ui-state-active > a
+      &.ui-state-active > a,
       &.ui-tabs-selected > a:hover,
       &.ui-state-active > a:hover {
-        color: @gray !important;
-        background-color: @white;
-        border: 1px solid @ui-grayLight4;
+        color: @textColor !important;
+        background-color: @btnBackground;
+        border: 1px solid @btnBorder;
         border-bottom-color: transparent;
         cursor: default;
       }
@@ -75,7 +84,7 @@
   &-nav li a,
   &-collapsible .ui-tabs-nav li.ui-tabs-selected a {
     cursor: pointer;
-    color:@ui-blueLight;
+    color:@textColor;
     background:none;
     font-weight:normal;
     margin-bottom:-1px;
