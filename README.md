@@ -23,6 +23,11 @@ There *are* some minor known issues lingering that I'm working on, but the hope 
 
 This theme targets jQuery UI 1.8.16 and the default version of jQuery included in the (current) jQuery UI builds (jQuery 1.6.2). I'm aware of jQuery 1.7.1 and intend on upgrading anything necessary in the theme to use it when the jQuery UI team officially include it in their theme packs.
 
+##Project status
+
+This project is currently under a code-freeze until mid-July 2012. At that time we will begin work on both moving the project over to using LESS and on getting Bootstrap 2.0 support in place. We will also target jQuery UI 1.8.21 (latest). The aim will be to get a stable release ready by end of July/early August. 
+
+Thank you for your patience. We know that it's been a few months since the last release but we hope to have wrapped up enough work on other projects in order to focus on this one soon. If you would like to get involved in any of the 2.0 sprints, please feel free to express your interest [here](https://github.com/addyosmani/jquery-ui-bootstrap/issues/56).
 
 ##Demo
 
