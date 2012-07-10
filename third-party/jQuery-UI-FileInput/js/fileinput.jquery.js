@@ -10,95 +10,130 @@
 /**
  * All credits go to the Author of this file, some additional customization was
  * done for theme compat. purposes.
+ *
+ * Additional bugfixes/changes by smurfy
  */
-$.fn.customFileInput = function(options){
-	
-	//Get current element
-	var fileInput = $(this);
-	
-	//Define settings
-	var settings	= jQuery.extend({
-		button_position 	: 'right',
-		classes				: fileInput.attr('class'),
-		feedback_text		: 'No file selected...',
-		button_text			: 'Browse',
-		button_change_text	: 'Change'
-	}, options);
-	
-	//apply events and styles for file input element
-	fileInput
-		.addClass('customfile-input') //add class for CSS
-		.focus(function(){
-			upload.addClass('customfile-focus'); 
-			fileInput.data('val', fileInput.val());
-		})
-		.blur(function(){ 
-			upload.removeClass('customfile-focus');
-			$(this).trigger('checkChange');
-		 })
-		 .bind('disable',function(){
-		 	fileInput.attr('disabled',true);
-			upload.addClass('customfile-disabled');
-		})
-		.bind('enable',function(){
-			fileInput.removeAttr('disabled');
-			upload.removeClass('customfile-disabled');
-		})
-		.bind('checkChange', function(){
-			if(fileInput.val() && fileInput.val() != fileInput.data('val')){
-				fileInput.trigger('change');
-			}
-		})
-		.bind('change',function(){
-			//get file name
-			var fileName = $(this).val().split(/\\/).pop();
-			//get file extension
-			var fileExt = 'customfile-ext-' + fileName.split('.').pop().toLowerCase();
-			
-			//When a file is added for the first time the input box increases 21px in width
-			//so we decrease it 21 pixels and we pass a flag in order to avoid later decreases of width
-			if ('undefined' === typeof uploadFeedback.data('used')) {
-			  uploadFeedback.css({ width : '-=21' }).data('used', true);
-			}
-			
-			//update the feedback
-			uploadFeedback				
-				.text(fileName) //set feedback text to filename
-				.removeClass(uploadFeedback.data('fileExt') || '') //remove any existing file extension class
-				.addClass(fileExt) //add file extension class
-				.data('fileExt', fileExt) //store file extension for class removal on next change
-				.addClass('customfile-feedback-populated'); //add class to show populated state
-			//change text of button	
-			uploadButton.text(settings.button_change_text);	
-		})
-		.click(function(){ //for IE and Opera, make sure change fires after choosing a file, using an async callback
-			fileInput.data('val', fileInput.val());
-			setTimeout(function(){
-				fileInput.trigger('checkChange');
-			},100);
-		});
-		
-		//create custom control container
-		var upload = $('<div class="input-' + (('right' === settings.button_position)?'append':'prepend') + ' customfile">');
-		//create custom control feedback
-		var uploadFeedback = $('<span class="customfile-feedback ' + settings.classes + '" aria-hidden="true">' + settings.feedback_text + '</span>').appendTo(upload);
-		//create custom control button
-		var uploadButton = $('<span class="add-on customfile-button" aria-hidden="true">' + settings.button_text + '</span>').css({ float : settings.button_position });
-		
-		if ('right' === settings.button_position) {
-			uploadButton.insertAfter(uploadFeedback);
-		} else uploadButton.insertBefore(uploadFeedback);
-	
-	//match disabled state
-	if(fileInput.is('[disabled]')){
-		fileInput.trigger('disable');
-	} else upload.click(function () { fileInput.trigger('click'); });
-		
-	
-	//insert original input file in dom, css if hide it outside of screen
-	upload.insertAfter(fileInput);
-	fileInput.insertAfter(upload);
-		
-	//return jQuery
-	return $(this);
-};
+!function ($) {
+
+    "use strict"; // jshint ;_;
+
+    /* FILEINPUT CLASS DEFINITION
+     * ====================== */
+
+    var CustomFileInput = function (content, options) {
+        var self = this;
+        this.$element = $(content);
+
+        this.options = $.extend({
+            classes	: (this.$element.attr('class') ? this.$element.attr('class') : ''),
+        }, options);
+
+        //create custom control container
+        this.$upload = $('<div class="input-' + (('right' === this.options.button_position)?'append':'prepend') + ' customfile">');
+        //create custom control feedback
+        this.$uploadFeedback = $('<input type="text" readonly="readonly" class="customfile-feedback ' + this.options.classes + '" aria-hidden="true" value="' + this.options.feedback_text + '"/>').appendTo(this.$upload);
+        //create custom control button
+        this.$uploadButton = $('<span class="add-on customfile-button" aria-hidden="true">' + this.options.button_text + '</span>').css({ float : this.options.button_position });
+
+        this.$element
+            .addClass('customfile-input') //add class for CSS
+            .on('focus', $.proxy(this.onFocus, this))
+            .on('blur', $.proxy(this.onBlur, this))
+            .on('disable', $.proxy(this.onDisable, this))
+            .on('enable', $.proxy(this.onEnable, this))
+            .on('checkChange', $.proxy(this.onCheckChange, this))
+            .on('change', $.proxy(this.onChange, this))
+            .on('click', $.proxy(this.onClick, this));
+
+        if ('right' === this.options.button_position) {
+            this.$uploadButton.insertAfter(this.$uploadFeedback);
+        } else {
+            this.$uploadButton.insertBefore(this.$uploadFeedback);
+        }
+
+        //match disabled state
+        if (this.$element.is('[disabled]')) {
+            this.$element.trigger('disable');
+        } else {
+            this.$upload.on('click', function () { self.$element.trigger('click'); });
+        }
+
+        //insert original input file in dom, css if hide it outside of screen
+        this.$upload.insertAfter(this.$element);
+        this.$element.insertAfter(this.$upload);
+    };
+
+    CustomFileInput.prototype = {
+        constructor: CustomFileInput,
+
+        onClick : function() {
+            var self = this;
+            this.$element.data('val', this.$element.val());
+            setTimeout(function(){
+                self.$element.trigger('checkChange');
+            } ,100);
+        },
+
+        onCheckChange: function() {
+            if(this.$element.val() && this.$element.val() != this.$element.data('val')){
+                this.$element.trigger('change');
+            }
+        },
+
+        onEnable: function() {
+            this.$element.removeAttr('disabled');
+            this.$upload.removeClass('customfile-disabled');
+        },
+
+        onDisable: function() {
+            this.$element.attr('disabled',true);
+            this.$upload.addClass('customfile-disabled');
+        },
+
+        onFocus: function() {
+            this.$upload.addClass('customfile-focus');
+            this.$element.data('val', this.$element.val());
+        },
+
+        onBlur: function() {
+            this.$upload.removeClass('customfile-focus');
+            this.$element.trigger('checkChange');
+        },
+
+        onChange : function() {
+            //get file name
+            var fileName = this.$element.val().split(/\\/).pop();
+            if (!fileName) {
+                this.$uploadFeedback
+                    .val(this.options.feedback_text) //set feedback text to filename
+                    .removeClass('customfile-feedback-populated'); //add class to show populated state
+                this.$uploadButton.text(this.options.button_text);
+            } else {
+                this.$uploadFeedback
+                    .val(fileName) //set feedback text to filename
+                    .addClass('customfile-feedback-populated'); //add class to show populated state
+                this.$uploadButton.text(this.options.button_change_text);
+            }
+        }
+    };
+
+    $.fn.customFileInput = function(option){
+        return this.each(function () {
+            var $this = $(this);
+            var data = $this.data('customFileInput')
+            var options = $.extend({}, $.fn.customFileInput.defaults, $this.data(), typeof option == 'object' && option);
+            if (!data) {
+                $this.data('customFileInput', (data = new CustomFileInput(this, options)));
+            }
+        })
+    };
+
+    $.fn.customFileInput.defaults = {
+        button_position 	: 'right',
+        feedback_text		: 'No file selected...',
+        button_text			: 'Browse',
+        button_change_text	: 'Change'
+    }
+
+}(window.jQuery);
+
