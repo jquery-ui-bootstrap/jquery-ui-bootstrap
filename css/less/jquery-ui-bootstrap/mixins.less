@@ -1,0 +1,58 @@
+/*
+ * jQuery UI Bootstrap v0.23 (Mixins)
+ * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
+ * Created the LESS version by T1gr0u
+ * Released under MIT/GPL.
+ */
+
+
+// Border Radius
+#border-radius {
+	.topLeft ( @radius: 4px ) {
+		-moz-border-radius-topleft: @radius;
+		-webkit-border-top-left-radius: @radius;
+		-khtml-border-top-left-radius: @radius;
+		border-top-left-radius: @radius;
+	}
+	.topRight ( @radius: 4px ) {
+		-moz-border-radius-topright: @radius;
+		-webkit-border-top-right-radius: @radius;
+		-khtml-border-top-right-radius: @radius;
+		border-top-right-radius: @radius;
+	}
+	.bottomLeft ( @radius: 4px ) {
+		-moz-border-radius-bottomleft: @radius;
+		-webkit-border-bottom-left-radius: @radius;
+		-khtml-border-bottom-left-radius: @radius;
+		border-bottom-left-radius: @radius;
+	}
+	.bottomRight ( @radius: 4px ) {
+		-moz-border-radius-bottomright: @radius;
+		-webkit-border-bottom-right-radius: @radius;
+		-khtml-border-bottom-right-radius: @radius;
+		border-bottom-right-radius: @radius;
+	}
+	
+	.border( @topLeft:6px,  @topRight:6px, @bottomRight:6px, @bottomLeft:6px ) {
+		-webkit-border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+		-moz-border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+		border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+	}
+	
+}
+
+// Transitions
+.ui_transition( @arg1, @arg2 ) {
+	-webkit-transition: @arg1, @arg2;
+	-moz-transition: @arg1, @arg2;
+	-ms-transition: @arg1, @arg2;
+	-o-transition: @arg1, @arg2;
+	transition: @arg1, @arg2;
+}
+
+// Drop shadows
+.ui_box-shadow( @arg1, @arg2 ) {
+	-webkit-box-shadow: @arg1, @arg2;
+	-moz-box-shadow: @arg1, @arg2;
+	box-shadow: @arg1, @arg2;
+}

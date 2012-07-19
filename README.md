@@ -10,13 +10,11 @@ Twitter's Bootstrap was one of my favorite projects to come out of 2011, but hav
 * The ability to theme jQuery UI widgets using Bootstrap styles. Whilst I love jQuery UI, I (like others) find some of the current themes to look a little dated. My hope is that this theme provides a decent alternative for others that feel the same.
 
 To clarify, this project doesn't aim or intend to replace Twitter Bootstrap. It merely provides a jQuery UI-compatible theme inspired by Bootstrap's design. It also provides a version of Bootstrap CSS with a few (minor) sections commented out which enable the theme to work along-side it.
-
 I welcome any and all feedback as I'd very much like this theme to be as solid as possible.
 
 ##Browser-support
 
 All modern browsers are targeted by this theme with 'lo-res' experiences (i.e no gradients, border-radius etc.) provided for users using older browsers. 
-
 There *are* some minor known issues lingering that I'm working on, but the hope is that in time those will all get ironed out. 
 
 ##jQuery UI support
@@ -32,5 +30,15 @@ Thank you for your patience. We know that it's been a few months since the last 
 ##Demo
 
 For a live preview of the theme, see [http://addyosmani.github.com/jquery-ui-bootstrap](http://addyosmani.github.com/jquery-ui-bootstrap).
-
 A [blog post](http://addyosmani.com/blog/jquery-ui-bootstrap/) with some more details about the project is also available.
+
+##LESS
+
+LESS version added into the "jquery-ui-bootstrap/css/less" folder, compile the "style.less"
+"style.less" makes it easier to change the "bootstrap.less" and "jquery-ui-bootstrap"
+Broke down the jquery ui bootstrap LESS files
+
+## Bootstrap 2.0
+in css/less2 contains the less files for bootstrap 2.0
+variables.less contains all the extra colours for jQuery UI Bootstrap
+Try the demo "index-less2.html" still work in progress

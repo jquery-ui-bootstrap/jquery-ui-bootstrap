@@ -1,0 +1,146 @@
+
+/***Wijmo Theming**/
+
+div.wijmo-wijmenu{
+	padding:0 20px;
+	#gradient > .vertical ( #333333, #222222 );  
+	.ui_box-shadow( 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1) );
+}
+
+.wijmo-wijmenu {
+	.ui-state-default {
+		box-shadow: none;
+		color: @grayLight;
+	}
+
+	.ui-state-default .wijmo-wijmenu-text {
+		color: @grayLight;
+	}
+
+	.ui-state-hover{
+		background: #444;
+		background: rgba(255, 255, 255, 0.05);
+		.wijmo-wijmenu-text{
+			color:@white;
+		}
+	}
+}
+
+div.wijmo-wijmenu .ui-widget-header h3{
+	position: relative;
+	margin-top:1px;
+	padding:0;
+}
+
+.wijmo-wijmenu {
+	h3 a{
+		color: @white;
+		display: block;
+		float: left;
+		font-size: 20px;
+		font-weight: 200;
+		line-height: 1;
+		margin-left: -20px;
+		margin-top:1px;
+		padding: 8px 20px 12px;
+		&:hover{
+			background-color: rgba(255, 255, 255, 0.05);
+			color: @white;
+			text-decoration: none;
+		}
+	}
+	.ui-widget-header{
+		border:0px;
+	}
+	.wijmo-wijmenu-parent .wijmo-wijmenu-child {
+		padding: 0.3em 0;
+	}
+}
+
+div.wijmo-wijmenu .wijmo-wijmenu-item {
+	.wijmo-wijmenu-child{
+		background: #333;
+		border:0;
+		margin:0;
+		padding: 6px 0;
+		width:160px;
+		#border-radius > .border( 0, 0, 6px, 6px );
+		.box-shadow( 0 2px 4px rgba(0, 0, 0, 0.2) );
+	}
+	margin:0;
+	border:0;
+}
+
+.wijmo-wijmenu a.wijmo-wijmenu-link{
+	margin:0;
+	line-height: 19px;
+	padding: 10px 10px 11px;
+	border:0;
+	.border-radius( 0 );
+}
+
+div.wijmo-wijmenu .wijmo-wijmenu-child {
+	.wijmo-wijmenu-link{
+		display:block;
+		float:none;
+		padding: 4px 15px;
+		width:auto;
+	}
+
+	.wijmo-wijmenu-child .wijmo-wijmenu-text {
+		float:none;
+	}
+}
+.wijmo-wijmenu .wijmo-wijmenu-item {
+	.wijmo-wijmenu-child .ui-state-hover {
+		background: #191919;
+	}
+
+	.wijmo-wijmenu-separator{
+		padding: 5px 0;
+		background-image: none;
+		background-color: #222;
+		border-top: 1px solid #444;
+		border-bottom:0;
+		border-left:0;
+		border-right:0;
+	}
+	input {
+		.transition( none 0s ease 0s );
+		background-color: rgba(255, 255, 255, 0.3);
+		border: 1px solid #111111;
+		.border-radius( 4px );
+		.ui_box-shadow( 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.25) );
+		color: rgba(255, 255, 255, 0.75);
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		line-height: 1;
+		margin: 5px 10px 0 10px;
+		padding: 4px 9px;
+		width:100px;
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+			color: @white;
+		}
+		&:focus {
+			background-color: @white;
+			border: 0 none;
+			.box-shadow( 0 0 3px rgba(0, 0, 0, 0.15) );
+			color: @grayDark;
+			outline: 0 none;
+			padding: 5px 10px;
+			text-shadow: 0 1px 0 @white;
+		}
+	}
+}
+
+.wijmo-wijmenu .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	text-shadow:none;
+}
+
+.wijmo-wijmenu .ui-state-default{
+	.box-shadow( none );
+	color:@grayLight;
+	filter: none;
+}
+
+
