@@ -14,15 +14,15 @@
 
   
     <!-- Styles --> 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="bootstrap/bootstrap.css" rel="stylesheet">
     <link href="css/demo.css" rel="stylesheet">
+    <link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://lesscss.googlecode.com/files/less-1.3.0.min.js"></script>
+   
     <style type="text/css">
       /* Override some defaults */
       html, body {
         background-color: #eee;
-      }
-      body {
-        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
       }
       .container > footer p {
         text-align: center; /* center align it with the container */
@@ -63,6 +63,10 @@
         border-left: 1px solid #eee;
       }
 
+      .topbar .btn {
+        border: 0;
+      }
+
     </style>
 
   </head>
@@ -73,7 +77,7 @@
   <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.8.16.ie.css"/>
   <![endif]-->
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
@@ -82,11 +86,12 @@
             <li><a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a></li>
             <li><a href="http://twitter.com/addyosmani">Contact</a></li>
           </ul>
-          <form action="" class="pull-right">
+          <form action="" class="pull-right navbar-form">
           </form>
         </div>
       </div>
     </div>
+
 
     <div class="container">
 
@@ -101,12 +106,12 @@
 
 
           <!--welcome-->
-          <div class="alert alert-block">      
+          <div class="alert-message block-message warning">      
             <p>
               <p><strong>Welcome!</strong> This is a live preview of the new jQuery UI Bootstrap theme -  a project I started to bring the beauty of Twitter's <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> to jQuery UI widgets.
-              </p><br>
+              </p>
               <p>
-              With this theme, not only do you get the ability to use Bootstrap-themed widgets, but you can now also use (most) of Twitter Bootstrap side-by-wide with it without components breaking visually. </p><br>
+              With this theme, not only do you get the ability to use Bootstrap-themed widgets, but you can now also use (most) of Twitter Bootstrap side-by-side with it without components breaking visually. </p>
               <p>
               It's still a work-in-progress, but I hope you find it useful. Issues and pull requests are always welcome - <a href="http://twitter.com/addyosmani">@addyosmani</a>
               </p>
@@ -554,13 +559,13 @@
                   <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
                   <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
                 </div>
-                </br>
+                <br/>
                 <div id="format">
                 <input type="checkbox" id="check1" /><label for="check1">B</label>
                 <input type="checkbox" id="check2" /><label for="check2">I</label>
                 <input type="checkbox" id="check3" /><label for="check3">U</label>
                 </div>
-                </br>
+                <br/>
               </form>
           <!--end button set-->
 
@@ -569,7 +574,7 @@
           <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
           <h2 class="demoheaders">File Input</h2>
           <form style="margin-top: 1em;"> 
-            <input type="file" class="span2" name="file" id="file">
+            <input type="file" class="span3" name="file" id="file">
           </form>
           <!-- end file input -->
 
@@ -694,8 +699,8 @@
 
         <!--scripts-->
 
-        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
         
 
         <!--daterangepicker-->
