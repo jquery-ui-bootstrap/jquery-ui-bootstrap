@@ -29,3 +29,9 @@ This theme targets jQuery UI 1.8.16 and the default version of jQuery included i
 For a live preview of the theme, see [http://addyosmani.github.com/jquery-ui-bootstrap](http://addyosmani.github.com/jquery-ui-bootstrap).
 
 A [blog post](http://addyosmani.com/blog/jquery-ui-bootstrap/) with some more details about the project is also available.
+
+
+##TODO
+-ui-dialog autorepositioning
+-update ui.css
+-update bootstrap.less, too
