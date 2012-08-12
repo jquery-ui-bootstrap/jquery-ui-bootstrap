@@ -57,7 +57,7 @@ $(function () {
     });
 
     // Progressbar
-    $("#progressbar").progressbar({
+    $('.progress').progressbar({
         value: 20
     });
 
@@ -110,7 +110,7 @@ $(function () {
 
 
     // Split button
-    $("#rerun").button().click(function () {
+    $(".rerun").button().click(function () {
         alert("Running the last action");
     }).next().button({
         text: false,

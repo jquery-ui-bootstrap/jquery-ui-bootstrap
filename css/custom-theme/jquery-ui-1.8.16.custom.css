@@ -591,6 +591,57 @@
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
+.ui-button-warning{
+color:#ffffff;
+background-color: rgb(250, 167, 50);
+background-image: -ms-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(251, 180, 80)), to(rgb(248, 148, 6)));
+background-image: -webkit-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: -o-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: -moz-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-repeat: repeat-x;
+border-color: rgb(248, 148, 6) rgb(248, 148, 6) rgb(173, 103, 4);
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.ui-button-danger{
+color:#ffffff;
+background-color: rgb(218, 79, 73);
+background-image: -ms-linear-gradient(top, rgb(238, 95, 91), rgb(189, 54, 47));
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(238, 95, 91)), to(rgb(189, 54, 47)));
+background-image: -webkit-linear-gradient(top, rgb(238, 95, 91), rgb(189, 54, 47));
+background-image: -o-linear-gradient(top, rgb(238, 95, 91), rgb(189, 54, 47));
+background-image: -moz-linear-gradient(top, rgb(238, 95, 91), rgb(189, 54, 47));
+background-image: linear-gradient(top, rgb(238, 95, 91), rgb(189, 54, 47));
+background-repeat: repeat-x;
+border-color: rgb(189, 54, 47) rgb(189, 54, 47) rgb(128, 36, 32);
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
+filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.ui-button-inverse{
+color:#ffffff;
+background-color: rgb(65, 65, 65);
+background-image: -ms-linear-gradient(top, rgb(85, 85, 85), rgb(34, 34, 34));
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(85, 85, 85)), to(rgb(34, 34, 34)));
+background-image: -webkit-linear-gradient(top, rgb(85, 85, 85), rgb(34, 34, 34));
+background-image: -o-linear-gradient(top, rgb(85, 85, 85), rgb(34, 34, 34));
+background-image: -moz-linear-gradient(top, rgb(85, 85, 85), rgb(34, 34, 34));
+background-image: linear-gradient(top, rgb(85, 85, 85), rgb(34, 34, 34));
+background-repeat: repeat-x;
+border-color: rgb(34, 34, 34) rgb(34, 34, 34) black;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
+filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
 .ui-button-error{
   color:#ffffff;
   background-color: #c43c35;
@@ -608,8 +659,17 @@
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
+
+.dropdown-toggle {
+  padding-right: 8px;
+  padding-left: 8px;
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
 .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
-button.ui-button-icon-only { } /* button elements seem to need a little more width */
+button.ui-button-icon-only { padding-top:4px;} /* button elements seem to need a little more width */
 .ui-button-icons-only { width: 3.4em; }
 button.ui-button-icons-only { width: 3.7em; }
 
@@ -1037,26 +1097,107 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  * http://docs.jquery.com/UI/Progressbar#theming
  */
 .ui-progressbar { height:2em; text-align: left; }
-.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%;
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; border-right:0px;}
 
-/*this can be removed if ui-widget-header is blue*/
-    color: #ffffff;
-  background-color: #0064cd;
+.progress-info .ui-progressbar-value{
+  background-color: rgb(75, 177, 207);
+  background-image: -moz-linear-gradient(top, rgb(91, 192, 222), rgb(51, 155, 185));
+  background-image: -ms-linear-gradient(top, rgb(91, 192, 222), rgb(51, 155, 185));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(91, 192, 222)), to(rgb(51, 155, 185)));
+  background-image: -webkit-linear-gradient(top, rgb(91, 192, 222), rgb(51, 155, 185));
+  background-image: -o-linear-gradient(top, rgb(91, 192, 222), rgb(51, 155, 185));
+  background-image: linear-gradient(top, rgb(91, 192, 222), rgb(51, 155, 185));
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
-  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
-  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
-  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
-  background-image: linear-gradient(top, #049cdb, #0064cd);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  border-color: #0064cd #0064cd #003f81;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
- }
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#5bc0de', endColorstr='#339bb9', GradientType=0);
+}
 
 
+.progress-success .ui-progressbar-value{
+  background-color: rgb(94, 185, 94);
+  background-image: -moz-linear-gradient(top, rgb(98, 196, 98), rgb(87, 169, 87));
+  background-image: -ms-linear-gradient(top, rgb(98, 196, 98), rgb(87, 169, 87));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(98, 196, 98)), to(rgb(87, 169, 87)));
+  background-image: -webkit-linear-gradient(top, rgb(98, 196, 98), rgb(87, 169, 87));
+  background-image: -o-linear-gradient(top, rgb(98, 196, 98), rgb(87, 169, 87));
+  background-image: linear-gradient(top, rgb(98, 196, 98), rgb(87, 169, 87));
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
+}
+
+
+.progress-warning .ui-progressbar-value{
+background-color: rgb(250, 167, 50);
+background-image: -moz-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: -ms-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(251, 180, 80)), to(rgb(248, 148, 6)));
+background-image: -webkit-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: -o-linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-image: linear-gradient(top, rgb(251, 180, 80), rgb(248, 148, 6));
+background-repeat: repeat-x;
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+}
+
+
+.progress-danger .ui-progressbar-value{
+background-color: rgb(221, 81, 76);
+background-image: -moz-linear-gradient(top, rgb(238, 95, 91), rgb(196, 60, 53));
+background-image: -ms-linear-gradient(top, rgb(238, 95, 91), rgb(196, 60, 53));
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(238, 95, 91)), to(rgb(196, 60, 53)));
+background-image: -webkit-linear-gradient(top, rgb(238, 95, 91), rgb(196, 60, 53));
+background-image: -o-linear-gradient(top, rgb(238, 95, 91), rgb(196, 60, 53));
+background-image: linear-gradient(top, rgb(238, 95, 91), rgb(196, 60, 53));
+background-repeat: repeat-x;
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0);
+}
+
+.progress-info.progress-striped .ui-progressbar-value{
+  background-color: rgb(91, 192, 222);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+
+.progress-success.progress-striped .ui-progressbar-value{
+  background-color: rgb(98, 196, 98);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-warning.progress-striped .ui-progressbar-value{
+  background-color: rgb(251, 180, 80);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-danger.progress-striped .ui-progressbar-value{
+  background-color: rgb(238, 95, 91);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.active .ui-progressbar-value{
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -moz-animation: progress-bar-stripes 2s linear infinite;
+  -ms-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
 
 /*** Input field styling from Bootstrap **/
  input, textarea {
