@@ -17,6 +17,7 @@ $(function () {
     // Buttonset
     $('#radioset').buttonset();
     $("#format").buttonset();
+    $("#pager").buttonset();
 
 
     // Dialog
