@@ -725,6 +725,22 @@ text-shadow:none;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+
+.ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text{
+  padding:0px;
+}
+
+.ui-button-text-icon-primary span{
+  float:left;
+  padding:0px;
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary, .ui-button-text-icons .ui-button-icon-primary, .ui-button-icons-only .ui-button-icon-primary{
+  margin-top: -2px;
+  margin-left: -5px;
+  margin-right: 5px;
+}
+
 .ui-button-text-only .ui-button-text .ui-state-active{
   color: rgba(255, 255, 255, 0.75);
 }

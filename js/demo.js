@@ -135,6 +135,16 @@ $(function () {
         }
     });
 
+    // icon buttons
+    //ui-button-icon
+
+    $( ".ui-button-icon" ).button({
+        icons: {
+            primary: "ui-icon-locked"
+        }
+    });
+
+
     // modal dialog init: custom buttons and a "close" callback reseting the form inside
     var $dialog = $("#dialog2").dialog({
         autoOpen: false,
