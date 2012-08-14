@@ -1231,6 +1231,10 @@ filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endC
   -ms-animation: progress-bar-stripes 2s linear infinite;
   -o-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
+  -webkit-background-size: 40px 40px;
+     -moz-background-size: 40px 40px;
+       -o-background-size: 40px 40px;
+          background-size: 40px 40px;
 }
 
 /*** Input field styling from Bootstrap **/
