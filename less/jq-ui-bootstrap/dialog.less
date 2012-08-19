@@ -1,0 +1,114 @@
+/*
+ * jQuery UI Dialog 
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog { 
+	position: absolute; 
+	padding: .2em; 
+	width: 300px; 
+	overflow: hidden; 
+	.ui-dialog-titlebar { 
+		/*padding: .4em 1em;*/
+		position: relative;
+		padding:5px 15px;
+		border:0px 0px 0px 1px solid;
+		border-color: white;
+		padding: 5px 15px;
+		font-size: 18px;
+		text-decoration:none;
+		background:none;
+		#border-radius > .bottomRight ( 0px );
+		#border-radius > .bottomLeft ( 0px );
+		border-bottom:1px solid @grayLighter;
+	}
+	.ui-dialog-title {
+		float: left;
+		/*margin: .1em 16px .1em 0; */
+		color:@grayDark;
+		font-weight:bold;
+		margin-top:5px;
+		margin-bottom:5px;
+		padding:5px;
+	}
+	.ui-dialog-titlebar-close {
+		position: absolute;
+		right: .3em;
+		top: 50%;
+		width: 19px;
+		margin: -10px 0 0 0;
+		padding: 1px;
+		height: 18px;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 13.5px;
+		text-shadow: 0 1px 0 @white;
+		.opacity( 25 );
+	}
+	.ui-dialog-titlebar-close span { 
+		display: block; 
+		margin: 1px; 
+		text-indent:9999px;
+	}
+	.ui-dialog-titlebar-close:hover, .ui-dialog-titlebar-close:focus { 
+		padding: 0;   
+		.opacity( 90 );
+	}
+	.ui-dialog-content { 
+		position: relative; 
+		border: 0; 
+		padding: .5em 1em; 
+		background: none; 
+		overflow: auto; 
+		zoom: 1; 
+	}
+	.ui-dialog-buttonpane {
+		text-align: left;
+		border-width: 1px 0 0 0;
+		background-image: none;
+		margin: .5em 0 0 0;
+		background-color: @formActionsBackground;
+		padding: 5px 15px 5px;
+		border-top: 1px solid darken(@grayLighter,10%);
+		#border-radius > .border( 0, 0, 6px, 6px );
+		.box-shadow( inset 0 1px 0 @white );
+		zoom: 1;
+		margin-bottom: 0;
+	}
+	.ui-dialog-buttonpane .ui-dialog-buttonset {
+		float: right;
+	}
+	.ui-dialog-buttonpane button { 
+		margin: .5em .4em .5em 0; 
+		cursor: pointer; 
+	}
+	.ui-resizable-se { 
+		width: 14px; 
+		height: 14px; 
+		right: 3px; 
+		bottom: 3px; 
+	}
+}
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button.ui-state-focus{
+	.ui-button-primary;
+	//overrides so it looks normal but gets hover too
+	background-position:0;
+	background-color: mix(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight, 60%);
+	&:hover, &:active {
+	    background-position:0 -15px;
+        background-color: @btnPrimaryBackgroundHighlight;
+        *background-color: darken(@btnPrimaryBackgroundHighlight, 5%);
+    }
+}
+
+/***Dialog fixes**/
+.ui-dialog-buttonset .ui-button:focus {
+    //Fixes for FF dotted box
+    outline:none;
+}
