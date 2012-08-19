@@ -47,7 +47,7 @@ ul#icons span.ui-icon {
 	margin: 0 4px;
 }
 
-#buttons button {
+#jq-buttons button,#jq-button-icons button{
 	float: left;
 	margin-right: 4px;
 }

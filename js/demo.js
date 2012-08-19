@@ -9,14 +9,24 @@ $(function () {
     $('#tabs2, #tabs').tabs();
 
     // Buttons
-    $('button').button();
+    $('#jq-buttons button').button();
 
     // Anchors, Submit
-    $('.button,#sampleButton').button();
-
+    $('.jq-button,#sampleButton').button();
+    
+    // icon buttons
+    //ui-button-icon
+    $( ".ui-button-icon" ).button({
+        icons: {
+            primary: "ui-icon-locked"
+        }
+    });
+    $('.jq-btn').button();
+    
     // Buttonset
     $('#radioset').buttonset();
     $("#format").buttonset();
+    $("#pager").buttonset();
 
 
     // Dialog
@@ -57,7 +67,7 @@ $(function () {
     });
 
     // Progressbar
-    $("#progressbar").progressbar({
+    $('.progress').progressbar({
         value: 20
     });
 
@@ -110,7 +120,7 @@ $(function () {
 
 
     // Split button
-    $("#rerun").button().click(function () {
+    $(".rerun").button().click(function () {
         alert("Running the last action");
     }).next().button({
         text: false,
@@ -134,6 +144,9 @@ $(function () {
             $(ui.panel).append("<p>" + tab_content + "</p>");
         }
     });
+
+
+
 
     // modal dialog init: custom buttons and a "close" callback reseting the form inside
     var $dialog = $("#dialog2").dialog({
