@@ -108,6 +108,8 @@ $(function () {
     });
     $("#amount").val($("#slider-vertical").slider("value"));
 
+    //Menu
+    $("#menu").menu();
 
     // Split button
     $("#rerun").button().click(function () {
