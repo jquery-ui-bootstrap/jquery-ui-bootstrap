@@ -21,7 +21,7 @@ There *are* some minor known issues lingering that I'm working on, but the hope 
 
 ##jQuery UI support
 
-This theme targets jQuery UI 1.9.0 and the default version of jQuery included in the (current) jQuery UI builds (jQuery 1.6.2). I'm aware of jQuery 1.7.1 and intend on upgrading anything necessary in the theme to use it when the jQuery UI team officially include it in their theme packs.
+This theme targets jQuery UI 1.9.0 and the default version of jQuery included in the (current) jQuery UI builds (jQuery 1.6.2). I'm aware of jQuery 1.8.2 and intend on upgrading anything necessary in the theme to use it when the jQuery UI team officially include it in their theme packs.
 
 ##Project status
 
