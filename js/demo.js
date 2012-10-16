@@ -111,6 +111,7 @@ $(function () {
     //Menu
     $("#menu").menu();
 
+    //Spinner
     var spinner = $( "#spinner" ).spinner();
 
     $( "#disable" ).click(function() {
