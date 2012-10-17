@@ -137,6 +137,10 @@ $(function () {
 
     $( "button" ).button();
 
+    //Tooltip
+
+    $( document ).tooltip();
+
     // Split button
     $("#rerun").button().click(function () {
         alert("Running the last action");
