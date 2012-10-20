@@ -108,6 +108,38 @@ $(function () {
     });
     $("#amount").val($("#slider-vertical").slider("value"));
 
+    //Menu
+    $("#menu").menu();
+
+    //Spinner
+    var spinner = $( "#spinner" ).spinner();
+
+    $( "#disable" ).click(function() {
+        if ( spinner.spinner( "option", "disabled" ) ) {
+            spinner.spinner( "enable" );
+        } else {
+            spinner.spinner( "disable" );
+        }
+    });
+    $( "#destroy" ).click(function() {
+        if ( spinner.data( "ui-spinner" ) ) {
+            spinner.spinner( "destroy" );
+        } else {
+            spinner.spinner();
+        }
+    });
+    $( "#getvalue" ).click(function() {
+        alert( spinner.spinner( "value" ) );
+    });
+    $( "#setvalue" ).click(function() {
+        spinner.spinner( "value", 5 );
+    });
+
+    $( "button" ).button();
+
+    //Tooltip
+
+    $( document ).tooltip();
 
     // Split button
     $("#rerun").button().click(function () {
@@ -179,7 +211,7 @@ $(function () {
 
     // close icon: removing the tab on click
     // note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
-    $("#tabs span.ui-icon-close").live("click", function () {
+    $("#tabs span.ui-icon-close").on("click", function () {
         var index = $("li", $tabs).index($(this).parent());
         $tabs.tabs("remove", index);
     });
@@ -246,7 +278,7 @@ $(function () {
 
     // close icon: removing the tab on click
     // note: closable tabs gonna be an option in the future - see http://dev.jqueryui.com/ticket/3924
-    $("#tabs span.ui-icon-close").live("click", function () {
+    $("#tabs span.ui-icon-close").on("click", function () {
         var index = $("li", $tabs).index($(this).parent());
         $tabs.tabs("remove", index);
     });
