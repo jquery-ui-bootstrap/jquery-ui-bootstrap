@@ -139,7 +139,7 @@ $(function () {
 
     //Tooltip
 
-    $( document ).tooltip();
+    $( "#tooltip" ).tooltip();
 
     // Split button
     $("#rerun").button().click(function () {
