@@ -849,7 +849,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-slider-vertical .ui-slider-range-max { top: 0; }
 
 /*
- * jQuery UI Tabs 1.9.0
+ * jQuery UI Tabs 1.9.2
  *
  * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
@@ -857,9 +857,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  *
  * http://jqueryui.com/tabs/
  */
- .ui-tabs .ui-tabs-nav{ background:none; border-color: #ddd;
-  border-style: solid;
-  border-width: 0 0 1px;}
+ .ui-tabs .ui-tabs-nav{ background:none; border-color: #ddd;border-style: solid;border-width: 0 0 1px;}
 .ui-tabs { position: relative; padding: .2em; zoom: 1; border:0px;} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 
 
@@ -879,7 +877,6 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
           box-shadow: 0px 0px 0px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
 }
 .ui-tabs .ui-tabs-nav li a {
-
   float: left;
   text-decoration: none;
   cursor: text;
@@ -895,8 +892,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active { margin-bottom: 0; padding-bottom: 0px; outline:none;}
-.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
-
+.ui-tabs .ui-tabs-nav li.ui-tabs-active , .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-bottom-color: #ffffff;
@@ -904,10 +900,11 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   color:gray;
   outline:none;
 }
-
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a{background-color: #ffffff;outline:none;border:none;}
 .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover{
   background:#ffffff;
   outline:none;
+  margin-bottom:0px;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a { cursor: text; }
 .ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a { cursor: pointer; color:#0069D6; background:none; font-weight:normal; margin-bottom:-1px;}
