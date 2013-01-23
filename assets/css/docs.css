@@ -791,3 +791,7 @@ ul#icons span.ui-icon {
     line-height:18px;
     min-width: 70px;
 }
+/* Wijmo */
+#wijmo-container{
+    margin-bottom: 20px;
+}

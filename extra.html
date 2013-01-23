@@ -14,25 +14,20 @@
     <!--[if IE 7]>
     <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
     <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+    <![endif]-->
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <!--begin wijmo menu-->
     <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
     <!--End wijmo menu-->
     <!--begin file input-->
     <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
     <!--End file input-->
-    <!--begin DateRangePicker-->
-    <link href="third-party/jQuery-UI-Date-Range-Picker/css/ui.daterangepicker.css" media="screen" rel="Stylesheet" type="text/css" />
-    <!--End DateRangePicker-->
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.0.ie.css"/>
     <![endif]-->
 
     <!-- Le fav and touch icons -->
@@ -95,7 +90,7 @@
             <ul class="nav nav-list bs-docs-sidenav">
                 <li><a href="#wijmo"><i class="icon-chevron-right"></i> Wijmo</a></li>
                 <li><a href="#file-input"><i class="icon-chevron-right"></i> File input</a></li>
-                <li><a href="#dateRangePicker"><i class="icon-chevron-right"></i> dateRangePicker</a></li>
+                <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
             </ul>
         </div>
         <div class="span9">
@@ -104,10 +99,10 @@
                 <div class="page-header">
                     <h1>Wijmo</h1>
                 </div>
-                <div class="row-fluid">
-                    <p>
-                        This is an example of how to retheme one of the Wijmo jQuery UI components to match the Twitter Bootstrap theme. Whilst a menu component will be arriving to jQueryUI soon, you can find the menu in <a href="http://wijmo.com/widgets/wijmo-open/">Wijmo Open</a>.
-                    </p>
+                <p>
+                    This is an example of how to retheme one of the Wijmo jQuery UI components to match the Twitter Bootstrap theme. Whilst a menu component will be arriving to jQueryUI soon, you can find the menu in <a href="http://wijmo.com/widgets/wijmo-open/">Wijmo Open</a>.
+                </p>
+                <div id="wijmo-container" class="container-fluid">
                     <ul id="menu1">
                         <li>
                             <h3>
@@ -130,35 +125,59 @@
                     </ul>
                     <!-- End demo markup -->
                 </div>
+                <div class="clearfix"></div>
+<pre class="prettyprint linenums">
+$("#menu1").wijmenu({
+    trigger: ".wijmo-wijmenu-item",
+    triggerEvent: "click"
+});
+</pre>
             </section>
             <!-- File input -->
             <section id="file-input">
                 <div class="page-header">
                     <h1>File Input</h1>
+                </div>
+                <div class="container-fluid">
                     <form>
                         <input type="file" class="span3" name="file" id="file">
                     </form>
                 </div>
+<pre class="prettyprint linenums">
+$('#file').customFileInput({
+    button_position : 'right'
+});
+</pre>
             </section>
             <!-- end file input -->
             <!-- File input -->
-            <section id="dateRangePicker">
+            <section id="date-range">
                 <div class="page-header">
-                    <h1>FilamentGroup Date Range Picker</h1>
+                    <h1>Select a Date Range with datepicker</h1>
                 </div>
                 <p>
-                    The date range picker plugin code is open source and available in a git repository, <a href="https://github.com/filamentgroup/jQuery-UI-Date-Range-Picker">jQuery-UI-Date-Range-Picker</a>. For demonstration sakes it is included in this theme pack with style updates.
+                    <input type="text" value="01/01/2013" id="rangeBa" />
+                    <input type="text" value="02/06/2013" id="rangeBb" />
                 </p>
-                <h2>Default Rangepicker</h2>
-                <p>
-                    <input type="text" value="4/23/99" id="rangeA" />
-                </p>
-
-                <h2>2 inputs Rangepicker</h2>
-                <div>
-                    <input type="text" value="4/23/99" id="rangeBa" />
-                    <input type="text" value="4/23/99" id="rangeBb" />
-                </div>
+<pre class="prettyprint linenums">
+// Select a Date Range with datepicker
+$( "#rangeBa" ).datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 3,
+    onClose: function( selectedDate ) {
+        $( "#rangeBb" ).datepicker( "option", "minDate", selectedDate );
+    }
+});
+$( "#rangeBb" ).datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 3,
+    onClose: function( selectedDate ) {
+        $( "#rangeBa" ).datepicker( "option", "maxDate", selectedDate );
+    }
+});
+</pre>
             </section>
             <!-- end file input -->
         </div>
@@ -187,9 +206,8 @@
 <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
-<!--daterangepicker-->
-<script type="text/javascript" src="third-party/jQuery-UI-Date-Range-Picker/js/date.js"></script>
-<script type="text/javascript" src="third-party/jQuery-UI-Date-Range-Picker/js/daterangepicker.jQuery.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+<script src="assets/js/docs.js" type="text/javascript"></script>
 <!-- FileInput -->
 <script src="third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript"></script>
 <script src="third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript"></script>
@@ -198,8 +216,6 @@
 <script src="third-party/wijmo/jquery.mousewheel.min.js" type="text/javascript"></script>
 <script src="third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
 <!--End wijmo-->
-<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-<script src="assets/js/docs.js" type="text/javascript"></script>
 <script src="assets/js/demo.js" type="text/javascript"></script>
 </body>
 </html>

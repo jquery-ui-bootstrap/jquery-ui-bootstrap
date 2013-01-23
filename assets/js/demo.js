@@ -219,7 +219,21 @@ $(function () {
 
     $("#menu1").wijmenu({ trigger: ".wijmo-wijmenu-item", triggerEvent: "click" });
 
-    // Filament datepicker
-    $('#rangeA').daterangepicker();
-    $('#rangeBa, #rangeBb').daterangepicker();
+    // Select a Date Range with datepicker
+    $( "#rangeBa" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 3,
+        onClose: function( selectedDate ) {
+            $( "#rangeBb" ).datepicker( "option", "minDate", selectedDate );
+        }
+    });
+    $( "#rangeBb" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 3,
+        onClose: function( selectedDate ) {
+            $( "#rangeBa" ).datepicker( "option", "maxDate", selectedDate );
+        }
+    });
 });
