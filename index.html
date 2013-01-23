@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A preview of the jQuery UI Bootstrap theme">
+    <meta name="author" content="Addy Osmani">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/custom-theme/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.9.2.ie.css"/>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
+
+<!-- Navbar
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">jQuery UI Bootstrap</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="./index.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+    <div class="container">
+        <h1>jQuery UI Bootstrap</h1>
+        <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
+    </div>
+</header>
+
+
+<div class="container">
+    <!-- Docs nav ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
+                <li><a href="#button"><i class="icon-chevron-right"></i> Button</a></li>
+                <li><a href="#accordion"><i class="icon-chevron-right"></i> Accordion</a></li>
+                <li><a href="#dialog"><i class="icon-chevron-right"></i> Dialog</a></li>
+                <li><a href="#tabs-simple"><i class="icon-chevron-right"></i> Tabs</a></li>
+                <li><a href="#overlay"><i class="icon-chevron-right"></i> Overlay</a></li>
+            </ul>
+        </div>
+        <div class="span9">
+            <!-- Download ================================================== -->
+            <section id="download-bootstrap">
+                <div class="page-header">
+                    <h1>1. Download</h1>
+                </div>
+                <div class="row-fluid">
+                    <p class="docs-lead">
+                        Welcome! This is a live preview of the new jQuery UI Bootstrap theme - a project I started to bring the beauty of Twitter's <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> to jQuery UI widgets.
+                        With this theme, not only do you get the ability to use Bootstrap-themed widgets, but you can now also use (most) of Twitter Bootstrap side-by-wide with it without components breaking visually.
+                        It's still a work-in-progress, but I hope you find it useful. Issues and pull requests are always welcome - <a href="http://twitter.com/addyosmani">@addyosmani</a></p>
+                    </p>
+                    <p>
+                        <a class="download-btn ui-button-primary"href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/v0.23">Download stable (v0.23)</a>
+                        <a class="download-btn" href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/master" >Download Latest (dev)</a>
+                    </p>
+                </div>
+            </section>
+            <!-- Button -->
+            <section id="button">
+                <div class="page-header">
+                    <h1>Button</h1>
+                </div>
+                <!-- Buttons -->
+                <h2>Button default</h2>
+                <p>
+                    <button>Default</button>
+                    <button class="ui-button-primary">Primary</button>
+                    <button class="ui-button-success">Success</button>
+                    </br>
+                    </br>
+                    <button class="ui-button-error">Danger</button>
+                    <a class="button">Anchor</a>
+                    <input type="submit" class="button" value="Submit"/>
+                </p>
+
+<pre class="prettyprint linenums">
+// Button
+$('button').button();
+// Anchors, Submit
+$('.button').button();
+</pre>
+                <!-- Button set-->
+                <h2>Button set</h2>
+                <p>
+                    <form>
+                        <div id="radioset">
+                            <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
+                            <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
+                            <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+                        </div>
+                        </br>
+                        <div id="format">
+                            <input type="checkbox" id="check1" /><label for="check1">B</label>
+                            <input type="checkbox" id="check2" /><label for="check2">I</label>
+                            <input type="checkbox" id="check3" /><label for="check3">U</label>
+                        </div>
+                        </br>
+                    </form>
+                </p>
+<pre class="prettyprint linenums">
+// Buttonset
+$('#radioset').buttonset();
+$("#format").buttonset();
+</pre>
+            </section>
+            <!-- Accordion -->
+            <section id="accordion">
+                <div class="page-header">
+                    <h1>Accordion</h1>
+                </div>
+                <div id="menu-collapse">
+                    <div>
+                        <h3><a href="#">First</a></h3>
+                        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    </div>
+                    <div>
+                        <h3><a href="#">Second</a></h3>
+                        <div>Phasellus mattis tincidunt nibh.</div>
+                    </div>
+                    <div>
+                        <h3><a href="#">Third</a></h3>
+                        <div>Nam dui erat, auctor a, dignissim quis.</div>
+                    </div>
+                </div>
+<pre class="prettyprint linenums">
+// Accordion
+$("#menu-collapse").accordion({
+    header: "h3"
+});
+</pre>
+            </section>
+            <!-- Dialog -->
+            <section id="dialog">
+                <div class="page-header">
+                    <h1>Dialog</h1>
+                </div>
+                <p class="dialog-button">
+                    <a href="#" id="dialog_link" class="ui-state-default ui-corner-all">
+                        <span class="ui-icon ui-icon-newwin"></span>Open Dialog
+                    </a>
+                    &nbsp;
+                    <a href="#" id="modal_link" class="ui-state-default ui-corner-all">
+                        <span class="ui-icon ui-icon-newwin"></span>
+                        Open Modal Dialog
+                    </a>
+                </p>
+                <!-- ui-dialog -->
+                <div id="dialog_simple" title="Dialog Simple Title">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <!--static dialog-->
+                <div id="dialog-message" title="Modal Dialog">
+                    <p>
+                        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                        Your files have downloaded successfully into the My Downloads folder.
+                    </p>
+                    <p>
+                        Currently using <b>36% of your storage space</b>.
+                    </p>
+                </div>
+                <!--end static dialog-->
+<pre class="prettyprint linenums">
+// Dialog Link
+$('#dialog_link').click(function () {
+    $('#dialog_simple').dialog('open');
+    return false;
+});
+
+// Modal Link
+$('#modal_link').click(function () {
+    $('#dialog-message').dialog('open');
+    return false;
+});
+
+// Dialog Simple
+$('#dialog_simple').dialog({
+    autoOpen: false,
+    width: 600,
+    buttons: {
+        "Ok": function () {
+            $(this).dialog("close");
+        },
+        "Cancel": function () {
+            $(this).dialog("close");
+        }
+    }
+});
+
+// Dialog message
+$("#dialog-message").dialog({
+    autoOpen: false,
+    modal: true,
+    buttons: {
+        Ok: function () {
+            $(this).dialog("close");
+        }
+    }
+});
+</pre>
+            </section>
+            <!-- Tabs -->
+            <section id="tabs-simple">
+                <div class="page-header">
+                    <h1>Tabs</h1>
+                </div>
+                <h2>Simple tabs</h2>
+                <!--Demo-->
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-a">First</a></li>
+                        <li><a href="#tabs-b">Second</a></li>
+                        <li><a href="#tabs-c">Third</a></li>
+                    </ul>
+                    <div id="tabs-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    <div id="tabs-b">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+                    <div id="tabs-c">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+                </div>
+                <!-- End demo -->
+<pre class="prettyprint linenums">
+// Simple tabs
+$('#tabs').tabs();
+</pre>
+                <h2>Simple tabs adding and removing.</h2>
+                <!-- Demo -->
+                <div id="dialog2" title="Tab data">
+                    <form>
+                        <fieldset class="ui-helper-reset">
+                            <label for="tab_title">Title</label>
+                            <input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all" />
+                            <label for="tab_content">Content</label>
+                            <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all"></textarea>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <button id="add_tab" class="ui-button-primary">Add Tab</button>
+
+                <div id="tabs2">
+                    <ul>
+                        <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                    </div>
+                </div>
+                <!-- End demo -->
+<pre class="prettyprint linenums">
+// Simple tabs adding and removing
+$('#tabs2').tabs();
+
+// Dynamic tabs
+var tabTitle = $( "#tab_title" ),
+    tabContent = $( "#tab_content" ),
+    tabTemplate = "&lt;li&gt;&lt;a href='#{href}'>#{label}&lt;/a&gt; &lt;span class='ui-icon ui-icon-close'>Remove Tab&lt;/span&gt;&lt;/li&gt;",
+    tabCounter = 2;
+
+var tabs = $( "#tabs2" ).tabs();
+
+// modal dialog init: custom buttons and a "close" callback reseting the form inside
+var dialog = $( "#dialog2" ).dialog({
+    autoOpen: false,
+    modal: true,
+    buttons: {
+        Add: function() {
+            addTab();
+            $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+            $( this ).dialog( "close" );
+        }
+    },
+    close: function() {
+        form[ 0 ].reset();
+    }
+});
+
+// addTab form: calls addTab function on submit and closes the dialog
+var form = dialog.find( "form" ).submit(function( event ) {
+    addTab();
+    dialog.dialog( "close" );
+    event.preventDefault();
+});
+
+// actual addTab function: adds new tab using the input from the form above
+function addTab() {
+    var label = tabTitle.val() || "Tab " + tabCounter,
+        id = "tabs-" + tabCounter,
+        li = $( tabTemplate.replace( /#\{href\}/g, "#" + id ).replace( /#\{label\}/g, label ) ),
+        tabContentHtml = tabContent.val() || "Tab " + tabCounter + " content.";
+
+    tabs.find( ".ui-tabs-nav" ).append( li );
+    tabs.append( "&lt;div id='" + id + "&gt;&lt;/div&gt;&lt;p&gt;" + tabContentHtml + "&lt;/p&gt;&lt;/div&gt;" );
+    tabs.tabs( "refresh" );
+    tabCounter++;
+}
+
+// addTab button: just opens the dialog
+$( "#add_tab" )
+    .button()
+    .click(function() {
+        dialog.dialog( "open" );
+    });
+
+// close icon: removing the tab on click
+$( "#tabs2" ).on( "click",'span.ui-icon-close', function() {
+
+    var panelId = $( this ).closest( "li" ).remove().attr( "aria-controls" );
+    $( "#" + panelId ).remove();
+    tabs.tabs( "refresh" );
+});
+</pre>
+                <h2>Combination examples</h2>
+                <!--start combinations-->
+                <div id="tabs3">
+                    <ul>
+                        <li><a href="#tabs3-1">First</a></li>
+                        <li><a href="#tabs3-2">Second</a></li>
+                        <li><a href="#tabs3-3">Third</a></li>
+                    </ul>
+                    <div id="tabs3-1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
+                        <a href="#" id="sampleButton">Change</a>
+                    </div>
+                    <div id="tabs3-2">Tab 2</div>
+                    <div id="tabs3-3">Tab 3</div>
+                </div>
+                <!--end combinations-->
+<pre class="prettyprint linenums">
+//Combination examples (tabs) and open dialog
+$('#sampleButton').on('click', function(event){
+    event.preventDefault();
+    $('#dialog_simple').dialog({
+        autoOpen: true,
+        modal: true,
+        width: 600,
+        buttons: {
+            "Save": function () {
+                $(this).dialog("close");
+            },
+            "Cancel": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+});
+</pre>
+            <!-- End tabs -->
+            </section>
+            <section id="overlay">
+                <div class="page-header">
+                    <h1>Overlay and Shadow Classes</h1>
+                </div>
+                <div class="window-contain">
+                    <p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p><p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. </p><p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. </p><p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. </p>
+
+                    <!-- ui-overlay -->
+                    <div class="ui-overlay">
+                        <div class="ui-widget-overlay"></div>
+                        <div class="ui-widget-shadow ui-corner-all" style="width: 302px; height: 152px; position: absolute; left: 50px; top: 30px;"></div>
+                    </div>
+                    <div style="position: absolute; width: 280px; height: 130px;left: 50px; top: 30px; padding: 10px;" class="ui-widget ui-widget-content ui-corner-all">
+                        <div class="ui-dialog-content ui-widget-content" style="background: none; border: 0;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p>
+            jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
+        </p>
+        <p>
+            Twitter Bootstrap &copy; Twitter 2012 - 2013
+        </p>
+        <ul class="footer-links">
+            <li><a href="http://addyosmani.com/blog/">Blog</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery-1.8.3.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/docs.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>
