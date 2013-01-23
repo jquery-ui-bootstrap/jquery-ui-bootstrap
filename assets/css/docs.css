@@ -16,6 +16,14 @@ h3 code {
 -------------------------------------------------- */
 
 /* padding for in-page bookmarks and fixed navbar */
+.page-header {
+    border-bottom: 1px solid #EEEEEE;
+    margin: 20px 0;
+    padding-bottom: 9px;
+}
+.page-header > h1{
+    color: #5A5A5A;
+}
 section {
     padding-top: 20px;
 }
@@ -488,7 +496,6 @@ form.bs-docs-example {
 }
 .bs-docs-sidenav .active .icon-chevron-right,
 .bs-docs-sidenav .active a:hover .icon-chevron-right {
-    background-image: url(../img/glyphicons-halflings-white.png);
     opacity: 1;
 }
 .bs-docs-sidenav.affix {
