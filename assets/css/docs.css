@@ -741,10 +741,27 @@ ul#icons span.ui-icon {
 #add_tab {
     cursor: pointer;
 }
+
 /*shadow*/
 .window-contain{
     position: relative;
     height: 200px;
     padding:1% 4%;
     overflow:hidden;
+}
+
+/*Toolbar*/
+#toolbar {
+    padding: 5px 0 5px 5px;
+}
+/*
+* Bug chrome with toolbar and bootstrap inheritance
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #toolbar input{display:block;float:left;}
+}
+/*slider*/
+#amount{
+    color:#f6931f; 
+    font-weight:bold;
 }

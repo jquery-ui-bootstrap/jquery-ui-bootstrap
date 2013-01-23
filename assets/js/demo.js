@@ -1,12 +1,16 @@
 $(function () {
-    // Buttons
+    //####### Buttons
     $('button,.button,#sampleButton').button();
 
     // Buttonset
     $('#radioset').buttonset();
     $("#format").buttonset();
 
-    // Accordion
+    //####### Toolbar
+    $("#play, #shuffle").button();
+    $("#repeat").buttonset();
+
+    //####### Accordion
     $("#menu-collapse").accordion({
         header: "h3"
     });
@@ -45,7 +49,7 @@ $(function () {
         }
     });
 
-    // Dialogs
+    //####### Dialogs
     $("#dialog-message").dialog({
         autoOpen: false,
         modal: true,
@@ -59,7 +63,7 @@ $(function () {
     // Remove focus from buttons
     $('.ui-dialog :button').blur();
 
-    // Tabs
+    //####### Tabs
     $('#tabs2, #tabs, #tabs3').tabs();
 
     // Dynamic tabs
@@ -141,4 +145,68 @@ $(function () {
         });
     });
 
+    //####### Datepicker
+    $('#datepicker').datepicker({
+        inline: true
+    });
+
+    //####### Slider
+
+    // Horizontal slider
+    $('#h-slider').slider({
+        range: true,
+        values: [17, 67]
+    });
+
+    // Vertical slider
+    $("#v-slider").slider({
+        orientation: "vertical",
+        range: "min",
+        min: 0,
+        max: 100,
+        value: 60,
+        slide: function (event, ui) {
+            $("#amount").val(ui.value);
+        }
+    });
+    $("#amount").val($("#v-slider").slider("value"));
+
+    // Autocomplete
+    var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
+
+    $("#tags").autocomplete({
+        source: availableTags
+    });
+
+    //####### Menu
+    $("#menu").menu();
+
+    //####### Spinner
+
+    var spinner = $( "#spinner" ).spinner();
+
+    $( "#disable" ).click(function() {
+        if ( spinner.spinner( "option", "disabled" ) ) {
+            spinner.spinner( "enable" );
+        } else {
+            spinner.spinner( "disable" );
+        }
+    });
+    $( "#destroy" ).click(function() {
+        if ( spinner.data( "ui-spinner" ) ) {
+            spinner.spinner( "destroy" );
+        } else {
+            spinner.spinner();
+        }
+    });
+    $( "#getvalue" ).click(function() {
+        alert( spinner.spinner( "value" ) );
+    });
+    $( "#setvalue" ).click(function() {
+        spinner.spinner( "value", 5 );
+    });
+
+    //####### Tooltip
+
+    $( "#tooltip" ).tooltip();
 });
