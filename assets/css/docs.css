@@ -676,6 +676,9 @@ form.bs-docs-example {
     }
 }
 
+#twitter-share{
+    padding-top:5px;
+}
 .docs-lead{margin-bottom:20px;font-size:15px;font-weight:200;line-height:30px;}
 
 /* Download */
