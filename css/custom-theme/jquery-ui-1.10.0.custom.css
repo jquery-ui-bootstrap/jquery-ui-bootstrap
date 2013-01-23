@@ -816,9 +816,9 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 
 /*
- * jQuery UI Menu 1.9.0
+ * jQuery UI Menu 1.10.0
  *
- * Copyright 2012-10-11, AUTHORS.txt (http://jqueryui.com/about)
+* Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
@@ -872,9 +872,9 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 
 /*
- * jQuery UI spinner 1.9.0
+ * jQuery UI spinner 1.10.0
  *
- * Copyright 2012-10-11, AUTHORS.txt (http://jqueryui.com/about)
+* Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
@@ -897,20 +897,38 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 
 /*
- * jQuery UI Dialog 1.8.16
+ * jQuery UI Dialog 1.10.0
  *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
  * http://docs.jquery.com/UI/Dialog#theming
  */
-.ui-dialog { position: absolute; top: 0; left: 0; padding: .2em; width: 300px; overflow: hidden; outline: 0; }
+.ui-dialog { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  padding: .2em; 
+  width: 300px; 
+  overflow: hidden; 
+  outline: 0; 
+  background-clip: padding-box;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  /*left: 50%;
+  margin-left: -280px;*/
+  outline: medium none;
+  position: fixed;
+  /*top: 10%;
+  width: 560px;*/
+  z-index: 1050;
+}
 .ui-dialog .ui-dialog-titlebar { /*padding: .4em 1em;*/
-
   position: relative;
   padding:5px 15px;
-
   border:0px 0px 0px 1px solid;
   border-color: white;
   padding: 5px 15px;
@@ -925,9 +943,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   -webkit-border-bottom-left-radius: 0px;
   -khtml-border-bottom-left-radius: 0px;
   border-bottom-left-radius: 0px;
-
   border-bottom:1px solid #ccc;
-
 }
 .ui-dialog .ui-dialog-title {
   float: left;
@@ -936,14 +952,15 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   margin-top:5px;
   margin-bottom:5px;
   padding:5px;
-
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .ui-dialog .ui-dialog-titlebar-close {
   position: absolute;
   right: .3em;
   top: 50%;
   width: 19px;
-  margin: -10px 0 0 0;
+  margin: -20px 0 0 0;
   padding: 1px;
   height: 18px;
   font-size: 20px;
@@ -954,6 +971,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   -khtml-opacity: 0.25;
   -moz-opacity: 0.25;
   opacity: 0.25;
+  background:none;
+  border-width: 0;
+  border:none;
+  box-shadow: none;
 }
 
 .ui-dialog .ui-dialog-titlebar-close span { 
@@ -965,7 +986,8 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 1px;   filter: alpha(opacity=90);
   -khtml-opacity: 0.90;
   -moz-opacity: 0.90;
-  opacity: 0.90;   }
+  opacity: 0.90;   
+}
 
 .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
 
