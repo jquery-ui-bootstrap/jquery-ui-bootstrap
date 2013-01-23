@@ -760,8 +760,20 @@ ul#icons span.ui-icon {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     #toolbar input{display:block;float:left;}
 }
+/*Datepicker*/
+#datepicker{
+    margin-bottom: 20px;
+}
 /*slider*/
 #amount{
     color:#f6931f; 
     font-weight:bold;
+}
+#h-slider,#v-slider{
+    margin-bottom: 20px;
+}
+/*Autocomplete*/
+#tags{
+    margin-bottom: 20px;
+
 }
