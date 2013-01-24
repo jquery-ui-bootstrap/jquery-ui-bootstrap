@@ -921,7 +921,6 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   /*left: 50%;
   margin-left: -280px;*/
   outline: medium none;
-  position: fixed;
   /*top: 10%;
   width: 560px;*/
   z-index: 1050;
@@ -1031,9 +1030,9 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 /*
- * jQuery UI Slider 1.8.16
+ * jQuery UI Slider 1.10.0
  *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
@@ -1073,9 +1072,9 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-slider-vertical .ui-slider-range-max { top: 0; }
 
 /*
- * jQuery UI Tabs 1.9.2
+ * jQuery UI Tabs 1.10.0
  *
- * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
@@ -1141,12 +1140,13 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 /* IE fix for background inheritance from ui-widget*/
 .ui-tabs .ui-tabs-nav li{
   filter:none;
+  margin-bottom: -1px;
 }
 
 /*
- * jQuery UI Tooltip 1.9.0
+ * jQuery UI Tooltip 1.10.0
  *
- * Copyright 2012-10-11, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
@@ -1167,9 +1167,9 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 body .ui-tooltip { border-width:2px; }
 
 /*
- * jQuery UI Datepicker 1.9.0
+ * jQuery UI Datepicker 1.10.0
  *
- * Copyright 2012-10-11, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
@@ -1311,9 +1311,9 @@ body .ui-tooltip { border-width:2px; }
 }
 
 /*
- * jQuery UI Progressbar 1.8.16
+ * jQuery UI Progressbar 1.10.0
  *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
