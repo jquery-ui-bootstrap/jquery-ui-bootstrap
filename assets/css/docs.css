@@ -434,6 +434,9 @@ form.bs-docs-example {
 /* Sidenav for Docs
 -------------------------------------------------- */
 
+/* Sidenav for Docs
+-------------------------------------------------- */
+
 .bs-docs-sidenav {
     width: 228px;
     margin: 30px 0 0;
@@ -463,15 +466,7 @@ form.bs-docs-example {
     -moz-border-radius: 0 0 6px 6px;
     border-radius: 0 0 6px 6px;
 }
-.bs-docs-sidenav > li.active > a {
-    background: #B24926; /* Old browsers */
-    background: -moz-linear-gradient(45deg,  #B24926 0%, #FAA523 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#B24926), color-stop(100%,#FAA523)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* IE10+ */
-    background: linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B24926', endColorstr='#FAA523',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.bs-docs-sidenav > .active > a {
     position: relative;
     z-index: 2;
     padding: 9px 15px;
@@ -480,7 +475,16 @@ form.bs-docs-example {
     -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
     box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+    background: #B24926; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #B24926 0%, #FAA523 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#B24926), color-stop(100%,#FAA523)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #B24926 0%,#FAA523 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B24926', endColorstr='#FAA523',GradientType=1 );
 }
+
 /* Chevrons */
 .bs-docs-sidenav .icon-chevron-right {
     float: right;
@@ -506,6 +510,24 @@ form.bs-docs-example {
     top: auto;
     bottom: 270px;
 }
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+    .bs-docs-container {
+        max-width: 970px;
+    }
+    .bs-docs-sidenav {
+        width: 258px;
+    }
+    .bs-docs-sidenav > li > a {
+        width: 230px \9; /* Override the previous IE8-9 hack */
+    }
+}
+
 /* Desktop
 ------------------------- */
 @media (max-width: 980px) {
@@ -655,25 +677,6 @@ form.bs-docs-example {
         white-space: normal;
         word-wrap: break-word;
         word-break: break-all;
-    }
-
-    /* Examples: dropdowns */
-    .bs-docs-example-submenus > .pull-left {
-        float: none;
-        clear: both;
-    }
-    .bs-docs-example-submenus > .pull-left,
-    .bs-docs-example-submenus > .pull-left + .pull-left {
-        margin-left: 0;
-    }
-    .bs-docs-example-submenus p {
-        margin-bottom: 0;
-    }
-    .bs-docs-example-submenus .dropup > .dropdown-menu,
-    .bs-docs-example-submenus .dropdown > .dropdown-menu {
-        margin-bottom: 10px;
-        float: none;
-        max-width: 180px;
     }
 
     /* Tighten up footer */
