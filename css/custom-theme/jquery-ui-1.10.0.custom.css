@@ -15,26 +15,26 @@
 	display: none;
 }
 
-.ui-helper-hidden-accessible { 
+.ui-helper-hidden-accessible {
 	border: 0;
 	clip: rect(0 0 0 0);
-	height: 1px; 
-	margin: -1px; 
-	overflow: hidden; 
-	padding: 0; 
-	position: absolute; 
-	width: 1px; 
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
-.ui-helper-reset { 
-	margin: 0; 
-	padding: 0; 
-	border: 0; 
-	outline: 0; 
-	line-height: 1.3; 
-	text-decoration: none; 
-	font-size: 100%; 
-	list-style: none; 
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
 }
 
 .ui-helper-clearfix:before,
@@ -43,34 +43,34 @@
 	display: table;
 }
 
-.ui-helper-clearfix:after { 
-	content: "."; 
-	display: block; 
-	height: 0; 
-	clear: both; 
-	visibility: hidden; 
+.ui-helper-clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 
-.ui-helper-clearfix { 
+.ui-helper-clearfix {
 	/*display: inline-block; */
 	display: block;
 	min-height: 0; /* support: IE7 */
 }
 
 /* required comment for clearfix to work in Opera \*/
-* html .ui-helper-clearfix { 
-	height:1%; 
+* html .ui-helper-clearfix {
+	height:1%;
 }
 
 /* end clearfix */
-.ui-helper-zfix { 
-	width: 100%; 
-	height: 100%; 
-	top: 0; 
-	left: 0; 
-	position: absolute; 
-	opacity: 0; 
-	filter:Alpha(Opacity=0); 
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0);
 }
 .ui-front {
 	z-index: 100;
@@ -88,11 +88,11 @@
 ----------------------------------*/
 
 /* states and images */
-.ui-icon { 
-	display: block; 
-	text-indent: -99999px; 
-	overflow: hidden; 
-	background-repeat: no-repeat; 
+.ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
 }
 
 
@@ -101,12 +101,12 @@
 
 /* Overlays */
 
-.ui-widget-overlay { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%; 
+.ui-widget-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 
@@ -120,83 +120,83 @@
  * http://api.jqueryui.com/resizable/
  */
 
-.ui-resizable { 
+.ui-resizable {
 	position: relative;
 }
 
-.ui-resizable-handle { 
+.ui-resizable-handle {
 	position: absolute;
 	font-size: 0.1px;
-	z-index: 99999; 
-	display: block; 
+	z-index: 99999;
+	display: block;
 }
 
 .ui-resizable-disabled .ui-resizable-handle,
-.ui-resizable-autohide .ui-resizable-handle { 
-	display: none; 
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
 }
 
-.ui-resizable-n { 
-	cursor: n-resize; 
-	height: 7px; 
-	width: 100%; 
-	top: -5px; 
-	left: 0; 
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
 }
 
-.ui-resizable-s { 
-	cursor: s-resize; 
-	height: 7px; 
-	width: 100%; 
-	bottom: -5px; 
-	left: 0; 
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
 }
 
-.ui-resizable-e { 
-	cursor: e-resize; 
-	width: 7px; 
-	right: -5px; 
-	top: 0; 
-	height: 100%; 
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
 }
 
-.ui-resizable-w { 
-	cursor: w-resize; 
-	width: 7px; 
-	left: -5px; 
-	top: 0; 
-	height: 100%; 
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
 }
 
-.ui-resizable-se { 
-	cursor: se-resize; 
-	width: 12px; 
-	height: 12px; 
-	right: 1px; 
-	bottom: 1px; 
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
 }
 
-.ui-resizable-sw { 
-	cursor: sw-resize; 
-	width: 9px; 
-	height: 9px; 
-	left: -5px; 
-	bottom: -5px; 
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
 }
 
-.ui-resizable-nw { 
-	cursor: nw-resize; 
-	width: 9px; 
-	height: 9px; 
-	left: -5px; 
-	top: -5px; 
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
 }
 
-.ui-resizable-ne { 
-	cursor: ne-resize; 
-	width: 9px; 
-	height: 9px; 
-	right: -5px; 
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
 	top: -5px;
 }
 
@@ -211,10 +211,10 @@
  * http://jqueryui.com/selectable/
  */
 
-.ui-selectable-helper { 
-	position: absolute; 
-	z-index: 100; 
-	border: 1px dotted black; 
+.ui-selectable-helper {
+	position: absolute;
+	z-index: 100;
+	border: 1px dotted black;
 }
 
 
@@ -732,16 +732,16 @@
 
 /* Overlays */
 
-.ui-widget-overlay { 
-	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x; 
+.ui-widget-overlay {
+	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
 	opacity: .30;
-	filter:Alpha(Opacity=30); 
+	filter:Alpha(Opacity=30);
 }
 
-.ui-widget-shadow { 
-	margin: -8px 0 0 -8px; 
-	padding: 8px; 
-	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x; 
+.ui-widget-shadow {
+	margin: -8px 0 0 -8px;
+	padding: 8px;
+	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
 	opacity: .30;
 	filter:Alpha(Opacity=30);
 	-webkit-border-radius: 8px; /* Safari 4 */
@@ -762,55 +762,53 @@
 
 /* IE/Win - Fix animation bug - #4615 */
 
-.ui-accordion { 
-	width: 100%; 
+.ui-accordion {
+	width: 100%;
 }
-.ui-accordion .ui-accordion-header { 
-	cursor: pointer; 
-	position: relative; 
-	margin-top: 1px; 
-	zoom: 1; 
-	font-weight:bold; 
-}
-
-.ui-accordion .ui-accordion-li-fix { 
-	display: inline; 
+.ui-accordion .ui-accordion-header {
+	cursor: pointer;
+	position: relative;
+	margin-top: 1px;
+	font-weight:bold;
 }
 
-.ui-accordion .ui-accordion-header-active { 
-	border-bottom: 0 !important; 
+.ui-accordion .ui-accordion-li-fix {
+	display: inline;
 }
 
-.ui-accordion .ui-accordion-header a { 
-	display: block; 
-	font-size: 1em; 
-	padding: .5em .5em .5em 1.7em; 
-}
-.ui-accordion-icons .ui-accordion-header a { 
-	padding-left: 2.2em; 
+.ui-accordion .ui-accordion-header-active {
+	border-bottom: 0 !important;
 }
 
-.ui-accordion .ui-accordion-header .ui-icon { 
-	position: absolute; 
-	left: .5em; 
-	top: 50%; 
-	margin-top: -8px; 
+.ui-accordion .ui-accordion-header a {
+	display: block;
+	font-size: 1em;
+	padding: .5em .5em .5em 1.7em;
+}
+.ui-accordion-icons .ui-accordion-header a {
+	padding-left: 2.2em;
 }
 
-.ui-accordion .ui-accordion-content { 
-	padding: 1em 2.2em; 
-	border-top: 0; 
-	margin-top: -2px; 
-	position: relative; 
-	top: 1px; 
-	margin-bottom: 2px; 
-	overflow: auto; 
-	display: none; 
-	zoom: 1; 
+.ui-accordion .ui-accordion-header .ui-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
 }
 
-.ui-accordion .ui-accordion-content-active { 
-	display: block; 
+.ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	border-top: 0;
+	margin-top: -2px;
+	position: relative;
+	top: 1px;
+	margin-bottom: 2px;
+	overflow: auto;
+	display: none;
+}
+
+.ui-accordion .ui-accordion-content-active {
+	display: block;
 }
 
 
@@ -824,11 +822,11 @@
  * http://jqueryui.com/autocomplete/
  */
 
-.ui-autocomplete { 
-	position: absolute; 
+.ui-autocomplete {
+	position: absolute;
 	top: 0;
 	left: 0;
-	cursor: default; 
+	cursor: default;
 }
 
 
@@ -1049,7 +1047,7 @@ button.ui-button::-moz-focus-inner {
 
 .ui-menu .ui-menu-item {
 	margin: 0;
-	padding: 0; zoom: 1;
+	padding: 0;
 	float: left;
 	clear: left;
 	width: 100%;
@@ -1068,14 +1066,13 @@ button.ui-button::-moz-focus-inner {
 	display: block;
 	padding: 2px .4em;
 	line-height: 1.5;
-	zoom: 1;
 	font-weight: normal;
 }
 
 .ui-menu .ui-menu-item a.ui-state-focus,
-.ui-menu .ui-menu-item a.ui-state-active { 
-	font-weight: normal; 
-	margin: 0; 
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: 0;
 	color: #ffffff;
 	background: #0064cd;
 	background-color: #0064cd;
@@ -1215,16 +1212,16 @@ button.ui-button::-moz-focus-inner {
  * http://docs.jquery.com/UI/Dialog#theming
  */
 
-.ui-dialog { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	padding: .2em; 
-	width: 300px; 
-	overflow: hidden; 
-	outline: 0; 
+.ui-dialog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2em;
+	width: 300px;
+	overflow: hidden;
+	outline: 0;
 	background-clip: padding-box;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	border-radius: 6px 6px 6px 6px;
 	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); /* Safari 4 */
@@ -1237,7 +1234,8 @@ button.ui-button::-moz-focus-inner {
 	width: 560px;*/
 	z-index: 1050;
 }
-.ui-dialog .ui-dialog-titlebar { /*padding: .4em 1em;*/
+.ui-dialog .ui-dialog-titlebar {
+	/*padding: .4em 1em;*/
 	position: relative;
 	padding: 5px 15px;
 	border: 0 0 0 1px solid;
@@ -1288,8 +1286,8 @@ button.ui-button::-moz-focus-inner {
 	box-shadow: none;
 }
 
-.ui-dialog .ui-dialog-titlebar-close span { 
-	display: block; 
+.ui-dialog .ui-dialog-titlebar-close span {
+	display: block;
 	margin: 1px;
 	text-indent: 9999px;
 }
@@ -1308,7 +1306,6 @@ button.ui-button::-moz-focus-inner {
 	padding: .5em 1em;
 	background: none;
 	overflow: auto;
-	zoom: 1;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
@@ -1325,7 +1322,6 @@ button.ui-button::-moz-focus-inner {
 	-webkit-box-shadow: inset 0 1px 0 #ffffff; /* Safari 4 */
 	-moz-box-shadow: inset 0 1px 0 #ffffff; /* Firefox 3.6 */
 	box-shadow: inset 0 1px 0 #ffffff;
-	zoom: 1;
 	margin-bottom: 0;
 
 }
@@ -1468,7 +1464,6 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs {
 	position: relative; /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;
-	zoom: 1;
 	border: 0;
 	-webkit-border-radius: 0; /* Safari 4 */
 	-moz-border-radius: 0; /* Firefox 3.6 */
@@ -2080,7 +2075,7 @@ div.wijmo-wijmenu {
 	color: #bfbfbf;
 }
 
-.wijmo-wijmenu .ui-state-default .wijmo-wijmenu-text {		
+.wijmo-wijmenu .ui-state-default .wijmo-wijmenu-text {
 	color: #bfbfbf;
 }
 
