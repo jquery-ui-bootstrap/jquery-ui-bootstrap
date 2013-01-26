@@ -1367,6 +1367,10 @@ input[type=file]:focus, input[type=checkbox]:focus, select:focus {
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
 input[type="password"],
 .ui-autocomplete-input,
 textarea,
