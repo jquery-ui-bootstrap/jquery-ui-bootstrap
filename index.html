@@ -113,10 +113,10 @@
                     <p class="docs-lead">
                         Welcome! This is a live preview of jQuery UI Bootstrap - a project we started to bring the beauty of Twitter <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> to jQuery UI widgets.
                         With this theme, not only do you get the ability to use Bootstrap-themed widgets, but you can now also use (most) of Twitter Bootstrap side-by-wide with it without components breaking visually.
-                        It's still a work-in-progress, but we hope you find it useful. Issues and pull requests are always welcome.</p>
+                        It's still a work-in-progress, but we hope you find it useful. Issues and pull requests are always welcome.
                     </p>
                     <p>
-                        <a class="download-btn ui-button-primary"href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/v0.5pre">Download stable (v0.5)</a>
+                        <a class="download-btn ui-button-primary" href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/v0.5pre">Download stable (v0.5)</a>
                         <a class="download-btn" href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/master" >Download Latest (dev)</a>
                     </p>
                 </div>
@@ -138,8 +138,6 @@
                     <button>Default</button>
                     <button class="ui-button-primary">Primary</button>
                     <button class="ui-button-success">Success</button>
-                    </br>
-                    </br>
                     <button class="ui-button-error">Danger</button>
                     <a class="button">Anchor</a>
                     <input type="submit" class="button" value="Submit"/>
@@ -153,42 +151,38 @@ $('.button').button();
 </pre>
                 <!-- Button set-->
                 <h2>Button set</h2>
-                <p>
-                    <form>
-                        <div id="radioset">
-                            <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
-                            <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
-                            <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
-                        </div>
-                        </br>
-                        <div id="format">
-                            <input type="checkbox" id="check1" /><label for="check1">B</label>
-                            <input type="checkbox" id="check2" /><label for="check2">I</label>
-                            <input type="checkbox" id="check3" /><label for="check3">U</label>
-                        </div>
-                        </br>
-                    </form>
-                </p>
+                <form>
+                    <p id="radioset">
+                        <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
+                        <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
+                        <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+                    </p>
+                    <p id="format">
+                        <input type="checkbox" id="check1" /><label for="check1">B</label>
+                        <input type="checkbox" id="check2" /><label for="check2">I</label>
+                        <input type="checkbox" id="check3" /><label for="check3">U</label>
+                    </p>
+                </form>
 <pre class="prettyprint linenums">
 // Buttonset
 $('#radioset').buttonset();
 $("#format").buttonset();
 </pre>
-            <h2>Simple toolbar</h2>
-                <div id="toolbar" class="span4 ui-toolbar ui-widget-header ui-corner-all">
+                <h2>Simple toolbar</h2>
+                <form class="clearfix">
+	                <div id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
 
-                <input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
-                
-                <span id="repeat">
-                  <input type="radio" id="repeat0" name="repeat" checked="checked" /><label for="repeat0">No Repeat</label>
-                  <input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
-                  <input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
-                </span>
+	                    <input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
 
-              </div>
-              <div class="clearfix"></div>
+	                    <span id="repeat">
+	                        <input type="radio" id="repeat0" name="repeat" checked="checked" /><label for="repeat0">No Repeat</label>
+	                        <input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
+	                        <input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
+	                    </span>
+	                </div>
+                </form>
 <pre class="prettyprint linenums">
-//Toolbar
+// Toolbar
 $("#play, #shuffle").button();
 $("#repeat").buttonset();
 </pre>
