@@ -171,6 +171,7 @@ $("#format").buttonset();
                 <h2>Simple toolbar</h2>
                 <form class="clearfix">
 	                <div id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
+		                <button id="play">Play</button>
 
 	                    <input type="checkbox" id="shuffle"><label for="shuffle">Shuffle</label>
 
@@ -183,7 +184,13 @@ $("#format").buttonset();
                 </form>
 <pre class="prettyprint linenums">
 // Toolbar
-$("#play, #shuffle").button();
+$("#play").button({
+    text: false,
+    icons: {
+        primary: "ui-icon-play"
+    }
+});
+$("#shuffle").button();
 $("#repeat").buttonset();
 </pre>
             </section>
