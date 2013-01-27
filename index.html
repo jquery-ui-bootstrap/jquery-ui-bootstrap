@@ -4,21 +4,21 @@
             <meta charset="utf-8">
             <title>jQuery UI Bootstrap</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="A preview of the jQuery UI Bootstrap theme">
+            <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
             <meta name="author" content="Addy Osmani">
 
             <!-- Le styles -->
-            <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-            <link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
-            <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.0.custom.css">
+            <link rel="stylesheet" href="assets/css/font-awesome.min.css">
             <!--[if IE 7]>
             <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
             <![endif]-->
             <!--[if lt IE 9]>
-            <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+            <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.0.ie.css">
             <![endif]-->
-            <link href="assets/css/docs.css" rel="stylesheet">
-            <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+            <link rel="stylesheet" href="assets/css/docs.css">
+            <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
 
             <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
             <!--[if lt IE 9]>
@@ -140,7 +140,7 @@
                     <button class="ui-button-success">Success</button>
                     <button class="ui-button-error">Danger</button>
                     <a class="button">Anchor</a>
-                    <input type="submit" class="button" value="Submit"/>
+                    <input type="submit" class="button" value="Submit">
                 </p>
 
 <pre class="prettyprint linenums">
@@ -153,14 +153,14 @@ $('.button').button();
                 <h2>Button set</h2>
                 <form>
                     <p id="radioset">
-                        <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
-                        <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
-                        <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+                        <input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+                        <input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+                        <input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
                     </p>
                     <p id="format">
-                        <input type="checkbox" id="check1" /><label for="check1">B</label>
-                        <input type="checkbox" id="check2" /><label for="check2">I</label>
-                        <input type="checkbox" id="check3" /><label for="check3">U</label>
+                        <input type="checkbox" id="check1"><label for="check1">B</label>
+                        <input type="checkbox" id="check2"><label for="check2">I</label>
+                        <input type="checkbox" id="check3"><label for="check3">U</label>
                     </p>
                 </form>
 <pre class="prettyprint linenums">
@@ -172,12 +172,12 @@ $("#format").buttonset();
                 <form class="clearfix">
 	                <div id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
 
-	                    <input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
+	                    <input type="checkbox" id="shuffle"><label for="shuffle">Shuffle</label>
 
 	                    <span id="repeat">
-	                        <input type="radio" id="repeat0" name="repeat" checked="checked" /><label for="repeat0">No Repeat</label>
-	                        <input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
-	                        <input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
+	                        <input type="radio" id="repeat0" name="repeat" checked="checked"><label for="repeat0">No Repeat</label>
+	                        <input type="radio" id="repeat1" name="repeat"><label for="repeat1">Once</label>
+	                        <input type="radio" id="repeatall" name="repeat"><label for="repeatall">All</label>
 	                    </span>
 	                </div>
                 </form>
@@ -310,7 +310,7 @@ $('#tabs').tabs();
                     <form>
                         <fieldset class="ui-helper-reset">
                             <label for="tab_title">Title</label>
-                            <input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all" />
+                            <input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all">
                             <label for="tab_content">Content</label>
                             <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all"></textarea>
                         </fieldset>
@@ -516,7 +516,7 @@ $('#h-slider').slider({
                         </p>
                         <p>
                           <label for="amount">Volume:</label>
-                          <input type="text" id="amount" />
+                          <input type="text" id="amount">
                         </p>
                     </div>
                     <div class="span6">
@@ -546,7 +546,7 @@ $("#amount").val($("#v-slider").slider("value"));
                 </div>
                 <div class="ui-widget">
                     <label for="tags">Tags: </label>
-                    <input id="tags" />
+                    <input id="tags">
                 </div>
 <pre class="prettyprint linenums">
 // Autocomplete
@@ -616,7 +616,7 @@ $("#menu").menu();
                 <h2>Spinner</h2>
                 <p>
                   <label for="spinner">Select a value:</label>
-                  <input id="spinner" name="value" />
+                  <input id="spinner" name="value">
                 </p>
 
                 <p>
@@ -872,7 +872,7 @@ $( "#setvalue" ).click(function() {
                       <a href="http://themeroller.com" title="ThemeRoller: jQuery UI's theme builder application">ThemeRoller</a>
                       will also style tooltips accordingly.</p>
                   <p>Tooltips are also useful for form elements, to show some additional information in the context of each field.</p>
-                  <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes." /></p>
+                  <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
                   <p>Hover the field to see the tooltip.</p>
                 </div>
 <pre class="prettyprint linenums">
@@ -903,11 +903,11 @@ $( "#tooltip" ).tooltip();
     </div>
 </footer>
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
-<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-<script src="assets/js/docs.js" type="text/javascript"></script>
-<script src="assets/js/demo.js" type="text/javascript"></script>
+<script src="assets/js/jquery-1.9.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/docs.js"></script>
+<script src="assets/js/demo.js"></script>
 </body>
 </html>
