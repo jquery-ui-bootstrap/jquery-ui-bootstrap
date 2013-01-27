@@ -302,9 +302,15 @@ $("#dialog-message").dialog({
                         <li><a href="#tabs-b">Second</a></li>
                         <li><a href="#tabs-c">Third</a></li>
                     </ul>
-                    <div id="tabs-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                    <div id="tabs-b">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-                    <div id="tabs-c">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+                    <div id="tabs-a">
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	                </div>
+                    <div id="tabs-b">
+	                    <p>Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</p>
+	                </div>
+                    <div id="tabs-c">
+	                    <p>Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</p>
+	                </div>
                 </div>
                 <!-- End demo -->
 <pre class="prettyprint linenums">
@@ -324,7 +330,7 @@ $('#tabs').tabs();
                     </form>
                 </div>
 
-                <button id="add_tab" class="ui-button-primary">Add Tab</button>
+                <p><button id="add_tab" class="ui-button-primary">Add Tab</button></p>
 
                 <div id="tabs2">
                     <ul>
@@ -410,7 +416,7 @@ $( "#tabs2" ).on( "click",'span.ui-icon-close', function() {
                     </ul>
                     <div id="tabs3-1">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
-                        <a href="#" id="sampleButton">Change</a>
+                        <a href="#" id="sampleButton">Open dialog</a>
                     </div>
                     <div id="tabs3-2">Tab 2</div>
                     <div id="tabs3-3">Tab 3</div>

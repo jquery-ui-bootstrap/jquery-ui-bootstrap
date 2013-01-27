@@ -868,8 +868,13 @@
 	overflow: visible; /* the overflow property removes extra width in IE */
 }
 
+.ui-button:hover {
+	color: #333;
+	text-decoration: none;
+}
+
 .ui-button-primary {
-	color: #ffffff;
+	color: #fff;
 	background-color: #0064cd;
 	background-repeat: repeat-x;
 	background-image: -webkit-linear-gradient(top, #049cdb, #0064cd); /* Safari 5.1+, Chrome 10+ */
@@ -883,7 +888,7 @@
 }
 
 .ui-button-success {
-	color: #ffffff;
+	color: #fff;
 	background-color: #57a957;
 	background-repeat: repeat-x;
 	background-image: -webkit-linear-gradient(top, #62c462, #57a957); /* Safari 5.1+, Chrome 10+ */
@@ -897,7 +902,7 @@
 }
 
 .ui-button-error {
-	color: #ffffff;
+	color: #fff;
 	background-color: #c43c35;
 	background-repeat: repeat-x;
 	background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35); /* Safari 5.1+, Chrome 10+ */
@@ -908,6 +913,13 @@
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	border-color: #c43c35 #c43c35 #882a25;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.ui-button-primary:hover,
+.ui-button-success:hover,
+.ui-button-error:hover {
+	color: #fff;
+	text-decoration: none;
 }
 
 /* to make room for the icon, a width needs to be set here */
@@ -1463,7 +1475,6 @@ button.ui-button::-moz-focus-inner {
 
 .ui-tabs {
 	position: relative; /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-	padding: .2em;
 	border: 0;
 	-webkit-border-radius: 0; /* Safari 4 */
 	-moz-border-radius: 0; /* Firefox 3.6 */
@@ -1471,86 +1482,65 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-tabs .ui-tabs-nav {
-	background: none;
-	border: #ddd solid;
-	border-width: 0 0 1px;
+	margin-bottom: 5px;
+	border: solid #ddd;
+	border-width: 0 0 1px 0;
 	-webkit-border-radius: 0; /* Safari 4 */
 	-moz-border-radius: 0; /* Firefox 3.6 */
 	border-radius: 0;
-}
-
-.ui-tabs .ui-tabs-nav li:hover,
-.ui-tabs .ui-tabs-nav li a:hover {
-	background: whiteSmoke;
-	border-bottom: 1px solid #ddd;
-	padding-bottom: 0;
-	color: #00438A;
-}
-
-.ui-tabs .ui-tabs-nav {
-	margin: 0;
-	padding: .2em .2em 0;
-	border-bottom: 1px solid #ddd;
+	background: none;
 }
 
 .ui-tabs .ui-tabs-nav li {
-	text-decoration: none;
-	list-style: none;
-	float: left;
 	position: relative;
-	top: 1px;
-	padding: 0 0 1px 0;
+	top: 0;
+	float: left;
+	margin-right: 2px;
+	margin-bottom: -1px;
+	border: 0;
+	list-style: none;
 	white-space: nowrap;
 	background: none;
-	border: 0;
 }
 
 .ui-tabs-nav .ui-state-default {
-	-webkit-box-shadow: 0px 0px 0px #ffffff;  /* Safari 4 */
-	-moz-box-shadow: 0px 0px 0px #ffffff;  /* Firefox 3.6 */
-	box-shadow: 0px 0px 0px #ffffff;
+	border: 0;
+	-webkit-box-shadow: none;  /* Safari 4 */
+	-moz-box-shadow: none;  /* Firefox 3.6 */
+	box-shadow: none;
 }
 
 .ui-tabs .ui-tabs-nav li a {
 	float: left;
-	text-decoration: none;
-	cursor: text;
-	padding: 0 15px;
-	margin-right: 2px;
-	line-height: 34px;
-	border: 1px solid transparent;
+	border: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
 	-webkit-border-radius: 4px 4px 0 0; /* Safari 4 */
 	-moz-border-radius: 4px 4px 0 0; /* Firefox 3.6 */
 	border-radius: 4px 4px 0 0;
+	padding: 8px 12px;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	color: #0069D6;
+	background: none;
 }
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-active {
-	margin-bottom: 0;
-	padding-bottom: 0;
-	outline: none;
-}
-
-.ui-tabs .ui-tabs-nav li.ui-tabs-active,
-.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
-.ui-tabs .ui-tabs-nav li.ui-state-processing a {
-	background-color: #ffffff;
-	border: 1px solid #ddd;
-	border-bottom-color: #ffffff;
-	cursor: default;
-	color: gray;
-	outline: none;
+.ui-tabs .ui-tabs-nav li a:hover {
+	border: 1px solid whiteSmoke;
+	border-bottom: 1px solid #ddd;
+	background-color: whiteSmoke;
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
-	background-color: #ffffff;
-	outline: none;
-	border: 0;
+	border: 1px solid #ddd;
+	border-bottom: 1px solid #fff;
+	background-color: #fff;
+	color: #555;
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
-	background: #ffffff;
-	outline: none;
-	margin-bottom: 0;
+	background: #fff;
+	cursor: text;
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active a,
@@ -1559,25 +1549,16 @@ button.ui-button::-moz-focus-inner {
 	cursor: text;
 }
 
-.ui-tabs .ui-tabs-nav li a,
-.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
-	cursor: pointer;
-	color: #0069D6;
-	background: none;
-	font-weight: normal;
-	margin-bottom: -1px;
-}
-
 /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-panel {
 	display: block;
-	border-width: 0;
-	padding: 1em 1.4em;
+	margin: 1em 0;
+	border: 0;
+	-webkit-border-radius: 0; /* Safari 4 */
+	-moz-border-radius: 0; /* Firefox 3.6 */
+	border-radius: 0;
+	padding: 1px 0;
 	background: none;
-}
-
-.ui-tabs-panel .ui-button {
-	text-decoration: none;
 }
 
 .ui-tabs .ui-tabs-hide {
@@ -1587,7 +1568,6 @@ button.ui-button::-moz-focus-inner {
 /* IE fix for background inheritance from ui-widget */
 .ui-tabs .ui-tabs-nav li {
 	filter:none;
-	margin-bottom: -1px;
 }
 
 
