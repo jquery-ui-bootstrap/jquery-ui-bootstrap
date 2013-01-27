@@ -1,6 +1,12 @@
 $(function () {
     //####### Buttons
-    $('button,.button,#sampleButton').button();
+    $("button,.button,#sampleButton").button();
+    $("#btn-with-icon").button({
+        text: true,
+        icons: {
+            primary: "ui-icon-play"
+        }
+    });
 
     // Buttonset
     $('#radioset').buttonset();
