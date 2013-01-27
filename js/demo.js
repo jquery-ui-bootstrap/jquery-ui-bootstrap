@@ -255,7 +255,13 @@ $(function () {
     //});
 
     //Toolbar
-    $("#play, #shuffle").button();
+	$("#play").button({
+	    text: false,
+	    icons: {
+	        primary: "ui-icon-play"
+	    }
+	});
+    $("#shuffle").button();
     $("#repeat").buttonset();
 
 

@@ -4,21 +4,21 @@
             <meta charset="utf-8">
             <title>jQuery UI Bootstrap</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="A preview of the jQuery UI Bootstrap theme">
+            <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
             <meta name="author" content="Addy Osmani">
 
             <!-- Le styles -->
-            <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-            <link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
-            <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.0.custom.css">
+            <link rel="stylesheet" href="assets/css/font-awesome.min.css">
             <!--[if IE 7]>
             <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
             <![endif]-->
             <!--[if lt IE 9]>
-            <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+            <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.0.ie.css">
             <![endif]-->
-            <link href="assets/css/docs.css" rel="stylesheet">
-            <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+            <link rel="stylesheet" href="assets/css/docs.css">
+            <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
 
             <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
             <!--[if lt IE 9]>
@@ -113,10 +113,10 @@
                     <p class="docs-lead">
                         Welcome! This is a live preview of jQuery UI Bootstrap - a project we started to bring the beauty of Twitter <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> to jQuery UI widgets.
                         With this theme, not only do you get the ability to use Bootstrap-themed widgets, but you can now also use (most) of Twitter Bootstrap side-by-wide with it without components breaking visually.
-                        It's still a work-in-progress, but we hope you find it useful. Issues and pull requests are always welcome.</p>
+                        It's still a work-in-progress, but we hope you find it useful. Issues and pull requests are always welcome.
                     </p>
                     <p>
-                        <a class="download-btn ui-button-primary"href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/v0.5pre">Download stable (v0.5)</a>
+                        <a class="download-btn ui-button-primary" href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/v0.5pre">Download stable (v0.5)</a>
                         <a class="download-btn" href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/master" >Download Latest (dev)</a>
                     </p>
                 </div>
@@ -138,11 +138,9 @@
                     <button>Default</button>
                     <button class="ui-button-primary">Primary</button>
                     <button class="ui-button-success">Success</button>
-                    </br>
-                    </br>
                     <button class="ui-button-error">Danger</button>
                     <a class="button">Anchor</a>
-                    <input type="submit" class="button" value="Submit"/>
+                    <input type="submit" class="button" value="Submit">
                 </p>
 
 <pre class="prettyprint linenums">
@@ -153,43 +151,46 @@ $('.button').button();
 </pre>
                 <!-- Button set-->
                 <h2>Button set</h2>
-                <p>
-                    <form>
-                        <div id="radioset">
-                            <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
-                            <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
-                            <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
-                        </div>
-                        </br>
-                        <div id="format">
-                            <input type="checkbox" id="check1" /><label for="check1">B</label>
-                            <input type="checkbox" id="check2" /><label for="check2">I</label>
-                            <input type="checkbox" id="check3" /><label for="check3">U</label>
-                        </div>
-                        </br>
-                    </form>
-                </p>
+                <form>
+                    <p id="radioset">
+                        <input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+                        <input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+                        <input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+                    </p>
+                    <p id="format">
+                        <input type="checkbox" id="check1"><label for="check1">B</label>
+                        <input type="checkbox" id="check2"><label for="check2">I</label>
+                        <input type="checkbox" id="check3"><label for="check3">U</label>
+                    </p>
+                </form>
 <pre class="prettyprint linenums">
 // Buttonset
 $('#radioset').buttonset();
 $("#format").buttonset();
 </pre>
-            <h2>Simple toolbar</h2>
-                <div id="toolbar" class="span4 ui-toolbar ui-widget-header ui-corner-all">
+                <h2>Simple toolbar</h2>
+                <form class="clearfix">
+	                <div id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
+		                <button id="play">Play</button>
 
-                <input type="checkbox" id="shuffle" /><label for="shuffle">Shuffle</label>
-                
-                <span id="repeat">
-                  <input type="radio" id="repeat0" name="repeat" checked="checked" /><label for="repeat0">No Repeat</label>
-                  <input type="radio" id="repeat1" name="repeat" /><label for="repeat1">Once</label>
-                  <input type="radio" id="repeatall" name="repeat" /><label for="repeatall">All</label>
-                </span>
+	                    <input type="checkbox" id="shuffle"><label for="shuffle">Shuffle</label>
 
-              </div>
-              <div class="clearfix"></div>
+	                    <span id="repeat">
+	                        <input type="radio" id="repeat0" name="repeat" checked="checked"><label for="repeat0">No Repeat</label>
+	                        <input type="radio" id="repeat1" name="repeat"><label for="repeat1">Once</label>
+	                        <input type="radio" id="repeatall" name="repeat"><label for="repeatall">All</label>
+	                    </span>
+	                </div>
+                </form>
 <pre class="prettyprint linenums">
-//Toolbar
-$("#play, #shuffle").button();
+// Toolbar
+$("#play").button({
+    text: false,
+    icons: {
+        primary: "ui-icon-play"
+    }
+});
+$("#shuffle").button();
 $("#repeat").buttonset();
 </pre>
             </section>
@@ -301,9 +302,15 @@ $("#dialog-message").dialog({
                         <li><a href="#tabs-b">Second</a></li>
                         <li><a href="#tabs-c">Third</a></li>
                     </ul>
-                    <div id="tabs-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                    <div id="tabs-b">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-                    <div id="tabs-c">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+                    <div id="tabs-a">
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	                </div>
+                    <div id="tabs-b">
+	                    <p>Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</p>
+	                </div>
+                    <div id="tabs-c">
+	                    <p>Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</p>
+	                </div>
                 </div>
                 <!-- End demo -->
 <pre class="prettyprint linenums">
@@ -316,14 +323,14 @@ $('#tabs').tabs();
                     <form>
                         <fieldset class="ui-helper-reset">
                             <label for="tab_title">Title</label>
-                            <input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all" />
+                            <input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all">
                             <label for="tab_content">Content</label>
                             <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all"></textarea>
                         </fieldset>
                     </form>
                 </div>
 
-                <button id="add_tab" class="ui-button-primary">Add Tab</button>
+                <p><button id="add_tab" class="ui-button-primary">Add Tab</button></p>
 
                 <div id="tabs2">
                     <ul>
@@ -409,7 +416,7 @@ $( "#tabs2" ).on( "click",'span.ui-icon-close', function() {
                     </ul>
                     <div id="tabs3-1">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
-                        <a href="#" id="sampleButton">Change</a>
+                        <a href="#" id="sampleButton">Open dialog</a>
                     </div>
                     <div id="tabs3-2">Tab 2</div>
                     <div id="tabs3-3">Tab 3</div>
@@ -522,7 +529,7 @@ $('#h-slider').slider({
                         </p>
                         <p>
                           <label for="amount">Volume:</label>
-                          <input type="text" id="amount" />
+                          <input type="text" id="amount">
                         </p>
                     </div>
                     <div class="span6">
@@ -552,7 +559,7 @@ $("#amount").val($("#v-slider").slider("value"));
                 </div>
                 <div class="ui-widget">
                     <label for="tags">Tags: </label>
-                    <input id="tags" />
+                    <input id="tags">
                 </div>
 <pre class="prettyprint linenums">
 // Autocomplete
@@ -622,7 +629,7 @@ $("#menu").menu();
                 <h2>Spinner</h2>
                 <p>
                   <label for="spinner">Select a value:</label>
-                  <input id="spinner" name="value" />
+                  <input id="spinner" name="value">
                 </p>
 
                 <p>
@@ -878,7 +885,7 @@ $( "#setvalue" ).click(function() {
                       <a href="http://themeroller.com" title="ThemeRoller: jQuery UI's theme builder application">ThemeRoller</a>
                       will also style tooltips accordingly.</p>
                   <p>Tooltips are also useful for form elements, to show some additional information in the context of each field.</p>
-                  <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes." /></p>
+                  <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
                   <p>Hover the field to see the tooltip.</p>
                 </div>
 <pre class="prettyprint linenums">
@@ -909,11 +916,11 @@ $( "#tooltip" ).tooltip();
     </div>
 </footer>
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
-<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-<script src="assets/js/docs.js" type="text/javascript"></script>
-<script src="assets/js/demo.js" type="text/javascript"></script>
+<script src="assets/js/jquery-1.9.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/docs.js"></script>
+<script src="assets/js/demo.js"></script>
 </body>
 </html>
