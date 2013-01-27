@@ -768,12 +768,6 @@ ul#icons span.ui-icon {
 	margin: 0;
     padding: 5px 0 5px 5px;
 }
-/*
-* Bug chrome with toolbar and bootstrap inheritance
-*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    #toolbar input{display:block;float:left;}
-}
 /*Datepicker*/
 #datepicker{
     margin-bottom: 20px;
