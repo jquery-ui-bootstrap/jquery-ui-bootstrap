@@ -55,7 +55,7 @@ git fetch jquery-ui-bootstrap
 
 #Merge now your local copy with the original project
 git checkout master
-git merge jquery-ui-bootstrap/master
+git merge jquery-ui-bootstrap/gh-pages
 
 #Valide your change
 git commit -a -m "Synchronization with the original"
