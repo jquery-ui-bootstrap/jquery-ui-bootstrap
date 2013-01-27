@@ -171,11 +171,12 @@ input[type="password"],
 .ui-autocomplete-input,
 textarea,
 .uneditable-input{
-  width: 210px;
-  height: 18px;
+	width: 210px;
+	height: 18px;
 }
 
 #toolbar {
+	margin: 0;
 	padding: 5px 0 5px 5px;
 }
 /*

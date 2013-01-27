@@ -765,6 +765,7 @@ ul#icons span.ui-icon {
 
 /*Toolbar*/
 #toolbar {
+	margin: 0;
     padding: 5px 0 5px 5px;
 }
 /*
