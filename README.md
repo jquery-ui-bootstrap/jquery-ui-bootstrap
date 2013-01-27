@@ -45,3 +45,21 @@ get out more frequent releases and your help with this would be greatly apprecia
 ##Demo
 
 For a live preview of the current theme, see [http://addyosmani.github.com/jquery-ui-bootstrap](http://addyosmani.github.com/jquery-ui-bootstrap).
+
+##Update your fork
+<pre>
+cd jquery-ui-bootstrap
+
+git remote add jquery-ui-bootstrap git@github.com:addyosmani/jquery-ui-bootstrap.git
+git fetch jquery-ui-bootstrap
+
+#Merge now your local copy with the original project
+git checkout master
+git merge jquery-ui-bootstrap/master
+
+#Valide your change
+git commit -a -m "Synchronization with the original"
+
+#Send your changes to github
+git push
+</pre>
