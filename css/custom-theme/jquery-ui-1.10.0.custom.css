@@ -975,14 +975,14 @@ button.ui-button-icons-only {
 .ui-button-text-icon-secondary .ui-icon,
 .ui-button-text-icons .ui-icon,
 .ui-button-icons-only .ui-icon {
-	top: 50%;
-	margin-top: -3px;
-	margin-bottom: 3px;
+    margin-bottom: 0;
+    margin-top: 1px;
+    top: 50%;
 }
 
 .ui-button-icon-only .ui-icon {
 	left: 50%;
-	margin-left: -8px;
+	/*margin-left: -8px;*/
 }
 
 .ui-button-text-icon-primary .ui-button-icon-primary,
