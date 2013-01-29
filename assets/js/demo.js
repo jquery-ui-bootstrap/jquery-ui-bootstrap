@@ -8,6 +8,24 @@ $(function () {
         }
     });
 
+    $("#button-with-icon" ).button({
+      icons: {
+        primary: "ui-icon-locked"
+      },
+      text: true
+    });
+    $("#button-with-icon2" ).button({
+      icons: {
+        primary: "ui-icon-play"
+      },
+      text: true
+    });
+    $("#button-with-icon3" ).button({
+      icons: {
+        primary: "ui-icon-stop"
+      },
+      text: true
+    });
     // Buttonset
     $('#radioset').buttonset();
     $("#format").buttonset();

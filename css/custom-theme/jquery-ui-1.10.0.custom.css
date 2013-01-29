@@ -898,6 +898,9 @@
 }
 
 
+.ui-button-text-icon-primary .ui-button-icon-primary { float:left; }
+.ui-button-text-icon-primary { padding:2px 7px 3px; }
+
 .ui-button-primary {
 	color: #fff;
 	background-color: #0064cd;
