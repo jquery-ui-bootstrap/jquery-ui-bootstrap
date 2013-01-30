@@ -843,13 +843,12 @@
 .ui-button {
 	cursor: pointer;
 	display: inline-block;
-	background-color: #e6e6e6;
+	background-color: #F5F5F5;
 	background-repeat: no-repeat;
 	background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* Safari 5.1+, Chrome 10+ */
 	background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6); /* Firefox 3.6 */
 	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* Opera 11.10+ */
 	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0); /* IE8 */
 	padding: 5px 14px 6px;
 	margin: 0;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -866,11 +865,16 @@
 	-o-transition: 0.1s linear background-image;
 	transition: 0.1s linear background-image;
 	overflow: visible; /* the overflow property removes extra width in IE */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0); /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	vertical-align: middle;
 }
 
 .ui-button:hover {
 	color: #333;
 	text-decoration: none;
+	background-color:#e6e6e6;
+	background-position: 0 -15px;
 }
 
 .ui-btn-large{
@@ -903,16 +907,17 @@
 
 .ui-button-primary {
 	color: #fff;
-	background-color: #0064cd;
-	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(top, #049cdb, #0064cd); /* Safari 5.1+, Chrome 10+ */
-	background-image: -moz-linear-gradient(top, #049cdb, #0064cd); /* Firefox 3.6 */
-	background-image: -o-linear-gradient(top, #049cdb, #0064cd); /* Opera 11.10+ */
-	background-image: linear-gradient(top, #049cdb, #0064cd); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0); /* IE8 */
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: #0064cd #0064cd #003f81;
+	background-color: #006DCC;
+	background-image: -webkit-linear-gradient(top, #0088CC, #0044CC); /* Safari 5.1+, Chrome 10+ */
+	background-image: -moz-linear-gradient(top, #0088CC, #0044CC); /* Firefox 3.6 */
+	background-image: -o-linear-gradient(top, #0088CC, #0044CC); /* Opera 11.10+ */
+	background-image: linear-gradient(top, #0088CC, #0044CC); /* CSS3 Compliant */
+	background-repeat: repeat-x;
+	border-color: #0044CC #0044CC #003f81;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0); /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
 .ui-button-warning {
@@ -980,37 +985,67 @@
 
 .ui-button-success {
 	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #57a957;
-	background-repeat: repeat-x;
 	background-image: -webkit-linear-gradient(top, #62c462, #57a957); /* Safari 5.1+, Chrome 10+ */
 	background-image: -moz-linear-gradient(top, #62c462, #57a957); /* Firefox 3.6 */
 	background-image: -o-linear-gradient(top, #62c462, #57a957); /* Opera 11.10+ */
 	background-image: linear-gradient(top, #62c462, #57a957); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0); /* IE8 */
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-repeat: repeat-x;
 	border-color: #57a957 #57a957 #3d773d;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0); /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
 .ui-button-error {
 	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #c43c35;
-	background-repeat: repeat-x;
 	background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35); /* Safari 5.1+, Chrome 10+ */
 	background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35); /* Firefox 3.6 */
 	background-image: -o-linear-gradient(top, #ee5f5b, #c43c35); /* Opera 11.10+ */
 	background-image: linear-gradient(top, #ee5f5b, #c43c35); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0); /* IE8 */
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-repeat: repeat-x;
 	border-color: #c43c35 #c43c35 #882a25;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0); /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
 .ui-button-primary:hover,
 .ui-button-success:hover,
-.ui-button-error:hover {
+.ui-button-info:hover,
+.ui-button-danger:hover, 
+.ui-button-warning:hover,
+.ui-button-inverse:hover{
 	color: #fff;
 	text-decoration: none;
+	background-position: 0 -15px;
+}
+
+.ui-button-primary:hover{
+	background-color: #0044CC;
+}
+
+.ui-button-success:hover{
+	background-color: #51A351;
+}
+
+.ui-button-info:hover{
+	background-color: #2F96B4;
+}
+
+.ui-button-danger:hover{
+	background-color: #BD362F;
+}
+
+.ui-button-warning:hover{
+	background-color: #F89406;
+}
+
+.ui-button-inverse:hover{
+	background-color: #222222;
 }
 
 /* to make room for the icon, a width needs to be set here */
