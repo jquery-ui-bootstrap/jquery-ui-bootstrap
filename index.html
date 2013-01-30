@@ -227,6 +227,48 @@ $("#play").button({
 $("#shuffle").button();
 $("#repeat").buttonset();
 </pre>
+            <h2>Split Button</h2>
+            <div id="split-button" class="clearfix">
+                <div>
+                    <button id="rerun">Run last action</button>
+                    <button id="select">Select an action</button>
+                </div>
+                <ul>
+                    <li><a href="#">Open...</a></li>
+                    <li><a href="#">Save</a></li>
+                    <li><a href="#">Delete</a></li>
+                </ul>
+            </div>
+<pre class="prettyprint linenums">
+// Split Button
+$( "#rerun" )
+.button()
+.click(function() {
+    alert( "Running the last action" );
+})
+.next()
+.button({
+    text: false,
+    icons: {
+        primary: "ui-icon-triangle-1-s"
+    }
+})
+.click(function() {
+    var menu = $( this ).parent().next().show().position({
+        my: "left top",
+        at: "left bottom",
+        of: this
+    });
+    $( document ).one( "click", function() {
+        menu.hide();
+    });
+    return false;
+}).parent()
+.buttonset()
+.next()
+.hide()
+.menu();
+</pre>
             </section>
             <!-- Accordion -->
             <section id="accordion">

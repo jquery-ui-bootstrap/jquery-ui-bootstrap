@@ -778,6 +778,15 @@ ul#icons span.ui-icon {
     *display: inline;
     *zoom: 1;
 }
+
+/* Split Button */
+#split-button{
+    margin-bottom:20px;
+}
+#split-button .ui-menu{
+    position: absolute;
+}
+
 /*Datepicker*/
 #datepicker{
     margin-bottom: 20px;
