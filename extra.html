@@ -95,6 +95,7 @@
                 <li><a href="#wijmo"><i class="icon-chevron-right"></i> Wijmo</a></li>
                 <li><a href="#file-input"><i class="icon-chevron-right"></i> File input</a></li>
                 <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
+                <li><a href="#font-awesome"><i class="icon-chevron-right"></i> Font Awesome</a></li>
             </ul>
         </div>
         <div class="span9">
@@ -154,7 +155,7 @@ $('#file').customFileInput({
 </pre>
             </section>
             <!-- end file input -->
-            <!-- File input -->
+            <!-- Date Range input -->
             <section id="date-range">
                 <div class="page-header">
                     <h1>Select a Date Range with datepicker</h1>
@@ -181,6 +182,127 @@ $( "#rangeBb" ).datepicker({
         $( "#rangeBa" ).datepicker( "option", "maxDate", selectedDate );
     }
 });
+</pre>
+            </section>
+            <!-- end Date Range -->
+            <!-- File input -->
+            <section id="font-awesome">
+                <div class="page-header">
+                    <h1>Font Awesome</h1>
+                </div>
+                <h3>Toolbar with Font Awesome</h3>
+                <form class="clearfix">
+                    <div id="toolbar-fa" class="ui-toolbar ui-widget-header ui-corner-all">
+                        <button id="play-fa">Play</button>
+                        <button id="stop-fa">Stop</button>
+                        <button id="prev-fa">Prev</button>
+                        <button id="next-fa">Next</button>
+                        <input type="checkbox" id="shuffle-fa"><label for="shuffle-fa">Shuffle</label>
+
+	                    <span id="repeat">
+	                        <input type="radio" id="repeat0-fa" name="repeat" checked="checked"><label for="repeat0-fa">No Repeat</label>
+	                        <input type="radio" id="repeat1-fa" name="repeat"><label for="repeat1-fa">Once</label>
+	                        <input type="radio" id="repeatall-fa" name="repeat"><label for="repeatall-fa">All</label>
+	                    </span>
+                    </div>
+                </form>
+<pre class="prettyprint linenums">
+//####### Toolbar with Font Awesome
+$("#play-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-play"
+    }
+});
+$("#stop-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-stop"
+    }
+});
+$("#prev-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-fast-backward"
+    }
+});
+$("#next-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-fast-forward"
+    }
+});
+$("#shuffle-fa").button();
+$("#repeat-fa").buttonset();
+</pre>
+                <h3>Buttons with icons (Font Awesome)</h3>
+                <p>
+                    <button id="button-with-icon-fa">Button with icon only</button>
+                    <button id="button-with-icon2-fa" class="ui-button-warning">Button with icon only</button>
+                    <button id="button-with-icon3-fa" class="ui-button-danger">Button with icon only</button>
+                </p>
+<pre class="prettyprint linenums">
+// ############ Button with icon (Font Awesome)
+$("#button-with-icon-fa" ).button({
+    icons: {
+        primary: "icon-lock"
+    },
+    text: false
+});
+$("#button-with-icon2-fa" ).button({
+    icons: {
+        primary: "icon-play"
+    },
+    text: false
+});
+$("#button-with-icon3-fa" ).button({
+    icons: {
+        primary: "icon-stop"
+    },
+    text: false
+});
+</pre>
+            <h3>Split Button (Font Awesome)</h3>
+            <div id="split-button-fa" class="clearfix">
+                <div>
+                    <button id="rerun-fa">Run last action</button>
+                    <button id="select-fa">Select an action</button>
+                </div>
+                <ul>
+                    <li><a href="#">Open...</a></li>
+                    <li><a href="#">Save</a></li>
+                    <li><a href="#">Delete</a></li>
+                </ul>
+            </div>
+<pre class="prettyprint linenums">
+// Split Button
+$( "#rerun-fa" )
+.button()
+.click(function() {
+    alert( "Running the last action" );
+})
+.next()
+.button({
+    text: false,
+    icons: {
+        primary: "ui-icon-triangle-1-s"
+    }
+})
+.click(function() {
+    var menu = $( this ).parent().next().show().position({
+        my: "left top",
+        at: "left bottom",
+        of: this
+    });
+    $( document ).one( "click", function() {
+        menu.hide();
+    });
+    return false;
+}).parent()
+.buttonset()
+.next()
+.hide()
+.menu();
 </pre>
             </section>
             <!-- end file input -->

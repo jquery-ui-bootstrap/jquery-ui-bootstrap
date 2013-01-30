@@ -780,10 +780,10 @@ ul#icons span.ui-icon {
 }
 
 /* Split Button */
-#split-button{
+#split-button,#split-button-fa{
     margin-bottom:20px;
 }
-#split-button .ui-menu{
+#split-button .ui-menu,#split-button-fa .ui-menu{
     position: absolute;
 }
 

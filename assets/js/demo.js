@@ -269,6 +269,9 @@ $(function () {
 
     $( "#tooltip" ).tooltip();
 
+    /*
+    * Extra
+    * */
     // File input (using http://filamentgroup.com/lab/jquery_custom_file_input_book_designing_with_progressive_enhancement/)
     if ($.fn.customFileInput){
         $('#file').customFileInput({
@@ -298,4 +301,81 @@ $(function () {
             $( "#rangeBa" ).datepicker( "option", "maxDate", selectedDate );
         }
     });
+    //####### Toolbar with Font Awesome
+    $("#play-fa").button({
+        text: false,
+        icons: {
+            primary: "icon-play"
+        }
+    });
+    $("#stop-fa").button({
+        text: false,
+        icons: {
+            primary: "icon-stop"
+        }
+    });
+    $("#prev-fa").button({
+        text: false,
+        icons: {
+            primary: "icon-fast-backward"
+        }
+    });
+    $("#next-fa").button({
+        text: false,
+        icons: {
+            primary: "icon-fast-forward"
+        }
+    });
+    $("#shuffle-fa").button();
+    $("#repeat-fa").buttonset();
+
+    // ############ Button with icon (Font Awesome)
+    $("#button-with-icon-fa" ).button({
+        icons: {
+            primary: "icon-lock"
+        },
+        text: false
+    });
+    $("#button-with-icon2-fa" ).button({
+        icons: {
+            primary: "icon-play"
+        },
+        text: false
+    });
+    $("#button-with-icon3-fa" ).button({
+        icons: {
+            primary: "icon-stop"
+        },
+        text: false
+    });
+
+    // Split button (Font Awesome)
+
+    $( "#rerun-fa" )
+        .button()
+        .click(function() {
+            alert( "Running the last action" );
+        })
+        .next()
+        .button({
+            text: false,
+            icons: {
+                primary: "icon-caret-down"
+            }
+        })
+        .click(function() {
+            var menu = $( this ).parent().next().show().position({
+                my: "left top",
+                at: "left bottom",
+                of: this
+            });
+            $( document ).one( "click", function() {
+                menu.hide();
+            });
+            return false;
+        }).parent()
+        .buttonset()
+        .next()
+        .hide()
+        .menu();
 });

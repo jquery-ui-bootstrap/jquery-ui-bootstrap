@@ -902,8 +902,13 @@
 }
 
 
-.ui-button-text-icon-primary .ui-button-icon-primary { float:left; }
-.ui-button-text-icon-primary { padding:2px 7px 3px; }
+.ui-button-text-icon-primary .ui-button-icon-primary {
+    float:left;
+}
+
+.ui-button-text-icon-primary {
+    padding:2px 7px 3px;
+}
 
 .ui-button-primary {
 	color: #fff;
@@ -1062,6 +1067,9 @@ button.ui-button-icons-only {
 	width: 3.7em;
 }
 
+.ui-button-text-icon-primary .ui-button-icon-primary.ui-icon {
+    margin-top:5px;
+}
 /*button text element */
 
 .ui-button .ui-button-text {
@@ -1103,7 +1111,7 @@ input.ui-button {
 .ui-button-text-icons .ui-icon,
 .ui-button-icons-only .ui-icon {
     margin-bottom: 0;
-    margin-top: 0;
+    margin-top: 1px;
     top: 50%;
 }
 
@@ -2331,3 +2339,39 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
 	color: #bfbfbf;
 	filter: none;
 }
+
+/**
+* Font Awesome in jQuery UI
+* @author Gerits Aurelien
+*
+**/
+
+.ui-button-icon-primary.ui-icon[class^="icon-"]:before,
+.ui-button-icon-primary.ui-icon[class*=" icon-"]:before,
+.ui-button-icon-secondary.ui-icon[class^="icon-"]:before,
+.ui-button-icon-secondary.ui-icon[class*=" icon-"]:before {
+    font-size: inherit;
+    margin-left: 7px;
+    display: inline;
+    text-decoration: inherit;
+    color:inherit;
+}
+
+/* **
+* If you use "Font awesome" is disable UI icons in element
+** */
+.ui-state-default .ui-icon[class*=" icon-"]{
+    /* Reset background with font Awesome */
+    background:none;
+}
+
+/* If you do not use ui-icon uncomment the lines */
+/*
+.ui-button .ui-button-text{
+    display: inline-block;
+    padding:5px;
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary{
+    float:none;
+}*/
