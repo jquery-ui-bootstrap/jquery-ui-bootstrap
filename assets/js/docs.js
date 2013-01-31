@@ -25,6 +25,12 @@
 
         // make code pretty
         window.prettyPrint && prettyPrint();
+        
+        //function replace targetblank for valid w3c
+        $('a.targetblank').on('click', function() {
+             window.open($(this).attr('href'));
+             return false;
+        });
 
     })
 }(window.jQuery);
