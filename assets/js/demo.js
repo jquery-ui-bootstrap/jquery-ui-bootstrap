@@ -8,6 +8,10 @@ $(function () {
         }
     });
 
+    $("#progressbar").progressbar({
+      value: 37
+    });
+
     $("#button-with-icon" ).button({
       icons: {
         primary: "ui-icon-locked"
