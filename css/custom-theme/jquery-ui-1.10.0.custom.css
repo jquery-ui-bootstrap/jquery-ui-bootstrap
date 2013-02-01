@@ -850,10 +850,10 @@
 	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* Opera 11.10+ */
 	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* CSS3 Compliant */
 	padding: 5px 14px 6px;
-	margin: 0;
+	margin: 0px 4px 0px 0px;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 	color: #333;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: normal;
 	border: 1px solid #ccc;
 	border-bottom-color: #bbb;
