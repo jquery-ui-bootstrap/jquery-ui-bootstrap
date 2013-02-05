@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Map with jQuery UI Bootstrap</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
+            <meta name="author" content="Addy Osmani">
+
+            <!-- Le styles -->
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.0.custom.css">
+            <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+            <!--[if IE 7]>
+            <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+            <![endif]-->
+            <!--[if lt IE 9]>
+            <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.0.ie.css">
+            <![endif]-->
+            <link rel="stylesheet" href="assets/css/docs.css">
+            <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
+
+            <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+
+            <!-- Le fav and touch icons -->
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+            <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+            <link rel="shortcut icon" href="assets/ico/favicon.png">
+            <!-- googlemap -->
+            <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=weather" type="text/javascript"></script>
+            <!-- End googlemap -->
+        </head>
+
+        <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
+
+        <!-- Navbar
+        ================================================== -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li>
+                                <a href="./index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="./components.html">Components</a>
+                            </li>
+                            <li>
+                                <a href="./extra.html">Extra</a>
+                            </li>
+                            <li class="active">
+                                <a href="./map.html">Map</a>
+                            </li>
+                            <li>
+                                <a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/addyosmani">Contact</a>
+                            </li>
+                        </ul>
+                        <div id="twitter-share" class="pull-right">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Subhead
+        ================================================== -->
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <h1>jQuery UI Bootstrap</h1>
+                <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
+            </div>
+        </header>
+
+
+        <div class="container">
+        <!-- Docs nav ================================================== -->
+        <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                <li><a href="#block-map"><i class="icon-chevron-right"></i> Map</a></li>
+                <li><a href="#block-accordion"><i class="icon-chevron-right"></i> Accordion</a></li>
+                <li><a href="#block-tabs"><i class="icon-chevron-right"></i> Tabs</a></li>
+            </ul>
+        </div>
+        <div class="span9">
+            <section id="block-map">
+                <div class="page-header">
+                    <h1>Demo map</h1>
+                </div>
+                <div class="row-fluid">
+                    <p class="docs-lead">
+                        <a href="http://www.gmap3.net">GMap3</a> allows you to finely manipulate yours markers and others objects, to associate custom data usable in each event.
+                        <br />This is an example of using jQuery UI Bootstrap with <a href="http://www.gmap3.net">gmap3</a>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Accordion gmap3 ================================================== -->
+            <section id="block-accordion">
+                <div class="page-header">
+                    <h1>Accordion</h1>
+                </div>
+                <div class="row-fluid">
+                    <div id="gmap3" class="span5"></div>
+                    <div class="span7">
+                        <div id="accordion-map">
+                            <h3><a href="#">Paris</a></h3>
+                            <div>
+                                <p>
+                                    Paris is the capital and largest city of France.  <br />
+                                    It is situated on the river Seine, in northern France, at the heart of the Île-de-France region.  <br />
+                                    The city of Paris, within its administrative limits (the 20 arrondissements), has a population of about 2,230,000.  <br />
+                                    Its metropolitan area is one of the largest population centres in Europe, with more than 12 million inhabitants.
+                                    <br /><br />
+                                    <a href="http://en.wikipedia.org/wiki/Paris" target="_blank">Paris on Wikipedia</a>
+                                </p>
+                            </div>
+                            <h3><a href="#">Poitiers</a></h3>
+                            <div>
+                                <p>
+                                    Poitiers is a city on the Clain river in west central France.  <br />
+                                    It is a commune and the capital of the Vienne department and of the Poitou-Charentes region.  <br />
+                                    The centre is picturesque and its streets are interesting for predominant remains of historical architecture, especially from the Romanesque period.  <br />
+                                    Two major military battles occurred near the city: in 732, the Battle of Poitiers (also known as the Battle of Tours), in which the Franks commanded by Charles Martel halted the expansion of the Umayyad Caliphate, and in 1356, the Battle of Poitiers, a key victory for English forces during the Hundred Years' War.
+                                    <br /><br />
+                                    <a href="http://en.wikipedia.org/wiki/Poitiers" target="_blank">Poitiers on Wikipedia</a>
+                                </p>
+                            </div>
+                            <h3><a href="#">Perpignan</a></h3>
+                            <div>
+                                <p>
+                                    Perpignan is a city, a commune and the capital of the Pyrénées-Orientales department in southern France.  <br />
+                                    Perpignan was the capital of the former province and county of Roussillon (Rosselló in Catalan) and continental capital of the Kingdom of Majorca in the 13th and 14th centuries. <br />
+                                    As of 2009, Perpignan had 120,100 inhabitants (Perpignanais, Perpinyanés) in the city proper. The metropolitan area has a total population of 300,221 in 2009.
+                                    <br /><br />
+                                    <a href="http://en.wikipedia.org/wiki/Perpignan" target="_blank">Perpignan on Wikipedia</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+<pre class="prettyprint linenums">
+function selectCity(index, updateAccordion) {
+    if (updateAccordion) {
+        $( "#accordion" ).accordion("option", "active", index);
+    }
+    $('#gmap3').gmap3({
+        exec: {
+            name: "marker",
+            all:"true",
+            func: function(value){
+                // data.object is the google.maps.Marker object
+                if (value.data.index === index) {
+                    value.object.setIcon("http://maps.google.com/mapfiles/marker_green.png");
+                } else {
+                    value.object.setIcon("http://maps.google.com/mapfiles/marker.png");
+                }
+            }
+        }
+    });
+}
+$(function(){
+    //##### Accordion with gmap3
+
+    $( "#accordion-map" ).accordion({
+        header: "h3",
+        activate: function(event, ui) {
+            // index / 2 because of the 2 elements by set (h3 + div)
+            selectCity(ui.newHeader.index() / 2);
+        }
+    });
+
+    $('#gmap3').gmap3({
+        map:{
+            options:{
+                center:[46.578498,2.457275],
+                zoom: 5
+            }
+        },
+        marker:{
+            values:[
+                {latLng:[48.8620722, 2.352047], data: {index: 0},
+                    options:{icon: "http://maps.google.com/mapfiles/marker_green.png"}
+                },
+                {address:"86000 Poitiers, France", data: {index: 1}},
+                {address:"66000 Perpignan, France", data: {index: 2}}
+            ],
+            options:{
+                draggable: false
+            },
+            events:{
+                click: function (marker, event, context) {
+                    selectCity(context.data.index, true);
+                }
+            }
+        }
+    });
+});
+</pre>
+            </section>
+            <!-- Tabs gmap3 ================================================== -->
+            <section id="block-tabs">
+                <div class="page-header">
+                    <h1>Tabs</h1>
+                </div>
+                <div class="row-fluid">
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#classic">Classic</a></li>
+                            <li><a href="#weather">Weather</a></li>
+                            <li><a href="#tabs-3">Text</a></li>
+                        </ul>
+                        <div id="classic" class="span12 gmap3"></div>
+                        <div id="weather" class="span12 gmap3"></div>
+                        <div id="tabs-3">
+                            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                        </div>
+                    </div>
+                </div>
+<pre class="prettyprint linenums">
+// invoque google maps on 2 divs
+$(".gmap3").gmap3({
+    map: {
+        options: {
+            zoom: 6,
+            center: [49.265984, -123.127491],
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+    }
+});
+
+// Append the meteo layer on weather map
+var map = $("#weather").gmap3("get");
+
+var weatherLayer = new google.maps.weather.WeatherLayer({
+    temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+});
+weatherLayer.setMap(map);
+
+var cloudLayer = new google.maps.weather.CloudLayer();
+cloudLayer.setMap(map);
+
+
+// force maps to refresh on show
+$("#tabs").tabs({
+    activate: function(event, ui) {
+        if (ui.newPanel.hasClass("gmap3")) {
+            ui.newPanel.gmap3({trigger: "resize"});
+        }
+    }
+});
+</pre>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+          <div class="span3">
+            <h3><span class="icon-envelope"></span> Contact</h3>
+            <ul class="icons">
+              <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
+              <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
+              <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+            </ul>
+          </div>
+          <div class="span9">
+            <div class="span4">
+                <h3><span class="icon-group"></span> Team</h3>
+                <ul class="unstyled">
+                    <li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Addy Osmani</a></li>
+                    <li>Co-maintainer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Aurélien Gérits</a></li>
+                </ul>
+            </div>
+            <div class="span4">
+                <h3><span class="icon-lightbulb"></span> Credits</h3>
+                <ul class="unstyled">
+                    <li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
+                    <li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+</footer>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery-1.9.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/docs.js"></script>
+<!--gmap3-->
+<script src="third-party/gmap3/gmap3.min.js" type="text/javascript"></script>
+<!--End gmap3-->
+<script src="third-party/gmap3/demo-map.js"></script>
+</body>
+</html>

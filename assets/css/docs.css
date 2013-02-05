@@ -822,3 +822,7 @@ ul#icons span.ui-icon {
 #wijmo-container{
     margin-bottom: 20px;
 }
+/* gmap3 */
+#gmap3,.gmap3{
+    height: 350px;
+}
