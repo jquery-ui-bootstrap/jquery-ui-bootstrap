@@ -1727,19 +1727,116 @@ button.ui-button::-moz-focus-inner {
  */
 
 .ui-tooltip {
-	padding:8px;
-	position:absolute;
-	z-index:9999;
-	max-width: 300px;
-	-webkit-box-shadow: inset 0 1px 0 #ffffff; /* Safari 4 */
-	-moz-box-shadow: inset 0 1px 0 #ffffff; /* Firefox 3.6 */
-	box-shadow: inset 0 1px 0 #ffffff;
+    display: block;
+    font-size: 11px;
+    opacity: 0.8;
+    position: absolute;
+    visibility: visible;
+    z-index: 99999;
+    max-width: 200px;
+}
+
+.ui-tooltip, .arrow:after {
+    background: #000000;
+    border: 1px solid #000000;
+}
+
+.ui-tooltip {
+    color: #FFFFFF;
+    padding: 3px 8px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 1px 0 #000000; /* Safari 4 */
+    -moz-box-shadow: inset 0 1px 0 #000000; /* Firefox 3.6 */
+    box-shadow: inset 0 1px 0 #000000;
+    border-radius: 4px 4px 4px 4px;
 }
 
 body .ui-tooltip {
-	border-width: 2px;
+	border-width: 1px;
 }
 
+.arrow {
+    top: 22%;
+    height: 22px;
+    width: 22px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+
+.arrow.bottom {
+    top: 100%;
+    height: 22px;
+    width: 22px;
+    left: 40%;
+    margin-left: 0;
+}
+
+.arrow.top {
+    top: -52%;
+    bottom: 22px;
+    height: 22px;
+    width: 22px;
+    left: 40%;
+    margin-left: 0;
+}
+
+.arrow.left {
+	top : 10%;
+    height: 22px;
+    width: 22px;
+    left: -13%;
+    right: 0;
+    margin-left:-10px;
+    bottom:-16px;
+}
+
+.arrow.right {
+    top: 25%;
+    height: 20px;
+    width: 20px;
+    left: 65%;
+    margin-left:30px;
+    bottom:-16px;
+}
+
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 15px;
+    height: 15px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    tranform: rotate(45deg);
+}
+
+.arrow.bottom:after {
+    left:5%;
+    top: -65%;
+}
+
+.arrow.top:after {
+    left:5%;
+    top: 50%;
+}
+
+.arrow.left:after{
+	top:10%;
+}
+
+.arrow.right:after{
+    top: -10%;
+    margin-right: 0;
+    left: -75%;
+}
 
 /*
  * jQuery UI Datepicker 1.10.0

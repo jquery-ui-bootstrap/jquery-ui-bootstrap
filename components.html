@@ -998,7 +998,84 @@ $( "#setvalue" ).click(function() {
 //####### Tooltip
 $( "#tooltip" ).tooltip();
 </pre>
-
+    <h2>Four directions</h2>
+    <ul class="bs-docs-tooltip-examples">
+        <li><a href="#" id="tooltip-top" title="Tooltip on top">Tooltip on top</a></li>
+        <li><a href="#" id="tooltip-right" title="Tooltip on right">Tooltip on right</a></li>
+        <li><a href="#" id="tooltip-bottom" title="Tooltip on bottom">Tooltip on bottom</a></li>
+        <li><a href="#" id="tooltip-left" title="Tooltip on left">Tooltip on left</a></li>
+    </ul>
+<pre class="prettyprint linenums">
+/**
+ * Tooltip top
+ */
+$( "#tooltip-top" ).tooltip({
+    position: {
+        my: "center bottom-15",
+        at: "center top",
+        using: function( position, feedback ) {
+            $( this ).css( position );
+            $( "&lt;div&gt;" )
+            .addClass( "arrow bottom" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+    }
+});
+/**
+ * Tooltip right
+ */
+$( "#tooltip-right" ).tooltip({
+    position: {
+        my: "left+15 left",
+        at: "right center",
+        using: function( position, feedback ) {
+            $( this ).css( position );
+            $( "&lt;div&gt;" )
+            .addClass( "arrow left" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+    }
+});
+/**
+ * Tooltip left
+ */
+$( "#tooltip-left" ).tooltip({
+    position: {
+        my: "right-15 center",
+        at: "left center",
+        using: function( position, feedback ) {
+            $( this ).css( position );
+            $( "&lt;div&gt;" )
+            .addClass( "arrow right" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+    }
+});
+/**
+ * Tooltip bottom
+ */
+$( "#tooltip-bottom" ).tooltip({
+    position: {
+        my: "center top+15",
+        at: "center bottom",
+        using: function( position, feedback ) {
+            $( this ).css( position );
+            $( "&lt;div&gt;" )
+            .addClass( "arrow top" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+    }
+});
+</pre>
+    </section>
 
     <section id="block-progress">
         <div class="page-header">
@@ -1007,6 +1084,7 @@ $( "#tooltip" ).tooltip();
         <div id="progress">
             <p>Default progress bar with a vertical gradient.</p>
             <div id="progressbar"></div>
+        </div>
     </section>
 
 
