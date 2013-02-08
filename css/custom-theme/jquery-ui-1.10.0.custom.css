@@ -1732,11 +1732,11 @@ button.ui-button::-moz-focus-inner {
     opacity: 0.8;
     position: absolute;
     visibility: visible;
-    z-index: 99999;
+    z-index: 1024;
     max-width: 200px;
 }
 
-.ui-tooltip, .arrow:after {
+.ui-tooltip {
     background: #000000;
     border: 1px solid #000000;
 }
@@ -1757,85 +1757,79 @@ body .ui-tooltip {
 }
 
 .arrow {
-    top: 22%;
-    height: 22px;
-    width: 22px;
     overflow: hidden;
     position: absolute;
-    left: 50%;
-    margin-left: -35px;
-    bottom: -16px;
+    margin-left: 0;
+    height: 20px;
+    width: 20px;
 }
 
 .arrow.bottom {
     top: 100%;
-    height: 22px;
-    width: 22px;
-    left: 40%;
-    margin-left: 0;
+    left: 38%;
 }
 
 .arrow.top {
-    top: -52%;
+    top: -50%;
     bottom: 22px;
-    height: 22px;
-    width: 22px;
-    left: 40%;
-    margin-left: 0;
+    left: 42%;
 }
 
 .arrow.left {
-	top : 10%;
-    height: 22px;
-    width: 22px;
-    left: -13%;
+    top : 25%;
+    left: -15%;
     right: 0;
-    margin-left:-10px;
     bottom:-16px;
 }
 
 .arrow.right {
-    top: 25%;
-    height: 20px;
-    width: 20px;
-    left: 65%;
-    margin-left:30px;
+    top: 26%;
+    left: 100%;
+    right: 0;
     bottom:-16px;
+    margin-left: 1px;
 }
 
 .arrow:after {
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: -20px;
-    width: 15px;
-    height: 15px;
+    content : " " ;
+    position : absolute ;
+    height : 0 ;
+    left:0;
+    top: 0;
+    width: 0;
+    margin-left : 0 ;
+    bottom : 12px ;
     box-shadow: 6px 5px 9px -9px black;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    tranform: rotate(45deg);
 }
 
 .arrow.bottom:after {
-    left:5%;
-    top: -65%;
+    border-top:8px solid #000000;
+    border-right:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-left:8px solid transparent;
 }
 
 .arrow.top:after {
-    left:5%;
-    top: 50%;
+    border-top:6px solid transparent;
+    border-right:6px solid transparent;
+    border-bottom:6px solid #000000;
+    border-left:6px solid transparent;
 }
 
 .arrow.left:after{
-	top:10%;
+    width:0;
+    border-top: 6px solid transparent;
+    border-right: 6px solid #000000;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
 }
 
 .arrow.right:after{
-    top: -10%;
-    margin-right: 0;
-    left: -75%;
+    width:0;
+    border-top: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #000000;
 }
 
 /*
