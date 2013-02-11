@@ -1149,15 +1149,18 @@ input.ui-button {
 	color: #ffffff;
 	background-color: #0064cd;
 	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(top, #049cdb, #0064cd); /* Safari 5.1+, Chrome 10+ */
 	background-image: -moz-linear-gradient(top, #049cdb, #0064cd); /* Firefox 3.6 */
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#049cdb), to(#0064cd));
+    background-image: -webkit-linear-gradient(top, #049cdb, #0064cd); /* Safari 5.1+, Chrome 10+ */
 	background-image: -o-linear-gradient(top, #049cdb, #0064cd); /* Opera 11.10+ */
-	background-image: linear-gradient(top, #049cdb, #0064cd); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0); /* IE8 */
+    background-image: linear-gradient(to bottom, #049cdb, #0064cd);/* CSS3 Compliant */
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0); /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	border-color: #0064cd #0064cd #003f81;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
+
 .ui-buttonset .ui-button {
 	margin-left: 0;
 	margin-right: -.4em;
