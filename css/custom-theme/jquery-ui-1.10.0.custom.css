@@ -2487,6 +2487,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
 .ui-state-default .ui-icon[class*=" icon-"]{
     /* Reset background with font Awesome */
     background:none;
+    margin-left:-12px; /*fix for margin issue with font awesome buttons*/
 }
 
 /* If you do not use ui-icon uncomment the lines */

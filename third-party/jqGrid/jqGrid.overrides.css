@@ -1,0 +1,101 @@
+.ui-jqgrid .ui-jqgrid-view,.ui-jqgrid .ui-paging-info, .ui-jqgrid .ui-pg-table,
+.ui-jqgrid .ui-pg-selbox {
+    font-size: 14px;
+}
+.ui-jqgrid .ui-jqgrid-titlebar{
+    height: 40px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #F9F9F9;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    padding:0px;
+}
+.ui-jqgrid .ui-jqgrid-title {
+    float: left;
+    margin: 8px;
+}
+
+.ui-jqgrid .ui-widget-header{
+    background: none;
+    background-image: none;
+    background-color: #FFFFFF;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom:1px solid #D3D3D3;
+}
+
+.ui-jqgrid .ui-search-toolbar input[type="text"]{
+    font-size: 12px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;                
+}                       
+.ui-jqgrid .ui-state-default, .ui-jqgrid .ui-widget-content .ui-state-default, .ui-jqgrid .ui-widget-header .ui-state-default {
+    background: #F9F9F9;
+    border: 1px solid #D3D3D3;               
+    line-height: 15px;
+    height: 45px;
+    font-weight: bold;
+    color: #777777;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.ui-jqgrid .ui-icon-triangle-1-n {
+    background-position: 1px -16px;
+}
+.ui-jqgrid tr.ui-search-toolbar th { 
+    border-top-width: 0px !important; 
+    border-top-color: inherit !important; 
+    border-top-style: ridge !important 
+}
+.ui-jqgrid .ui-state-hover, .ui-jqgrid .ui-widget-content .ui-state-hover, .ui-jqgrid .ui-widget-header .ui-state-hover, .ui-jqgrid .ui-state-focus, .ui-jqgrid .ui-widget-content .ui-state-focus, .ui-jqgrid .ui-widget-header .ui-state-focus { 
+    border:1px solid #666666;
+    background: #F3F3F3; 
+}
+.ui-jqgrid .ui-state-active, .ui-jqgrid .ui-widget-content .ui-state-active, .ui-jqgrid .ui-widget-header .ui-state-active { 
+    border: 1px solid #aaaaaa; 
+    background: #ffffff; 
+    font-weight: normal; color: #212121; 
+}
+.ui-jqgrid .ui-pg-input {
+    font-size: inherit;
+    width: 50px;
+}
+.ui-jqgrid .ui-pg-selbox {
+    display: block;
+    height: 25px;
+    line-height: 18px;
+    margin: 0;
+    width: 100px;
+}
+.ui-jqgrid .ui-jqgrid-htable th div{
+    overflow:visible;
+}
+.ui-jqgrid .ui-pager-control {
+    height: 50px;
+    position: relative;
+}
+.ui-pg-table .navtable .ui-corner-all{
+    border-radius: 0px;
+}
+.ui-jqgrid .ui-pg-button:hover {
+    padding: 1px;
+}
+.ui-jqgrid .loading {
+    position: absolute; 
+    top: 45%;
+    left: 45%;
+    width: auto;
+    height: auto;
+    z-index:101;
+    padding: 6px; 
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    border-width: 2px !important; 
+    font-size:11px;
+}
+
+.ui-jqgrid tr.ui-row-ltr td{
+    padding: 8px;
+}

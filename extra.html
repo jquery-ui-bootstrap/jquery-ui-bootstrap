@@ -29,6 +29,12 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    <!-- jqGrid-->
+    <link rel="stylesheet" href="third-party/jqGrid/jqGrid/css/ui.jqgrid.css" />
+    <link rel="stylesheet" href="third-party/jqGrid/jqGrid.overrides.css"> 
+    <!-- end jqGrid -->
+
 
     <!-- Le fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -101,6 +107,7 @@
                 <li><a href="#wijmo"><i class="icon-chevron-right"></i> Wijmo</a></li>
                 <li><a href="#file-input"><i class="icon-chevron-right"></i> File input</a></li>
                 <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
+                <li><a href="#jqgrid"><i class="icon-chevron-right"></i> jqGrid</a></li>
                 <li><a href="#font-awesome"><i class="icon-chevron-right"></i> Font Awesome</a></li>
             </ul>
         </div>
@@ -191,6 +198,52 @@ $( "#rangeBb" ).datepicker({
 </pre>
             </section>
             <!-- end Date Range -->
+            
+            <section id="jqgrid">
+                <div class="page-header">
+                    <h1>jqGrid</h1>
+                </div>
+                <h3>Table with jqGrid</h3>
+                   
+                <div class="span9">
+                        <table id="jqGrid01"></table>
+                        <div id="jqGridPager01"></div>
+                </div><!--/span-->
+ <p>&nbsp;</p>
+    <pre class="prettyprint linenums">
+// ############ jqGrid Table
+$("#jqGrid01").jqGrid({
+    data: mydata,
+    datatype: "local",
+    height: 250,
+    rowNum: 10,
+    rowList: [10,20,30],
+    colNames:['Inv No','Date', 'Client', 'Amount','Tax','Total','Notes'],
+    colModel:[
+        {name:'id',index:'id', width:60, sorttype:"int",search:true},
+        {name:'invdate',index:'invdate', width:90, sorttype:"date", formatter:"date"},
+        {name:'name',index:'name', width:100},
+        {name:'amount',index:'amount', width:80, align:"right",sorttype:"float", formatter:"number"},
+        {name:'tax',index:'tax', width:80, align:"right",sorttype:"float"},        
+        {name:'total',index:'total', width:80,align:"right",sorttype:"float"},        
+        {name:'note',index:'note', width:150, sortable:false}        
+    ],
+    pager: "#jqGridPager01",
+    viewrecords: true,
+    caption: "Sample jqGrid Table",
+    hidegrid:false,
+    altRows: true                
+});
+
+$("#jqGrid01")
+    .jqGrid('filterToolbar',{defaultSearch:true,stringResult:true})
+    .jqGrid('setSelection', '3');
+            
+                </pre>
+                <p>&nbsp;</p>
+           </section>
+            
+            
             <!-- File input -->
             <section id="font-awesome">
                 <div class="page-header">
@@ -364,6 +417,11 @@ $( "#rerun-fa" )
 <script src="third-party/wijmo/jquery.mousewheel.min.js" type="text/javascript"></script>
 <script src="third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
 <!--End wijmo-->
-<script src="assets/js/demo.js" type="text/javascript"></script>
+<script src="assets/js/demo.js"></script>
+
+<!--jqGrid-->
+<script src="third-party/jqGrid/jqGrid/js/i18n/grid.locale-en.js"></script>
+<script src="third-party/jqGrid/jqGrid/js/jquery.jqGrid.min.js"></script> 
+<!--end jqGrid-->
 </body>
 </html>
