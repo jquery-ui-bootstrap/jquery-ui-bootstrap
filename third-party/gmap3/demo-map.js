@@ -1,6 +1,6 @@
 function selectCity(index, updateAccordion) {
     if (updateAccordion) {
-        $( "#accordion" ).accordion("option", "active", index);
+        $( "#accordion-map" ).accordion("option", "active", index);
     }
     $('#gmap3').gmap3({
         exec: {
