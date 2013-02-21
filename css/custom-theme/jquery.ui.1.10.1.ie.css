@@ -20,7 +20,7 @@
 }
 
 /*
- * jQuery UI Button 1.10.0
+ * jQuery UI Button 1.10.1
  *
  * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
@@ -45,5 +45,5 @@
 .ui-button-icon-only .ui-icon{
 	top:50%;
 	margin-top: 0px;
-	margin-bottom:-26px;
+	margin-bottom:-28px;
 }

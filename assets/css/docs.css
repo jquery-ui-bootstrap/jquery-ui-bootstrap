@@ -768,11 +768,11 @@ ul#icons span.ui-icon {
 }
 
 /*Toolbar*/
-#toolbar {
+#toolbar,#toolbar-fa {
 	margin: 0;
     padding: 5px 0 5px 5px;
 }
-#repeat {
+#repeat,#repeat-fa {
 	display: inline-block;
     /* IE7 inline-block fix */
     *display: inline;
