@@ -11,11 +11,12 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-
-  
     <!-- Styles --> 
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet/less" href="less/style.less">
+  	<script src="js/less-1.3.0.min.js"></script>
+    
     <link href="css/demo.css" rel="stylesheet">
+    
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -26,9 +27,6 @@
       }
       .container > footer p {
         text-align: center; /* center align it with the container */
-      }
-      .container {
-        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
       }
 
       /* The white background content wrapper */
@@ -57,10 +55,14 @@
         min-height: 500px;
       }
       /* Give a quick and non-cross-browser friendly divider */
-      .content .span4 {
+      .content .span5 {
         margin-left: 0;
         padding-left: 19px;
         border-left: 1px solid #eee;
+      }
+
+      .topbar .btn {
+        border: 0;
       }
 
     </style>
@@ -77,43 +79,28 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
-          <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a></li>
-            <li><a href="http://twitter.com/addyosmani">Contact</a></li>
-          </ul>
-          <form action="" class="pull-right">
-          </form>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a></li>
+              <li><a href="http://twitter.com/addyosmani">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+
 
     <div class="container">
 
       <div class="content">
         <div class="page-header">
-          <h1>jQuery UI Bootstrap <small>A Bootstrap-themed kickstart for jQuery UI widgets (v0.14)</small></h1>
+          <h1>jQuery UI Bootstrap <small>A Bootstrap 2 themed kickstart for jQuery UI widgets</small></h1>
         </div>
         <div class="row">
 
           <!--left col-->
           <div class="span10">
-
-
-          <!--welcome-->
-          <div class="alert alert-block">      
-            <p>
-              <p><strong>Welcome!</strong> This is a live preview of the new jQuery UI Bootstrap theme -  a project I started to bring the beauty of Twitter's <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> to jQuery UI widgets.
-              </p><br>
-              <p>
-              With this theme, not only do you get the ability to use Bootstrap-themed widgets, but you can now also use (most) of Twitter Bootstrap side-by-wide with it without components breaking visually. </p><br>
-              <p>
-              It's still a work-in-progress, but I hope you find it useful. Issues and pull requests are always welcome - <a href="http://twitter.com/addyosmani">@addyosmani</a>
-              </p>
-            </p>
-          </div>
-          <!--end welcome-->
-
 
         <!-- Accordion -->
             <h2 class="demoHeaders">Accordion</h2>
@@ -445,7 +432,7 @@
 
 
           <!--start filamentgroup datepicker-->
-            <link href="third-party/jQuery-UI-Date-Range-Picker/css/ui.daterangepicker.css" media="screen" rel="Stylesheet" type="text/css" />
+            <!-- <link href="third-party/jQuery-UI-Date-Range-Picker/css/ui.daterangepicker.css" media="screen" rel="Stylesheet" type="text/css" /> -->
 
             <p>&nbsp;</p>
             <h2>FilamentGroup Date Range Picker</h2>
@@ -525,26 +512,66 @@
 
 
           <!--right col-->
-          <div class="span4">
-
-            <!-- Buttons -->
-            <h2 class="demoHeaders">Buttons</h2>
-            <div id="buttons">
-
-              <button>Default</button>
-              <button class="ui-button-primary">Primary</button>
-              <button class="ui-button-success">Success</button>
-              </br>
-              </br>
-              <button class="ui-button-error">Danger</button>
-
-              <a class="button">Anchor</a>
-
-              <input type="submit" class="button" value="Submit"/>
-
+          <div class="span5">
+            <h2 class="demoHeaders">Bootstrap Buttons</h2>
+            <div id="">
+              <button class="btn">Default</button>
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-success">Success</button>
+              <p>&nbsp;</p>
+              
+              <button class="btn btn-info">Info</button>
+              <button class="btn btn-warning">Warning</button>
+              <button class="btn btn-danger">Danger</button>
+              <button class="btn btn-inverse">Inverse</button>
+              <p>&nbsp;</p>
+              <a class="btn">Anchor</a>
+              <input type="submit" class="btn" value="Submit"/>
+              
+              <p>&nbsp;</p>
+              <button class="ui-button-primary btn-large">Large</button>
+              <button class="ui-button btn-small">Small</button>
+              <button class="ui-button-warning btn-mini">Mini</button>
+               <p>&nbsp;</p>
             </div>
+            
+            <h2 class="demoHeaders">Buttons</h2>
+            <div id="jq-buttons">
+              <div>
+                <button class="ui-button" >Default</button>
+                <button class="ui-button-primary" >Primary</button>
+                <button class="ui-button-success" >Success</button>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+              
+              <button class="ui-button-info">Info</button>
+              <button class="ui-button-warning">Warning</button>
+              <button class="ui-button-danger">Danger</button>
+              <button class="ui-button-inverse">Inverse</button>
+              
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
 
-            </br>
+              <a class="jq-button">Anchor</a>
+              <input type="submit" class="jq-button" value="Submit"/>
+              
+              <p>&nbsp;</p>
+              <button class="ui-button-primary btn-large">Large</button>
+              <button class="ui-button btn-small">Small</button>
+              <button class="ui-button-warning btn-mini">Mini</button>
+               <p>&nbsp;</p>
+               <p>&nbsp;</p>
+            </div>
+            
+            <div id="jq-button-icons">
+              <button class="btn" href="#"><i class="icon-refresh"></i> Boot</button> 
+              <button class="ui-button-icon">Boot</button>           
+              <button class="ui-button-primary ui-button-icon">JQ UI</button>
+              <button class="ui-button-warning btn-mini ui-button-icon">Mini</button>
+               <p>&nbsp;</p>
+               <p>&nbsp;</p>
+            </div>
           
           <!-- Button set-->
             <h2 class="demoHeaders">Button set</h2>
@@ -564,12 +591,12 @@
               </form>
           <!--end button set-->
 
-
+          
           <!-- File Input-->
           <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
           <h2 class="demoheaders">File Input</h2>
           <form style="margin-top: 1em;"> 
-            <input type="file" class="span2" name="file" id="file">
+            <input type="file" class="" name="file" id="file">
           </form>
           <!-- end file input -->
 
@@ -617,7 +644,7 @@
             <!--autocomplete-->
             <div class="ui-widget">
               <label for="tags">Tags: </label>
-              <input id="tags" />
+              <input id="tags" type="text" />
             </div>
             <!--end autocomplete-->
 
@@ -694,8 +721,8 @@
 
         <!--scripts-->
 
-        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
         
 
         <!--daterangepicker-->
