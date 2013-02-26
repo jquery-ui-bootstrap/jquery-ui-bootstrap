@@ -1120,7 +1120,10 @@ input.ui-button {
 
 .ui-button-icon-only .ui-icon {
 	left: 50%;
+	/* chrome margin*/
 	margin-left: -8px;
+	/* firefox margin*/
+    margin-right: -6px;
 }
 
 .ui-button-text-icon-primary .ui-button-icon-primary,
