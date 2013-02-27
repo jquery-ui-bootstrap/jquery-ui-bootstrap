@@ -7,15 +7,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
         
-        <link rel="stylesheet" href="../../css/custom-theme/jquery-ui-1.10.0.custom.css">
-        <link rel="stylesheet" href="jqGrid/css/ui.jqgrid.css" /> 
         <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/custom-theme/jquery-ui-1.10.1.custom.css">
+        
+        <link rel="stylesheet" href="jqGrid/css/ui.jqgrid.css" /> 
         <link rel="stylesheet" href="jqGrid.overrides.css">
 
   
 
         <!-- jQuery + jqGrid -->
-        <script src="../../assets/js/jquery-1.9.0.min.js"></script>  
+        <script src="../../assets/js/jquery-1.9.0.min.js"></script> 
+        <script src="../../assets/js/bootstrap.min.js"></script>
         <script src="../../assets/js/jquery-ui-1.10.0.custom.min.js"></script>       
         <script src="jqGrid/js/i18n/grid.locale-en.js"></script>
         <script src="jqGrid/js/jquery.jqGrid.min.js"></script> 
@@ -58,7 +60,7 @@
                     {id:"29",invdate:"2007-09-01",name:"test3",note:"note3",amount:"400.00",tax:"30.00",total:"430.00"}
                 ];
     
-                jQuery("#jqGrid01").jqGrid({
+                $("#demoGrid").jqGrid({
                     data: mydata,
                     datatype: "local",
                     height: 250,
@@ -68,25 +70,89 @@
                     colModel:[
                         {name:'id',index:'id', width:60, sorttype:"int",search:true},
                         {name:'invdate',index:'invdate', width:90, sorttype:"date", formatter:"date"},
-                        {name:'name',index:'name', width:100},
+                        {name:'name',index:'name', width:200},
                         {name:'amount',index:'amount', width:80, align:"right",sorttype:"float", formatter:"number"},
                         {name:'tax',index:'tax', width:80, align:"right",sorttype:"float"},        
                         {name:'total',index:'total', width:80,align:"right",sorttype:"float"},        
-                        {name:'note',index:'note', width:150, sortable:false}        
+                        {name:'note',index:'note', width:250, sortable:false}        
                     ],
-                    pager: "#jqGridPager01",
+                    pager: "#gridPager",
                     viewrecords: true,
                     caption: "Sample jqGrid Table",
-                    hidegrid:false,
-                    altRows: true                
+                    hidegrid:true,
+                    altRows: true,
+                    shrinkToFit:false,
+                    autowidth: true,
+                    height: '100%',
+                    multiselect: true,
+                    beforeSelectRow: function(rowid, e) {
+                        var $this = $(this), rows = this.rows,
+                            // get id of the previous selected row
+                            startId = $this.jqGrid('getGridParam', 'selrow'),
+                            startRow, endRow, iStart, iEnd, i, rowidIndex;
+
+                        if (!e.ctrlKey && !e.shiftKey && !e.metaKey) {
+                            $this.jqGrid('resetSelection');
+                        } else if (startId && e.shiftKey) {
+                            $this.jqGrid('resetSelection');
+
+                            // get DOM elements of the previous selected and
+                            // the currect selected rows
+                            startRow = rows.namedItem(startId);
+                            endRow = rows.namedItem(rowid);
+                            if (startRow && endRow) {
+                                // get min and max from the indexes of the previous selected
+                                // and the currect selected rows 
+                                iStart = Math.min(startRow.rowIndex, endRow.rowIndex);
+                                rowidIndex = endRow.rowIndex;
+                                iEnd = Math.max(startRow.rowIndex, rowidIndex);
+                                for (i = iStart; i <= iEnd; i++) {
+                                    // the row with rowid will be selected by
+                                    // jqGrid. So we don't need select it
+                                    if (i != rowidIndex) {
+                                        $this.jqGrid('setSelection', rows[i].id, false);
+                                    }
+                                }
+                            }
+
+                            // clear text selection (needed in IE)
+                            if(document.selection && document.selection.empty) {
+                                document.selection.empty();
+                            } else if(window.getSelection) {
+                                window.getSelection().removeAllRanges();
+                            }
+                        }
+                        return true;
+                    }                
                 });
-                
-                jQuery("#jqGrid01").jqGrid('filterToolbar',{defaultSearch:true,stringResult:true});
+                jQuery("#demoGrid").jqGrid('navGrid','#gridPager',{add:false,del:false});
+                //jQuery("#demoGrid").jqGrid('filterToolbar',{defaultSearch:true,stringResult:true});
             
+                //test responsiveness
+                $(window).on('resize', function(event, ui) {
+                    // Get width of parent container
+                    var parWidth = $("#gbox_demoGrid").parent().width();
+                    var curWidth = $("#gbox_demoGrid").width();
+                    //console.log("span width " + parWidth + " gridWidth " + gWidth);
+                    var w = parWidth - 1; // Fudge factor to prevent horizontal scrollbars
+                    if (Math.abs(w - curWidth) > 2)
+                    {
+                        //alert("resize to " + width);
+                        console.log("span width " + parWidth + " gridWidth " + curWidth);    
+                        $("#demoGrid").setGridWidth(w);
+                        console.log("new width " + w);
+                    }
+
+                }).trigger('resize');
             });
         </script>
 
-
+        <style>
+          body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+          }
+        </style>
         
 
 
@@ -105,16 +171,12 @@
 
      
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row-fluid">
                 
-                <div class="span9">
-
-                    <div class="hero-unit">
-                        <table id="jqGrid01"></table>
-                        <div id="jqGridPager01"></div>
-                    </div>
-
+                <div class="span9" id='gridSpan'>
+                  <table id="demoGrid"></table>
+                  <div id="gridPager"></div>
                 </div><!--/span-->
             </div><!--/row-->
 
