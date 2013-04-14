@@ -2293,7 +2293,7 @@ textarea,
 
 /***Dialog fixes**/
 
-.ui-dialog-buttonset .ui-button:nth-child(2) {
+.ui-dialog-buttonset .ui-button:not(:first-child) {
 	cursor: pointer;
 	display: inline-block;
 	background-color: #e6e6e6;
