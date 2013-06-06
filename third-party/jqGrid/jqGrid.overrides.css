@@ -85,7 +85,8 @@
 }
 
 .ui-jqgrid-btable .ui-widget-content.ui-state-highlight {
-    background-color: #EEDC94;		
+    background-color: #EEDC94;	
+    		background-image: -ms-linear-gradient(top, #FCEEC1, #EEDC94); 
 		background-image: -webkit-linear-gradient(top, #fceec1, #eedc94); /* Safari 5.1+, Chrome 10+ */
 		background-image: -moz-linear-gradient(top, #fceec1, #eedc94); /* Firefox 3.6 */
 		background-image: -o-linear-gradient(top, #fceec1, #eedc94); /* Opera 11.10+ */
