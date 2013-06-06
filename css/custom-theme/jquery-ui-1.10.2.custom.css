@@ -2150,6 +2150,24 @@ body .ui-tooltip {
 	filter: none;
 }
 
+.ui-datepicker td .ui-state-highlight{
+	color: #404040;
+	background: #eedc94;
+	background-color: #eedc94;
+	background-repeat: repeat-x;
+	background-image: -webkit-linear-gradient(top, #fceec1, #eedc94); /* Safari 5.1+, Chrome 10+ */
+	background-image: -moz-linear-gradient(top,#fceec1, #eedc94); /* Firefox 3.6 */
+	background-image: -o-linear-gradient(top, #fceec1, #eedc94); /* Opera 11.10+ */
+	background-image: linear-gradient(top, #fceec1, #eedc94); /* CSS3 Compliant */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceec1', endColorstr='#eedc94', GradientType=0); /* IE8 */
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-color: #eedc94 #eedc94 #e4c652;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	-webkit-border-radius: 4px; /* Safari 4 */
+	-moz-border-radius: 4px; /* Firefox 3.6 */
+	border-radius: 4px;
+}
+
 .ui-datepicker td .ui-state-active {
 	background: #bfbfbf;
 	margin-bottom: 0;
