@@ -12,6 +12,7 @@
 	padding: .2em; 
 	width: 300px; 
 	overflow: hidden; 
+	.box-shadow(0 3px 7px rgba(0, 0, 0, 0.3));
 	.ui-dialog-titlebar { 
 		/*padding: .4em 1em;*/
 		position: relative;
@@ -40,7 +41,7 @@
 		right: .3em;
 		top: 50%;
 		width: 19px;
-		margin: -10px 0 0 0;
+		margin: -20px 0 0 0;
 		padding: 1px;
 		height: 18px;
 		font-size: 20px;
@@ -48,6 +49,11 @@
 		line-height: 13.5px;
 		text-shadow: 0 1px 0 @white;
 		.opacity( 25 );
+		background: none;
+		border-width: 0;
+		border: none;
+		.box-shadow( none);
+		
 	}
 	.ui-dialog-titlebar-close span { 
 		display: block; 
