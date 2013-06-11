@@ -8,7 +8,7 @@
  * http://docs.jquery.com/UI/Datepicker#theming
  */
 .ui-datepicker { 
-	width: 22em; 
+	width: 17em; 
 	padding: .2em .2em 0; 
 	display: none; 
 	.ui-datepicker-header { 
@@ -184,9 +184,8 @@
 }
 
 .ui-datepicker-today {
-	
 	a{
-		background-color: @grayLight;
+		background-color: @blueDark;
 		cursor: pointer;
 		padding: 0 4px;
 		margin-bottom:0px;
@@ -209,18 +208,29 @@
 	}
 
 	.ui-state-default {
-		border:0px;
+		border: 0;
 		background:none;
-		margin-bottom:0px;
-		padding:5px;
-		color:gray;
+		margin-bottom: 0;
+		padding: 5px;
+		color: gray;
 		text-align: center;
-		filter:none;
+		filter: none;
 		&:hover{
 			background:@blueDark;
 			color:white;
 			.border-radius( 4px );
 		}
+	}
+	
+	.ui-state-highlight{
+		color: #404040;
+		background: #eedc94;
+		#gradient > .vertical (#fceec1, #eedc94);
+		.reset-filter();
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		border-color: #eedc94 #eedc94 #e4c652;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		.border-radius(4px);
 	}
 	
 	.ui-state-active {
