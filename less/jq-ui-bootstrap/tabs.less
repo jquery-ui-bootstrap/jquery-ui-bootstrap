@@ -10,32 +10,30 @@
 
 .ui-tabs { 
 	position: relative; 
-	padding: .2em; 
-	zoom: 1; 
-	border:0px;
+	border: 0; 
+	.border-radius(0);
 
 	/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	.ui-tabs-nav li:hover{
 		text-decoration: none;
 	}
 	.ui-tabs-nav { 
-		margin: 0; 
-		padding: 0; 
-		background:none;
-		border-color: #ddd ;
-    	border-style: solid;
-    	border-width: 0 0 1px 0;
+		margin-bottom: 5px;
+		border: solid #ddd;
+		border-width: 0 0 1px 0;
+		.border-radius( 0 );
+		background: none;
 	}
 	.ui-tabs-nav li { 
-		list-style: none; 
-		float: left; 
-		position: relative; 
-		top: 1px;   
-		padding: 0 0 1px; 
-		white-space: nowrap; 
-		background:none; 
-		border:0px;
+		position: relative;
+		top: 0;
+		float: left;
 		margin-right: 2px;
+		margin-bottom: -1px;
+		border: 0;
+		list-style: none;
+		white-space: nowrap;
+		background: none;
 	}
 }
 
@@ -46,14 +44,15 @@
 	.ui-tabs-nav{
 		li a {
 			float: left;
-			text-decoration: none;
-			cursor: text;
-			padding: 0 15px;
-			margin-right: 2px;
-			line-height: 34px;
-			border: 1px solid transparent;
-		
+			border: 1px solid #fff;
+			border-bottom: 1px solid #ddd;
 			#border-radius > .border( 4px, 4px, 0, 0 );
+			padding: 8px 12px;
+			font-weight: normal;
+			text-decoration: none;
+			outline: none;
+			color: #0069D6;
+			background: none;
 		}
 		li.ui-tabs-selected { 
 			margin-bottom: 0; 
@@ -67,33 +66,35 @@
 			background-color: @white;
 			border: 1px solid #ddd;
 			border-bottom-color: @white;
-			cursor: default;
+			cursor: text;
 			color: @gray;
 			outline:none;
 		}
 		li:hover, li a:hover{
-		    border-color: @grayLighter @grayLighter #ddd;
+		    border-color: whiteSmoke whiteSmoke #ddd; // TODO - move whiteSmoke to variable
             text-decoration: none;
-            background-color: @grayLighter;
+            background-color: whiteSmoke; // TODO - move whiteSmoke to variable
 		}
 		li.ui-tabs-selected:hover, li.ui-tabs-active:hover {
           background:@white;
           outline:none;
         }
 	}
-	.ui-tabs-nav li a,
+	/* .ui-tabs-nav li a,
 	.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
 		cursor: pointer;
 		color:@ui-blueLight;
 		background:none;
 		font-weight:normal;
 		margin-bottom:-1px;
-	} 
+	} */
 	/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 	.ui-tabs-panel { 
 		display: block; 
-		border-width: 0; 
-		padding: 1em 1.4em; 
+		margin: 1em 0;
+		border: 0; 
+		.border-radius(0);
+		padding: 1px 0; 
 		background: none; 
 	}
 }
