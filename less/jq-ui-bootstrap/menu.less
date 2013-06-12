@@ -12,29 +12,104 @@
 	padding: 2px;
 	margin: 0;
 	display:block;
-	float: left;
-
+	outline: none;
+	width: 200px;
+	margin-bottom: 2em;
 	.ui-menu {
 		margin-top: -3px;
+		position: absolute;
+		list-style:none;
+	}
+	
+	/*
+	 * Bug inline with IE sub menu
+	 */
+	/* IE9, IE10 */
+	@media screen and (min-width:~"0\0") {
+		li {
+		  list-style-type: none;
+		  display: inline;
+		  line-height: 0;
+		}
+		// partial fix out of .ui-menu container.. see below
 	}
 	.ui-menu-item {
 		margin:0;
 		padding: 0;
-		zoom: 1;
-		float: left;
-		clear: left;
 		width: 100%;
+		list-style:none;
+	}
+	.ui-menu-divider {
+		margin: 5px -2px 5px -2px;
+		height: 0;
+		font-size: 0;
+		line-height: 0;
+		border-width: 1px 0 0 0;
 	}
 	.ui-menu-item a {
 		text-decoration:none;
 		display:block;
-		padding:.2em .4em;
+		padding:2px .4em;
 		line-height:1.5;
-		zoom:1;
-	}
-	.ui-menu-item a.ui-state-hover, .ui-menu-item a.ui-state-active {
+		min-height: 0; /* support: IE7 */
 		font-weight: normal;
-		background: @blueDark;
+		.ui-corner-all{
+			.border-radius(0px);
+		}
+		
+	}
+	.ui-menu-item a.ui-state-focus, 
+	.ui-menu-item a.ui-state-active,
+	.ui-menu-item a.ui-widget-content{
+		font-weight: bold;
 		color: @white;
+		background: @blue;
+		#gradient > .vertical(@blue, lighten(@blue, 5%));
+		.reset-filter();
+	}
+	.ui-menu-item a.ui-state-active {
+		padding: 1px .4em;
+	}
+	.ui-state-disabled {
+		font-weight: normal;
+		margin: .4em 0 .2em;
+		line-height: 1.5;
+		a {
+			cursor: default;
+		}
+	}
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+	.ui-menu-item a {
+		position: relative;
+		padding-left: 2em;
+	}
+}
+
+.ui-menu {
+	/* left-aligned */
+	.ui-icon {
+		position: absolute;
+		top: .2em;
+		left: .2em;
+	}
+	
+	/* right-aligned */
+	.ui-menu-icon {
+		position: static;
+		float: right;
+	}
+}
+/*
+ * Bug inline with IE sub menu
+ */
+/* IE9, IE10 */
+@media screen and (min-width: ~"0\0") {
+	li.ui-menu-item { 
+	  /* This fixes the IE10 issue (jQuery UI Issue #8844)*/
+	  list-style-type: none;
 	}
 }
