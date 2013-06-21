@@ -1,0 +1,37 @@
+/**
+* Less'd version of Font Awesome in jQuery UI
+* @author Gerits Aurelien, Vijay Dharap
+*
+**/
+
+.ui-button-icon-primary.ui-icon[class^="icon-"]:before,
+.ui-button-icon-primary.ui-icon[class*=" icon-"]:before,
+.ui-button-icon-secondary.ui-icon[class^="icon-"]:before,
+.ui-button-icon-secondary.ui-icon[class*=" icon-"]:before {
+    font-size: inherit;
+    margin-left: 7px!important;
+    margin-left: 5px;
+    display: inline;
+    text-decoration: inherit;
+    color:inherit;
+}
+
+/* **
+* If you use "Font awesome" is disable UI icons in element
+** */
+.ui-state-default .ui-icon[class*=" icon-"]{
+    /* Reset background with font Awesome */
+    background:none;
+    margin-left:-12px; /*fix for margin issue with font awesome buttons*/
+}
+
+/* If you do not use ui-icon uncomment the lines */
+/*
+.ui-button .ui-button-text{
+    display: inline-block;
+    padding:5px;
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary{
+    float:none;
+}*/

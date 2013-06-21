@@ -58,6 +58,11 @@ For a live preview of the current theme, see [http://addyosmani.github.com/jquer
 
     #Send your changes to github
     git push
+	
+	#compile your less changes to create a new css file
+	npm install -g less
+	cd less
+	lessc -x style.less > style.min.css
 
 ##Licence
 
