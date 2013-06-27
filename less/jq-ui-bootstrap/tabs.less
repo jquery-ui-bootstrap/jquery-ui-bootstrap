@@ -1,0 +1,113 @@
+/*
+ * jQuery UI Tabs 
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+
+.ui-tabs { 
+	position: relative; 
+	border: 0; 
+	.border-radius(0);
+
+	/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	.ui-tabs-nav li:hover{
+		text-decoration: none;
+	}
+	.ui-tabs-nav { 
+		margin-bottom: 5px;
+		border: solid #ddd;
+		border-width: 0 0 1px 0;
+		.border-radius( 0 );
+		background: none;
+	}
+	.ui-tabs-nav li { 
+		position: relative;
+		top: 0;
+		float: left;
+		margin-right: 2px;
+		margin-bottom: -1px;
+		border: 0;
+		list-style: none;
+		white-space: nowrap;
+		background: none;
+	}
+}
+
+.ui-tabs-nav .ui-state-default{
+	.box-shadow( 0px 0px 0px @white );
+}
+.ui-tabs {
+	.ui-tabs-nav{
+		li a {
+			float: left;
+			border: 1px solid #fff;
+			border-bottom: 1px solid #ddd;
+			#border-radius > .border( 4px, 4px, 0, 0 );
+			padding: 8px 12px;
+			font-weight: normal;
+			text-decoration: none;
+			outline: none;
+			color: #0069D6;
+			background: none;
+		}
+		li.ui-tabs-selected { 
+			margin-bottom: 0; 
+			padding-bottom: 0px; 
+			outline:none;
+		}
+		li.ui-tabs-selected a,
+		li.ui-state-disabled a,
+		li.ui-state-processing a,
+		li.ui-tabs-active a, li.ui-tabs-active a:hover, li.ui-tabs-selected a:hover {
+			background-color: @white;
+			border: 1px solid #ddd;
+			border-bottom-color: @white;
+			cursor: text;
+			color: @gray;
+			outline:none;
+		}
+		li:hover, li a:hover{
+		    border-color: whiteSmoke whiteSmoke #ddd; // TODO - move whiteSmoke to variable
+            text-decoration: none;
+            background-color: whiteSmoke; // TODO - move whiteSmoke to variable
+		}
+		li.ui-tabs-selected:hover, li.ui-tabs-active:hover {
+          background:@white;
+          outline:none;
+        }
+	}
+	/* .ui-tabs-nav li a,
+	.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+		cursor: pointer;
+		color:@ui-blueLight;
+		background:none;
+		font-weight:normal;
+		margin-bottom:-1px;
+	} */
+	/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+	.ui-tabs-panel { 
+		display: block; 
+		margin: 1em 0;
+		border: 0; 
+		.border-radius(0);
+		padding: 1px 0; 
+		background: none; 
+	}
+}
+
+.ui-tabs-panel .ui-button{text-decoration:none;}
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+
+/* IE fix for background inheritance from ui-widget*/
+.ui-tabs .ui-tabs-nav li{
+	filter:none;
+}
+
+.ui-tabs-nav.ui-corner-all{
+    .border-radius( 0 );
+}
