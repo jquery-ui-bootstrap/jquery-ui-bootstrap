@@ -8,11 +8,8 @@
             <meta name="author" content="Addy Osmani">
 
             <!-- Le styles -->
-			<!-- Use the raw LESS for debugging purposes -->
-			<!-- <link rel="stylesheet/less" href="less/style.less">
-			<script src="assets/js/less-1.4.2.min.js"></script> -->
-			<!-- for PROD use the compiled CSS -->
-			<link type="text/css" href="less/style.min.css" rel="stylesheet" />
+			<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+			<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.2.custom.css">
             <link rel="stylesheet" href="assets/css/font-awesome.min.css">
             <!--[if IE 7]>
             <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
@@ -72,11 +69,12 @@
                             </li>
                             <li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									Select Theme <b class="caret"></b>
+									Switch Theme <b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-									<li><a tabindex="-1" href="#">Default Bootstrap Theme</a></li>
-									<li><a tabindex="-1" href="theme/united/index.html">United Theme via Bootswatch</a></li>
+									<li><a tabindex="-1" href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
+									<li><a tabindex="-1" href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
+									<li><a tabindex="-1" href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
 								</ul>
                             </li>
                         </ul>

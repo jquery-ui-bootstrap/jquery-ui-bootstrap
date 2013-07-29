@@ -8,24 +8,27 @@
     <meta name="author" content="Addy Osmani">
 
     <!-- Le styles -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.2.custom.css">
+	<!-- Use the raw LESS for debugging purposes -->
+	<!-- <link rel="stylesheet/less" href="../../less/style.less">
+	<script src="../../assets/js/less-1.4.2.min.js"></script>	 -->
+	<!-- for PROD use the compiled CSS -->
+    <link type="text/css" href="../../less/style.min.css" rel="stylesheet" />
 	
-    <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href="../../assets/css/font-awesome.min.css" rel="stylesheet" />
     <!--[if IE 7]>
-    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <link rel="stylesheet" href="../../assets/css/font-awesome-ie7.min.css">
     <![endif]-->
     <!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.2.ie.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/custom-theme/jquery.ui.1.10.2.ie.css"/>
     <![endif]-->
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="../../assets/css/docs.css" rel="stylesheet">
+    <link href="../../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <!--begin wijmo menu-->
-    <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
+    <link href="../../third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
     <!--End wijmo menu-->
     <!--begin file input-->
 	<!-- Don't use in case of LESS'd css since it already includes this -->
-    <!-- <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet"> -->
+    <!-- <link href="../../third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet"> -->
     <!--End file input-->
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -33,17 +36,17 @@
     <![endif]-->
     
     <!-- jqGrid-->
-    <link rel="stylesheet" href="third-party/jqGrid/jqGrid/css/ui.jqgrid.css" />
-    <link rel="stylesheet" href="third-party/jqGrid/jqGrid.overrides.css"> 
+    <link rel="stylesheet" href="../../third-party/jqGrid/jqGrid/css/ui.jqgrid.css" />
+    <link rel="stylesheet" href="../../third-party/jqGrid/jqGrid.overrides.css"> 
     <!-- end jqGrid -->
 
 
     <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
 </head>
 
@@ -51,7 +54,7 @@
 
 <!-- Navbar
 ================================================== -->
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -82,12 +85,12 @@
                     </li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							Select Theme <b class="caret"></b>
+							Switch Theme <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-							<li><a tabindex="-1" href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
-							<li><a tabindex="-1" href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
-							<li><a tabindex="-1" href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
+							<li><a tabindex="-1" href="../../index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
+							<li><a tabindex="-1" href="../united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
+							<li><a tabindex="-1" href="./index.html">Default Bootstrap Theme (LESS'd)</a></li>
 						</ul>
 					</li>
                 </ul>
@@ -413,25 +416,25 @@ $( "#rerun-fa" )
     </div>
 </footer>
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery-migrate-1.2.1.js"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/js/holder.js"></script>
-<script src="assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
-<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-<script src="assets/js/docs.js" type="text/javascript"></script>
+<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../../assets/js/jquery-migrate-1.2.1.js"></script>
+<script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../assets/js/holder.js"></script>
+<script src="../../assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+<script src="../../assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+<script src="../../assets/js/docs.js" type="text/javascript"></script>
 <!-- FileInput -->
-<script src="third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript"></script>
-<script src="third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript"></script>
+<script src="../../third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript"></script>
+<script src="../../third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript"></script>
 <!-- End FileInput -->
 <!--wijmo-->
-<script src="third-party/wijmo/jquery.mousewheel.min.js" type="text/javascript"></script>
-<script src="third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
+<script src="../../third-party/wijmo/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="../../third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
 <!--End wijmo-->
 <!--jqGrid-->
-<script src="third-party/jqGrid/jqGrid/js/i18n/grid.locale-en.js"></script>
-<script src="third-party/jqGrid/jqGrid/js/jquery.jqGrid.min.js"></script> 
+<script src="../../third-party/jqGrid/jqGrid/js/i18n/grid.locale-en.js"></script>
+<script src="../../third-party/jqGrid/jqGrid/js/jquery.jqGrid.min.js"></script> 
 <!--end jqGrid-->
-<script src="assets/js/demo-extra.js"></script>
+<script src="../../assets/js/demo-extra.js"></script>
 </body>
 </html>
