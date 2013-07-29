@@ -93,13 +93,13 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget {   
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-family: @sansFontFamily; 
 	font-size:13px; 
 	.ui-widget { 
 		font-size: 1em; 
 	}
 	input, select, textarea, button { 
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+		font-family: @sansFontFamily; 
 		font-size: 1em; 
 	}
 }
@@ -153,7 +153,9 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
 	
 	//keep it for IE incase we use background images
-	background-position: 0 -15px;
+	// commenting since this is breaking just too many places. e.g. buttonbar, toolbar, accordion header, etc.
+	// must check JQ UI
+	//background-position: 0 -15px;
 	color: @grayDark;
 	text-decoration: none;
 }

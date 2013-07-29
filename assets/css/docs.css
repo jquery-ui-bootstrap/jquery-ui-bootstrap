@@ -804,20 +804,6 @@ ul#icons span.ui-icon {
     margin-bottom: 20px;
 }
 
-/**
-* fix bug position button customfile
-*/
-.input-append.customfile, .input-prepend {
-    font-size: 0;
-    margin-bottom: 5px;
-    white-space: normal;
-}
-.input-append.customfile .add-on{
-    height:20px;
-    font-size:14px;
-    line-height:18px;
-    min-width: 70px;
-}
 /* Wijmo */
 #wijmo-container{
     margin-bottom: 20px;

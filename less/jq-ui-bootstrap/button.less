@@ -25,6 +25,13 @@
     border-bottom-color: darken(@btnBorder, 10%);
     .ie7-restore-left-whitespace(); // Give IE7 some love
     .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
+
+	&.ui-state-hover, &.ui-state-focus{
+		border-color: rgba(82, 168, 236, 0.8);
+		.box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)" );
+    }
+
+	
 }
 
 .ui-btn-large{
@@ -59,6 +66,10 @@
 
 .ui-button-inverse{
   .ui_setup_button( @white, @btnInverseBackground, @btnInverseBackgroundHighlight);
+  // correct the text color for extremely dark inverses
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+    color: @grayLight;
+  }
 }
 .ui-button-info{
   .ui_setup_button( @white, @btnInfoBackground, @btnInfoBackgroundHighlight);
@@ -155,6 +166,11 @@ button.ui-button-icons-only { width: 3.7em; }
 	.ui-button { 
 		margin-left: 0; 
 		margin-right: -.4em; 
+		&.ui-state-focus{
+			background-color: @btnBackground;
+			*background-color: darken(@btnBackgroundHighlight, 5%);
+			background-position: 0 0;
+		}
 	}
 }
 
