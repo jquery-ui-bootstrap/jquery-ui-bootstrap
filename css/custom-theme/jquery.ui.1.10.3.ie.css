@@ -1,0 +1,55 @@
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-left, .ui-corner-bottom{ border-radius:0px;}
+/*
+ * jQuery UI Tabs 1.10.0
+ *
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://jqueryui.com/tabs/
+ */
+
+.ui-state-active,.ui-tabs-selected { border-radius:0px;}
+.ui-tabs-selected { border-radius:0px;}
+.ui-tabs .ui-tabs-nav li{ filter:none;}
+.ui-tabs .ui-tabs-nav li a { border-radius:0px; }
+
+.ui-button .ui-button-text {
+	display: block;
+}
+
+/*
+ * jQuery UI Button 1.10.2
+ *
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://jqueryui.com/button/
+ */
+
+.ui-button-text-icon-primary{}
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {}
+
+.ui-button-text-icon-primary .ui-icon{
+	top:50%;
+	margin-top: 5px;
+	margin-bottom:-26px;
+}
+
+.ui-button-icons-only .ui-icon {}
+
+.ui-button-icon-only .ui-icon{
+	top:50%;
+	margin-top: 0px;
+	margin-bottom:-28px;
+}
+
+.ui-menu li {
+  list-style-type: none;
+  display: inline;
+  line-height: 0;
+}
