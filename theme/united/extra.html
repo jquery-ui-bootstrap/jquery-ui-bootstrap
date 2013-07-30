@@ -26,10 +26,6 @@
     <!--begin wijmo menu-->
     <link href="../../third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
     <!--End wijmo menu-->
-    <!--begin file input-->
-	<!-- Don't use in case of LESS'd css since it already includes this -->
-    <!-- <link href="../../third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet"> -->
-    <!--End file input-->
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -39,8 +35,10 @@
     <link rel="stylesheet" href="../../third-party/jqGrid/jqGrid/css/ui.jqgrid.css" />
     <link rel="stylesheet" href="../../third-party/jqGrid/jqGrid.overrides.css"> 
     <!-- end jqGrid -->
-
-
+	
+	<!-- Select2 -->
+	<!-- <link rel="stylesheet" href="../../third-party/select2/select2.css"> -->
+	<!-- End Select2 -->
     <!-- Le fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
@@ -124,6 +122,7 @@
                 <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
                 <li><a href="#jqgrid"><i class="icon-chevron-right"></i> jqGrid</a></li>
                 <li><a href="#font-awesome"><i class="icon-chevron-right"></i> Font Awesome</a></li>
+                <li><a href="#select2"><i class="icon-chevron-right"></i> Select2</a></li>
             </ul>
         </div>
         <div class="span9">
@@ -379,6 +378,52 @@ $( "#rerun-fa" )
 </pre>
             </section>
             <!-- end file input -->
+			
+			<!-- Start Select2 -->
+            <section id="select2">
+                <div class="page-header">
+                    <h1>Select2</h1>
+                </div>
+                <h3>A simple select2 example</h3>
+                <form class="clearfix">
+                    <div id="select2">
+                         <select id="e1">
+							<option value="AL">Alabama</option>
+							<option value="WY">Wyoming</option>
+						</select>
+                    </div>
+                </form>
+<pre class="prettyprint linenums">
+//####### Toolbar with Font Awesome
+$("#play-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-play"
+    }
+});
+$("#stop-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-stop"
+    }
+});
+$("#prev-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-fast-backward"
+    }
+});
+$("#next-fa").button({
+    text: false,
+    icons: {
+        primary: "icon-fast-forward"
+    }
+});
+$("#shuffle-fa").button();
+$("#repeat-fa").buttonset();
+</pre>
+            </section>
+            <!-- end Select2 -->
         </div>
     </div>
 </div>
@@ -435,6 +480,9 @@ $( "#rerun-fa" )
 <script src="../../third-party/jqGrid/jqGrid/js/i18n/grid.locale-en.js"></script>
 <script src="../../third-party/jqGrid/jqGrid/js/jquery.jqGrid.min.js"></script> 
 <!--end jqGrid-->
+<!--select2-->
+<script src="../../third-party/select2/select2.js"></script>
+<!--End select2-->
 <script src="../../assets/js/demo-extra.js"></script>
 </body>
 </html>
