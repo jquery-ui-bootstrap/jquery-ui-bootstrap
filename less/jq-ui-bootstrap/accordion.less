@@ -1,54 +1,61 @@
 /*
- * jQuery UI Accordion 
+ * jQuery UI Accordion 1.10.3
  *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
- * http://docs.jquery.com/UI/Accordion#theming
+ * http://jqueryui.com/accordion/
  */
 /* IE/Win - Fix animation bug - #4615 */
 .ui-accordion {
 	width: 100%;
-	&-header { 
-		cursor: pointer; 
-		position: relative; 
-		margin-top: 1px; 
-		zoom: 1; 
-		font-weight:bold;
-		a { 
-    		display: block; 
-    		font-size: 1em; 
-    		padding: .5em .5em .5em 1.7em; 
-    	} 
-    	.ui-icon { 
-    		position: absolute; 
-    		left: .5em; 
-    		top: 50%; 
-    		margin-top: -8px; 
-    	}
+	.ui-accordion {
+		&-li-fix {
+			display: inline;
+		}
+		&-header-active {
+			border-bottom: 0 !important; 
+		}
+		&-header { 
+			display: block;
+			cursor: pointer;
+			position: relative;
+			margin-top: 2px;
+			padding: .5em .5em .5em .7em;
+			min-height: 0; /* support: IE7 */
+		}
+		&-icons {
+			padding-left: 2.2em;
+		}
+		&-noicons {
+			padding-left: .7em;
+		}
+		&-icons {
+			.ui-accordion-icons{
+				padding-left: 2.2em;
+			}
+		}
+		&-header {
+			.ui-accordion-header-icon {
+				position: absolute;	
+				left: .5em;
+				top: 50%;
+				margin-top: -8px;
+			}
+		}
+		&-content { 
+			padding: 1em 2.2em; 
+			border-top: 0; 
+			margin-top: -2px; 
+			position: relative; 
+			top: 1px; 
+			margin-bottom: 2px; 
+			overflow: auto; 
+			display: none; 
+		}
+		&-content-active { 
+			display: block;
+		}
 	}
-	&-li-fix {
-		display: inline;
-	}
-	&-header-active {
-		border-bottom: 0 !important; 
-	}
-	&-content { 
-		padding: 1em 2.2em; 
-		border-top: 0; 
-		margin-top: -2px; 
-		position: relative; 
-		top: 1px; 
-		margin-bottom: 2px; 
-		overflow: auto; 
-		display: none; 
-		zoom: 1; 
-	}
-	&-content-active { 
-		display: block;
-	}
-}
-.ui-accordion-icons .ui-accordion-header a {
-	padding-left: 2.2em; 
 }
