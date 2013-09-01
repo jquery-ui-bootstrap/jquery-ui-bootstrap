@@ -1,6 +1,6 @@
 $(function () {
     //####### Buttons
-    $("button,.button,#sampleButton").button();
+    $("#layout button,.button,#sampleButton").button();
     $("#btn-with-icon").button({
         text: true,
         icons: {

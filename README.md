@@ -1,4 +1,4 @@
-#jQuery UI Bootstrap (v0.5)
+#jQuery UI Bootstrap (v 1.0 Alpha)
 
 This project was started to bring the beauty and ease-of-use of Twitter Bootstrap to jQuery UI widgets ♥.
 
@@ -22,7 +22,7 @@ There *are* some minor known issues lingering that we're working on, but the hop
 
 ##jQuery UI support
 
-This theme targets jQuery UI 1.10.2 (stable) and 1.9.2 (legacy), along with the default version of jQuery included in the (current) jQuery UI builds (jQuery 1.6+).
+This theme targets jQuery UI 1.10.3 (stable) and 1.9.2 (legacy), along with the default version of jQuery included in the (current) jQuery UI builds (jQuery 1.6+).
 
 ##Project status
 

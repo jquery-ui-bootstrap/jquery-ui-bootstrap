@@ -2,41 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Extra with jQuery UI Bootstrap</title>
+    <title>Download jQuery UI Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A preview of the jQuery UI Bootstrap theme">
+    <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
     <meta name="author" content="Addy Osmani">
 
     <!-- Le styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css">
-	
-    <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.theme.css">-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <!--[if IE 7]>
     <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
     <![endif]-->
     <!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.3.ie.css"/>
+    <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.3.ie.css">
     <![endif]-->
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
     <!--begin wijmo menu-->
     <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
     <!--End wijmo menu-->
     <!--begin file input-->
     <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
     <!--End file input-->
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
+
     <!-- jqGrid-->
     <link rel="stylesheet" href="third-party/jqGrid/jqGrid/css/ui.jqgrid.css" />
-    <link rel="stylesheet" href="third-party/jqGrid/jqGrid.overrides.css"> 
+    <link rel="stylesheet" href="third-party/jqGrid/jqGrid.overrides.css">
     <!-- end jqGrid -->
 
-
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
     <!-- Le fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -49,80 +49,82 @@
 <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
 
 <!-- Navbar
-================================================== -->
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    ================================================== -->
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li>
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="./components.html">Components</a>
-                    </li>
-                    <li class="active">
-                        <a href="./extra.html">Extra</a>
-                    </li>
-                    <li>
-                        <a href="./map.html">Map</a>
-                    </li>
-                    <li>
-                        <a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a>
-                    </li>
-                    <li>
-                        <a href="http://twitter.com/addyosmani">Contact</a>
-                    </li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							Select Theme <b class="caret"></b>
-						</a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-							<li><a tabindex="-1" href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
-							<li><a tabindex="-1" href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
-							<li><a tabindex="-1" href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
-						</ul>
-					</li>
-                </ul>
-                <div id="twitter-share" class="pull-right">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-            </div>
+            <a class="navbar-brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
         </div>
-    </div>
-</div>
-
-
-<!-- Subhead
-================================================== -->
-<header class="jumbotron subhead" id="overview">
-    <div class="container">
-        <h1>jQuery UI Bootstrap</h1>
-        <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./components.html">Components</a>
+                </li>
+                <li>
+                    <a class="active" href="./extra.html">Extra</a>
+                </li>
+                <li>
+                    <a href="./map.html">Map</a>
+                </li>
+                <li>
+                    <a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/addyosmani">Contact</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Switch Theme <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
+                        <li><a href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
+                        <li><a href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="twitter-share" class="navbar-right">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+        </nav>
     </div>
 </header>
 
 
-<div class="container">
-    <!-- Docs nav ================================================== -->
-    <div class="row">
-        <div class="span3 bs-docs-sidebar">
-            <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#wijmo"><i class="icon-chevron-right"></i> Wijmo</a></li>
-                <li><a href="#file-input"><i class="icon-chevron-right"></i> File input</a></li>
-                <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
-                <li><a href="#jqgrid"><i class="icon-chevron-right"></i> jqGrid</a></li>
-                <li><a href="#font-awesome"><i class="icon-chevron-right"></i> Font Awesome</a></li>
-            </ul>
+<!-- Subhead
+    ================================================== -->
+<header class="bs-header" id="overview">
+    <div class="container">
+        <h1>jQuery UI Bootstrap</h1>
+        <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v1.0 alpha).</p>
+    </div>
+</header>
+
+
+<div class="container" id="layout">
+   <!-- Docs nav ================================================== -->
+   <div class="row">
+        <div class="col-lg-3 col-sm-3" id="sidebar">
+            <div class="bs-sidebar hidden-print" role="complementary">
+                <ul class="nav bs-sidenav">
+                    <li><a href="#wijmo"><i class="icon-chevron-right"></i> Wijmo</a></li>
+                    <li><a href="#file-input"><i class="icon-chevron-right"></i> File input</a></li>
+                    <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
+                    <li><a href="#jqgrid"><i class="icon-chevron-right"></i> jqGrid</a></li>
+                    <li><a href="#font-awesome"><i class="icon-chevron-right"></i> Font Awesome</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="span9">
+        <div class="col-md-9" id="article">
             <!-- Wijmo ================================================== -->
             <section id="wijmo">
                 <div class="page-header">
@@ -381,44 +383,42 @@ $( "#rerun-fa" )
 
 <!-- Footer
 ================================================== -->
-<footer class="footer">
+<footer class="bs-footer">
     <div class="container">
         <div class="row">
-          <div class="span3">
-            <h3><span class="icon-envelope"></span> Contact</h3>
-            <ul class="icons">
-              <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
-              <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
-              <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
-            </ul>
-          </div>
-          <div class="span9">
-            <div class="span4">
+            <div class="col-lg-3 col-sm-3">
+                <h3><span class="icon-envelope"></span> Contact</h3>
+                <ul class="icons">
+                    <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
+                    <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
+                    <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-4">
                 <h3><span class="icon-group"></span> Team</h3>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                     <li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Addy Osmani</a></li>
                     <li>Chief Maintainer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Aurélien Gérits</a></li>
                 </ul>
             </div>
-            <div class="span4">
+            <div class="col-lg-5 col-sm-5">
                 <h3><span class="icon-lightbulb"></span> Credits</h3>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                     <li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
                     <li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
                 </ul>
             </div>
-          </div>
         </div>
     </div>
 </footer>
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery-1.9.1.min.js"></script>
 <script src="assets/js/jquery-migrate-1.2.1.js"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/holder.js"></script>
-<script src="assets/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-<script src="assets/js/docs.js" type="text/javascript"></script>
+<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/docs.js"></script>
 <!-- FileInput -->
 <script src="third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript"></script>
 <script src="third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript"></script>
@@ -429,7 +429,7 @@ $( "#rerun-fa" )
 <!--End wijmo-->
 <!--jqGrid-->
 <script src="third-party/jqGrid/jqGrid/js/i18n/grid.locale-en.js"></script>
-<script src="third-party/jqGrid/jqGrid/js/jquery.jqGrid.min.js"></script> 
+<script src="third-party/jqGrid/jqGrid/js/jquery.jqGrid.min.js"></script>
 <!--end jqGrid-->
 <script src="assets/js/demo-extra.js"></script>
 </body>

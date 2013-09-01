@@ -10,6 +10,7 @@
     <!-- Le styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css">
+    <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.theme.css">-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <!--[if IE 7]>
     <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
@@ -19,12 +20,11 @@
     <![endif]-->
     <link rel="stylesheet" href="assets/css/docs.css">
     <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-
     <!-- Le fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -37,18 +37,19 @@
 <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
 
 <!-- Navbar
-================================================== -->
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
+    ================================================== -->
+    <header class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
+              </button>
+              <a class="navbar-brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
+            </div>
+            <nav class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
                     <li>
                         <a href="./index.html">Home</a>
                     </li>
@@ -67,55 +68,60 @@
                     <li>
                         <a href="http://twitter.com/addyosmani">Contact</a>
                     </li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							Select Theme <b class="caret"></b>
-						</a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-							<li><a tabindex="-1" href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
-							<li><a tabindex="-1" href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
-							<li><a tabindex="-1" href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
-						</ul>
-					</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Switch Theme <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
+                            <li><a href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
+                            <li><a href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </div>
+                <div id="twitter-share" class="navbar-right">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </nav>
         </div>
-    </div>
+    </header>
+
+
+    <!-- Subhead
+    ================================================== -->
+    <header class="bs-header" id="overview">
+        <div class="container">
+            <h1>jQuery UI Bootstrap</h1>
+            <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v1.0 alpha).</p>
+        </div>
+    </header>
+
+
+<div class="container" id="layout">
+    <!-- Docs nav ================================================== -->
+    <div class="row">
+    <div class="col-lg-3 col-sm-3" id="sidebar">
+      <div class="bs-sidebar hidden-print" role="complementary">
+        <ul class="nav bs-sidenav">
+            <li><a href="#button"><i class="icon-chevron-right"></i> Button</a></li>
+            <li><a href="#accordion"><i class="icon-chevron-right"></i> Accordion</a></li>
+            <li><a href="#dialog"><i class="icon-chevron-right"></i> Dialog</a></li>
+            <li><a href="#tabs-simple"><i class="icon-chevron-right"></i> Tabs</a></li>
+            <li><a href="#overlay"><i class="icon-chevron-right"></i> Overlay</a></li>
+            <li><a href="#block-state"><i class="icon-chevron-right"></i> Highlight/Error</a></li>
+            <li><a href="#calendar"><i class="icon-chevron-right"></i> Datepicker</a></li>
+            <li><a href="#slider"><i class="icon-chevron-right"></i> Slider</a></li>
+            <li><a href="#autocomplete"><i class="icon-chevron-right"></i> Autocomplete</a></li>
+            <li><a href="#block-menu"><i class="icon-chevron-right"></i> Menu</a></li>
+            <li><a href="#block-spinner"><i class="icon-chevron-right"></i> Spinner</a></li>
+            <li><a href="#block-icons"><i class="icon-chevron-right"></i> Icons</a></li>
+            <li><a href="#block-tooltip"><i class="icon-chevron-right"></i> Tooltip</a></li>
+            <li><a href="#block-progress"><i class="icon-chevron-right"></i> Progress</a></li>
+        </ul>
+  </div>
 </div>
-
-
-<!-- Subhead
-================================================== -->
-<header class="jumbotron subhead" id="overview">
-    <div class="container">
-        <h1>jQuery UI Bootstrap</h1>
-        <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
-    </div>
-</header>
-
-
-<div class="container">
-<!-- Docs nav ================================================== -->
-<div class="row">
-<div class="span3 bs-docs-sidebar">
-    <ul class="nav nav-list bs-docs-sidenav">
-        <li><a href="#button"><i class="icon-chevron-right"></i> Button</a></li>
-        <li><a href="#accordion"><i class="icon-chevron-right"></i> Accordion</a></li>
-        <li><a href="#dialog"><i class="icon-chevron-right"></i> Dialog</a></li>
-        <li><a href="#tabs-simple"><i class="icon-chevron-right"></i> Tabs</a></li>
-        <li><a href="#overlay"><i class="icon-chevron-right"></i> Overlay</a></li>
-        <li><a href="#block-state"><i class="icon-chevron-right"></i> Highlight/Error</a></li>
-        <li><a href="#calendar"><i class="icon-chevron-right"></i> Datepicker</a></li>
-        <li><a href="#slider"><i class="icon-chevron-right"></i> Slider</a></li>
-        <li><a href="#autocomplete"><i class="icon-chevron-right"></i> Autocomplete</a></li>
-        <li><a href="#block-menu"><i class="icon-chevron-right"></i> Menu</a></li>
-        <li><a href="#block-spinner"><i class="icon-chevron-right"></i> Spinner</a></li>
-        <li><a href="#block-icons"><i class="icon-chevron-right"></i> Icons</a></li>
-        <li><a href="#block-tooltip"><i class="icon-chevron-right"></i> Tooltip</a></li>
-        <li><a href="#block-progress"><i class="icon-chevron-right"></i> Progress</a></li>
-    </ul>
-</div>
-<div class="span9">
+<div class="col-md-9" id="article">
 <!-- Button -->
 <section id="button">
     <div class="page-header">
@@ -144,20 +150,20 @@ $('.button').button();
 
     <h3>Button sizes</h3>
     <p>
-        <button class="ui-button-primary ui-btn-large">Large button</button>
-        <button class="ui-button ui-btn-large">Large button</button>
+        <button class="ui-button-primary ui-btn-lg">Large button</button>
+        <button class="ui-button ui-btn-lg">Large button</button>
     </p>
     <p>
         <button class="ui-button-primary">Default button</button>
         <button class="ui-button">Default button</button>
     </p>
     <p>
-        <button class="ui-button-primary ui-btn-small">Small button</button>
-        <button class="ui-button ui-btn-small">Small button</button>
+        <button class="ui-button-primary ui-btn-sm">Small button</button>
+        <button class="ui-button ui-btn-sm">Small button</button>
     </p>
     <p>
-        <button class="ui-button-primary ui-btn-mini">Mini button</button>
-        <button class="ui-button ui-btn-mini">Mini button</button>
+        <button class="ui-button-primary ui-btn-xs">Extra small button</button>
+        <button class="ui-button ui-btn-xs">Extra small button</button>
     </p>
 
     <h3>Buttons with icons</h3>
@@ -167,46 +173,44 @@ $('.button').button();
 
     <h3>Block level button</h3>
     <div class="well" style="max-width: 400px; ">
-        <button class="ui-button-primary btn-block">Block level button</button>
-        <button class="ui-button btn-block">Block level button</button>
+        <button class="ui-button-primary ui-btn-block">Block level button</button>
+        <button class="ui-button ui-btn-block">Block level button</button>
     </div>
 
 
 
     <h3>Thumbnails with buttons</h3>
-    <div class="row-fluid">
-        <ul class="thumbnails">
-            <li class="span4">
-                <div class="thumbnail">
-                    <img data-src="holder.js/300x200" alt="300x200">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><button class="ui-button-primary">Primary</button><button>Default</button></p>
-                    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="300x200">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><button class="ui-button-primary">Primary</button><button>Default</button></p>
                 </div>
-            </li>
-            <li class="span4">
-                <div class="thumbnail">
-                    <img data-src="holder.js/300x200" alt="300x200">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><button class="ui-button-primary">Primary</button><button>Default</button></p>
-                    </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="300x200">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><button class="ui-button-primary">Primary</button><button>Default</button></p>
                 </div>
-            </li>
-            <li class="span4">
-                <div class="thumbnail">
-                    <img data-src="holder.js/300x200" alt="300x200">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><button class="ui-button-primary">Primary</button><button>Default</button></p>
-                    </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x200" alt="300x200">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><button class="ui-button-primary">Primary</button><button>Default</button></p>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 
 
@@ -215,7 +219,7 @@ $('.button').button();
         <h1>Heading</h1>
         <p>Tagline</p>
         <p>
-            <button class="ui-button-primary ui-btn-large">Learn more</button>
+            <button class="ui-button-primary ui-btn-lg">Learn more</button>
         </p>
     </div>
 
@@ -241,7 +245,7 @@ $("#format").buttonset();
 
 
     <h2>Simple toolbar</h2>
-    <form class="clearfix">
+    <form>
         <div id="toolbar" class="ui-toolbar ui-widget-header ui-corner-all">
             <button id="play">Play</button>
             <input type="checkbox" id="shuffle"><label for="shuffle">Shuffle</label>
@@ -633,7 +637,7 @@ $('#h-slider').slider({
 </pre>
     <!-- Vertical Slider -->
     <h2>Vertical Slider</h2>
-    <div class="row-fluid">
+    <div class="row">
         <div class="span6">
             <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
                 <span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
@@ -1083,60 +1087,55 @@ $( "#tooltip-bottom" ).tooltip({
 </pre>
     </section>
 
-    <section id="block-progress">
-        <div class="page-header">
-            <h1>Progress bar</h1>
+        <section id="block-progress">
+            <div class="page-header">
+                <h1>Progress bar</h1>
+            </div>
+            <div id="progress">
+                <p>Default progress bar with a vertical gradient.</p>
+                <div id="progressbar"></div>
+            </div>
+        </section>
+        <!--end progress-->
+        <!--end-->
         </div>
-        <div id="progress">
-            <p>Default progress bar with a vertical gradient.</p>
-            <div id="progressbar"></div>
-        </div>
-    </section>
-
-
-
-</section>
-<!--end datepicker-->
-<!--end-->
-</div>
-</div>
+    </div>
 </div>
 
 <!-- Footer
 ================================================== -->
-<footer class="footer">
+<footer class="bs-footer">
     <div class="container">
         <div class="row">
-            <div class="span3">
+            <div class="col-lg-3 col-sm-3">
                 <h3><span class="icon-envelope"></span> Contact</h3>
                 <ul class="icons">
-                    <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
-                    <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
-                    <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+                  <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
+                  <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
+                  <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
                 </ul>
             </div>
-            <div class="span9">
-                <div class="span4">
-                    <h3><span class="icon-group"></span> Team</h3>
-                    <ul class="unstyled">
-                        <li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Addy Osmani</a></li>
-                        <li>Chief Maintainer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Aurélien Gérits</a></li>
-                    </ul>
-                </div>
-                <div class="span4">
-                    <h3><span class="icon-lightbulb"></span> Credits</h3>
-                    <ul class="unstyled">
-                        <li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
-                        <li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
-                    </ul>
-                </div>
+            <div class="col-lg-4 col-sm-4">
+                <h3><span class="icon-group"></span> Team</h3>
+                <ul class="list-unstyled">
+                    <li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Addy Osmani</a></li>
+                    <li>Chief Maintainer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Aurélien Gérits</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-5 col-sm-5">
+                <h3><span class="icon-lightbulb"></span> Credits</h3>
+                <ul class="list-unstyled">
+                    <li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
+                    <li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
+                </ul>
             </div>
         </div>
     </div>
 </footer>
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="assets/js/jquery-1.9.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.js"></script>
+<script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/holder.js"></script>
 <script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="assets/js/google-code-prettify/prettify.js"></script>

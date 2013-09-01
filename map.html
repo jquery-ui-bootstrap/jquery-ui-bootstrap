@@ -1,116 +1,118 @@
 <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <title>Map with jQuery UI Bootstrap</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
-            <meta name="author" content="Addy Osmani">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Map with jQuery UI Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
+    <meta name="author" content="Addy Osmani">
 
-            <!-- Le styles -->
-			<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-			<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css">
-            <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-            <!--[if IE 7]>
-            <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
-            <![endif]-->
-            <!--[if lt IE 9]>
-            <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.3.ie.css">
-            <![endif]-->
-            <link rel="stylesheet" href="assets/css/docs.css">
-            <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
+    <!-- Le styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css">
+    <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.theme.css">-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.3.ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <!-- googlemap -->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=weather" type="text/javascript"></script>
+    <!-- End googlemap -->
+</head>
 
-            <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-            <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-            <![endif]-->
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
 
-            <!-- Le fav and touch icons -->
-            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-            <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-            <link rel="shortcut icon" href="assets/ico/favicon.png">
-            <!-- googlemap -->
-            <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=weather" type="text/javascript"></script>
-            <!-- End googlemap -->
-        </head>
-
-        <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
-
-        <!-- Navbar
-        ================================================== -->
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li>
-                                <a href="./index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="./components.html">Components</a>
-                            </li>
-                            <li>
-                                <a href="./extra.html">Extra</a>
-                            </li>
-                            <li class="active">
-                                <a href="./map.html">Map</a>
-                            </li>
-                            <li>
-                                <a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a>
-                            </li>
-                            <li>
-                                <a href="http://twitter.com/addyosmani">Contact</a>
-                            </li>
-                            <li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									Select Theme <b class="caret"></b>
-								</a>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-									<li><a tabindex="-1" href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
-									<li><a tabindex="-1" href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
-									<li><a tabindex="-1" href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
-								</ul>
-                            </li>
-                        </ul>
-                        <div id="twitter-share" class="pull-right">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Navbar
+    ================================================== -->
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
         </div>
-
-
-        <!-- Subhead
-        ================================================== -->
-        <header class="jumbotron subhead" id="overview">
-            <div class="container">
-                <h1>jQuery UI Bootstrap</h1>
-                <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="./components.html">Components</a>
+                </li>
+                <li>
+                    <a href="./extra.html">Extra</a>
+                </li>
+                <li>
+                    <a href="./map.html">Map</a>
+                </li>
+                <li>
+                    <a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/addyosmani">Contact</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Switch Theme <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
+                        <li><a href="theme/united/index.html">United Theme via Bootswatch (LESS'd)</a></li>
+                        <li><a href="theme/base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="twitter-share" class="navbar-right">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
-        </header>
+        </nav>
+    </div>
+</header>
 
 
-        <div class="container">
-        <!-- Docs nav ================================================== -->
-        <div class="row">
-        <div class="span3 bs-docs-sidebar">
-            <ul class="nav nav-list bs-docs-sidenav">
+<!-- Subhead
+================================================== -->
+<header class="bs-header" id="overview">
+    <div class="container">
+        <h1>jQuery UI Bootstrap</h1>
+        <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v1.0 alpha).</p>
+    </div>
+</header>
+
+
+<div class="container" id="layout">
+    <!-- Docs nav ================================================== -->
+    <div class="row">
+    <div class="col-lg-3 col-sm-3" id="sidebar">
+        <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
                 <li><a href="#block-map"><i class="icon-chevron-right"></i> Map</a></li>
                 <li><a href="#block-accordion"><i class="icon-chevron-right"></i> Accordion</a></li>
                 <li><a href="#block-tabs"><i class="icon-chevron-right"></i> Tabs</a></li>
             </ul>
         </div>
-        <div class="span9">
+    </div>
+    <div class="col-md-9" id="article">
             <section id="block-map">
                 <div class="page-header">
                     <h1>Demo map</h1>
@@ -128,9 +130,9 @@
                 <div class="page-header">
                     <h1>Accordion</h1>
                 </div>
-                <div class="row-fluid">
-                    <div id="gmap3" class="span5"></div>
-                    <div class="span7">
+                <div class="row">
+                    <div id="gmap3" class="col-lg-5 col-sm-5"></div>
+                    <div class="col-lg-7 col-sm-7">
                         <div id="accordion-map">
                             <h3>Paris</h3>
                             <div>
@@ -232,15 +234,15 @@ $(function(){
                 <div class="page-header">
                     <h1>Tabs</h1>
                 </div>
-                <div class="row-fluid">
+                <div class="row">
                     <div id="tabs">
                         <ul>
                             <li><a href="#classic">Classic</a></li>
                             <li><a href="#weather">Weather</a></li>
                             <li><a href="#tabs-3">Text</a></li>
                         </ul>
-                        <div id="classic" class="span12 gmap3"></div>
-                        <div id="weather" class="span12 gmap3"></div>
+                        <div id="classic" class="col-lg-12 col-sm-12 gmap3"></div>
+                        <div id="weather" class="col-lg-12 col-sm-12 gmap3"></div>
                         <div id="tabs-3">
                             <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
                             <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
@@ -287,39 +289,38 @@ $("#tabs").tabs({
 
 <!-- Footer
 ================================================== -->
-<footer class="footer">
+<footer class="bs-footer">
     <div class="container">
         <div class="row">
-          <div class="span3">
-            <h3><span class="icon-envelope"></span> Contact</h3>
-            <ul class="icons">
-              <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
-              <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
-              <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
-            </ul>
-          </div>
-          <div class="span9">
-            <div class="span4">
+            <div class="col-lg-3 col-sm-3">
+                <h3><span class="icon-envelope"></span> Contact</h3>
+                <ul class="icons">
+                    <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
+                    <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
+                    <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-4">
                 <h3><span class="icon-group"></span> Team</h3>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                     <li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Addy Osmani</a></li>
                     <li>Chief Maintainer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Aurélien Gérits</a></li>
                 </ul>
             </div>
-            <div class="span4">
+            <div class="col-lg-5 col-sm-5">
                 <h3><span class="icon-lightbulb"></span> Credits</h3>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                     <li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
                     <li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
                 </ul>
             </div>
-          </div>
         </div>
     </div>
 </footer>
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="assets/js/jquery-1.9.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.js"></script>
+<script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/holder.js"></script>
 <script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="assets/js/google-code-prettify/prettify.js"></script>
