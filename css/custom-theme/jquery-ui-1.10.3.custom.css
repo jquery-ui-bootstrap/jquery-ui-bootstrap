@@ -1341,6 +1341,7 @@ button.ui-button::-moz-focus-inner {
 	width: 560px;*/
 	z-index: 1050;
 }
+
 .ui-dialog .ui-dialog-titlebar {
 	/*padding: .4em 1em;*/
 	position: relative;
@@ -1359,6 +1360,7 @@ button.ui-button::-moz-focus-inner {
 	border-bottom-left-radius: 0;
 	border-bottom: 1px solid #ccc;
 }
+
 .ui-dialog .ui-dialog-title {
 	float: left;
 	color: #404040;
@@ -1369,6 +1371,7 @@ button.ui-button::-moz-focus-inner {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
+
 .ui-dialog .ui-dialog-titlebar-close {
 	position: absolute;
 	right: .3em;
@@ -1420,7 +1423,7 @@ button.ui-button::-moz-focus-inner {
 	border-width: 1px 0 0 0;
 	background-image: none;
 	margin: .5em 0 0 0;
-	background-color: #f5f5f5;
+	background-color: #ffffff;
 	padding: 5px 15px 5px;
 	border-top: 1px solid #ddd;
 	-webkit-border-radius: 0 0 6px 6px; /* Safari 4 */
@@ -1454,17 +1457,37 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
-	color: #ffffff;
-	background-color: #0064cd;
-	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(top, #049cdb, #0064cd); /* Safari 5.1+, Chrome 10+ */
-	background-image: -moz-linear-gradient(top, #049cdb, #0064cd); /* Firefox 3.6 */
-	background-image: -o-linear-gradient(top, #049cdb, #0064cd); /* Opera 11.10+ */
-	background-image: linear-gradient(top, #049cdb, #0064cd); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0); /* IE8 */
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: #0064cd #0064cd #003f81;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button.ui-state-hover{
+    color: #ffffff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+/***Dialog fixes**/
+
+.ui-dialog-buttonset .ui-button:not(:first-child) {
+    cursor: pointer;
+    display: inline-block;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    -o-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    overflow: visible;
+}
+
+.ui-dialog-buttonset .ui-button:not(:first-child).ui-state-hover{
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+    text-decoration: none;
 }
 
 
@@ -2240,38 +2263,6 @@ textarea,
 	-webkit-box-shadow: inset 0 1px 0 #ffffff; /* Safari 4 */
 	-moz-box-shadow: inset 0 1px 0 #ffffff; /* Firefox 3.6 */
 	box-shadow: inset 0 1px 0 #ffffff;
-}
-
-/***Dialog fixes**/
-
-.ui-dialog-buttonset .ui-button:not(:first-child) {
-	cursor: pointer;
-	display: inline-block;
-	background-color: #e6e6e6;
-	background-repeat: no-repeat;
-	background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* Safari 5.1+, Chrome 10+ */
-	background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6); /* Firefox 3.6 */
-	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* Opera 11.10+ */
-	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0); /* IE8 */
-	padding: 5px 14px 6px;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	color: #333;
-	font-size: 13px;
-	line-height: normal;
-	border: 1px solid #ccc;
-	border-bottom-color: #bbb;
-	-webkit-border-radius: 4px; /* Safari 4 */
-	-moz-border-radius: 4px; /* Firefox 3.6 */
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); /* Safari 4 */
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); /* Firefox 3.6 */
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-webkit-transition: 0.1s linear all;
-	-moz-transition: 0.1s linear all;
-	-o-transition: 0.1s linear all;
-	transition: 0.1s linear all;
-	overflow: visible;
 }
 
 /***Wijmo Theming**/

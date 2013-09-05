@@ -30,7 +30,8 @@
   background-image: none;
 }
 
-.ui-button{
+.ui-button,
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button{
 	text-shadow: 0 1px 0 #fff;
 	background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#e6e6e6));
 	background-image: -webkit-linear-gradient(top, #ffffff, 0%, #e6e6e6, 100%);
@@ -43,7 +44,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
-.ui-button-primary {
+.ui-button-primary,
+.ui-dialog-buttonset .ui-button:not(:first-child){
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#428bca), to(#3071a9));
   background-image: -webkit-linear-gradient(top, #428bca, 0%, #3071a9, 100%);
   background-image: -moz-linear-gradient(top, #428bca 0%, #3071a9 100%);
