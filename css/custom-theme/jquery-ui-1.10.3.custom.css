@@ -1490,6 +1490,32 @@ button.ui-button::-moz-focus-inner {
     text-decoration: none;
 }
 
+/* ui-dialog-buttonset UI info */
+.ui-dialog-buttonset .ui-button.ui-button-info{
+	color: #ffffff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
+}
+
+.ui-dialog-buttonset .ui-button.ui-button-info.ui-state-hover{
+	color: #ffffff;
+	background-color: #39b3d7;
+	border-color: #269abc;
+}
+
+/* ui-dialog-buttonset UI success */
+.ui-dialog-buttonset .ui-button.ui-button-success{
+	color: #ffffff;
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+}
+
+.ui-dialog-buttonset .ui-button.ui-button-success.ui-state-hover{
+	color: #ffffff;
+	background-color: #47a447;
+	border-color: #398439;
+}
+
 /* ui-dialog-buttonset UI warning */
 .ui-dialog-buttonset .ui-button.ui-button-warning{
 	color: #ffffff;
