@@ -585,7 +585,7 @@ $( "#tabs2" ).on( "click",'span.ui-icon-close', function() {
 //Combination examples (tabs) and open dialog
 $('#sampleButton').on('click', function(event){
     event.preventDefault();
-    $('#dialog_simple').dialog({
+    $('#modal-simple').dialog({
         autoOpen: true,
         modal: true,
         width: 600,
@@ -688,7 +688,7 @@ $('#h-slider').slider({
             </p>
             <p>
                 <label for="amount">Volume:</label>
-                <input type="text" id="amount">
+                <input type="text" id="amount" value="">
             </p>
         </div>
         <div class="span6">
@@ -718,7 +718,7 @@ $("#amount").val($("#v-slider").slider("value"));
     </div>
     <div class="ui-widget">
         <label for="tags">Tags: </label>
-        <input id="tags">
+        <input type="text" id="tags" value="">
     </div>
 <pre class="prettyprint linenums">
 // Autocomplete
@@ -788,7 +788,7 @@ $("#menu").menu();
     <h2>Spinner</h2>
     <p>
         <label for="spinner">Select a value:</label>
-        <input id="spinner" name="value">
+        <input type="text" id="spinner" name="value" value="0">
     </p>
 
     <p>

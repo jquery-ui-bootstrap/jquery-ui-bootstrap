@@ -231,7 +231,7 @@ $(function () {
     //Combination examples (tabs) and open dialog
     $('#sampleButton').on('click', function(event){
         event.preventDefault();
-        $('#dialog_simple').dialog({
+        $('#modal-simple').dialog({
             autoOpen: true,
             modal: true,
             width: 600,

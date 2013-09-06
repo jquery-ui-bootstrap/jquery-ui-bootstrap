@@ -2160,17 +2160,10 @@ body .ui-tooltip {
 }
 
 .ui-datepicker td .ui-state-highlight{
-	color: #404040;
-	background: #eedc94;
-	background-color: #eedc94;
-	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(top, #fceec1, #eedc94); /* Safari 5.1+, Chrome 10+ */
-	background-image: -moz-linear-gradient(top,#fceec1, #eedc94); /* Firefox 3.6 */
-	background-image: -o-linear-gradient(top, #fceec1, #eedc94); /* Opera 11.10+ */
-	background-image: linear-gradient(top, #fceec1, #eedc94); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceec1', endColorstr='#eedc94', GradientType=0); /* IE8 */
+	color: #ffffff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: #eedc94 #eedc94 #e4c652;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	-webkit-border-radius: 4px; /* Safari 4 */
 	-moz-border-radius: 4px; /* Firefox 3.6 */
@@ -2178,11 +2171,13 @@ body .ui-tooltip {
 }
 
 .ui-datepicker td .ui-state-active {
-	background: #bfbfbf;
+	color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
 	margin-bottom: 0;
 	font-size: normal;
 	text-shadow: 0;
-	color: #ffffff;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	-webkit-border-radius: 4px; /* Safari 4 */
 	-moz-border-radius: 4px; /* Firefox 3.6 */
 	border-radius: 4px;
@@ -2190,16 +2185,10 @@ body .ui-tooltip {
 
 .ui-datepicker td .ui-state-hover {
 	color: #ffffff;
-	background: #0064cd;
-	background-color: #0064cd;
-	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(top, #049cdb, #0064cd); /* Safari 5.1+, Chrome 10+ */
-	background-image: -moz-linear-gradient(top, #049cdb, #0064cd); /* Firefox 3.6 */
-	background-image: -o-linear-gradient(top, #049cdb, #0064cd); /* Opera 11.10+ */
-	background-image: linear-gradient(top, #049cdb, #0064cd); /* CSS3 Compliant */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0); /* IE8 */
+	background: #428bca;
+	background-color: #428bca;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: #0064cd #0064cd #003f81;
+	border-color: #357ebd;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	-webkit-border-radius: 4px; /* Safari 4 */
 	-moz-border-radius: 4px; /* Firefox 3.6 */
