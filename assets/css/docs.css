@@ -1012,13 +1012,13 @@ h1[id] {
     margin-bottom:20px;
 }
 /*Dialog*/
-#dialog_link,#modal_link {
+#btn-dialog-simple,#btn-dialog-message,#btn-dialog-button {
     padding: .4em 1em .4em 20px;
     text-decoration: none;
     position: relative;
 }
 
-#dialog_link span.ui-icon, #modal_link span.ui-icon {
+#btn-dialog-simple span.ui-icon, #btn-dialog-message span.ui-icon, #btn-dialog-button span.ui-icon {
     margin: 0 5px 0 0;
     position: absolute;
     left: .2em;

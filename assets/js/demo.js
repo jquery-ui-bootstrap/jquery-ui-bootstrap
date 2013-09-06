@@ -78,28 +78,15 @@ $(function () {
         header: "h3"
     });
 
-    // Dialog Link
-    $('#dialog_link').click(function () {
-        $('#dialog_simple').dialog('open');
-        return false;
-    });
-
-    // Modal Link
-    $('#modal_link').click(function () {
-        $('#dialog-message').dialog('open');
-        return false;
-    });
-    //hover states on the static widgets
-    $('#dialog_link, #modal_link, ul#icons li').hover(
-        function () {
-            $(this).addClass('ui-state-hover');
-        }, function () {
-            $(this).removeClass('ui-state-hover');
-        }
-    );
+    //####### Dialogs
 
     // Dialog Simple
-    $('#dialog_simple').dialog({
+    $('#btn-dialog-simple').click(function () {
+        $('#modal-simple').dialog('open');
+        return false;
+    });
+    
+    $('#modal-simple').dialog({
         autoOpen: false,
         width: 600,
         buttons: {
@@ -112,8 +99,13 @@ $(function () {
         }
     });
 
-    //####### Dialogs
-    $("#dialog-message").dialog({
+    // Dialog message
+    $('#btn-dialog-message').click(function () {
+        $('#modal-message').dialog('open');
+        return false;
+    });
+    
+    $("#modal-message").dialog({
         autoOpen: false,
         modal: true,
         buttons: {
@@ -122,6 +114,52 @@ $(function () {
             }
         }
     });
+
+    // Dialog mutli button
+    $('#btn-dialog-button').click(function () {
+        $('#modal-button').dialog('open');
+        return false;
+    });
+    // Dialog Button
+    $('#modal-button').dialog({
+        autoOpen: false,
+        width: 600,
+        buttons: [
+            {
+                text: "Delete",
+                click: function() { 
+                },
+                    class:"ui-button-danger"
+                },
+            {
+                text: "Edit",
+                click: function() { 
+                },
+                    class:"ui-button-warning"
+                },
+            {
+                text: "other",
+                click: function() { 
+                },
+                    class:"ui-button-inverse"
+                },
+            {
+                text: "Close",
+                click: function() { 
+                    $(this).dialog("close");
+                }
+            }
+        ]
+    });
+
+    //hover states on the static widgets
+    $('#btn-dialog-simple, #btn-dialog-message, #btn-dialog-button, ul#icons li').hover(
+        function () {
+            $(this).addClass('ui-state-hover');
+        }, function () {
+            $(this).removeClass('ui-state-hover');
+        }
+    );
 
     // Remove focus from buttons
     $('.ui-dialog :button').blur();

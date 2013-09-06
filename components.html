@@ -342,21 +342,25 @@ $("#menu-collapse").accordion({
         <h1>Dialog</h1>
     </div>
     <p class="dialog-button">
-        <a href="#" id="dialog_link" class="ui-state-default ui-corner-all">
+        <a href="#" id="btn-dialog-simple" class="ui-state-default ui-corner-all">
             <span class="ui-icon ui-icon-newwin"></span>Open Dialog
         </a>
         &nbsp;
-        <a href="#" id="modal_link" class="ui-state-default ui-corner-all">
+        <a href="#" id="btn-dialog-message" class="ui-state-default ui-corner-all">
             <span class="ui-icon ui-icon-newwin"></span>
             Open Modal Dialog
         </a>
+        &nbsp;
+        <a href="#" id="btn-dialog-button" class="ui-state-default ui-corner-all">
+            <span class="ui-icon ui-icon-newwin"></span>Open Button Dialog
+        </a>
     </p>
     <!-- ui-dialog -->
-    <div id="dialog_simple" title="Dialog Simple Title">
+    <div id="modal-simple" title="Dialog Simple Title">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
     <!--static dialog-->
-    <div id="dialog-message" title="Modal Dialog">
+    <div id="modal-message" title="Modal Dialog">
         <p>
             <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
             Your files have downloaded successfully into the <a href="#">My Downloads</a> folder.
@@ -366,21 +370,18 @@ $("#menu-collapse").accordion({
         </p>
     </div>
     <!--end static dialog-->
+    <!-- Multi button dialog-->
+    <div id="modal-button" title="Dialog Multi button">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 <pre class="prettyprint linenums">
-// Dialog Link
-$('#dialog_link').click(function () {
-    $('#dialog_simple').dialog('open');
-    return false;
-});
-
-// Modal Link
-$('#modal_link').click(function () {
-    $('#dialog-message').dialog('open');
-    return false;
-});
-
 // Dialog Simple
-$('#dialog_simple').dialog({
+$('#btn-dialog-simple').click(function () {
+    $('#modal-simple').dialog('open');
+    return false;
+});
+
+$('#modal-simple').dialog({
     autoOpen: false,
     width: 600,
     buttons: {
@@ -394,7 +395,12 @@ $('#dialog_simple').dialog({
 });
 
 // Dialog message
-$("#dialog-message").dialog({
+$('#btn-dialog-message').click(function () {
+    $('#modal-message').dialog('open');
+    return false;
+});
+
+$("#modal-message").dialog({
     autoOpen: false,
     modal: true,
     buttons: {
@@ -402,6 +408,43 @@ $("#dialog-message").dialog({
             $(this).dialog("close");
         }
     }
+});
+
+// Dialog mutli button
+$('#btn-dialog-button').click(function () {
+    $('#modal-button').dialog('open');
+    return false;
+});
+// Dialog Button
+$('#modal-button').dialog({
+    autoOpen: false,
+    width: 600,
+    buttons: [
+        {
+            text: "Delete",
+            click: function() { 
+            },
+                class:"ui-button-danger"
+            },
+        {
+            text: "Edit",
+            click: function() { 
+            },
+                class:"ui-button-warning"
+            },
+        {
+            text: "other",
+            click: function() { 
+            },
+                class:"ui-button-inverse"
+            },
+        {
+            text: "Close",
+            click: function() { 
+                $(this).dialog("close");
+            }
+        }
+    ]
 });
 </pre>
 </section>

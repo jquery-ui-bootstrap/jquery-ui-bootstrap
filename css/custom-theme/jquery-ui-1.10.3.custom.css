@@ -1490,6 +1490,44 @@ button.ui-button::-moz-focus-inner {
     text-decoration: none;
 }
 
+/* ui-dialog-buttonset UI warning */
+.ui-dialog-buttonset .ui-button.ui-button-warning{
+	color: #ffffff;
+	background-color: #f0ad4e;
+	border-color: #eea236;
+}
+
+.ui-dialog-buttonset .ui-button.ui-button-warning.ui-state-hover{
+    color: #ffffff;
+	background-color: #ed9c28;
+	border-color: #d58512;
+}
+
+/* ui-dialog-buttonset UI Danger */
+.ui-dialog-buttonset .ui-button.ui-button-danger{
+	color: #ffffff;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
+
+.ui-dialog-buttonset .ui-button.ui-button-danger.ui-state-hover{
+	color: #ffffff;
+	background-color: #d2322d;
+	border-color: #ac2925;
+}
+
+/* ui-dialog-buttonset UI Inverse */
+.ui-dialog-buttonset .ui-button.ui-button-inverse{
+	color: #ffffff;
+	background-color: #222222;
+    border-color: #080808;
+}
+
+.ui-dialog-buttonset .ui-button.ui-button-inverse.ui-state-hover{
+	color: #ffffff;
+	background-color: #363636;
+	border-color: #000000;
+}
 
 /*
  * jQuery UI Slider 1.10.3
