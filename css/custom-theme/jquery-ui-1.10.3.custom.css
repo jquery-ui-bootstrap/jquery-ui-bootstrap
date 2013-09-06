@@ -333,12 +333,8 @@
 .ui-state-error,
 .ui-state-default {
 	position: relative;
-	/*margin-bottom: 18px;*/
 	border-width: 1px;
 	border-style: solid;
-	-webkit-border-radius: 4px; /* Safari 4 */
-	-moz-border-radius: 4px; /* Firefox 3.6 */
-	border-radius: 4px;
 }
 
 .ui-state-highlight p,
@@ -811,7 +807,6 @@
 	vertical-align: middle;
 	cursor: pointer;
 	border: 1px solid #ccc;
-	border-radius: 4px;
 	-webkit-user-select: none;
 	 -moz-user-select: none;
 	  -ms-user-select: none;

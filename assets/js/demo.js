@@ -129,20 +129,20 @@ $(function () {
                 text: "Delete",
                 click: function() { 
                 },
-                    class:"ui-button-danger"
-                },
+                class:"ui-button-danger"
+            },
             {
                 text: "Edit",
                 click: function() { 
                 },
-                    class:"ui-button-warning"
-                },
+                class:"ui-button-warning"
+            },
             {
                 text: "other",
                 click: function() { 
                 },
-                    class:"ui-button-inverse"
-                },
+                class:"ui-button-inverse"
+            },
             {
                 text: "Close",
                 click: function() { 
