@@ -1097,7 +1097,7 @@ button.ui-button::-moz-focus-inner {
 
 
 /*
- * jQuery UI Menu 1.10.1
+ * jQuery UI Menu 1.10.3
  *
  * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
@@ -1174,19 +1174,11 @@ button.ui-button::-moz-focus-inner {
 .ui-menu .ui-menu-item a.ui-widget-content{
 	font-weight: bold;
 	margin: 0;
-	color: #ffffff;
-	background: #0081C2;
-	background-color: #0081C2;
-	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(top, #0088CC, #0077B3); /* Safari 5.1+, Chrome 10+ */
-	background-image: -moz-linear-gradient(top, #0088CC, #0077B3); /* Firefox 3.6 */
-	background-image: -o-linear-gradient(top, #0088CC, #0077B3); /* Opera 11.10+ */
-	background-image: linear-gradient(to bottom, #0088CC, #0077B3); /* CSS3 Compliant */
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: #0088CC #0088CC #0077B3;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0077B3', GradientType=0); /* IE8 */
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-color: #428BCA;
+    border-color: #357EBD;
+    color: #FFFFFF;
+    display: block;
+    white-space: nowrap;
 }
 
 /* Fix problem with border in ui-state-active */
