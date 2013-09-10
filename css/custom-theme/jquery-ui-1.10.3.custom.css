@@ -2312,7 +2312,25 @@ textarea,
 	-moz-box-shadow: inset 0 1px 0 #ffffff; /* Firefox 3.6 */
 	box-shadow: inset 0 1px 0 #ffffff;
 }
+/** File Input **/
 
+.customfile-button{
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 /***Wijmo Theming**/
 
 div.wijmo-wijmenu {

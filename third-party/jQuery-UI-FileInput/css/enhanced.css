@@ -5,18 +5,12 @@
 .customfile.input-append .customfile-feedback { border-radius: 3px 0 0 3px;  padding-left: 25px;}
 .customfile.input-prepend .customfile-feedback { border-radius: 0 3px 3px 0; }
 .customfile.input-prepend .add-on, .customfile.input-append .add-on{
-  color:#333;
-  cursor: pointer;
-  display: inline-block;
-  background-color: #e6e6e6;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
-  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    cursor: pointer;
+    display: inline-block;
+    color: #333333;
+    background-color: #ffffff;
+    font-weight: normal;
+    border: 1px solid #cccccc;
 }
 .customfile-disabled { opacity: .5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); cursor: default;  }
 .customfile-feedback { border: 1px solid #CCCCCC; color: #808080; display: inline-block; font-size: 13px; line-height: 18px; padding: 4px; 
@@ -36,7 +30,12 @@
 .customfile-feedback-populated { padding-left: 25px; background: url(../images/icon-generic.gif) 5px center no-repeat; white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; }
 
 .customfile-button { /* IE7 and bellow hack*/ *margin-top: -1px; /* EO Hack */}
-.customfile:hover .customfile-button, .customfile-focus .customfile-button  { background-position: 0 -15px; color: #333; text-decoration: none;}
+.customfile:hover .customfile-button, .customfile-focus .customfile-button  {
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+    text-decoration: none;
+}
 .customfile-focus .customfile-button {}
 
 
@@ -54,8 +53,9 @@
     white-space: normal;
 }
 .input-append.customfile .add-on{
-    height:20px;
-    font-size:14px;
-    line-height:18px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
     min-width: 70px;
+    height: 26px;
 }
