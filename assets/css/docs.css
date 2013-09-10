@@ -1126,3 +1126,9 @@ ul#icons span.ui-icon {
 #gmap3,.gmap3{
     height: 350px;
 }
+
+/* Fix Google Maps canvas */
+.google-map-canvas,
+.google-map-canvas * {
+    box-sizing: content-box;
+}
