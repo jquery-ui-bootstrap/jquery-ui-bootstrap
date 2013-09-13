@@ -8,10 +8,6 @@ $(function () {
         }
     });
 
-    $("#progressbar").progressbar({
-      value: 37
-    });
-
     $("#button-with-icon" ).button({
       icons: {
         primary: "ui-icon-locked"
@@ -375,4 +371,30 @@ $(function () {
             }
         }
     });
+    //####### progressbar
+    $("#progressbar").progressbar({
+      value: 37
+    });
+
+    //Custom progress bar
+     var customprogressbar = $( "#custom-progressbar" ),
+    progressLabel = $( ".progress-label" );
+    
+    customprogressbar.progressbar({
+        value: false,
+        change: function() {
+            progressLabel.text( customprogressbar.progressbar( "value" ) + "%" );
+        },
+        complete: function() {
+            progressLabel.text( "Complete!" );
+        }
+    });
+    function progress() {
+        var val = customprogressbar.progressbar( "value" ) || 0;
+        customprogressbar.progressbar( "value", val + 1 );
+        if ( val < 99 ) {
+            setTimeout( progress, 100 );
+        }
+    }
+    setTimeout( progress, 3000 );
 });

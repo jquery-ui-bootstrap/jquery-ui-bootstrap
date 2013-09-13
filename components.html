@@ -481,15 +481,21 @@ $('#tabs').tabs();
     <div id="dialog2" title="Tab data">
         <form>
             <fieldset class="ui-helper-reset">
-                <label for="tab_title">Title</label>
+            <p>
+                <label for="tab_title">Title</label><br />
                 <input type="text" name="tab_title" id="tab_title" value="" class="ui-widget-content ui-corner-all">
-                <label for="tab_content">Content</label>
-                <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all"></textarea>
+            </p>
+            <p>
+                <label for="tab_content">Content</label><br />
+                <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all" cols="35"></textarea>
+            </p>
             </fieldset>
         </form>
     </div>
 
-    <p><button id="add_tab" class="ui-button-primary">Add Tab</button></p>
+    <p>
+        <button id="add_tab" class="ui-button-primary">Add Tab</button>
+    </p>
 
     <div id="tabs2">
         <ul>
@@ -1137,6 +1143,8 @@ $( "#tooltip-bottom" ).tooltip({
             <div id="progress">
                 <p>Default progress bar with a vertical gradient.</p>
                 <div id="progressbar"></div>
+                <p>Display status of a determinate or indeterminate process.</p>
+                <div id="custom-progressbar"><div class="progress-label">Loading...</div></div>
             </div>
         </section>
         <!--end progress-->

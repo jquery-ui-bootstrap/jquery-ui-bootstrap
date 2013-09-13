@@ -144,3 +144,26 @@ input, textarea {
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
+
+/*
+ * jQuery UI Progressbar 1.10.3
+ *
+ * Copyright 2013, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.ui-progressbar .ui-progressbar-value {
+  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+  background-image: -o-linear-gradient(top, #149bdf, #0480be);
+  background-image: linear-gradient(to bottom, #149bdf, #0480be);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
