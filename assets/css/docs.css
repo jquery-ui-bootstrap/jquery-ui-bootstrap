@@ -1119,11 +1119,11 @@ ul#icons span.ui-icon {
 }
 
 .progress-label {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 4px;
   font-weight: bold;
-  text-shadow: 1px 1px 0 #fff;
+  float:left;
 }
 
 /* Wijmo */

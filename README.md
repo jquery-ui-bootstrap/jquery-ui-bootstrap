@@ -26,9 +26,9 @@ This theme targets jQuery UI 1.10.3 (stable) and 1.9.2 (legacy), along with the 
 
 ##Project status
 
-This project is under active, but slow development. There has been a great deal of work done in branches to introduce compatibility with jQuery UI 1.9 and further work done to move us towards using LESS and improved parity with Bootstrap 2.x.
+This project is under active, but slow development. There has been a great deal of work done in branches to introduce compatibility with jQuery UI 1.9 and further work done to move us towards using LESS and improved parity with Bootstrap 3.x.
 
-At this time, we are seeking contributors interested in helping us to finally complete the work needed to be Bootstrap 2.x compatible. This would involve helping in your spare time across a few weeks and you would be given credit in the project README. 
+At this time, we are seeking contributors interested in helping us to finally complete the work needed to be Bootstrap 3.x compatible. This would involve helping in your spare time across a few weeks and you would be given credit in the project README. 
 
 As one of the (currently) more popular open-source jQuery UI themes we would love to get out more frequent releases and your help with this would be greatly appreciated.
 
