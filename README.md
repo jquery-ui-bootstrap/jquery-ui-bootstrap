@@ -34,13 +34,17 @@ As one of the (currently) more popular open-source jQuery UI themes we would lov
 
 ##Team
 
-* [Addy Osmani](https://github.com/addyosmani) 
-* [Gerits Aurelien](https://github.com/gtraxx)
+* Lead Product Developer : [Addy Osmani](https://github.com/addyosmani) 
+* Chief Maintainer : [Gerits Aurelien](https://github.com/gtraxx)
+
+## Contributor
+
+* Less Support : [Vijay Dharap](https://github.com/dharapvj)
 * You? ;) We're always open to improvements.
 
 ##Demo
 
-For a live preview of the current theme, see [http://addyosmani.github.com/jquery-ui-bootstrap](http://addyosmani.github.com/jquery-ui-bootstrap).
+For a live preview of the current theme, see [http://addyosmani.github.io/jquery-ui-bootstrap/](http://addyosmani.github.io/jquery-ui-bootstrap/).
 
 ##Synchronize your fork
 
@@ -58,8 +62,9 @@ For a live preview of the current theme, see [http://addyosmani.github.com/jquer
 
     #Send your changes to github
     git push
-	
-	#compile your less changes to create a new css file
+
+####compile your less changes to create a new css file
+
 	npm install -g less
 	cd less
 	lessc -x style.less > style.min.css
