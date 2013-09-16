@@ -2547,7 +2547,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
 /*
 .ui-button .ui-button-text{
     display: inline-block;
-    padding:5px;
+    padding: 0px;
 }
 
 .ui-button-text-icon-primary .ui-button-icon-primary{

@@ -133,7 +133,7 @@
                 <p>
                     This is an example of how to retheme one of the Wijmo jQuery UI components to match the Twitter Bootstrap theme. Whilst a menu component will be arriving to jQueryUI soon, you can find the menu in <a href="http://wijmo.com/widgets/wijmo-open/">Wijmo Open</a>.
                 </p>
-                <div id="wijmo-container" class="container-fluid">
+                <div id="wijmo-container" class="container">
                     <ul id="menu1">
                         <li>
                             <h3>
@@ -169,7 +169,7 @@ $("#menu1").wijmenu({
                 <div class="page-header">
                     <h1>File Input</h1>
                 </div>
-                <div class="container-fluid">
+                <div class="container">
                     <form>
                         <div class="form-group">
                             <input type="file" name="file" id="file">
@@ -219,11 +219,12 @@ $( "#rangeBb" ).datepicker({
                     <h1>jqGrid</h1>
                 </div>
                 <h3>Table with jqGrid</h3>
-                   
-                <div class="span9">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
                         <table id="jqGrid01"></table>
                         <div id="jqGridPager01"></div>
-                </div><!--/span-->
+                    </div>
+                </div>
  <p>&nbsp;</p>
     <pre class="prettyprint linenums">
 // ############ jqGrid Table
@@ -378,7 +379,7 @@ $( "#rerun-fa" )
 .menu();
 </pre>
             </section>
-            <!-- end file input -->
+            <!-- end button with icon -->
         </div>
     </div>
 </div>

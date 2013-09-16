@@ -1064,6 +1064,17 @@ ul#icons span.ui-icon {
 #wijmo-container{
     margin-bottom: 20px;
 }
+
+/* Font Awesome*/
+#split-button-fa .ui-button .ui-button-text{
+    display: inline-block;
+    padding: 0px;
+}
+
+#split-button-fa .ui-button-text-icon-primary .ui-button-icon-primary{
+    float:none;
+}
+
 /* gmap3 */
 #gmap3,.gmap3{
     height: 350px;
