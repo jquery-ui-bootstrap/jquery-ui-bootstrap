@@ -112,17 +112,15 @@
             </ul>
         </div>
     </div>
-    <div class="col-md-9" id="article">
+    <div class="col-lg-9 col-sm-9" id="article">
             <section id="block-map">
                 <div class="page-header">
                     <h1>Demo map</h1>
                 </div>
-                <div class="row-fluid">
-                    <p class="docs-lead">
-                        <a href="http://www.gmap3.net">GMap3</a> allows you to finely manipulate yours markers and others objects, to associate custom data usable in each event.
-                        <br />This is an example of using jQuery UI Bootstrap with <a href="http://www.gmap3.net">gmap3</a>.
-                    </p>
-                </div>
+                <p class="docs-lead">
+                    <a href="http://www.gmap3.net">GMap3</a> allows you to finely manipulate yours markers and others objects, to associate custom data usable in each event.
+                    <br />This is an example of using jQuery UI Bootstrap with <a href="http://www.gmap3.net">gmap3</a>.
+                </p>
             </section>
 
             <!-- Accordion gmap3 ================================================== -->
@@ -130,45 +128,44 @@
                 <div class="page-header">
                     <h1>Accordion</h1>
                 </div>
-                <div class="row">
-                    <div id="gmap3" class="col-lg-5 col-sm-5"></div>
-                    <div class="col-lg-7 col-sm-7">
-                        <div id="accordion-map">
-                            <h3>Paris</h3>
-                            <div>
-                                <p>
-                                    Paris is the capital and largest city of France.  <br />
-                                    It is situated on the river Seine, in northern France, at the heart of the Île-de-France region.  <br />
-                                    The city of Paris, within its administrative limits (the 20 arrondissements), has a population of about 2,230,000.  <br />
-                                    Its metropolitan area is one of the largest population centres in Europe, with more than 12 million inhabitants.
-                                    <br /><br />
-                                    <a href="http://en.wikipedia.org/wiki/Paris" target="_blank">Paris on Wikipedia</a>
-                                </p>
-                            </div>
-                            <h3>Poitiers</h3>
-                            <div>
-                                <p>
-                                    Poitiers is a city on the Clain river in west central France.  <br />
-                                    It is a commune and the capital of the Vienne department and of the Poitou-Charentes region.  <br />
-                                    The centre is picturesque and its streets are interesting for predominant remains of historical architecture, especially from the Romanesque period.  <br />
-                                    Two major military battles occurred near the city: in 732, the Battle of Poitiers (also known as the Battle of Tours), in which the Franks commanded by Charles Martel halted the expansion of the Umayyad Caliphate, and in 1356, the Battle of Poitiers, a key victory for English forces during the Hundred Years' War.
-                                    <br /><br />
-                                    <a href="http://en.wikipedia.org/wiki/Poitiers" target="_blank">Poitiers on Wikipedia</a>
-                                </p>
-                            </div>
-                            <h3>Perpignan</h3>
-                            <div>
-                                <p>
-                                    Perpignan is a city, a commune and the capital of the Pyrénées-Orientales department in southern France.  <br />
-                                    Perpignan was the capital of the former province and county of Roussillon (Rosselló in Catalan) and continental capital of the Kingdom of Majorca in the 13th and 14th centuries. <br />
-                                    As of 2009, Perpignan had 120,100 inhabitants (Perpignanais, Perpinyanés) in the city proper. The metropolitan area has a total population of 300,221 in 2009.
-                                    <br /><br />
-                                    <a href="http://en.wikipedia.org/wiki/Perpignan" target="_blank">Perpignan on Wikipedia</a>
-                                </p>
-                            </div>
+                <div id="gmap3" class="col-lg-5 col-sm-5"></div>
+                <div class="col-lg-7 col-sm-7">
+                    <div id="accordion-map">
+                        <h3>Paris</h3>
+                        <div>
+                            <p>
+                                Paris is the capital and largest city of France.  <br />
+                                It is situated on the river Seine, in northern France, at the heart of the Île-de-France region.  <br />
+                                The city of Paris, within its administrative limits (the 20 arrondissements), has a population of about 2,230,000.  <br />
+                                Its metropolitan area is one of the largest population centres in Europe, with more than 12 million inhabitants.
+                                <br /><br />
+                                <a href="http://en.wikipedia.org/wiki/Paris" target="_blank">Paris on Wikipedia</a>
+                            </p>
+                        </div>
+                        <h3>Poitiers</h3>
+                        <div>
+                            <p>
+                                Poitiers is a city on the Clain river in west central France.  <br />
+                                It is a commune and the capital of the Vienne department and of the Poitou-Charentes region.  <br />
+                                The centre is picturesque and its streets are interesting for predominant remains of historical architecture, especially from the Romanesque period.  <br />
+                                Two major military battles occurred near the city: in 732, the Battle of Poitiers (also known as the Battle of Tours), in which the Franks commanded by Charles Martel halted the expansion of the Umayyad Caliphate, and in 1356, the Battle of Poitiers, a key victory for English forces during the Hundred Years' War.
+                                <br /><br />
+                                <a href="http://en.wikipedia.org/wiki/Poitiers" target="_blank">Poitiers on Wikipedia</a>
+                            </p>
+                        </div>
+                        <h3>Perpignan</h3>
+                        <div>
+                            <p>
+                                Perpignan is a city, a commune and the capital of the Pyrénées-Orientales department in southern France.  <br />
+                                Perpignan was the capital of the former province and county of Roussillon (Rosselló in Catalan) and continental capital of the Kingdom of Majorca in the 13th and 14th centuries. <br />
+                                As of 2009, Perpignan had 120,100 inhabitants (Perpignanais, Perpinyanés) in the city proper. The metropolitan area has a total population of 300,221 in 2009.
+                                <br /><br />
+                                <a href="http://en.wikipedia.org/wiki/Perpignan" target="_blank">Perpignan on Wikipedia</a>
+                            </p>
                         </div>
                     </div>
                 </div>
+                <div class="clearfix"></div>
                 <br />
 <pre class="prettyprint linenums">
 function selectCity(index, updateAccordion) {
@@ -234,21 +231,20 @@ $(function(){
         <div class="page-header">
             <h1>Tabs</h1>
         </div>
-        <div class="row">
-            <div id="tabs">
-                <ul>
-                    <li><a href="#classic">Classic</a></li>
-                    <li><a href="#weather">Weather</a></li>
-                    <li><a href="#tabs-3">Text</a></li>
-                </ul>
-                <div id="classic" class="col-lg-12 col-sm-12 gmap3"></div>
-                <div id="weather" class="col-lg-12 col-sm-12 gmap3"></div>
-                <div id="tabs-3">
-                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-                    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-                </div>
+        <div id="tabs">
+            <ul>
+                <li><a href="#classic">Classic</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#tabs-3">Text</a></li>
+            </ul>
+            <div id="classic" class="col-lg-12 col-sm-12 gmap3"></div>
+            <div id="weather" class="col-lg-12 col-sm-12 gmap3"></div>
+            <div id="tabs-3">
+                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
             </div>
         </div>
+        <div class="clearfix"></div>
 <pre class="prettyprint linenums">
 // invoque google maps on 2 divs
 $(".gmap3").gmap3({
