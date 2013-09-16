@@ -926,13 +926,21 @@ h1[id] {
     margin-bottom: 0;
   }
 }
+
+/* contener Article*/
+#article{
+  *max-width:70%; /* Fix max size for IE 7*/
+}
+
+#article h1 > .label{
+  padding: 0.2em 0.4em 0.1em;
+}
+
 /* Share Twitter*/
 #twitter-share{
     padding-top:5px;
 }
-#article h1 > .label{
-	padding: 0.2em 0.4em 0.1em;
-}
+
 /* Accordion */
 #menu-collapse{
     margin-bottom:20px;
