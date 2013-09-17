@@ -8,6 +8,7 @@
  * Portions copyright jQuery UI & Twitter Bootstrap
  */
 
+/********** VJ - Move to Less - Start *************/
 
 /* Layout helpers
 ----------------------------------*/
@@ -201,7 +202,6 @@
 	top: -5px;
 }
 
-
 /*
  * jQuery UI Selectable 1.10.3
  *
@@ -217,6 +217,7 @@
 	z-index: 100;
 	border: 1px dotted black;
 }
+/********** VJ - Move to Less - End *************/
 
 
 /*
@@ -406,6 +407,7 @@
 	filter:Alpha(Opacity=35); /* For IE8 - See #6059 */
 }
 
+/********** VJ - Move to Less - Start *************/
 /* Icons
 ----------------------------------*/
 
@@ -637,7 +639,7 @@
 .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
 .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
 .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
-
+/********** VJ - Move to Less - End *************/
 
 /* Misc visuals
 ----------------------------------*/
@@ -682,6 +684,7 @@
 	border-bottom-right-radius: 4px;
 }
 
+/********** VJ - Move to Less - Start *************/
 /* Overlays */
 
 .ui-widget-overlay {
@@ -700,7 +703,6 @@
 	-moz-border-radius: 8px; /* Firefox 3.6 */
 	border-radius: 8px;
 }
-
 
 /*
  * jQuery UI Accordion 1.10.3
@@ -782,6 +784,7 @@
 	left: 0;
 	cursor: default;
 }
+/********** VJ - Move to Less - End *************/
 
 
 /*

@@ -1,13 +1,14 @@
 /* Overlays */
-.ui-widget-overlay { 
-	background: #aaaaaa url("@{image-dir}/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+
+.ui-widget-overlay {
+	background: @gray-light url("@{image-dir}/ui-bg_flat_0_@{gray-light}_40x100.png") 50% 50% repeat-x;
 	.opacity( 30 );
 }
-.ui-widget-shadow { 
-	margin: -8px 0 0 -8px; 
-	padding: 8px; 
-	background: @grayLight url("@{image-dir}/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x; 
+
+.ui-widget-shadow {
+	margin: -8px 0 0 -8px;
+	padding: 8px;
+	background: @gray-light url("@{image-dir}/ui-bg_flat_0_@{gray-light}_40x100.png") 50% 50% repeat-x;
 	.opacity( 30 );
-	.border-radius( 8px );
-	-khtml-border-radius: 8px; 
+	border-radius: 8px ;
 }

@@ -5,108 +5,30 @@
  * Released under MIT/GPL.
  */
 
-/* Layout helpers
-----------------------------------*/
-.ui-helper-hidden { 
-	display: none; 
-}
-.ui-helper-hidden-accessible { 
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px,1px,1px,1px); 
-}
-.ui-helper-reset { 
-	margin: 0; 
-	padding: 0; 
-	border: 0; 
-	outline: 0; 
-	line-height: 1.3; 
-	text-decoration: none; 
-	font-size: 100%; 
-	list-style: none; 
-}
-.ui-helper-clearfix:after { 
-	content: "."; 
-	display: block; 
-	height: 0; 
-	clear: both; 
-	visibility: hidden; 
-}
-.ui-helper-clearfix { display: inline-block; }
-/* required comment for clearfix to work in Opera \*/
-* html .ui-helper-clearfix { height:1%; }
-.ui-helper-clearfix { display:block; }
-/* end clearfix */
-.ui-helper-zfix { 
-	width: 100%; 
-	height: 100%; 
-	top: 0; 
-	left: 0; 
-	position: absolute; 
-	.opacity( 0 );
-}
-
-
-/* Interaction Cues
-----------------------------------*/
-.ui-state-disabled { cursor: default !important; }
-
-
-/* Icons
-----------------------------------*/
-
-/* states and images */
-.ui-icon { 
-	display: block; 
-	text-indent: -99999px; 
-	overflow: hidden; 
-	background-repeat: no-repeat; 
-}
-
-
-/* Misc visuals
-----------------------------------*/
-
-/* Overlays */
-.ui-widget-overlay { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%; 
-}
-
 
 /*
  * jQuery UI CSS Framework 
- *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
  * http://docs.jquery.com/UI/Theming/API
- *
- * To view and modify this theme, visit http://jqueryui.com/themeroller/?ctl=themeroller
  */
 
 
 /* Component containers
 ----------------------------------*/
 .ui-widget {   
-	font-family: @sansFontFamily; 
+	font-family: @font-family-sans-serif; 
 	font-size:13px; 
 	.ui-widget { 
 		font-size: 1em; 
 	}
 	input, select, textarea, button { 
-		font-family: @sansFontFamily; 
+		font-family: @font-family-sans-serif; 
 		font-size: 1em; 
 	}
 }
 .ui-widget-content { 
-	border: 1px solid @grayLight; 
-	background: @white url("@{image-dir}/ui-bg_glass_75_ffffff_1x400.png") 50% 50% repeat-x;
-	color: @grayDark;
+	border: 1px solid @gray-light; 
+	background: @body-bg url("@{image-dir}/ui-bg_glass_75_ffffff_1x400.png") 50% 50% repeat-x;
+	color: @gray-dark;
 }
 .ui-widget-header {
 	font-weight:bold;
@@ -125,7 +47,7 @@
 border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555;*/
 
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	color: @grayDark;
+	color: @gray-dark;
 	font-size: 13px;
 	line-height: normal;
 	border: 1px solid @btnBorder;
@@ -156,7 +78,7 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 	// commenting since this is breaking just too many places. e.g. buttonbar, toolbar, accordion header, etc.
 	// must check JQ UI
 	//background-position: 0 -15px;
-	color: @grayDark;
+	color: @gray-dark;
 	text-decoration: none;
 }
 
@@ -169,7 +91,7 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
-	border: 1px solid @grayLight;  
+	border: 1px solid @gray-light;  
 	font-weight: normal; 
 	color: @grayDarker; 
 }
@@ -195,7 +117,7 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {
 	position: auto;
 	margin-bottom: 18px;
-	color: @grayDark;
+	color: @gray-dark;
 	#gradient > .vertical( @ui-yellowLighter, @ui-yellowLight );
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	border-color: @ui-yellowLight @ui-yellowLight @ui-yellow;
@@ -208,7 +130,7 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 }
 
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { 
-    color: @grayDark; 
+    color: @gray-dark; 
 }
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
 	position: relative;
