@@ -259,9 +259,9 @@
 
 .ui-widget-header {
 	font-weight: bold;
-	border-color: #0064cd #0064cd #003f81;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	border: 1px solid #666;
+    background-color: #F5F5F5;
+    border-color: #DDDDDD;
+    color: #333333;
 
 }
 
@@ -1338,7 +1338,6 @@ button.ui-button::-moz-focus-inner {
 	padding: 5px 15px;
 	font-size: 18px;
 	text-decoration: none;
-	background: none;
 	-webkit-border-bottom-right-radius: 0; /* Safari 4 */
 	-moz-border-radius-bottomright: 0; /* Firefox 3.6 */
 	border-bottom-right-radius: 0;
