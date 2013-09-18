@@ -1,212 +1,176 @@
-/*!
- * jQuery UI Bootstrap v0.23
- * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
- * Created the LESS version by T1gr0u
- * Released under MIT/GPL.
- */
-
-
 /*
- * jQuery UI CSS Framework 
- * http://docs.jquery.com/UI/Theming/API
+ * jQuery UI Bootstrap v1.0 Alpha
+ *
+ * jQuery UI CSS Framework 1.10.3
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
+ * Created the LESS version by @dharapvj
+ * Released under MIT
  */
-
 
 /* Component containers
 ----------------------------------*/
-.ui-widget {   
+
+.ui-widget {
 	font-family: @font-family-sans-serif; 
-	font-size:13px; 
-	.ui-widget { 
-		font-size: 1em; 
+	font-size: 13px;
+	.ui-widget {
+		font-size: 13px;
 	}
 	input, select, textarea, button { 
 		font-family: @font-family-sans-serif; 
-		font-size: 1em; 
+		font-size: inherit;
 	}
 }
-.ui-widget-content { 
-	border: 1px solid @gray-light; 
-	background: @body-bg url("@{image-dir}/ui-bg_glass_75_ffffff_1x400.png") 50% 50% repeat-x;
+
+.ui-widget-content {
+	border: 1px solid @gray-light;
+	background: @body-bg url("@{image-dir}/ui-bg_glass_75_@{body-bg-num}_1x400.png") 50% 50% repeat-x;
 	color: @gray-dark;
 }
+
 .ui-widget-header {
-	font-weight:bold;
-	border-color: @blueDark @blueDark @ui-blue;
+	font-weight: bold;
+	/* FIXME BELOW */
+	border-color: #0064cd #0064cd #003f81;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	border:1px solid @gray;
-	a { 
-		color: @grayDarker; 
+	border: 1px solid @gray;
+	a {
+		color: @gray-darker;
 	}
 }
 
 /* Interaction states
 ----------------------------------*/
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-/*
-border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555;*/
 
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	color: @gray-dark;
-	font-size: 13px;
-	line-height: normal;
-	border: 1px solid @btnBorder;
-	border-bottom-color: darken(@btnBorder, 10%);
-	.ui_box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) );
-	.transition( 0.1s linear background-image );
-	overflow: visible;
-	#gradient > .vertical-three-colors( @btnBackground, @btnBackground, 25%, @btnBackgroundHighlight);
-    *background-color: @btnBackgroundHighlight; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-    .reset-filter();
-	&:hover {
-	    background-color: @btnBackgroundHighlight;
-        *background-color: darken(@btnBackgroundHighlight, 5%);
-    }
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+   color: #333333;
+   background-color: #ffffff;
+   font-weight: normal;
+   border: 1px solid #cccccc;
 }
 
 .ui-state-default {
-	a, a:link, a:visited { 
-		color: @gray;
+	a, a:link, a:visited {
+		color: #555555;
 		text-decoration: none;
 	}
 }
 
-
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
-	
-	//keep it for IE incase we use background images
-	// commenting since this is breaking just too many places. e.g. buttonbar, toolbar, accordion header, etc.
-	// must check JQ UI
-	//background-position: 0 -15px;
-	color: @gray-dark;
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
 	text-decoration: none;
 }
 
 .ui-state-hover {
-	a, a:hover {
-		color: @grayDarker;
+	a, a:hover, a:link, a:visited {
+		color: #333333;
 		text-decoration: none;
 	}
 }
 
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
-	border: 1px solid @gray-light;  
-	font-weight: normal; 
-	color: @grayDarker; 
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+	border: 1px solid #adadad;
+	font-weight: normal;
+	color: #333333;
 }
+
 .ui-state-active {
-	a, a:link, a:visited { 
-		color: @grayDarker; 
-		text-decoration: none; 
+	a, a:link, a:visited {
+		color: #333333;
+		text-decoration: none;
 	}
 }
-.ui-widget :active { outline: none; }
+
+.ui-widget :active {
+	outline: none;
+}
 
 /* Interaction Cues
 ----------------------------------*/
 
+.ui-state-highlight,
+.ui-state-error,
+.ui-state-default {
+	position: relative;
+	border-width: 1px;
+	border-style: solid;
+}
 
-.ui-state-highlight p, .ui-state-error p, .ui-state-default p{
+.ui-state-highlight p,
+.ui-state-error p,
+.ui-state-default p {
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 18px;
 	margin:7px 15px;
 }
 
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {
-	position: auto;
-	margin-bottom: 18px;
-	color: @gray-dark;
-	#gradient > .vertical( @ui-yellowLighter, @ui-yellowLight );
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: @ui-yellowLight @ui-yellowLight @ui-yellow;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	border-width: 1px;
-	border-style: solid;
-	.border-radius( 4px );
-	.box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.25) );
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
 }
 
-.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { 
-    color: @gray-dark; 
-}
-.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
-	position: relative;
-	margin-bottom: 18px;
-	color: @white;
-	border-width: 1px;
-	border-style: solid;
-	.border-radius( 4px );
-	.box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.25) );
-	#gradient > .vertical ( @ui-redLighter, @ui-redLight );
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: @ui-redLight @ui-redLight @ui-redDark;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+	color: #2d6987;
 }
 
-.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: @ui-red; }
-.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: @ui-red; }
-.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
-.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { 
-	.opacity( 70 );
-	font-weight: normal; 
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+	color: #b94a48;
+    background-color: #f2dede;
+    border-color: #eed3d7;
 }
 
-.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { 
-	.opacity( 35 );
-	background-image: none;  
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+	color: #953b39;
 }
 
-
-
-
-
-
-/* Misc visuals
-----------------------------------*/
-
-/* Corner radius */
-.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
-	#border-radius > .topLeft( 4px );
-}
-.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
-	#border-radius > .topRight( 4px );
-}
-.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
-	#border-radius > .bottomLeft( 4px );
-}
-.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
-	#border-radius > .bottomRight( 4px );
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+	color: #953b39;
 }
 
-
-
-
-/*** Input field styling from Bootstrap **/
-
-input, textarea {
-	.ui_transition(border linear 0.2s, box-shadow linear 0.2s);
-	border: 1px solid #ccc;
-	.box-shadow( inset 0 1px 3px rgba(0, 0, 0, 0.1));
-}
-input:focus, textarea:focus {
-	outline: 0;
-	border-color: rgba(82, 168, 236, 0.8);
-	.box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)" );
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+	font-weight: bold;
 }
 
-input[type=file]:focus, input[type=checkbox]:focus, select:focus {
-	.box-shadow( none );
-	outline: 1px dotted @gray;
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+	.opacity(70);
+	font-weight: normal;
 }
 
-.ui-autocomplete-input {
-	border: 1px solid #ccc;
-	padding: 4px;
-	font-size: 13px;
-	line-height: 18px;
-	color: @gray;
-	.border-radius(@inputBorderRadius);
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	.opacity(35);
+	background-image: none;
+}
+
+.ui-state-disabled .ui-icon {
+	.opacity(35); /* For IE8 - See #6059 */
 }
