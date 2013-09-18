@@ -8,6 +8,7 @@
  * Portions copyright jQuery UI & Twitter Bootstrap
  */
 
+/********** VJ - Move to Less - Start *************/
 
 /* Layout helpers
 ----------------------------------*/
@@ -200,7 +201,6 @@
 	right: -5px;
 	top: -5px;
 }
-
 
 /*
  * jQuery UI Selectable 1.10.3
@@ -638,7 +638,6 @@
 .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
 .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
 
-
 /* Misc visuals
 ----------------------------------*/
 
@@ -700,7 +699,6 @@
 	-moz-border-radius: 8px; /* Firefox 3.6 */
 	border-radius: 8px;
 }
-
 
 /*
  * jQuery UI Accordion 1.10.3
@@ -1095,6 +1093,7 @@ button.ui-button::-moz-focus-inner {
 	padding: 0;
 } 
 
+/********** VJ - Move to Less - End *************/
 
 /*
  * jQuery UI Menu 1.10.3

@@ -1,131 +1,177 @@
 /*
- * jQuery UI Button 
+ * jQuery UI Bootstrap v1.0 Alpha
  *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
+ * jQuery UI Button 1.10.3
  * http://docs.jquery.com/UI/Button#theming
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
+ * Created the LESS version by @dharapvj
+ * Released under MIT
  */
 .ui-button {
-    display: inline-block;
-    .ie7-inline-block();
-    padding: 5px 14px 6px;
-    margin-bottom: 0; // For input.btn
-    margin-right: 4px; // For input.btn
-    font-size: @baseFontSize;
-    line-height: normal;
-    *line-height: normal;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, "0 1px 1px rgba(255,255,255,.75)");
-    border: 1px solid @btnBorder;
-    *border: 0; // Remove the border to prevent IE7's black border on input:focus
-    border-bottom-color: darken(@btnBorder, 10%);
-    .ie7-restore-left-whitespace(); // Give IE7 some love
-    .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
-
-	&.ui-state-hover, &.ui-state-focus{
-		border-color: rgba(82, 168, 236, 0.8);
-		.box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)" );
-    }
-
-	
+	cursor: pointer;
+	display: inline-block;
+	padding: 6px 12px;
+  	margin-bottom: 0;
+	font-size: @font-size-base;
+	font-weight: normal;
+	line-height: @line-height-base;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	.user-select(none);
+	&:focus {
+	  .tab-focus()
+	}
+	&:focus, &:hover {
+		color: #333333;
+		background-color: #ebebeb;
+		border-color: #adadad;
+		text-decoration: none;
+	}
 }
 
-.ui-btn-large{
-    .btn-large;
-}
-.ui-btn-mini{
-    .btn-mini;
-}
-.ui-btn-small{
-    .btn-small;
+ui-button.disabled,
+ui-button[disabled],
+fieldset[disabled] ui-button,
+ui-button.disabled:hover,
+ui-button[disabled]:hover,
+fieldset[disabled] ui-button:hover,
+ui-button.disabled:focus,
+ui-button[disabled]:focus,
+fieldset[disabled] ui-button:focus,
+ui-button.disabled:active,
+ui-button[disabled]:active,
+fieldset[disabled] ui-button:active,
+ui-button.disabled.active,
+ui-button[disabled].active,
+fieldset[disabled] ui-button.ui-state-active {
+  background-color: #ffffff;
+  border-color: #cccccc;
 }
 
+.ui-btn-lg{
+	.btn-lg;
+}
+
+.ui-btn-sm,
+.ui-btn-xs {
+	.btn-sm;
+}
+
+.ui-btn-xs {
+	.btn-xs;
+}
+
+.ui-btn-block {
+	.btn-block;
+}
+
+.ui-btn-block + .ui-btn-block {
+    margin-top: 5px;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"]{
+	&.ui-btn-block{
+		width: 100%;
+	}
+}
+
+.ui-button-text-icon-primary 
+.ui-button-icon-primary {
+    float:left;
+}
+
+.ui-button-text-icon-primary {
+    padding:2px 7px 3px;
+}
 .ui-button-primary {
-    .ui_setup_button( @white, @btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+	.button-variant(@body-bg, @brand-primary, #357ebd);
+}
+.ui-button-warning {
+	.button-variant(@body-bg, @brand-warning, #eea236);
+}
+.ui-button-info {
+	.button-variant(@body-bg, @brand-info, #46b8da);
+}
+.ui-button-danger {
+	.button-variant(@body-bg, @brand-danger, #d43f3a);
+}
+.ui-button-inverse {
+	.button-variant(@body-bg, @gray-darker, #080808);
+}
+.ui-button-success {
+	.button-variant(@body-bg, @brand-success, #4cae4c);
+}
+.ui-button-error {
+	.button-variant(@body-bg, @brand-primary, #357ebd);
 }
 
-.ui-button-success{
-    .ui_setup_button( @white, @btnSuccessBackground,@btnSuccessBackgroundHighlight);
+/* to make room for the icon, a width needs to be set here */
+.ui-button-icon-only {
+	width: 2.2em;
 }
 
-.ui-button-error{
-    .ui_setup_button( @white, @btnDangerBackground, @btnDangerBackgroundHighlight);
-}
-
-.ui-button-danger{
-    .ui_setup_button( @white, @btnDangerBackground, @btnDangerBackgroundHighlight);
-}
-
-.ui-button-warning{
-  .ui_setup_button( @white, @btnWarningBackground, @btnWarningBackgroundHighlight);
-}
-
-.ui-button-inverse{
-  .ui_setup_button( @white, @btnInverseBackground, @btnInverseBackgroundHighlight);
-  // correct the text color for extremely dark inverses
-  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
-    color: @grayLight;
-  }
-}
-.ui-button-info{
-  .ui_setup_button( @white, @btnInfoBackground, @btnInfoBackgroundHighlight);
-}
-
-
-.ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
-button.ui-button-icon-only { 
-  /*
-    width: 2.4em;
-    margin-right: -.3em;
-    display: inline-block;
-position: relative;
-margin-right: .1em;
-text-decoration: none !important;
-cursor: pointer;
-text-align: center;
-zoom: 1;
-overflow: visible;
-*/
-   } 
-   
 /* button elements seem to need a little more width */
-.ui-button-icons-only { width: 3.4em; }
-button.ui-button-icons-only { width: 3.7em; }
-
-/*button text element */
-
-.ui-button .ui-button-text { display: block;   }
-.ui-button-text-only .ui-button-text {  }
-.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text { 
-	padding: .4em; 
-	text-indent: -9999999px; 
-	/*tempfix*/ display:none;
+.ui-button-icons-only {
+	width: 3.4em;
 }
-.ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 1em .4em 2.1em; }
-.ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
-.ui-button-text-icons .ui-button-text { 
-	padding-left: 2.1em; 
-	padding-right: 2.1em; 
-}
-/* no icon support for input elements, provide padding by default */
-/* input.ui-button { padding: .4em 1em; } */
 
-/*button icon element(s) */
+button.ui-button-icons-only {
+	width: 3.7em;
+}
 
 .ui-button-text-icon-primary .ui-button-icon-primary.ui-icon {
-  margin-top:5px;
+    margin-top:5px;
+}
+/*button text element */
+
+.ui-button .ui-button-text {
+	display: block;
+	line-height: normal;
 }
 
-.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { 
-	top: 50%; 
-	margin-top:0px; 
-	margin-bottom:0px; 
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+	padding: .4em;
+	text-indent: -9999px;
+	display:none; /*tempfix*/
 }
-.ui-button-icon-only .ui-icon { 
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 1em .4em 2.1em;
+}
+
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+	padding: .4em 2.1em .4em 1em;
+}
+
+.ui-button-text-icons .ui-button-text {
+	padding-left: 2.1em;
+	padding-right: 2.1em;
+}
+
+/* no icon support for input elements, provide padding by default */
+input.ui-button {
+	padding: .4em 1em;
+}
+
+/*button icon element(s) */
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+    margin-bottom: 0;
+    margin-top: 0;
+    top: 50%;
+}
+
+.ui-button-icon-only .ui-icon {
 	left: 50%;
 	/* chrome margin*/
 	margin-left: -8px;
@@ -133,73 +179,46 @@ button.ui-button-icons-only { width: 3.7em; }
     margin-right: -6px;
 }
 
-.ui-button-text-icon-primary .ui-button-icon-primary, 
-.ui-button-text-icons .ui-button-icon-primary, 
-.ui-button-icons-only .ui-button-icon-primary { 
-	left: .5em; 
+.ui-button-text-icon-primary, .ui-button-text-icons, .ui-button-icons-only {
+	.ui-button-icon-primary {
+		left: .5em;
+	}
 }
-.ui-button-text-icon-secondary .ui-button-icon-secondary, 
-.ui-button-text-icons .ui-button-icon-secondary, 
-.ui-button-icons-only .ui-button-icon-secondary { 
-	right: .5em;
+
+.ui-button-text-icon-secondary, .ui-button-text-icons, .ui-button-icons-only {
+	.ui-button-icon-secondary{
+		right: .5em;
+	}
 }
-.ui-button-text-icons .ui-button-icon-secondary, 
-.ui-button-icons-only .ui-button-icon-secondary { 
-	right: .5em;
+
+.ui-button-text-icons, .ui-button-icons-only {
+	.ui-button-icon-secondary{
+		right: .5em;
+	}
 }
 
 /*button sets*/
 
-
 .ui-buttonset {
 	margin-right: 7px;
 	.ui-state-active {
-		color: @white;
-		#gradient > .vertical ( @btnPrimaryBackground, @btnPrimaryBackgroundHighlight); 
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-		&.ui-state-hover{
-            background-color: @btnPrimaryBackgroundHighlight;
-            *background-color: darken(@btnPrimaryBackgroundHighlight, 5%);
-        }
-	}
-	.ui-button { 
-		margin-left: 0; 
-		margin-right: -.4em; 
-		&.ui-state-focus{
-			background-color: @btnBackground;
-			*background-color: darken(@btnBackgroundHighlight, 5%);
-			background-position: 0 0;
+		color: #ffffff;
+		background-color: #428bca;
+		border-color: #357ebd;
+		&.ui-state-hover {
+			color: #ffffff;
+			background-color: #3276b1;
+			border-color: #285e8e;
 		}
 	}
+	.ui-button {
+		margin-left: 0;
+		margin-right: -.4em;
+	}
 }
 
-/* workarounds */
-button.ui-button::-moz-focus-inner { 
-	border: 0; 
-	padding: 0; 
-} /* reset extra padding in Firefox */
-
-.ui-button-text-icon-primary {
-  padding:2px 7px 3px;
-}
-
-.ui-button-text-icon-primary span{
-  padding:0px;
-}
-
-.ui-button-text-icon-primary .ui-button-icon-primary, 
-.ui-button-text-icons .ui-button-icon-primary, 
-.ui-button-icons-only .ui-button-icon-primary{
-  float:left;
-}
-
-.btn-mini .ui-icon{
-  margin-top: -2px;
-}
-
-.ui-button-text-only .ui-button-text .ui-state-active{
-  color: rgba(255, 255, 255, 0.75);
-}
-
-
+/* reset extra padding in Firefox */
+button.ui-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+} 
