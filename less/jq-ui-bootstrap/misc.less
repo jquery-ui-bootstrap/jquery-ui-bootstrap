@@ -1,0 +1,40 @@
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+
+.ui-corner-all {
+	border-radius: @border-radius-base;
+}
+
+.ui-corner-top, .ui-corner-left, .ui-corner-tl {
+	border-top-left-radius: @border-radius-base;
+}
+
+.ui-corner-top, .ui-corner-right, .ui-corner-tr {
+	border-top-right-radius: @border-radius-base;
+}
+
+.ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+	border-bottom-left-radius: @border-radius-base;
+}
+
+.ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+	border-bottom-right-radius: @border-radius-base;
+}
+
+
+/* Overlays */
+
+.ui-widget-overlay {
+	background: @gray-light url("@{image-dir}/ui-bg_flat_0_@{gray-light-num}_40x100.png") 50% 50% repeat-x;
+	.opacity( 30 );
+}
+
+.ui-widget-shadow {
+	margin: -8px 0 0 -8px;
+	padding: 8px;
+	background: @gray-light url("@{image-dir}/ui-bg_flat_0_@{gray-light-num}_40x100.png") 50% 50% repeat-x;
+	.opacity( 30 );
+	border-radius: 8px ;
+}
