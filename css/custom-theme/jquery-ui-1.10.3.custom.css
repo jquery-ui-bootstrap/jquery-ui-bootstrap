@@ -1093,7 +1093,6 @@ button.ui-button::-moz-focus-inner {
 	padding: 0;
 } 
 
-/********** VJ - Move to Less - End *************/
 
 /*
  * jQuery UI Menu 1.10.3
@@ -1294,6 +1293,7 @@ button.ui-button::-moz-focus-inner {
 	background-position: -65px -16px;
 }
 
+/********** VJ - Move to Less - End *************/
 
 /*
  * jQuery UI Dialog 1.10.3
@@ -2247,6 +2247,8 @@ body .ui-tooltip {
 	background-image: none;
 }
 
+/********** VJ - Move to Less - Start *************/
+
 /*** Input field styling from Bootstrap **/
 
  input, textarea {
@@ -2305,6 +2307,7 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+/********** VJ - Move to Less - End *************/
 
 /**Toolbar**/
 
