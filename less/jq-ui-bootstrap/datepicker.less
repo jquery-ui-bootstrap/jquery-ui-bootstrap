@@ -18,8 +18,8 @@
 		font-weight: bold;
 		width: 100%;
 		padding: 4px 0;
-		background-color: @formActionsBackground;
-		color: @gray;
+		background-color: @ui-form-actions-background;
+		color: @ui-gray;
 	}
 	.ui-datepicker-prev,
 	.ui-datepicker-next { 
@@ -185,13 +185,13 @@
 
 .ui-datepicker-today {
 	a{
-		background-color: @linkColor;
+		background-color: @ui-link-color;
 		cursor: pointer;
 		padding: 0 4px;
 		margin-bottom:0px;
 		&:hover{
-			background-color: @gray;
-			color: @white;
+			background-color: @ui-gray;
+			color: @ui-white;
 		}
 	}
 }
@@ -204,7 +204,7 @@
 	}
 
 	&:hover{
-		color:white;
+		color:@ui-white;
 	}
 
 	.ui-state-default {
@@ -216,29 +216,29 @@
 		text-align: center;
 		filter: none;
 		&:hover{
-			background:@linkColor;
-			color:white;
-			.border-radius( 4px );
+			background:@ui-link-color;
+			color:@ui-white;
+			.ui-border-radius( 4px );
 		}
 	}
 	
 	.ui-state-highlight{
 		color: #404040;
 		background: #eedc94;
-		#gradient > .vertical (#fceec1, #eedc94);
-		.reset-filter();
+		#ui-gradient > .vertical (#fceec1, #eedc94);
+		.ui-reset-filter();
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 		border-color: #eedc94 #eedc94 #e4c652;
 		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-		.border-radius(4px);
+		.ui-border-radius(4px);
 	}
 	
 	.ui-state-active {
-		background:@grayLight;
+		background:@ui-gray-light;
 		margin-bottom:0px;
 		font-size:normal;
 		text-shadow: 0px;
-		color:white;  
-		.border-radius( 4px );
+		color:@ui-white;  
+		.ui-border-radius( 4px );
 	}
 }

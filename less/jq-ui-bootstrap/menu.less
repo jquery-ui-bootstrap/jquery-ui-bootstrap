@@ -56,7 +56,7 @@
 		min-height: 0; /* support: IE7 */
 		font-weight: normal;
 		.ui-corner-all{
-			.border-radius(0px);
+			.ui-border-radius(0px);
 		}
 		
 	}
@@ -64,10 +64,10 @@
 	.ui-menu-item a.ui-state-active,
 	.ui-menu-item a.ui-widget-content{
 		font-weight: bold;
-		color: @white;
-		background: @blue;
-		#gradient > .vertical(@blue, lighten(@blue, 5%));
-		.reset-filter();
+		color: @ui-white;
+		background: @ui-blue;
+		#ui-gradient  > .vertical(@ui-blue, lighten(@ui-blue, 5%));
+		.ui-reset-filter();
 	}
 	.ui-menu-item a.ui-state-active {
 		padding: 1px .4em;

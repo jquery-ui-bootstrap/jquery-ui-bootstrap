@@ -43,7 +43,7 @@
 	top: 0; 
 	left: 0; 
 	position: absolute; 
-	.opacity( 0 );
+	.ui-opacity( 0 );
 }
 
 
@@ -93,28 +93,28 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget {   
-	font-family: @sansFontFamily; 
+	font-family: @ui-font-family-sans-serif; 
 	font-size:13px; 
 	.ui-widget { 
 		font-size: 1em; 
 	}
 	input, select, textarea, button { 
-		font-family: @sansFontFamily; 
+		font-family: @ui-font-family-sans-serif; 
 		font-size: 1em; 
 	}
 }
 .ui-widget-content { 
-	border: 1px solid @grayLight; 
-	background: @white url("@{image-dir}/ui-bg_glass_75_ffffff_1x400.png") 50% 50% repeat-x;
-	color: @grayDark;
+	border: 1px solid @ui-gray-light; 
+	background: @ui-white url("@{ui-image-dir}/ui-bg_glass_75_ffffff_1x400.png") 50% 50% repeat-x;
+	color: @ui-gray-dark;
 }
 .ui-widget-header {
 	font-weight:bold;
-	border-color: @blueDark @blueDark @ui-blue;
+	border-color: @ui-blue-dark @ui-blue-dark @ui-blue;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	border:1px solid @gray;
+	border:1px solid @ui-gray;
 	a { 
-		color: @grayDarker; 
+		color: @ui-gray-darker; 
 	}
 }
 
@@ -122,29 +122,29 @@
 ----------------------------------*/
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 /*
-border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555;*/
+border: 1px solid #d3d3d3; background: @ui-gray-lighter url(ui-images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555;*/
 
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	color: @grayDark;
+	color: @ui-gray-dark;
 	font-size: 13px;
 	line-height: normal;
-	border: 1px solid @btnBorder;
-	border-bottom-color: darken(@btnBorder, 10%);
-	.ui_box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) );
-	.transition( 0.1s linear background-image );
+	border: 1px solid @ui-btn-default-border;
+	border-bottom-color: darken(@ui-btn-default-border, 10%);
+	.ui-box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) );
+	.ui-transition( 0.1s linear background-image );
 	overflow: visible;
-	#gradient > .vertical-three-colors( @btnBackground, @btnBackground, 25%, @btnBackgroundHighlight);
-    *background-color: @btnBackgroundHighlight; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-    .reset-filter();
+	#ui-gradient > .vertical-three-colors( @ui-btn-default-bg, @ui-btn-default-bg, 25%, @ui-btn-default-bg-highlight);
+    *background-color: @ui-btn-default-bg-highlight; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    .ui-reset-filter();
 	&:hover {
-	    background-color: @btnBackgroundHighlight;
-        *background-color: darken(@btnBackgroundHighlight, 5%);
+	    background-color: @ui-btn-default-bg-highlight;
+        *background-color: darken(@ui-btn-default-bg-highlight, 5%);
     }
 }
 
 .ui-state-default {
 	a, a:link, a:visited { 
-		color: @gray;
+		color: @ui-gray;
 		text-decoration: none;
 	}
 }
@@ -156,26 +156,26 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 	// commenting since this is breaking just too many places. e.g. buttonbar, toolbar, accordion header, etc.
 	// must check JQ UI
 	//background-position: 0 -15px;
-	color: @grayDark;
+	color: @ui-gray-dark;
 	text-decoration: none;
 }
 
 .ui-state-hover {
 	a, a:hover {
-		color: @grayDarker;
+		color: @ui-gray-darker;
 		text-decoration: none;
 	}
 }
 
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
-	border: 1px solid @grayLight;  
+	border: 1px solid @ui-gray-light;  
 	font-weight: normal; 
-	color: @grayDarker; 
+	color: @ui-gray-darker; 
 }
 .ui-state-active {
 	a, a:link, a:visited { 
-		color: @grayDarker; 
+		color: @ui-gray-darker; 
 		text-decoration: none; 
 	}
 }
@@ -195,32 +195,32 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {
 	position: auto;
 	margin-bottom: 18px;
-	color: @grayDark;
-	#gradient > .vertical( @ui-yellowLighter, @ui-yellowLight );
+	color: @ui-gray-dark;
+	#ui-gradient > .vertical( @ui-yellow-lighter, @ui-yellow-light );
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: @ui-yellowLight @ui-yellowLight @ui-yellow;
+	border-color: @ui-yellow-light @ui-yellow-light @ui-yellow;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	border-width: 1px;
 	border-style: solid;
-	.border-radius( 4px );
-	.box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.25) );
+	.ui-border-radius( 4px );
+	.ui-box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.25) );
 }
 
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { 
-    color: @grayDark; 
+    color: @ui-gray-dark; 
 }
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
 	position: relative;
 	margin-bottom: 18px;
-	color: @white;
+	color: @ui-white;
 	border-width: 1px;
 	border-style: solid;
-	.border-radius( 4px );
-	.box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.25) );
-	#gradient > .vertical ( @ui-redLighter, @ui-redLight );
+	.ui-border-radius( 4px );
+	.ui-box-shadow( inset 0 1px 0 rgba(255, 255, 255, 0.25) );
+	#gradient > .vertical ( @ui-red-lighter, @ui-red-light );
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	border-color: @ui-redLight @ui-redLight @ui-redDark;
+	border-color: @ui-red-light @ui-red-light @ui-red-dark;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
@@ -228,12 +228,12 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: @ui-red; }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
 .ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { 
-	.opacity( 70 );
+	.ui-opacity( 70 );
 	font-weight: normal; 
 }
 
 .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { 
-	.opacity( 35 );
+	.ui-opacity( 35 );
 	background-image: none;  
 }
 
@@ -247,16 +247,16 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 
 /* Corner radius */
 .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
-	#border-radius > .topLeft( 4px );
+	#ui-border-radius > .topLeft( 4px );
 }
 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
-	#border-radius > .topRight( 4px );
+	#ui-border-radius > .topRight( 4px );
 }
 .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
-	#border-radius > .bottomLeft( 4px );
+	#ui-border-radius > .bottomLeft( 4px );
 }
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
-	#border-radius > .bottomRight( 4px );
+	#ui-border-radius > .bottomRight( 4px );
 }
 
 
@@ -265,19 +265,19 @@ border: 1px solid #d3d3d3; background: @grayLighter url(images/ui-bg_glass_75_e6
 /*** Input field styling from Bootstrap **/
 
 input, textarea {
-	.ui_transition(border linear 0.2s, box-shadow linear 0.2s);
+	.ui-transition(border linear 0.2s, box-shadow linear 0.2s);
 	border: 1px solid #ccc;
-	.box-shadow( inset 0 1px 3px rgba(0, 0, 0, 0.1));
+	.ui-box-shadow( inset 0 1px 3px rgba(0, 0, 0, 0.1));
 }
 input:focus, textarea:focus {
 	outline: 0;
 	border-color: rgba(82, 168, 236, 0.8);
-	.box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)" );
+	.ui-box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)" );
 }
 
 input[type=file]:focus, input[type=checkbox]:focus, select:focus {
-	.box-shadow( none );
-	outline: 1px dotted @gray;
+	.ui-box-shadow( none );
+	outline: 1px dotted @ui-gray;
 }
 
 .ui-autocomplete-input {
@@ -285,6 +285,6 @@ input[type=file]:focus, input[type=checkbox]:focus, select:focus {
 	padding: 4px;
 	font-size: 13px;
 	line-height: 18px;
-	color: @gray;
-	.border-radius(@inputBorderRadius);
+	color: @ui-gray;
+	.ui-border-radius(@ui-input-border-radius);
 }
