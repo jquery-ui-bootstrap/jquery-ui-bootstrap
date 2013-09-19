@@ -1,0 +1,147 @@
+
+.ui-opacity(@opacity) {
+	.opacity(@opacity);
+}
+
+.ui-box-shadow( @shadow ){
+	.box-shadow( @shadow );
+}
+
+.ui-box-shadow( @arg1, @arg2 ){
+	-webkit-box-shadow: @arg1, @arg2;
+	-moz-box-shadow: @arg1, @arg2;
+	box-shadow: @arg1, @arg2;
+}
+
+.ui-transition( @transition ){
+	.transition( @transition );
+}
+
+.ui-transition(@arg1, @arg2){
+	-webkit-transition: @arg1, @arg2;
+	-moz-transition: @arg1, @arg2;
+	-ms-transition: @arg1, @arg2;
+	-o-transition: @arg1, @arg2;
+	transition: @arg1, @arg2;
+}
+
+.ui-border-radius( @radius ){
+	.border-radius(@radius);
+}
+
+.ui-reset-filter(){
+	.reset-filter();
+}
+
+.ui-ie7-inline-block(){
+	.ie7-inline-block();
+}
+
+.ui-ie7-restore-left-whitespace(){
+	.ie7-restore-left-whitespace();
+}
+
+.ui-btn-lg{
+    .btn-large;
+}
+.ui-btn-xs{
+    .btn-mini;
+}
+.ui-btn-sm{
+    .btn-small;
+}
+.ui-setup-button( @arg1, @startColor, @endColor ) {
+	color: @arg1;
+	//#gradient > .vertical( @startColor, @endColor ); 
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	//border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	// gradientBar will set the background to a pleasing blend of these, to support IE<=9
+    .gradientBar(@startColor, @endColor);
+    *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    .reset-filter();
+
+    // in these cases the gradient won't cover the background, so we override
+    
+    &:hover, &:active, &.active, &.disabled, &[disabled] {
+        background-color: @endColor;
+        *background-color: darken(@endColor, 5%);
+    }
+    
+    &.ui-state-hover, &.ui-state-focus{
+        background-color: @endColor;
+        *background-color: darken(@endColor, 5%);
+    }
+
+    // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+    &:active,&.active {
+        background-color: darken(@endColor, 10%) e("\9");
+    }
+    //set white icons
+    span.ui-icon { 
+    	background-image: url("@{ui-image-dir}/ui-icons_@{ui-icon-color}_256x240.png"); 
+    }
+}
+
+.ui-buttonBackground(@startColor, @endColor, @textColor, @textShadow) {
+	.buttonBackground(@startColor, @endColor, @textColor, @textShadow);
+}
+
+// Box sizing
+.ui-box-sizing(@boxmodel) {
+	.box-sizing(@boxmodel);
+}
+
+
+#ui-gradient {
+	.vertical(@startColor, @endColor){
+		#gradient > .vertical(@startColor, @endColor);
+	}
+
+	.vertical-three-colors(@startColor, @midColor, @colorStop, @endColor) {
+		#gradient > .vertical-three-colors(@startColor, @midColor, @colorStop, @endColor);
+	}
+}
+
+// Border Radius
+#ui-border-radius {
+	.topLeft ( @radius: 4px ) {
+		-moz-border-radius-topleft: @radius;
+		-webkit-border-top-left-radius: @radius;
+		-khtml-border-top-left-radius: @radius;
+		border-top-left-radius: @radius;
+	}
+	.topRight ( @radius: 4px ) {
+		-moz-border-radius-topright: @radius;
+		-webkit-border-top-right-radius: @radius;
+		-khtml-border-top-right-radius: @radius;
+		border-top-right-radius: @radius;
+	}
+	.bottomLeft ( @radius: 4px ) {
+		-moz-border-radius-bottomleft: @radius;
+		-webkit-border-bottom-left-radius: @radius;
+		-khtml-border-bottom-left-radius: @radius;
+		border-bottom-left-radius: @radius;
+	}
+	.bottomRight ( @radius: 4px ) {
+		-moz-border-radius-bottomright: @radius;
+		-webkit-border-bottom-right-radius: @radius;
+		-khtml-border-bottom-right-radius: @radius;
+		border-bottom-right-radius: @radius;
+	}
+	
+	.border( @topLeft:6px,  @topRight:6px, @bottomRight:6px, @bottomLeft:6px ) {
+		-webkit-border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+		-moz-border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+		border-radius: @topLeft @topRight @bottomRight @bottomLeft;
+	}
+	
+}
+
+// Transitions
+.ui-transition( @arg1, @arg2 ) {
+	-webkit-transition: @arg1, @arg2;
+	-moz-transition: @arg1, @arg2;
+	-ms-transition: @arg1, @arg2;
+	-o-transition: @arg1, @arg2;
+	transition: @arg1, @arg2;
+}

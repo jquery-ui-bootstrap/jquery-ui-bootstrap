@@ -9,70 +9,70 @@
  */
 .ui-button {
     display: inline-block;
-    .ie7-inline-block();
+    .ui-ie7-inline-block();
     padding: 5px 14px 6px;
     margin-bottom: 0; // For input.btn
     margin-right: 4px; // For input.btn
-    font-size: @baseFontSize;
+    font-size: @ui-font-size-base;
     line-height: normal;
     *line-height: normal;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, "0 1px 1px rgba(255,255,255,.75)");
-    border: 1px solid @btnBorder;
+    .ui-buttonBackground(@ui-btn-default-bg, @ui-btn-default-bg-highlight, @ui-gray-dark, "0 1px 1px rgba(255,255,255,.75)");
+    border: 1px solid @ui-btn-default-border;
     *border: 0; // Remove the border to prevent IE7's black border on input:focus
-    border-bottom-color: darken(@btnBorder, 10%);
-    .ie7-restore-left-whitespace(); // Give IE7 some love
-    .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
+    border-bottom-color: darken(@ui-btn-default-border, 10%);
+    .ui-ie7-restore-left-whitespace(); // Give IE7 some love
+    .ui-box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
 
 	&.ui-state-hover, &.ui-state-focus{
 		border-color: rgba(82, 168, 236, 0.8);
-		.box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)" );
+		.ui-box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)" );
     }
 
 	
 }
 
 .ui-btn-large{
-    .btn-large;
+    .ui-btn-lg();
 }
 .ui-btn-mini{
-    .btn-mini;
+    .ui-btn-xs();
 }
 .ui-btn-small{
-    .btn-small;
+    .ui-btn-sm();
 }
 
 .ui-button-primary {
-    .ui_setup_button( @white, @btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+   .ui-setup-button( @ui-white, @ui-btn-primary-bg, @ui-btn-primary-bg-highlight);
 }
 
 .ui-button-success{
-    .ui_setup_button( @white, @btnSuccessBackground,@btnSuccessBackgroundHighlight);
+    .ui-setup-button( @ui-white, @ui-btn-success-bg, @ui-btn-success-bg-highlight);
 }
 
 .ui-button-error{
-    .ui_setup_button( @white, @btnDangerBackground, @btnDangerBackgroundHighlight);
+    .ui-setup-button( @ui-white, @ui-btn-danger-bg, @ui-btn-danger-bg-highlight);
 }
 
 .ui-button-danger{
-    .ui_setup_button( @white, @btnDangerBackground, @btnDangerBackgroundHighlight);
+    .ui-setup-button( @ui-white, @ui-btn-danger-bg, @ui-btn-danger-bg-highlight);
 }
 
 .ui-button-warning{
-  .ui_setup_button( @white, @btnWarningBackground, @btnWarningBackgroundHighlight);
+    .ui-setup-button( @ui-white, @ui-btn-warning-bg, @ui-btn-warning-bg-highlight);
 }
 
 .ui-button-inverse{
-  .ui_setup_button( @white, @btnInverseBackground, @btnInverseBackgroundHighlight);
-  // correct the text color for extremely dark inverses
-  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
-    color: @grayLight;
-  }
+    .ui-setup-button( @ui-white, @ui-btn-inverse-bg, @ui-btn-inverse-bg-highlight);
+    // correct the text color for extremely dark inverses
+    &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+        color: @ui-gray-light;
+    }
 }
 .ui-button-info{
-  .ui_setup_button( @white, @btnInfoBackground, @btnInfoBackgroundHighlight);
+    .ui-setup-button( @ui-white, @ui-btn-info-bg, @ui-btn-info-bg-highlight);
 }
 
 
@@ -154,21 +154,21 @@ button.ui-button-icons-only { width: 3.7em; }
 .ui-buttonset {
 	margin-right: 7px;
 	.ui-state-active {
-		color: @white;
-		#gradient > .vertical ( @btnPrimaryBackground, @btnPrimaryBackgroundHighlight); 
+		color: @ui-white;
+		#ui-gradient > .vertical ( @ui-btn-primary-bg, @ui-btn-primary-bg-highlight); 
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 		&.ui-state-hover{
-            background-color: @btnPrimaryBackgroundHighlight;
-            *background-color: darken(@btnPrimaryBackgroundHighlight, 5%);
+            background-color: @ui-btn-primary-bg-highlight;
+            *background-color: darken(@ui-btn-primary-bg-highlight, 5%);
         }
 	}
 	.ui-button { 
 		margin-left: 0; 
 		margin-right: -.4em; 
 		&.ui-state-focus{
-			background-color: @btnBackground;
-			*background-color: darken(@btnBackgroundHighlight, 5%);
+			background-color: @ui-btn-default-bg;
+			*background-color: darken(@ui-btn-default-bg-highlight, 5%);
 			background-position: 0 0;
 		}
 	}
