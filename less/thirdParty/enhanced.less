@@ -4,7 +4,7 @@
 	left: -999em;
 	background: transparent;
 	border: 0;
-	.opacity( 0 );
+	.ui-opacity( 0 );
 }
 
 .customfile {
@@ -25,12 +25,12 @@
 	color:#333;
 	cursor: pointer;
 	display: inline-block;
-	#gradient > .vertical-three-colors( @white, @white, 25%, @grayLighter );
+	#ui-gradient > .vertical-three-colors( @white, @white, 25%, @grayLighter );
 }
 .customfile-disabled {
 	opacity: .5;
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-	//.opacity( 50 );
+	//.ui-opacity( 50 );
 	cursor: default;
 }
 
@@ -41,8 +41,8 @@
 	font-size: 13px;
 	line-height: 18px;
 	padding: 4px; 
-	.ui_transition( border linear 0.2s, box-shadow linear 0.2s );
-	.box-shadow( inset 0 1px 3px rgba(0, 0, 0, 0.1) );
+	.ui-transition( border linear 0.2s, box-shadow linear 0.2s );
+	.ui-box-shadow( inset 0 1px 3px rgba(0, 0, 0, 0.1) );
 }
 /* IE7 hack */
 *+html .customfile-feedback {
