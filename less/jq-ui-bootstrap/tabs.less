@@ -11,7 +11,7 @@
 .ui-tabs { 
 	position: relative; 
 	border: 0; 
-	.border-radius(0);
+	.ui-border-radius(0);
 
 	/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	.ui-tabs-nav li:hover{
@@ -21,7 +21,7 @@
 		margin-bottom: 5px;
 		border: solid #ddd;
 		border-width: 0 0 1px 0;
-		.border-radius( 0 );
+		.ui-border-radius( 0 );
 		background: none;
 	}
 	.ui-tabs-nav li { 
@@ -38,15 +38,15 @@
 }
 
 .ui-tabs-nav .ui-state-default{
-	.box-shadow( 0px 0px 0px @white );
+	.ui-box-shadow( 0px 0px 0px @ui-white );
 }
 .ui-tabs {
 	.ui-tabs-nav{
 		li a {
 			float: left;
-			border: 1px solid #fff;
+			border: 1px solid @ui-white;
 			border-bottom: 1px solid #ddd;
-			#border-radius > .border( 4px, 4px, 0, 0 );
+			#ui-border-radius > .border( 4px, 4px, 0, 0 );
 			padding: 8px 12px;
 			font-weight: normal;
 			text-decoration: none;
@@ -63,11 +63,11 @@
 		li.ui-state-disabled a,
 		li.ui-state-processing a,
 		li.ui-tabs-active a, li.ui-tabs-active a:hover, li.ui-tabs-selected a:hover {
-			background-color: @white;
+			background-color: @ui-white;
 			border: 1px solid #ddd;
-			border-bottom-color: @white;
+			border-bottom-color: @ui-white;
 			cursor: text;
-			color: @gray;
+			color: @ui-gray;
 			outline:none;
 		}
 		li:hover, li a:hover{
@@ -76,7 +76,7 @@
             background-color: whiteSmoke; // TODO - move whiteSmoke to variable
 		}
 		li.ui-tabs-selected:hover, li.ui-tabs-active:hover {
-          background:@white;
+          background:@ui-white;
           outline:none;
         }
 	}
@@ -93,7 +93,7 @@
 		display: block; 
 		margin: 1em 0;
 		border: 0; 
-		.border-radius(0);
+		.ui-border-radius(0);
 		padding: 1px 0; 
 		background: none; 
 	}
@@ -109,5 +109,5 @@
 }
 
 .ui-tabs-nav.ui-corner-all{
-    .border-radius( 0 );
+    .ui-border-radius( 0 );
 }
