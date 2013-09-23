@@ -25,7 +25,7 @@
 
 .ui-widget-content {
 	border: 1px solid @gray-light;
-	background: @body-bg url("@{image-dir}/ui-bg_glass_75_@{body-bg-num}_1x400.png") 50% 50% repeat-x;
+	background: @body-bg url("@{ui-image-dir}/ui-bg_glass_75_@{ui-body-bg-num}_1x400.png") 50% 50% repeat-x;
 	color: @gray-dark;
 }
 
@@ -47,7 +47,7 @@
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
    color: #333333;
-   background-color: #ffffff;
+   background-color: @ui-white;
    font-weight: normal;
    border: 1px solid #cccccc;
 }
@@ -160,17 +160,17 @@
 .ui-priority-secondary,
 .ui-widget-content .ui-priority-secondary,
 .ui-widget-header .ui-priority-secondary {
-	.opacity(70);
+	.ui-opacity(70);
 	font-weight: normal;
 }
 
 .ui-state-disabled,
 .ui-widget-content .ui-state-disabled,
 .ui-widget-header .ui-state-disabled {
-	.opacity(35);
+	.ui-opacity(35);
 	background-image: none;
 }
 
 .ui-state-disabled .ui-icon {
-	.opacity(35); /* For IE8 - See #6059 */
+	.ui-opacity(35); /* For IE8 - See #6059 */
 }

@@ -27,15 +27,15 @@
 /* Overlays */
 
 .ui-widget-overlay {
-	background: @gray-light url("@{image-dir}/ui-bg_flat_0_@{gray-light-num}_40x100.png") 50% 50% repeat-x;
-	.opacity( 30 );
+	background: @gray-light url("@{ui-image-dir}/ui-bg_flat_0_@{ui-gray-light-num}_40x100.png") 50% 50% repeat-x;
+	.ui-opacity( 30 );
 }
 
 .ui-widget-shadow {
 	margin: -8px 0 0 -8px;
 	padding: 8px;
-	background: @gray-light url("@{image-dir}/ui-bg_flat_0_@{gray-light-num}_40x100.png") 50% 50% repeat-x;
-	.opacity( 30 );
+	background: @gray-light url("@{ui-image-dir}/ui-bg_flat_0_@{ui-gray-light-num}_40x100.png") 50% 50% repeat-x;
+	.ui-opacity( 30 );
 	border-radius: 8px ;
 }
 
@@ -43,7 +43,7 @@
 /*** Input field styling from Bootstrap **/
 
 input, textarea {
-	.transition(~"border linear 0.2s, box-shadow linear 0.2s");
+	.ui-transition(~"border linear 0.2s, box-shadow linear 0.2s");
 }
 
 textarea {
@@ -54,10 +54,10 @@ textarea {
 input:focus, textarea:focus {
 	outline: 0;
 	border-color: rgba(82, 168, 236, 0.8);
-	.box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)");
+	.ui-box-shadow(~"inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6)");
 }
 input[type=file]:focus, input[type=checkbox]:focus, select:focus {
-	.box-shadow (none);
+	.ui-box-shadow (none);
 	outline: 1px dotted #666;
 }
 
@@ -81,7 +81,7 @@ textarea,
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  .box-sizing( content-box);
+  .ui-box-sizing( content-box);
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
