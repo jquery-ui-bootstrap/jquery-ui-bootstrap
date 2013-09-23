@@ -46,7 +46,7 @@ As one of the (currently) more popular open-source jQuery UI themes we would lov
 
 For a live preview of the current theme, see [http://addyosmani.github.io/jquery-ui-bootstrap/](http://addyosmani.github.io/jquery-ui-bootstrap/).
 
-##Synchronize your fork
+### Synchronize your fork
 
     cd your_fork
 
@@ -63,11 +63,24 @@ For a live preview of the current theme, see [http://addyosmani.github.io/jquery
     #Send your changes to github
     git push
 
-####compile your less changes to create a new css file
+### rock on node.js bandwagon!
+```Shell
+<<install node>>
+cd your_fork
 
-	npm install -g less
-	cd less
-	lessc -x style.less > style.min.css
+# install modules (or globally with -g switch)
+npm install
+
+# run local webserver to see the pages.
+node server.js
+
+# compile your LESS changes to create a new css file
+cd less
+lessc -x style.less > style.min.css
+lessc -x style2.less > style2.min.css
+```	
+
+	
 
 ##Licence
 

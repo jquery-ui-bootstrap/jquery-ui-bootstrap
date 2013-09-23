@@ -1,8 +1,14 @@
-/*
- * LESS'd version of jQuery UI spinner 1.10.0
+/*!
+ * jQuery UI Bootstrap v1.0 Alpha
  *
- * @see http://docs.jquery.com/UI/Menu#theming
+ * jQuery UI spinner 1.10.3
+ * http://docs.jquery.com/UI/Menu#theming
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
+ * Created the LESS version by @dharapvj
+ * Released under MIT
  */
+
 .ui-spinner {
 	position: relative;
 	display: inline-block;
@@ -15,10 +21,8 @@
 	border: none;
 	background: none;
 	padding: 0;
-	margin: .2em 0;
+	margin: .2em 22px 0.2em 0.4em;
 	vertical-align: middle;
-	margin-left: .4em;
-	margin-right: 22px;
 }
 
 .ui-spinner-button {
@@ -49,11 +53,12 @@
 		top: 50%;
 		left: 0;
 	}
+	/* need to fix icons sprite */
 	.ui-icon-triangle-1-s {
 		background-position: -65px -16px;
 	}
 }
-
+	
 .ui-spinner-up {
 	top: 0;
 }
