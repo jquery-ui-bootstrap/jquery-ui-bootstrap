@@ -6,7 +6,7 @@
  */
 
 // Border Radius
-#border-radius {
+#ui-border-radius {
 	.topLeft ( @radius: 4px ) {
 		-moz-border-radius-topleft: @radius;
 		-webkit-border-top-left-radius: @radius;
@@ -40,8 +40,29 @@
 	
 }
 
+.ui-border-radius( @radius ){
+	#ui-border-radius  > .topLeft ( @radius );
+	#ui-border-radius  > .topRight ( @radius );
+	#ui-border-radius  > .bottomLeft ( @radius );
+	#ui-border-radius  > .bottomRight ( @radius );
+}
+
+#ui-gradient {
+	.vertical(@startColor, @endColor){
+		#gradient > .vertical(@startColor, @endColor);
+	}
+
+	.vertical-three-colors(@startColor, @midColor, @colorStop, @endColor) {
+		#gradient > .vertical-three-colors(@startColor, @midColor, @colorStop, @endColor);
+	}
+}
+
 // Transitions
-.ui_transition( @arg1, @arg2 ) {
+.ui-transition( @transition ){
+	.transition( @transition );
+}
+
+.ui-transition( @arg1, @arg2 ) {
 	-webkit-transition: @arg1, @arg2;
 	-moz-transition: @arg1, @arg2;
 	-ms-transition: @arg1, @arg2;
@@ -50,40 +71,46 @@
 }
 
 // Drop shadows
-.ui_box-shadow( @arg1, @arg2 ) {
+.ui-box-shadow( @shadow ){
+	.box-shadow( @shadow );
+}
+
+.ui-box-shadow( @arg1, @arg2 ){
 	-webkit-box-shadow: @arg1, @arg2;
 	-moz-box-shadow: @arg1, @arg2;
 	box-shadow: @arg1, @arg2;
 }
 
-.ui_setup_button( @arg1, @startColor, @endColor ) {
-	color: @arg1;
-	//#gradient > .vertical( @startColor, @endColor ); 
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	//border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	// gradientBar will set the background to a pleasing blend of these, to support IE<=9
-    .gradientBar(@startColor, @endColor);
-    *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-    .reset-filter();
+.ui-button-variant(@color; @background; @border) {
+	.button-variant(@color; @background; @border);
+}
 
-    // in these cases the gradient won't cover the background, so we override
-    
-    &:hover, &:active, &.active, &.disabled, &[disabled] {
-        background-color: @endColor;
-        *background-color: darken(@endColor, 5%);
-    }
-    
-    &.ui-state-hover, &.ui-state-focus{
-        background-color: @endColor;
-        *background-color: darken(@endColor, 5%);
-    }
+.ui-btn-lg{
+    .btn-lg;
+}
+.ui-btn-xs{
+    .btn-xs;
+}
+.ui-btn-sm{
+    .btn-sm;
+}
 
-    // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
-    &:active,&.active {
-        background-color: darken(@endColor, 10%) e("\9");
-    }
-    //set white icons
-    span.ui-icon { 
-    	background-image: url("@{image-dir}/ui-icons_@{icon-color}_256x240.png"); 
-    }
+.ui-opacity(@opacity) {
+	.opacity(@opacity);
+}
+
+.ui-reset-filter(){
+	.reset-filter();
+}
+
+.ui-box-sizing(@boxmodel) {
+	.box-sizing(@boxmodel);
+}
+
+.ui-user-select(@select) {
+	.user-select(@select);
+}
+
+.ui-tab-focus() {
+	.tab-focus();
 }
