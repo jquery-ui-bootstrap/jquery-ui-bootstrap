@@ -21,9 +21,9 @@
 	vertical-align: middle;
 	cursor: pointer;
 	border: 1px solid #ccc;
-	.user-select(none);
+	.ui-user-select(none);
 	&:focus {
-	  .tab-focus()
+	  .ui-tab-focus()
 	}
 	&:focus, &:hover {
 		color: #333333;
@@ -48,7 +48,7 @@ fieldset[disabled] ui-button:active,
 ui-button.disabled.active,
 ui-button[disabled].active,
 fieldset[disabled] ui-button.ui-state-active {
-  background-color: #ffffff;
+  background-color: @ui-white;
   border-color: #cccccc;
 }
 
@@ -88,25 +88,25 @@ input[type="submit"], input[type="reset"], input[type="button"]{
     padding:2px 7px 3px;
 }
 .ui-button-primary {
-	.button-variant(@body-bg, @brand-primary, #357ebd);
+	.ui-button-variant(@body-bg, @brand-primary, #357ebd);
 }
 .ui-button-warning {
-	.button-variant(@body-bg, @brand-warning, #eea236);
+	.ui-button-variant(@body-bg, @brand-warning, #eea236);
 }
 .ui-button-info {
-	.button-variant(@body-bg, @brand-info, #46b8da);
+	.ui-button-variant(@body-bg, @brand-info, #46b8da);
 }
 .ui-button-danger {
-	.button-variant(@body-bg, @brand-danger, #d43f3a);
+	.ui-button-variant(@body-bg, @brand-danger, #d43f3a);
 }
 .ui-button-inverse {
-	.button-variant(@body-bg, @gray-darker, #080808);
+	.ui-button-variant(@body-bg, @gray-darker, #080808);
 }
 .ui-button-success {
-	.button-variant(@body-bg, @brand-success, #4cae4c);
+	.ui-button-variant(@body-bg, @brand-success, #4cae4c);
 }
 .ui-button-error {
-	.button-variant(@body-bg, @brand-primary, #357ebd);
+	.ui-button-variant(@body-bg, @brand-primary, #357ebd);
 }
 
 /* to make room for the icon, a width needs to be set here */
@@ -202,11 +202,11 @@ input.ui-button {
 .ui-buttonset {
 	margin-right: 7px;
 	.ui-state-active {
-		color: #ffffff;
+		color: @ui-white;
 		background-color: #428bca;
 		border-color: #357ebd;
 		&.ui-state-hover {
-			color: #ffffff;
+			color: @ui-white;
 			background-color: #3276b1;
 			border-color: #285e8e;
 		}
