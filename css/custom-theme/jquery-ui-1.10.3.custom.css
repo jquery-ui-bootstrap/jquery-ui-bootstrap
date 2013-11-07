@@ -226,7 +226,7 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
- * 
+ *
  *
  * To view and modify this theme, visit http://jqueryui.com/themeroller/
  */
@@ -1023,7 +1023,7 @@
 .ui-button-primary:hover,
 .ui-button-success:hover,
 .ui-button-info:hover,
-.ui-button-danger:hover, 
+.ui-button-danger:hover,
 .ui-button-warning:hover,
 .ui-button-inverse:hover{
 	color: #ffffff;
@@ -1173,7 +1173,7 @@ input.ui-button {
 button.ui-button::-moz-focus-inner {
 	border: 0;
 	padding: 0;
-} 
+}
 
 
 /*
@@ -1211,7 +1211,7 @@ button.ui-button::-moz-focus-inner {
 	  line-height: 0;
 	}
 
-	li.ui-menu-item { 
+	li.ui-menu-item {
 	  /* This fixes the IE10 issue (jQuery UI Issue #8844)*/
 	  list-style-type: none;
 	}
@@ -1414,7 +1414,9 @@ button.ui-button::-moz-focus-inner {
 	outline: medium none;
 	/*top: 10%;
 	width: 560px;*/
-	z-index: 1050;
+
+	/* juristr: fixes multiple modal ui-dialogs, otherwise it doesn't work */
+	/*z-index: 1050;*/
 }
 .ui-dialog .ui-dialog-titlebar {
 	/*padding: .4em 1em;*/
@@ -1479,7 +1481,7 @@ button.ui-button::-moz-focus-inner {
 	padding: 1px;
 	filter:alpha(opacity=90);
 	-moz-opacity: 0.90;
-	opacity: 0.90;	 
+	opacity: 0.90;
 }
 
 .ui-dialog .ui-dialog-content {
