@@ -20,7 +20,8 @@
 	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
-	border: 1px solid #ccc;
+	border: 1px solid @ui-btn-default-border;
+	background-color:@ui-white;
 	.ui-user-select(none);
 	&:focus {
 	  .ui-tab-focus()
@@ -52,16 +53,15 @@ fieldset[disabled] ui-button.ui-state-active {
   border-color: #cccccc;
 }
 
-.ui-btn-lg{
+.ui-btn-large{
 	.btn-lg;
 }
 
-.ui-btn-sm,
-.ui-btn-xs {
+.ui-btn-small{
 	.btn-sm;
 }
 
-.ui-btn-xs {
+.ui-btn-mini {
 	.btn-xs;
 }
 
@@ -85,28 +85,29 @@ input[type="submit"], input[type="reset"], input[type="button"]{
 }
 
 .ui-button-text-icon-primary {
-    padding:2px 7px 3px;
+padding:2px 7px 3px;
 }
+
 .ui-button-primary {
-	.ui-button-variant(@body-bg, @brand-primary, #357ebd);
+	.ui-button-variant(@ui-body-bg, @ui-brand-primary, @ui-brand-primary);
 }
 .ui-button-warning {
-	.ui-button-variant(@body-bg, @brand-warning, #eea236);
+	.ui-button-variant(@ui-body-bg, @ui-brand-warning, @ui-brand-warning);
 }
 .ui-button-info {
-	.ui-button-variant(@body-bg, @brand-info, #46b8da);
+	.ui-button-variant(@ui-body-bg, @ui-brand-info, @ui-brand-info);
 }
 .ui-button-danger {
-	.ui-button-variant(@body-bg, @brand-danger, #d43f3a);
+	.ui-button-variant(@ui-body-bg, @ui-brand-danger, @ui-brand-danger);
 }
 .ui-button-inverse {
-	.ui-button-variant(@body-bg, @gray-darker, #080808);
+	.ui-button-variant(@ui-body-bg, @ui-gray-darker, @ui-gray-darker);
 }
 .ui-button-success {
-	.ui-button-variant(@body-bg, @brand-success, #4cae4c);
+	.ui-button-variant(@ui-body-bg, @ui-brand-success, @ui-brand-success);
 }
 .ui-button-error {
-	.ui-button-variant(@body-bg, @brand-primary, #357ebd);
+	.ui-button-variant(@ui-body-bg, @ui-brand-primary, @ui-brand-primary);
 }
 
 /* to make room for the icon, a width needs to be set here */
@@ -130,7 +131,7 @@ button.ui-button-icons-only {
 
 .ui-button .ui-button-text {
 	display: block;
-	line-height: normal;
+	line-height: @ui-line-height-base;
 }
 
 .ui-button-icon-only .ui-button-text,
