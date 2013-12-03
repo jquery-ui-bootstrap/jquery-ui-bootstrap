@@ -1,7 +1,12 @@
-/*
- * Less'd version of jQuery UI Progressbar 1.10.0
+/*!
+ * jQuery UI Bootstrap v1.0 Alpha
  *
- * @see http://docs.jquery.com/UI/Progressbar#theming
+ * jQuery UI Progressbar 1.10.3
+ * http://jqueryui.com/tooltip/
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
+ * Created the LESS version by @dharapvj
+ * Released under MIT
  */
 .ui-progressbar {
 	height:2em;
@@ -14,14 +19,20 @@
 	
 	text-align: left;
 	.ui-progressbar-value {
+		margin: 0px;
 		height:100%;
 		color: @ui-white; /*this can be removed if ui-widget-header is blue*/
-		#ui-gradient > .vertical( @ui-link-color, @ui-link-hover-color );
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-		border-color: @ui-blue-dark @ui-blue-dark @ui-blue;
-		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-		.ui-box-shadow( inset 0 -1px 0 rgba(0, 0, 0, 0.15) );
+		background-color: #428BCA;
 		.ui-box-sizing(border-box);
 		.ui-transition( width 0.6s ease);
 	}
+	.ui-progressbar-overlay{
+		#ui-gradient > .vertical( @ui-link-color, @ui-link-hover-color );	// FIXME - Verify that this matches the actual CSS outcome.
+		background-size: 40px 40px;
+		.ui-animation( progress-bar-stripes 2s linear infinite);
+	}		
+}
+
+.ui-progressbar-indeterminate .ui-progressbar-value {
+	background-image: none;
 }
