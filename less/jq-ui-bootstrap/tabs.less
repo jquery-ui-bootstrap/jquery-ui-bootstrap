@@ -55,46 +55,35 @@
 				background-color: whiteSmoke;
 			}
 		}
-		
-		li.ui-tabs-selected a,
-		li.ui-state-disabled a,
-		li.ui-state-processing a,
-		li.ui-tabs-active a, li.ui-tabs-active a:hover, li.ui-tabs-selected a:hover {
-			background-color: @ui-white;
+		li.ui-tabs-active a{
 			border: 1px solid #ddd;
-			border-bottom-color: @ui-white;
+			border-bottom: 1px solid #fff;
+			background-color: #fff;
+			color: #555;
+		}
+		li.ui-tabs-active:hover{
+			background: #fff;
 			cursor: text;
-			color: @ui-gray;
-			outline:none;
 		}
-		li:hover, li a:hover{
-		    border-color: whiteSmoke whiteSmoke #ddd; // TODO - move whiteSmoke to variable
-            text-decoration: none;
-            background-color: whiteSmoke; // TODO - move whiteSmoke to variable
+		li.ui-tabs-active a,
+		li.ui-state-disabled a,
+		li.ui-tabs-loading a {
+			cursor: text;
 		}
-		li.ui-tabs-selected:hover, li.ui-tabs-active:hover {
-          background:@ui-white;
-          outline:none;
-        }
 	}
 	/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-	.ui-tabs-panel { 
-		display: block; 
+	.ui-tabs-panel {
+		display: block;
 		margin: 1em 0;
-		border: 0; 
+		border: 0;
 		.ui-border-radius(0);
-		padding: 1px 0; 
-		background: none; 
+		padding: 1px 0;
+		background: none;
+	}
+	.ui-tabs-hide {
+		display: none !important;
+	}
+	.ui-tabs-nav li {
+		filter:none;
 	}
 }
-
-.ui-tabs .ui-tabs-hide { display: none !important; }
-
-/* IE fix for background inheritance from ui-widget*/
-.ui-tabs .ui-tabs-nav li{
-	filter:none;
-}
-
-/*.ui-tabs-nav.ui-corner-all{
-    .ui-border-radius( 0 );
-} */

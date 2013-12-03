@@ -108,22 +108,88 @@
 }
 .ui-draggable .ui-dialog-titlebar { cursor: move; }
 
-/* VJ MORE FIXES REQUIRED BELOW */
-
-.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button.ui-state-focus{
-	.ui-button-primary;
-	//overrides so it looks normal but gets hover too
-	background-position:0;
-	background-color: mix(@ui-btn-primary-bg, @ui-btn-primary-bg-highlight, 60%);
-	&:hover, &:active {
-	    background-position:0 -15px;
-        background-color: @ui-btn-primary-bg-highlight;
-        *background-color: darken(@ui-btn-primary-bg-highlight, 5%);
-    }
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+	&.ui-state-hover{
+		color: #ffffff;
+		background-color: #3276b1;
+		border-color: #285e8e;
+	}
 }
 
 /***Dialog fixes**/
-.ui-dialog-buttonset .ui-button:focus {
-    //Fixes for FF dotted box
-    outline:none;
+.ui-dialog-buttonset .ui-button:not(:first-child) {
+    cursor: pointer;
+    display: inline-block;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    .ui-transition( 0.1s linear all);
+    overflow: visible;
+	&.ui-state-hover{
+		color: #333333;
+		background-color: #ebebeb;
+		border-color: #adadad;
+		text-decoration: none;
+	}
+}
+
+.ui-dialog-buttonset .ui-button{
+	/* ui-dialog-buttonset UI info */
+	&.ui-button-info{
+		color: #ffffff;
+		background-color: #5bc0de;
+		border-color: #46b8da;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #39b3d7;
+			border-color: #269abc;
+		}
+	}
+	/* ui-dialog-buttonset UI success */
+	&.ui-button-success{
+		color: #ffffff;
+		background-color: #5cb85c;
+		border-color: #4cae4c;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #47a447;
+			border-color: #398439;
+		}
+	}
+	/* ui-dialog-buttonset UI warning */
+	&.ui-button-warning{
+		color: #ffffff;
+		background-color: #f0ad4e;
+		border-color: #eea236;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #ed9c28;
+			border-color: #d58512;
+		}
+	}
+	/* ui-dialog-buttonset UI Danger */
+	&.ui-button-danger{
+		color: #ffffff;
+		background-color: #d9534f;
+		border-color: #d43f3a;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #d2322d;
+			border-color: #ac2925;
+		}
+	}
+	/* ui-dialog-buttonset UI Inverse */
+	&.ui-button-inverse{
+		color: #ffffff;
+		background-color: #222222;
+		border-color: #080808;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #363636;
+			border-color: #000000;
+		}
+	}
 }
