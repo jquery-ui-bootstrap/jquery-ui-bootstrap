@@ -96,7 +96,7 @@
 }
 
 .ui-opacity(@opacity) {
-	.opacity(@opacity);
+	.opacity(@opacity); // removed "/100" so that same values can be used via .opacity and .ui-opacity mixins.
 }
 
 .ui-reset-filter(){
