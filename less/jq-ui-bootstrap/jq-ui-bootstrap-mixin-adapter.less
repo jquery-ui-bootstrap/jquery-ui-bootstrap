@@ -96,7 +96,7 @@
 }
 
 .ui-opacity(@opacity) {
-	.opacity(@opacity / 100);
+	.opacity(@opacity); // removed "/100" so that same values can be used via .opacity and .ui-opacity mixins.
 }
 
 .ui-reset-filter(){
@@ -113,4 +113,12 @@
 
 .ui-tab-focus() {
 	.tab-focus();
+}
+
+.ui-animation(@anim) {
+  -webkit-animation: @anim;
+     -moz-animation: @anim;
+      -ms-animation: @anim;
+       -o-animation: @anim;
+          animation: @anim;
 }

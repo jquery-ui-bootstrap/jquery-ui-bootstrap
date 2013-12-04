@@ -1293,8 +1293,6 @@ button.ui-button::-moz-focus-inner {
 	background-position: -65px -16px;
 }
 
-/********** VJ - Move to Less - End *************/
-
 /*
  * jQuery UI Dialog 1.10.3
  *
@@ -1643,7 +1641,6 @@ button.ui-button::-moz-focus-inner {
 	top: 0;
 }
 
-
 /*
  * jQuery UI Tabs 1.10.3
  *
@@ -1750,7 +1747,6 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs .ui-tabs-nav li {
 	filter:none;
 }
-
 
 /*
  * jQuery UI Tooltip 1.10.3
@@ -2247,8 +2243,6 @@ body .ui-tooltip {
 	background-image: none;
 }
 
-/********** VJ - Move to Less - Start *************/
-
 /*** Input field styling from Bootstrap **/
 
  input, textarea {
@@ -2307,7 +2301,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/********** VJ - Move to Less - End *************/
 
 /**Toolbar**/
 
@@ -2329,6 +2322,9 @@ input[type="search"]::-webkit-search-decoration {
 	-moz-box-shadow: inset 0 1px 0 #ffffff; /* Firefox 3.6 */
 	box-shadow: inset 0 1px 0 #ffffff;
 }
+
+/********** VJ - Move to Less - End *************/
+
 /** File Input **/
 
 .customfile-button{
