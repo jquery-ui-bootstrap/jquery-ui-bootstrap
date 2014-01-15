@@ -1,11 +1,12 @@
-/*
- * jQuery UI Datepicker 
+/*!
+ * jQuery UI Bootstrap v1.0 Alpha
  *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
+ * jQuery UI Datepicker 1.10.3
  * http://docs.jquery.com/UI/Datepicker#theming
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
+ * Created the LESS version by @dharapvj
+ * Released under MIT
  */
 .ui-datepicker { 
 	width: 17em; 
@@ -14,11 +15,11 @@
 	.ui-datepicker-header { 
 		position:relative; 
 		padding:.2em 0; 
-		border:0px;
+		border:0;
 		font-weight: bold;
 		width: 100%;
 		padding: 4px 0;
-		background-color: @ui-form-actions-background;
+		background-color: @table-bg-hover;
 		color: @ui-gray;
 	}
 	.ui-datepicker-prev,
@@ -215,30 +216,33 @@
 		color: @ui-gray;
 		text-align: center;
 		filter: none;
-		&:hover{
-			background:@ui-link-color;
-			color:@ui-white;
-			.ui-border-radius( 4px );
-		}
 	}
 	
 	.ui-state-highlight{
-		color: #404040;
-		background: #eedc94;
-		#ui-gradient > .vertical (#fceec1, #eedc94);
-		.ui-reset-filter();
+		color: @ui-white;
+		background: @label-info-bg;
+		border-color: #46b8da;
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-		border-color: #eedc94 #eedc94 #e4c652;
 		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 		.ui-border-radius(4px);
 	}
 	
 	.ui-state-active {
-		background:@ui-gray-light;
+		color:@gray-dark;
+		background:@ui-gray-lighter;
+		border-color: #adadad;
 		margin-bottom:0px;
 		font-size:normal;
 		text-shadow: 0px;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		.ui-border-radius( 4px );
+	}
+	.ui-state-hover{
 		color:@ui-white;
+		background:@label-primary-bg;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		border-color: #357ebd;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 		.ui-border-radius( 4px );
 	}
 }

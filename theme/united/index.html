@@ -10,7 +10,7 @@
             <!-- Le styles -->
 			<!-- Use the raw LESS for debugging purposes -->
 			<!-- <link rel="stylesheet/less" href="../../less/style2.less">
-			<script src="../../assets/js/less-1.4.2.min.js"></script> -->
+			<script src="../../assets/js/vendor/less-1.4.2.min.js"></script -->
 			<!-- for PROD use the compiled CSS -->
 			<link type="text/css" href="../../less/style2.min.css" rel="stylesheet" />
             <link rel="stylesheet" href="../../assets/css/font-awesome.min.css">
@@ -18,14 +18,15 @@
             <link rel="stylesheet" href="../../assets/css/font-awesome-ie7.min.css">
             <![endif]-->
             <!--[if lt IE 9]>
-            <link rel="stylesheet" href="../../css/custom-theme/jquery.ui.1.10.2.ie.css">
+            <link rel="stylesheet" href="../../css/custom-theme/jquery.ui.1.10.3.ie.css">
             <![endif]-->
             <link rel="stylesheet" href="../../assets/css/docs.css">
             <link rel="stylesheet" href="../../assets/js/google-code-prettify/prettify.css">
 
             <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
             <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		      <script src="../../assets/js/vendor/html5shiv.js" type="text/javascript"></script>
+		      <script src="../../assets/js/vendor/respond.min.js" type="text/javascript"></script>
             <![endif]-->
 
             <!-- Le fav and touch icons -->
@@ -41,17 +42,18 @@
 
         <!-- Navbar
         ================================================== -->
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
+    <header class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
+               <a class="navbar-brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
+			</div>
+            <nav class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
                             <li class="active">
                                 <a href="./index.html">Home</a>
                             </li>
@@ -74,66 +76,65 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									Switch Theme <b class="caret"></b>
 								</a>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+								<ul class="dropdown-menu">
 									<li><a tabindex="-1" href="../../index.html">Default Bootstrap Theme (Non LESS'd)</a></li>
 									<li><a tabindex="-1" href="./index.html">United Theme via Bootswatch (LESS'd)</a></li>
 									<li><a tabindex="-1" href="../base/index.html">Default Bootstrap Theme (LESS'd)</a></li>
 								</ul>
                             </li>
                         </ul>
-                        <div id="twitter-share" class="pull-right">
+                        <div id="twitter-share" class="navbar-right">
                             <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Subhead
-        ================================================== -->
-        <header class="jumbotron subhead" id="overview">
-            <div class="container">
-                <h1>jQuery UI Bootstrap</h1>
-                <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
+                    </nav>
             </div>
         </header>
 
 
-        <div class="container">
+        <!-- Subhead
+        ================================================== -->
+        <header class="bs-header" id="overview">
+            <div class="container">
+                <h1>jQuery UI Bootstrap</h1>
+                <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v1.0 alpha).</p>
+            </div>
+        </header>
+
+
+        <div class="container" id="layout">
         <!-- Docs nav ================================================== -->
         <div class="row">
-        <div class="span3 bs-docs-sidebar">
-            <ul class="nav nav-list bs-docs-sidenav">
+    <div class="col-lg-3 col-sm-3" id="sidebar">
+      <div class="bs-sidebar hidden-print" role="complementary">
+        <ul class="nav bs-sidenav">
                 <li><a href="#block-download"><i class="icon-chevron-right"></i> Download</a></li>
                 <li><a href="#block-documentation"><i class="icon-chevron-right"></i> Getting Started</a></li>
                 <li><a href="#block-installation"><i class="icon-chevron-right"></i> Installation</a></li>
             </ul>
         </div>
-        <div class="span9">
+    </div>
+    <div class="col-lg-9 col-sm-9" id="article">
             <!-- Download ================================================== -->
             <section id="block-download">
                 <div class="page-header">
-                    <h1>1. Download</h1>
+                <h1><span class="label label-default">1</span> Download</h1>
                 </div>
-                <div class="row-fluid">
                     <p class="docs-lead">
-                        Welcome! This is a live preview of jQuery UI Bootstrap - a project we started to bring the beauty of Twitter <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> to jQuery UI widgets.
+                    Welcome! This is a live preview of jQuery UI Bootstrap - a project we started to bring the beauty of Twitter <a class="targetblank" href="http://getbootstrap.com">Bootstrap</a> to jQuery UI widgets.
                         With this theme, not only do you get the ability to use Bootstrap-themed widgets, but you can now also use (most) of Twitter Bootstrap side-by-wide with it without components breaking visually.
                     </p>
                     <p>
                         <a class="download-btn ui-button-primary" href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/v0.5pre">Download stable (v0.5)</a>
-                        <a class="download-btn" href="https://github.com/addyosmani/jquery-ui-bootstrap/zipball/master" >Download Latest (dev)</a>
+                <a class="download-btn" href="https://github.com/addyosmani/jquery-ui-bootstrap/archive/masterbs3.zip" >Download Latest (dev)</a>
                     </p>
-                </div>
                 <div class="alert alert-info">
                     <span class="icon-info-sign"></span> This theme's support for more third-party widgets may improve over-time, based on requests and the popularity of the widgets.
                 </div>
             </section>
             <section id="block-documentation">
                 <div class="page-header">
-                    <h1>2. Start with jQuery UI Bootstrap</h1>
+                <h1><span class="label label-default">2</span> Start with jQuery UI Bootstrap</h1>
                 </div>
                 <h2>Compatibility jQuery UI and Twitter Bootstrap</h2>
 
@@ -179,12 +180,12 @@
                     <tr>
                         <td>Button</td>
                         <td><div class="label label-success"><span class="icon-ok"></span></div></td>
-                        <td><div class="label label-important"><span class="icon-remove"></span></div></td>
+                    <td><div class="label label-warning"><span class="icon-remove"></span></div></td>
                     </tr>
                     <tr>
                         <td>Tooltip</td>
                         <td><div class="label label-success"><span class="icon-ok"></span></div></td>
-                        <td><div class="label label-important"><span class="icon-remove"></span></div></td>
+                    <td><div class="label label-warning"><span class="icon-remove"></span></div></td>
                     </tr>
                     </tbody>
                 </table>
@@ -192,16 +193,22 @@
                     <span class="icon-lightbulb icon-large"></span>  Select custom jQuery UI components (eg exclude tooltip)
                 </div>
                 <h3> Twitter Bootstrap components</h3>
-                <div class="row-fluid">
-                    <ul class="thumbnails">
-                        <li class="span3">
-                            <a href="#"class="thumbnail"><img src="../../assets/img/bootstrap-jquery-plugins-01.png" alt="bootstrap-jquery-plugins-01" width="295" height="265" class="alignnone size-full wp-image-281" /></a>
+            <div class="row">
+                <ul class="list-unstyled">
+                    <li class="col-sm-6 col-lg-3 col-sm-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../../assets/img/bootstrap-jquery-plugins-01.png" alt="bootstrap-jquery-plugins-01" width="295" height="265" class="alignnone size-full wp-image-281" />
+                        </a>
                         </li>
-                        <li class="span3">
-                            <a href="#"class="thumbnail"><img src="../../assets/img/bootstrap-jquery-plugins-02.png" alt="bootstrap-jquery-plugins-02" width="295" height="265" class="alignnone size-full wp-image-282" /></a>
+                    <li class="col-sm-6 col-lg-3 col-sm-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../../assets/img/bootstrap-jquery-plugins-02.png" alt="bootstrap-jquery-plugins-02" width="295" height="265" class="alignnone size-full wp-image-282" />
+                        </a>
                         </li>
-                        <li class="span3">
-                            <a href="#"class="thumbnail"><img src="../../assets/img/bootstrap-js-components.png" alt="bootstrap-js-components" width="250" height="236" class="alignnone size-full wp-image-274" /></a>
+                    <li class="col-sm-6 col-lg-3 col-sm-3">
+                        <a href="#" class="thumbnail">
+                            <img src="../../assets/img/bootstrap-js-components.png" alt="bootstrap-js-components" width="250" height="236" class="alignnone size-full wp-image-274" />
+                        </a>
                         </li>
                     </ul>
                 </div>
@@ -220,11 +227,11 @@
                     <tr>
                         <td>Button</td>
                         <td><div class="label label-success"><span class="icon-ok"></span></div></td>
-                        <td><div class="label label-important"><span class="icon-remove"></span></div></td>
+                    <td><div class="label label-warning"><span class="icon-remove"></span></div></td>
                     </tr>
                     <tr>
                         <td>Tooltip + popover</td>
-                        <td><div class="label label-important"><span class="icon-remove"></span></div></td>
+                    <td><div class="label label-warning"><span class="icon-remove"></span></div></td>
                         <td><div class="label label-success"><span class="icon-ok"></span></div></td>
                     </tr>
                     </tbody>
@@ -241,7 +248,7 @@
             </section>
             <section id="block-installation">
                 <div class="page-header">
-                    <h1>3. Installation</h1>
+                <h1><span class="label label-default">3</span> Installation</h1>
                 </div>
                 <ol>
                     <li>Download the archive</li>
@@ -258,10 +265,10 @@
 
 <!-- Footer
 ================================================== -->
-<footer class="footer">
+<footer class="bs-footer">
     <div class="container">
         <div class="row">
-          <div class="span3">
+            <div class="col-lg-3 col-sm-3">
             <h3><span class="icon-envelope"></span> Contact</h3>
             <ul class="icons">
               <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
@@ -269,32 +276,32 @@
               <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
             </ul>
           </div>
-          <div class="span9">
-            <div class="span4">
+            <div class="col-lg-4 col-sm-4">
                 <h3><span class="icon-group"></span> Team</h3>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                     <li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Addy Osmani</a></li>
                     <li>Chief Maintainer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Aurélien Gérits</a></li>
                 </ul>
             </div>
-            <div class="span4">
+            <div class="col-lg-5 col-sm-5">
                 <h3><span class="icon-lightbulb"></span> Credits</h3>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                     <li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
                     <li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
                 </ul>
             </div>
           </div>
         </div>
-    </div>
 </footer>
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../../assets/js/jquery-1.9.1.min.js"></script>
-<script src="../../assets/js/bootstrap.min.js"></script>
-<script src="../../assets/js/holder.js"></script>
-<script src="../../assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../../assets/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="../../assets/js/vendor/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="../../assets/js/vendor/bootstrap.js"></script>
+<script src="../../assets/js/vendor/holder.js"></script>
+<script src="../../assets/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="../../assets/js/google-code-prettify/prettify.js"></script>
 <script src="../../assets/js/docs.js"></script>
 <script src="../../assets/js/demo.js"></script>
+
 </body>
 </html>

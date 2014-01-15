@@ -1,40 +1,49 @@
-/*
- * jQuery UI Dialog 
+/*!
+ * jQuery UI Bootstrap v1.0 Alpha
  *
- * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
+ * jQuery UI Dialog 1.10.3
  * http://docs.jquery.com/UI/Dialog#theming
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter Bootstrap
+ * Created the LESS version by @dharapvj
+ * Released under MIT
  */
 .ui-dialog { 
 	position: absolute; 
+	top: 0;
+	left: 0;
 	padding: .2em; 
 	width: 300px; 
 	overflow: hidden; 
+	outline: 0;
+	background-clip: padding-box;
+	background-color: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: @border-radius-large;
 	.ui-box-shadow(0 3px 7px rgba(0, 0, 0, 0.3));
+	outline: medium none;
+	z-index: 1050;
 	.ui-dialog-titlebar { 
 		/*padding: .4em 1em;*/
 		position: relative;
-		padding:5px 15px;
 		border:0px 0px 0px 1px solid;
 		border-color: @ui-white;
 		padding: 5px 15px;
 		font-size: 18px;
 		text-decoration:none;
-		background:none;
 		#ui-border-radius > .bottomRight ( 0px );
 		#ui-border-radius > .bottomLeft ( 0px );
 		border-bottom:1px solid darken(@ui-gray-lighter, 14);
 	}
 	.ui-dialog-title {
 		float: left;
-		/*margin: .1em 16px .1em 0; */
-		color:@ui-gray-dark;
+		color:@ui-gray-dark; // FIXME - this needs to be #404040
 		font-weight:bold;
 		margin-top:5px;
 		margin-bottom:5px;
-		padding:5px;
+		padding:5px 0;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 	.ui-dialog-titlebar-close {
 		position: absolute;
@@ -48,12 +57,11 @@
 		font-weight: bold;
 		line-height: 13.5px;
 		text-shadow: 0 1px 0 @ui-white;
-		.ui-opacity( 25 );
+		.ui-opacity(.25);
 		background: none;
 		border-width: 0;
 		border: none;
 		.box-shadow( none);
-		
 	}
 	.ui-dialog-titlebar-close span { 
 		display: block; 
@@ -61,16 +69,14 @@
 		text-indent:9999px;
 	}
 	.ui-dialog-titlebar-close:hover, .ui-dialog-titlebar-close:focus { 
-		padding: 0;   
-		.opacity( 90 );
+		.opacity(.9);
 	}
 	.ui-dialog-content { 
 		position: relative; 
 		border: 0; 
-		padding: .5em 1em; 
+		padding: 15px; 
 		background: none; 
 		overflow: auto; 
-		zoom: 1; 
 	}
 	.ui-dialog-buttonpane {
 		text-align: left;
@@ -82,7 +88,6 @@
 		border-top: 1px solid darken(@ui-gray-lighter,10%);
 		#ui-border-radius > .border( 0, 0, 6px, 6px );
 		.ui-box-shadow( inset 0 1px 0 @ui-white );
-		zoom: 1;
 		margin-bottom: 0;
 	}
 	.ui-dialog-buttonpane .ui-dialog-buttonset {
@@ -101,20 +106,88 @@
 }
 .ui-draggable .ui-dialog-titlebar { cursor: move; }
 
-.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button.ui-state-focus{
-	.ui-button-primary;
-	//overrides so it looks normal but gets hover too
-	background-position:0;
-	background-color: mix(@ui-btn-primary-bg, @ui-btn-primary-bg-highlight, 60%);
-	&:hover, &:active {
-	    background-position:0 -15px;
-        background-color: @ui-btn-primary-bg-highlight;
-        *background-color: darken(@ui-btn-primary-bg-highlight, 5%);
-    }
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+	&.ui-state-hover{
+		color: #ffffff;
+		background-color: #3276b1;
+		border-color: #285e8e;
+	}
 }
 
 /***Dialog fixes**/
-.ui-dialog-buttonset .ui-button:focus {
-    //Fixes for FF dotted box
-    outline:none;
+.ui-dialog-buttonset .ui-button:not(:first-child) {
+    cursor: pointer;
+    display: inline-block;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    .ui-transition( 0.1s linear all);
+    overflow: visible;
+	&.ui-state-hover{
+		color: #333333;
+		background-color: #ebebeb;
+		border-color: #adadad;
+		text-decoration: none;
+	}
+}
+
+.ui-dialog-buttonset .ui-button{
+	/* ui-dialog-buttonset UI info */
+	&.ui-button-info{
+		color: #ffffff;
+		background-color: #5bc0de;
+		border-color: #46b8da;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #39b3d7;
+			border-color: #269abc;
+		}
+	}
+	/* ui-dialog-buttonset UI success */
+	&.ui-button-success{
+		color: #ffffff;
+		background-color: #5cb85c;
+		border-color: #4cae4c;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #47a447;
+			border-color: #398439;
+		}
+	}
+	/* ui-dialog-buttonset UI warning */
+	&.ui-button-warning{
+		color: #ffffff;
+		background-color: #f0ad4e;
+		border-color: #eea236;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #ed9c28;
+			border-color: #d58512;
+		}
+	}
+	/* ui-dialog-buttonset UI Danger */
+	&.ui-button-danger{
+		color: #ffffff;
+		background-color: #d9534f;
+		border-color: #d43f3a;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #d2322d;
+			border-color: #ac2925;
+		}
+	}
+	/* ui-dialog-buttonset UI Inverse */
+	&.ui-button-inverse{
+		color: #ffffff;
+		background-color: #222222;
+		border-color: #080808;
+		&.ui-state-hover{
+			color: #ffffff;
+			background-color: #363636;
+			border-color: #000000;
+		}
+	}
 }
