@@ -1,3 +1,6 @@
+.ui-jqgrid {
+	box-sizing: content-box;
+}
 .ui-jqgrid .ui-jqgrid-view,.ui-jqgrid .ui-paging-info, .ui-jqgrid .ui-pg-table,
 .ui-jqgrid .ui-pg-selbox {
     font-size: 14px;
@@ -21,7 +24,6 @@
 
 .ui-jqgrid .ui-search-toolbar input[type="text"]{
     font-size: 12px;
-    height: 15px;
     border: 1px solid #CCCCCC;
     border-radius: 4px;                
 }                       
@@ -48,8 +50,8 @@
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-.ui-jqgrid .ui-jqgrid-htable th span.ui-jqgrid-resize  {
-    height: 45px !important;
+.ui-jqgrid .ui-jqgrid-htable th {
+	height: auto;
 }
 
 .ui-jqgrid .ui-jqgrid-htable th div {
@@ -120,6 +122,7 @@
 .ui-jqgrid .ui-pg-input {
     font-size: inherit;
     width: auto;
+    box-sizing: content-box;
 }
 .ui-jqgrid .ui-pg-selbox {
     display: block;
