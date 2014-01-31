@@ -85,14 +85,18 @@
 	.button-variant(@color; @background; @border);
 }
 
+.ui-button-size (@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large){
+	.button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+
 .ui-btn-lg{
-    .btn-lg;
+	.ui-button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
 }
 .ui-btn-xs{
-    .btn-xs;
+	.ui-button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
 .ui-btn-sm{
-    .btn-sm;
+    padding: 1px 5px;
 }
 
 .ui-opacity(@opacity) {
