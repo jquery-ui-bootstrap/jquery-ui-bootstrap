@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Side By Side Comparisons</title>
+		<link href="../less/style.min.css" rel="stylesheet" type="text/css" />
+		<style>
+			.modal-dialog .modal-content{
+				width:auto !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Side By Side Comparisons</h1>
+
+			<h3>Form - Buttons Types</h3>
+			<table class="table">
+				<tr>
+					<th>Component</th>
+					<th>Unstyled</th>
+					<th>Bootstrap</th>
+					<th>JQueryUI -> Bootstrap</th>
+				</tr>
+				<tr>
+					<td>Default</td>
+					<td><button type="button" class="">Default</button></td>
+					<td><button type="button" class="btn btn-default">Default</button></td>
+					<td><button type="button" class="ui-button ui-widget ui-corner-all"><span class="ui-button-text">Default</span></button></td>
+				</tr>
+				<tr>
+					<td>Primary</td>
+					<td><button type="button" class="">Primary</button></td>
+					<td><button type="button" class="btn btn-primary">Primary</button></td>
+					<td><button type="button" class="ui-button-primary ui-button ui-widget ui-corner-all"><span class="ui-button-text">Primary</span></button></td>
+				</tr>
+				<tr>
+					<td>Success</td>
+					<td><button type="button" class="">Success</button></td>
+					<td><button type="button" class="btn btn-success">Success</button></td>
+					<td><button type="button" class="ui-button-success ui-button ui-widget ui-corner-all"><span class="ui-button-text">Success</span></button></td>
+				</tr>
+				<tr>
+					<td>Info</td>
+					<td><button type="button" class="">Info</button></td>
+					<td><button type="button" class="btn btn-info">Info</button></td>
+					<td><button type="button" class="ui-button-info ui-button ui-widget ui-corner-all"><span class="ui-button-text">Info</span></button></td>
+				</tr>
+				<tr>
+					<td>Warning</td>
+					<td><button type="button" class="">Warning</button></td>
+					<td><button type="button" class="btn btn-warning">Warning</button></td>
+					<td><button type="button" class="ui-button-warning ui-button ui-widget ui-corner-all"><span class="ui-button-text">Warning</span></button></td>
+				</tr>
+				<tr>
+					<td>Danger</td>
+					<td><button type="button" class="">Danger</button></td>
+					<td><button type="button" class="btn btn-danger">Danger</button></td>
+					<td><button type="button" class="ui-button-danger ui-button ui-widget ui-corner-all"><span class="ui-button-text">Danger</span></button></td>
+				</tr>
+				<tr>
+					<td>Link</td>
+					<td><button type="button" class="">Link</button></td>
+					<td><button type="button" class="btn btn-link">Link</button></td>
+					<td>N/A</td>
+				</tr>
+			</table>
+
+			<h3>Form - Buttons Sizes</h3>
+			<table class="table">
+				<tr>
+					<th>Component</th>
+					<th>Unstyled</th>
+					<th>Bootstrap</th>
+					<th>JQueryUI -> Bootstrap</th>
+				</tr>
+				<tr>
+					<td>Large</td>
+					<td>
+						<button type="button" class="">Large button</button>
+						<button type="button" class="">Large button</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-primary btn-lg">Large button</button>
+						<button type="button" class="btn btn-default btn-lg">Large button</button>
+					</td>
+					<td>
+						<button class="ui-button ui-btn-large ui-widget ui-corner-all ui-button-primary" role="button" aria-disabled="false"><span class="ui-button-text">Large button</span></button>
+						<button class="ui-button ui-btn-large ui-widget ui-corner-all" role="button" aria-disabled="false"><span class="ui-button-text">Large button</span></button>
+					</td>
+				</tr>
+				<tr>
+					<td>Default</td>
+					<td>
+						<button type="button" class="">Default button</button>
+						<button type="button" class="">Default button</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-primary">Default button</button>
+						<button type="button" class="btn btn-default">Default button</button>
+					</td>
+					<td>
+						<button class="ui-button ui-widget ui-corner-all ui-button-primary" role="button" aria-disabled="false"><span class="ui-button-text">Default button</span></button>
+						<button class="ui-button ui-widget ui-corner-all" role="button" aria-disabled="false"><span class="ui-button-text">Default button</span></button>
+					</td>
+				</tr>
+				<tr>
+					<td>Small</td>
+					<td>
+						<button type="button" class="">Small button</button>
+						<button type="button" class="">Small button</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-primary btn-sm">Small button</button>
+						<button type="button" class="btn btn-default btn-sm">Small button</button>
+					</td>
+					<td>
+						<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-focus" role="button" aria-disabled="false"><span class="ui-button-text">Small button</span></button>
+						<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Small button</span></button>
+					</td>
+				</tr>
+				<tr>
+					<td>Mini</td>
+					<td>
+						<button type="button" class="">Mini button</button>
+						<button type="button" class="">Mini button</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-primary btn-xs">Mini button</button>
+						<button type="button" class="btn btn-default btn-xs">Mini button</button>
+					</td>
+					<td>
+						<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-focus" role="button" aria-disabled="false"><span class="ui-button-text">Small button</span></button>
+						<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Small button</span></button>
+					</td>
+				</tr>
+			</table>
+
+
+			<h3>Dialogs</h3>
+			<table class="table">
+				<tr>
+					<th>Component</th>
+					<th>Unstyled</th>
+					<th style="width:50%">Bootstrap</th>
+					<th style="width:50%">JQueryUI -> Bootstrap</th>
+				</tr>
+				<tr>
+					<th>Dialog</th>
+					<td>N/A</td>
+					<td>
+						<div class="modal-dialog" style="padding:0;width:auto">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+									<h3>Modal title</h3>
+								</div>
+								<div class="modal-body">
+									<p>One fine body…</p>
+								</div>
+								<div class="modal-footer">
+									<button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+									<button class="btn btn-primary" type="button">Save changes</button>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" style="display: block;position:relative" tabindex="-1" role="dialog" aria-describedby="dialog_simple" aria-labelledby="ui-id-5">
+							<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+								<span id="ui-id-5" class="ui-dialog-title">Modal title</span><button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">X</span></button>
+							</div>
+							<div id="dialog_simple" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 18px; max-height: none; height: auto;">
+								<p>One fine body…</p>
+							</div>
+							<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+								<div class="ui-dialog-buttonset">
+									<button type="button" class="ui-button ui-widget ui-corner-all" role="button" aria-disabled="false"><span class="ui-button-text">Close</span></button>
+									<button type="button" class="ui-button ui-widget ui-corner-all ui-button-primary" role="button" aria-disabled="false"><span class="ui-button-text">Save Changes</span></button>
+								</div>
+							</div>
+							<div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>Modal</th>
+					<td>N/A</td>
+					<td>
+						<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade in" id="myModal" style="display: block;position:relative;padding:10px;">
+							<div class="modal-dialog" style="padding:0;width:auto">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+										<h3>Modal title</h3>
+									</div>
+									<div class="modal-body">
+										<p>One fine body…</p>
+									</div>
+									<div class="modal-footer">
+										<button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+										<button class="btn btn-primary" type="button">Save changes</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="ui-widget-overlay ui-front" style="position:relative;padding:10px;">
+							<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" style="display: block;position:relative" tabindex="-1" role="dialog" aria-describedby="dialog_simple" aria-labelledby="ui-id-5">
+								<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+									<span id="ui-id-5" class="ui-dialog-title">Modal title</span><button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">X</span></button>
+								</div>
+								<div id="dialog_simple" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 18px; max-height: none; height: auto;">
+									<p>One fine body…</p>
+								</div>
+								<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+									<div class="ui-dialog-buttonset">
+										<button type="button" class="ui-button ui-widget ui-corner-all" role="button" aria-disabled="false"><span class="ui-button-text">Close</span></button>
+										<button type="button" class="ui-button ui-widget ui-corner-all ui-button-primary" role="button" aria-disabled="false"><span class="ui-button-text">Save Changes</span></button>
+									</div>
+								</div>
+								<div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+								<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+								<div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+								<div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+								<div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+								<div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+								<div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+								<div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+	</body>
+</html>
