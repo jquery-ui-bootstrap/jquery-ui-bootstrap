@@ -11,7 +11,7 @@
 .ui-button {
 	cursor: pointer;
 	display: inline-block;
-	padding: 6px 12px;
+	padding: @ui-padding-base-vertical @ui-padding-base-horizontal;
   	margin-bottom: 0;
 	font-size: @font-size-base;
 	font-weight: normal;
@@ -88,26 +88,30 @@ input[type="submit"], input[type="reset"], input[type="button"]{
 padding:2px 7px 3px;
 }
 
+.ui-button {
+	.ui-button-variant(@ui-white, @ui-btn-default-bg, @ui-btn-default-border);
+}
+
 .ui-button-primary {
-	.ui-button-variant(@ui-body-bg, @ui-brand-primary, @ui-brand-primary);
+	.ui-button-variant(@ui-white, @ui-btn-primary-bg, @ui-btn-primary-border);
 }
 .ui-button-warning {
-	.ui-button-variant(@ui-body-bg, @ui-brand-warning, @ui-brand-warning);
+	.ui-button-variant(@ui-white, @ui-btn-warning-bg, @ui-btn-warning-border);
 }
 .ui-button-info {
-	.ui-button-variant(@ui-body-bg, @ui-brand-info, @ui-brand-info);
+	.ui-button-variant(@ui-white, @ui-btn-info-bg, @ui-btn-info-border);
 }
 .ui-button-danger {
-	.ui-button-variant(@ui-body-bg, @ui-brand-danger, @ui-brand-danger);
+	.ui-button-variant(@ui-white, @ui-btn-danger-bg, @ui-btn-danger-border);
 }
 .ui-button-inverse {
-	.ui-button-variant(@ui-body-bg, @ui-gray-darker, @ui-gray-darker);
+	.ui-button-variant(@ui-white, @ui-gray-darker, @ui-gray-darker);
 }
 .ui-button-success {
-	.ui-button-variant(@ui-body-bg, @ui-brand-success, @ui-brand-success);
+	.ui-button-variant(@ui-white, @ui-btn-success-bg, @ui-btn-success-border);
 }
 .ui-button-error {
-	.ui-button-variant(@ui-body-bg, @ui-brand-primary, @ui-brand-primary);
+	.ui-button-variant(@ui-white, @ui-btn-danger-bg, @ui-btn-danger-border);
 }
 
 /* to make room for the icon, a width needs to be set here */
