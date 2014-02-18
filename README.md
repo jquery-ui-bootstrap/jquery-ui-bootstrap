@@ -44,7 +44,7 @@ As one of the (currently) more popular open-source jQuery UI themes we would lov
 
 ##Demo
 
-For a live preview of the current theme, see [http://addyosmani.github.io/jquery-ui-bootstrap/](http://addyosmani.github.io/jquery-ui-bootstrap/).
+For a live preview of the current theme, see [http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/](http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/).
 
 ### Synchronize your fork
 
