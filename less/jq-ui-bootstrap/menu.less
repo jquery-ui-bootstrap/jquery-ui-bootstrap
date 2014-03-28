@@ -61,19 +61,34 @@
 		line-height: 1.5;
 		min-height: 0; /* support: IE7 */
 		font-weight: normal;
+
+		background-color: @ui-menu-item-a-bg;
+		border-color: @ui-menu-item-a-border;
+		color: @ui-menu-item-a-color;
+		
 		&.ui-corner-all{
 			border-radius: 0px;
 		}
+		
 		&.ui-state-focus, &.ui-state-active, &.ui-widget-content{
 			font-weight: bold;
 			margin: 0;
-			// FIXME - externalize colors
-			background-color: #428BCA;
-			border-color: #357EBD;
-			color: @ui-white;
 			display: block;
 			white-space: nowrap;
 		}
+
+		&.ui-state-active, &.ui-widget-content {
+			background-color: @ui-menu-item-a-active-bg;
+			border-color: @ui-menu-item-a-active-border;
+			color: @ui-menu-item-a-active-color;
+		}
+
+		&.ui-state-focus {
+			background-color: @ui-menu-item-a-focus-bg;
+			border-color: @ui-menu-item-a-focus-border;
+			color: @ui-menu-item-a-focus-color;
+		}
+		
 		/* Fix problem with border in ui-state-active */
 		.ui-state-active {
 			padding: 1px .4em;
