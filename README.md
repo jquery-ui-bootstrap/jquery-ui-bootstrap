@@ -1,6 +1,6 @@
 #jQuery UI Bootstrap (v 1.0 Alpha)
 
-This project was started to bring the beauty and ease-of-use of Twitter Bootstrap to jQuery UI widgets ♥.
+This project was started to bring the beauty and ease-of-use of Bootstrap to jQuery UI widgets ♥.
 
 
 ##Why?
@@ -10,7 +10,7 @@ Bootstrap is one of our favorite projects, but having used it regularly it left 
 * The ability to work side-by-side with jQuery UI (something which caused a number of widgets to break visually)
 * The ability to theme jQuery UI widgets using Bootstrap styles. Whilst we love jQuery UI, we find some of the current themes to look a little dated. Our hope is that this theme provides a decent alternative for others that feel the same.
 
-To clarify, this project doesn't aim or intend to replace Twitter Bootstrap. It merely provides a jQuery UI-compatible theme inspired by Bootstrap's design. It also provides a version of Bootstrap CSS with a few (minor) sections commented out which enable the theme to work alongside it.
+To clarify, this project doesn't aim or intend to replace Bootstrap. It merely provides a jQuery UI-compatible theme inspired by Bootstrap's design. It also provides a version of Bootstrap CSS with a few (minor) sections commented out which enable the theme to work alongside it.
 
 We welcome any and all feedback as we would very much like this theme to be as solid as possible.
 
