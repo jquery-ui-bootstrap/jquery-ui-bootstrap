@@ -8,8 +8,6 @@
  * Portions copyright jQuery UI & Twitter Bootstrap
  */
 
-/********** VJ - Move to Less - Start *************/
-
 /* Layout helpers
 ----------------------------------*/
 .ui-helper-hidden {
@@ -793,7 +791,6 @@
  */
 
 .ui-button {
-	cursor: pointer;
 	display: inline-block;
 	padding: 6px 12px;
   	margin-bottom: 0;
