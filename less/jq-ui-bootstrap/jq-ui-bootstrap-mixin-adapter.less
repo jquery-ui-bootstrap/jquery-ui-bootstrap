@@ -38,13 +38,16 @@
 		border-radius: @topLeft @topRight @bottomRight @bottomLeft;
 	}
 	
+	.single(@border:6px) {
+		-webkit-border-radius: @border;
+		-moz-border-radius: @border;
+		border-radius: @border;
+	}
+	
 }
 
 .ui-border-radius( @radius ){
-	#ui-border-radius  > .topLeft ( @radius );
-	#ui-border-radius  > .topRight ( @radius );
-	#ui-border-radius  > .bottomLeft ( @radius );
-	#ui-border-radius  > .bottomRight ( @radius );
+	#ui-border-radius  > .single ( @radius );
 }
 
 #ui-gradient {
