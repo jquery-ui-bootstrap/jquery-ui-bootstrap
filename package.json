@@ -1,6 +1,6 @@
 {
 	"name": "jquery-bootstrap-theme",
-	"version": "1.0.0-alpha",
+	"version": "1.0.0",
 	"dependencies": {
 		"less": "latest",
 		"express": "~3.3.0"
