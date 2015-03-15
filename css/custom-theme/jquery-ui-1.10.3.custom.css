@@ -1176,7 +1176,6 @@ button.ui-button::-moz-focus-inner {
     border-color: #357EBD;
     color: #FFFFFF;
     display: block;
-    white-space: nowrap;
 }
 
 /* Fix problem with border in ui-state-active */
