@@ -38,13 +38,16 @@
 		border-radius: @topLeft @topRight @bottomRight @bottomLeft;
 	}
 	
+	.single(@border:6px) {
+		-webkit-border-radius: @border;
+		-moz-border-radius: @border;
+		border-radius: @border;
+	}
+	
 }
 
 .ui-border-radius( @radius ){
-	#ui-border-radius  > .topLeft ( @radius );
-	#ui-border-radius  > .topRight ( @radius );
-	#ui-border-radius  > .bottomLeft ( @radius );
-	#ui-border-radius  > .bottomRight ( @radius );
+	#ui-border-radius  > .single ( @radius );
 }
 
 #ui-gradient {
@@ -87,16 +90,6 @@
 
 .ui-button-size (@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large){
 	.button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
-}
-
-.ui-btn-lg{
-	.ui-button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
-}
-.ui-btn-xs{
-	.ui-button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
-}
-.ui-btn-sm{
-    padding: 1px 5px;
 }
 
 .ui-opacity(@opacity) {
