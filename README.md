@@ -86,7 +86,7 @@ lessc -x style2.less > style2.min.css
 
     The MIT License (MIT)
 
-    jQuery UI Bootstrap © Addy Osmani 2012 - 2013.
+    jQuery UI Bootstrap © Addy Osmani 2012 - 2015.
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
     and associated documentation files (the “Software”), 
