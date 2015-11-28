@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script src="../assets/js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="../assets/js/vendor/bootstrap.js"></script>
+        <script src="../assets/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+        <link rel="stylesheet" href="../css/custom-theme/jquery-ui-1.10.3.custom.css"/>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    </head>
+
+    <body>
+        <div>
+            <button onclick="">Open Dialog </button>
+        </div>
+        <div id="modal">
+            Name: <input id="tags" type="text" placeholder="auto-complete"/>
+        </div>
+    </body>
+
+    <script>
+        var a = [ 'AA', 'Acordion', 'Active', 'AutoComplete', 'CSS', 'C', 'C++', 'JavaScript', 'Java' ];
+
+        $('#modal').dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: {
+                "OK" : function() {
+                    $(this).dialog('close');
+                },
+
+                "Cancel": function() {
+                    $(this).dialog('close');
+                }
+            }
+        });
+        $('button').click(function() {
+            $('#modal').dialog('open');    
+        });
+        
+        $('#tags').autocomplete({
+            source: a
+        });
+    </script>
+</html>
