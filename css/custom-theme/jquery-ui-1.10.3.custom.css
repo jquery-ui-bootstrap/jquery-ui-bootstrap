@@ -1308,7 +1308,6 @@ button.ui-button::-moz-focus-inner {
 	left: 0;
 	padding: .2em;
 	width: 300px;
-	overflow: hidden;
 	outline: 0;
 	background-clip: padding-box;
 	background-color: #ffffff;
