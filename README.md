@@ -1,9 +1,9 @@
-#jQuery UI Bootstrap (v 1.0 Alpha)
+# jQuery UI Bootstrap (v 1.0 Alpha)
 
 This project was started to bring the beauty and ease-of-use of Bootstrap to jQuery UI widgets ♥.
 
 
-##Why?
+## Why?
 
 Bootstrap is one of our favorite projects, but having used it regularly it left us wanting two things:
 
@@ -14,17 +14,17 @@ To clarify, this project doesn't aim or intend to replace Bootstrap. It merely p
 
 We welcome any and all feedback as we would very much like this theme to be as solid as possible.
 
-##Browser support
+## Browser support
 
 All modern browsers are targeted by this theme with 'lo-res' experiences (i.e no gradients, border-radius etc.) provided for users using older browsers. 
 
 There *are* some minor known issues lingering that we're working on, but the hope is that in time those will all get ironed out. 
 
-##jQuery UI support
+## jQuery UI support
 
 This theme targets jQuery UI 1.10.3 (stable) and 1.9.2 (legacy), along with the default version of jQuery included in the (current) jQuery UI builds (jQuery 1.6+).
 
-##Project status
+## Project status
 
 This project is under active, but slow development. There has been a great deal of work done in branches to introduce compatibility with jQuery UI 1.9 and further work done to move us towards using LESS and improved parity with Bootstrap 3.x.
 
@@ -32,7 +32,7 @@ At this time, we are seeking contributors interested in helping us to finally co
 
 As one of the (currently) more popular open-source jQuery UI themes we would love to get out more frequent releases and your help with this would be greatly appreciated.
 
-##Team
+## Team
 
 * Lead Product Developer : [Addy Osmani](https://github.com/addyosmani) 
 * Chief Maintainer : [Gerits Aurelien](https://github.com/gtraxx)
@@ -42,7 +42,7 @@ As one of the (currently) more popular open-source jQuery UI themes we would lov
 * Less Support : [Vijay Dharap](https://github.com/dharapvj)
 * You? ;) We're always open to improvements.
 
-##Demo
+## Demo
 
 For a live preview of the current theme, see [http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/](http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/).
 
@@ -82,7 +82,7 @@ lessc -x style2.less > style2.min.css
 
 	
 
-##Licence
+## Licence
 
     The MIT License (MIT)
 
