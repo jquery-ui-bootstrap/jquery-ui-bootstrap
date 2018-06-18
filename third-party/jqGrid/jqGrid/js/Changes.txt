@@ -5,7 +5,7 @@ Bug Fixes
    * Fix problem with getAbsoluteIndex on IE8
    * Fix in triggerReload grid to reset the savedRow array.
    * Fix in setGridWidth  method when try to resize a grid a and there is no data.
-   * Fix header aligment in ie8
+   * Fix header alignment in ie8
    * Fix in createEl function to check for val and not for html when select
    * making getChangedCells method compatible with unformat function if defined
    * Fixed record count when scroll true
@@ -26,8 +26,8 @@ common multiselect is combination of cb_ + id of the grid
    * Fix in unformat number and currency
    * Fixed bug when creating a select with dataUrl and select is set to multiple.
    * Fix a bug when creating select with multiple option. Also the attribute 
-should be set immediatley after the element is created and not after.
-   * Fix a bug in form edit. The comapared values should be trimed since of 
+should be set immediately after the element is created and not after.
+   * Fix a bug in form edit. The compared values should be trimmed since of
 split(",") which cause the elements to begin with space.
    * Fix a jqGrid loader (development version) for IE browsers
    * Fix for form icons in Opera
@@ -35,7 +35,7 @@ split(",") which cause the elements to begin with space.
    * Avoiding the overhead of local functions and maintenance issues when the 
 parameters change
    * Opera fix for cursor col-resize
-   * Fix in editGridRow when a save key is defined and the key is Eneter we 
+   * Fix in editGridRow when a save key is defined and the key is Enter we
 should not do save when we are in teaxtarea element
    * Fix in formatter checkbox when the value is undefined. We also add a 
 default format for the checkbox too
@@ -55,10 +55,10 @@ same type parameter - the response
    * Fix for serchhidden in searchGrid method
    * Fix for setGridWidth method
    * Fix  setColWidth function
-   * Fix for topinfo and bottom info in formedit to appear separatley in edit and add dialogs
+   * Fix for topinfo and bottom info in formedit to appear separately in edit and add dialogs
    * Fix searchFilter css to work when called from subgrid 
    * Fix celledit to work better when datepicker is attached
-   * Fix in viewGrid row to vizualize only the columns that only not hidden.
+   * Fix in viewGrid row to visualize only the columns that only not hidden.
 
    
 Additions and changes
@@ -73,7 +73,7 @@ resizable and can use any options of this widget
    * Added gridDnD method. The method connect two or more grids so that drag and drop rows
 between these is possible
    * Add columnChooser method which allows choosing/sorting columns at the same 
-time. This method requiere multiselect plugin
+time. This method require multiselect plugin
    * Now getRowData can return all rows when rowid is not set.
    * getCol now can return summary, average and count of the selected row. The 
 3 parameter determines this (valid are sum, avg, count). If this parameter 
@@ -99,9 +99,9 @@ before checking the values. Should return object of the posted data.
    * Added a property classes in colModel where we can attach classes to column.
    * info_dialog function can be used as separate modal dialog
    * Added a class ui-ellipsis in grid css file. Also work in FireFox too.
-   * Changind the order of calling the events beforeSearch and beforeClear in 
-filterToolbar method. Also the events are called immediatley after triggering the grid
-   * To onCellSelect we replace the 4 parameter with the more natuaral event instead of e.target - 
+   * Changed the order of calling the events beforeSearch and beforeClear in
+filterToolbar method. Also the events are called immediately after triggering the grid
+   * To onCellSelect we replace the 4 parameter with the more natural event instead of e.target -
 sorry if this will bring to some confusions.
    * Added searchoptions value parameter in order to separate the editing module and search module.
 We first look for such option in searchoptions and if not found we use the
@@ -135,7 +135,7 @@ Syntax: updateGridRows (data, rowidname, jsonreader)
 data is a array of data in format
 [{name:value,name1:value1...},{name:value,name2:value2...}]
 where the name is the name from colModel and value is the actuall value.
-It is not neccessary that all columns are present in the data item object
+It is not necessary that all columns are present in the data item object
 (the same as setRowData method)
 
 rowidname (string) - is the name of the row which should acts as id.
@@ -146,7 +146,7 @@ is used to set the data. Note that this work only of the item in jsonReader
 object 'repeatitems' is set to true.
 
 - Switch to namedItems JS function. This improve the speed. Previously we
-walk throught the entry rowset to find the rowIndex of the given rowid.
+walk through the entry rowset to find the rowIndex of the given rowid.
 Now we use the build in javaScript method namedItems which do the same.
 
 - multiselect is enabled in inline edit module.
@@ -172,15 +172,15 @@ The default value is null. This event can be passed in editGridRow, delGridRow,
 viewGridRow, and setColumns methods. The event raised when a close icon is clicked,
 a cancel button is clicked or ESC key is pressed (if this is enabled).
 
-- Significant speed improvents in tree Grid when a relative large data is loaded.
+- Significant speed improvements in tree Grid when a relative large data is loaded.
 
 - Added dataheight parameter to all modal windows, where we can control the
-scrolling content. Intitially this parameter is auto.
+scrolling content. Initially this parameter is auto.
 To summarize - we have two parameters for controlling the height of the modal.
 height and dataheight.
 The height parameter control the height of the entry modal, dataheight parameter
 control the height of the scrolling content.  The buttons of the modals are
-allways visible at the bottom of the modal.Also some improvments in jqDnR.
+allways visible at the bottom of the modal.Also some improvements in jqDnR.
 
 - In setColumns method we add colnameview and closeAfterSubmit parameters. The
 colnameview (default true). If set to false the names from colModel are not
@@ -376,7 +376,7 @@ Form Editing
 aded option in editGridRow - checkOnSubmit (default false)
 This option only work in editing mode and not in add.
 When set to true - the method looks if any data is changed in the form and
-if this is a case a dilog message appear where the user is asked to confirm the
+if this is a case a dialog message appear where the user is asked to confirm the
 changes or cancel it. Pressing cancel will return to the form, but does not
 set the values to its original state.
 
@@ -388,18 +388,18 @@ Fixes
 - Removed imgpath from cell edit and inline edit modules and common module.
 This parameter is no longer valid in 3.5
 - Replace $ with jQuery in grid.common.js which causes problems when used with
-other librariers like prototype.
-- removed a checking e.srcElement from base module. jQuery allready fix this.
+other libraries like prototype.
+- removed a checking e.srcElement from base module. jQuery already fix this.
 - fixing the size option in select when using ajax to load selects.
 - Fixed bug in IE browsers, when clicked on href tag with child nodes,
-IE incorrect report in all cases that this is a href element. This couses
+IE incorrect report in all cases that this is a href element. This causes
 onSelectCell not to behave correct.
-- Fixed bug in searchGrid - group options are not passed to serchFilter in 
+- Fixed bug in searchGrid - group options are not passed to searchFilter in
 order get them from Language file.
-- Fix in bulgarian trnslations.
+- Fix in bulgarian translations.
 - Fix on sorting column. The initial sort check first for index and then for 
 column name. Before the checking for the index was missed.
-Sortorder converted to lower case in order to avoid some cofusions.
+Sortorder converted to lower case in order to avoid some confusions.
 - Fix in set columns module. The modal does not appear correctly due to 
 missed parameter 
 
@@ -414,7 +414,7 @@ This is more natural, indicating that the grid is active when data is loaded.
 
 Form Editing
 ============
-- Added keyboard navigation, which allow us to navigate throught the records while
+- Added keyboard navigation, which allow us to navigate through the records while
 in form editing pressing certain keys. This option is available in editGridRow
 and viewGridRow methods. The default state is disabled. To enable this you
 should set the options in the edit/add parameters:
